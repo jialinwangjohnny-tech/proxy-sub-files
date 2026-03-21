@@ -1,7 +1,7 @@
 # 用户: user046-phone
 # UUID: 45eb4ddb-b93b-499d-987a-726a219b18f0
 # 落地: 206.135.155.245:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-21 05:21:47
 # 到期时间: 2026-04-08 21:06
 # 多线路自动切换模式
 
@@ -57,7 +57,7 @@ proxies:
   - name: "美国-HY2-线路1 (吴宇冰-phone)"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 50046
+    port: 42127
     password: 45eb4ddb-b93b-499d-987a-726a219b18f0
     sni: www.bing.com
     skip-cert-verify: true
@@ -66,13 +66,13 @@ proxies:
   - name: "美国-VLESS-线路1 (吴宇冰-phone)"
     type: vless
     server: s1.huhiuh.space
-    port: 50046
+    port: 42127
     uuid: 45eb4ddb-b93b-499d-987a-726a219b18f0
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: apple.com
+    servername: gateway.icloud.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -81,7 +81,7 @@ proxies:
   - name: "美国-HY2-线路2 (吴宇冰-phone)"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 50046
+    port: 42127
     password: 45eb4ddb-b93b-499d-987a-726a219b18f0
     sni: www.bing.com
     skip-cert-verify: true
@@ -90,13 +90,13 @@ proxies:
   - name: "美国-VLESS-线路2 (吴宇冰-phone)"
     type: vless
     server: s2.huhiuh.space
-    port: 50046
+    port: 42127
     uuid: 45eb4ddb-b93b-499d-987a-726a219b18f0
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: apple.com
+    servername: gateway.icloud.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -105,7 +105,7 @@ proxies:
   - name: "美国-HY2-线路3 (吴宇冰-phone)"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 50046
+    port: 42127
     password: 45eb4ddb-b93b-499d-987a-726a219b18f0
     sni: www.bing.com
     skip-cert-verify: true
@@ -114,13 +114,13 @@ proxies:
   - name: "美国-VLESS-线路3 (吴宇冰-phone)"
     type: vless
     server: s3.huhiuh.space
-    port: 50046
+    port: 42127
     uuid: 45eb4ddb-b93b-499d-987a-726a219b18f0
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: apple.com
+    servername: gateway.icloud.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
