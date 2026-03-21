@@ -1,0 +1,110 @@
+# 用户: user065
+# UUID: d3e0b528-f8cd-409a-8e09-2ffae3af7e0e
+# 落地: 175.29.19.8:12324 (韩国)
+# 生成时间: 2026-03-01 17:29:32
+# 到期时间: 2026-03-10
+
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - "https://dns.google/dns-query#Proxy"
+    - "https://cloudflare-dns.com/dns-query#Proxy"
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver-policy:
+    "geosite:cn,private":
+      - 223.5.5.5
+      - 119.29.29.29
+    "+.cn,+.com.cn":
+      - 223.5.5.5
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.localhost"
+    - "+.cn"
+    - "+.com.cn" 
+
+proxies:
+  - name: "韩国-VLESS (向上而生独享)"
+    type: vless
+    server: 38.175.193.105
+    port: 50065
+    uuid: d3e0b528-f8cd-409a-8e09-2ffae3af7e0e
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "韩国-HY2 (向上而生独享)"
+    type: hysteria2
+    server: 38.175.193.105
+    port: 50065
+    password: d3e0b528-f8cd-409a-8e09-2ffae3af7e0e
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+proxy-groups:
+  - name: "Proxy"
+    type: select
+    proxies:
+      - 韩国-VLESS (向上而生独享)
+      - 韩国-HY2 (向上而生独享)
+      - DIRECT
+
+rules:
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-SUFFIX,com.cn,DIRECT
+  - DOMAIN-KEYWORD,baidu,DIRECT
+  - DOMAIN-KEYWORD,alibaba,DIRECT
+  - DOMAIN-KEYWORD,aliyun,DIRECT
+  - DOMAIN-KEYWORD,taobao,DIRECT
+  - DOMAIN-KEYWORD,tmall,DIRECT
+  - DOMAIN-KEYWORD,jd,DIRECT
+  - DOMAIN-KEYWORD,qq,DIRECT
+  - DOMAIN-KEYWORD,tencent,DIRECT
+  - DOMAIN-KEYWORD,weixin,DIRECT
+  - DOMAIN-KEYWORD,bilibili,DIRECT
+  - DOMAIN-KEYWORD,douyin,DIRECT
+  - DOMAIN-KEYWORD,bytedance,DIRECT
+  - DOMAIN-KEYWORD,doubao,DIRECT
+  - DOMAIN-SUFFIX,doubao.com,DIRECT
+  - DOMAIN-SUFFIX,moonshot.cn,DIRECT
+  - DOMAIN-SUFFIX,kimi.ai,DIRECT
+  - DOMAIN-SUFFIX,deepseek.com,DIRECT
+  - GEOIP,CN,DIRECT
+  - GEOIP,LAN,DIRECT
+  - MATCH,Proxy

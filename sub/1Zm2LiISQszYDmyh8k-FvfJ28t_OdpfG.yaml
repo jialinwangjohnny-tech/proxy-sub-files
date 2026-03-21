@@ -1,0 +1,128 @@
+# 用户: user090
+# UUID: 8c3527c4-65f4-4ee5-8f80-41257b41c361
+# 落地: 23.142.108.153:443 (美国弗吉尼亚州)
+# 生成时间: 2026-03-15 09:35:01
+# 到期时间: 2026-03-15
+
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - "https://dns.google/dns-query#Proxy"
+    - "https://cloudflare-dns.com/dns-query#Proxy"
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver-policy:
+    "geosite:cn,private":
+      - 223.5.5.5
+      - 119.29.29.29
+    "+.cn,+.com.cn":
+      - 223.5.5.5
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.localhost"
+    - "+.cn"
+    - "+.com.cn" 
+
+proxies:
+  - name: "美国弗吉尼亚州-VLESS (tts6668899独享)"
+    type: vless
+    server: 38.175.193.105
+    port: 50090
+    uuid: 8c3527c4-65f4-4ee5-8f80-41257b41c361
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国弗吉尼亚州-HY2 (tts6668899独享)"
+    type: hysteria2
+    server: 38.175.193.105
+    port: 50090
+    password: 8c3527c4-65f4-4ee5-8f80-41257b41c361
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+proxy-groups:
+  - name: "Proxy"
+    type: select
+    proxies:
+      - 美国弗吉尼亚州-VLESS (tts6668899独享)
+      - 美国弗吉尼亚州-HY2 (tts6668899独享)
+      - DIRECT
+
+rules:
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-SUFFIX,com.cn,DIRECT
+  - DOMAIN-KEYWORD,baidu,DIRECT
+  - DOMAIN-KEYWORD,alibaba,DIRECT
+  - DOMAIN-KEYWORD,aliyun,DIRECT
+  - DOMAIN-KEYWORD,taobao,DIRECT
+  - DOMAIN-KEYWORD,tmall,DIRECT
+  - DOMAIN-KEYWORD,jd,DIRECT
+  - DOMAIN-KEYWORD,qq,DIRECT
+  - DOMAIN-KEYWORD,tencent,DIRECT
+  - DOMAIN-KEYWORD,weixin,DIRECT
+  - DOMAIN-SUFFIX,tiktok.com,Proxy
+  - DOMAIN-SUFFIX,tiktokv.com,Proxy
+  - DOMAIN-SUFFIX,tiktokcdn.com,Proxy
+  - DOMAIN-SUFFIX,tiktokd.com,Proxy
+  - DOMAIN-KEYWORD,tiktok,Proxy
+  - DOMAIN-KEYWORD,bilibili,DIRECT
+  - DOMAIN-KEYWORD,douyin,DIRECT
+  - DOMAIN-KEYWORD,bytedance,DIRECT
+  - DOMAIN-KEYWORD,doubao,DIRECT
+  - DOMAIN-SUFFIX,doubao.com,DIRECT
+  - DOMAIN-SUFFIX,volcengine.com,DIRECT
+  - DOMAIN-SUFFIX,volces.com,DIRECT
+  - DOMAIN-SUFFIX,moonshot.cn,DIRECT
+  - DOMAIN-SUFFIX,kimi.ai,DIRECT
+  - DOMAIN-SUFFIX,deepseek.com,DIRECT
+  - DOMAIN-SUFFIX,tongyi.aliyun.com,DIRECT
+  - DOMAIN-SUFFIX,qianwen.aliyun.com,DIRECT
+  - DOMAIN-KEYWORD,tongyi,DIRECT
+  - DOMAIN-KEYWORD,qianwen,DIRECT
+  - DOMAIN-SUFFIX,baichuan-ai.com,DIRECT
+  - DOMAIN-SUFFIX,zhipuai.cn,DIRECT
+  - DOMAIN-SUFFIX,chatglm.cn,DIRECT
+  - DOMAIN-SUFFIX,minimaxi.com,DIRECT
+  - DOMAIN-SUFFIX,hailuoai.com,DIRECT
+  - DOMAIN-SUFFIX,happyporsche.com,DIRECT
+  - DOMAIN-SUFFIX,ziyaoyun.com,DIRECT
+  - GEOIP,CN,DIRECT
+  - GEOIP,LAN,DIRECT
+  - MATCH,Proxy
