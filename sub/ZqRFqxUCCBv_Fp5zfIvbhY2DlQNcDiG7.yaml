@@ -1,7 +1,7 @@
 # 用户: user087-phone
 # UUID: e185ffca-7cc6-4424-b5c2-23a9d1e5163d
 # 落地: 64.32.180.224:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-21 00:58:57
 # 到期时间: 2026-04-12
 # 多线路自动切换模式
 
@@ -57,7 +57,7 @@ proxies:
   - name: "美国-HY2-线路1 (Cecilia_fan-phone)"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 50087
+    port: 14978
     password: e185ffca-7cc6-4424-b5c2-23a9d1e5163d
     sni: www.bing.com
     skip-cert-verify: true
@@ -66,13 +66,13 @@ proxies:
   - name: "美国-VLESS-线路1 (Cecilia_fan-phone)"
     type: vless
     server: s1.huhiuh.space
-    port: 50087
+    port: 14978
     uuid: e185ffca-7cc6-4424-b5c2-23a9d1e5163d
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: apple.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -81,7 +81,7 @@ proxies:
   - name: "美国-HY2-线路2 (Cecilia_fan-phone)"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 50087
+    port: 14978
     password: e185ffca-7cc6-4424-b5c2-23a9d1e5163d
     sni: www.bing.com
     skip-cert-verify: true
@@ -90,13 +90,13 @@ proxies:
   - name: "美国-VLESS-线路2 (Cecilia_fan-phone)"
     type: vless
     server: s2.huhiuh.space
-    port: 50087
+    port: 14978
     uuid: e185ffca-7cc6-4424-b5c2-23a9d1e5163d
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: apple.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -105,7 +105,7 @@ proxies:
   - name: "美国-HY2-线路3 (Cecilia_fan-phone)"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 50087
+    port: 14978
     password: e185ffca-7cc6-4424-b5c2-23a9d1e5163d
     sni: www.bing.com
     skip-cert-verify: true
@@ -114,13 +114,13 @@ proxies:
   - name: "美国-VLESS-线路3 (Cecilia_fan-phone)"
     type: vless
     server: s3.huhiuh.space
-    port: 50087
+    port: 14978
     uuid: e185ffca-7cc6-4424-b5c2-23a9d1e5163d
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: apple.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
