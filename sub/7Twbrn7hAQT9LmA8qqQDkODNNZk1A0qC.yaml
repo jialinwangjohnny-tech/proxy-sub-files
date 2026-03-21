@@ -1,7 +1,7 @@
 # 用户: user020-windows
 # UUID: 4c1a7de9-0181-4564-9a37-f22b3e074248
 # 落地: 202.160.71.65:443 (台湾)
-# 生成时间: 2026-03-21 02:12:31
+# 生成时间: 2026-03-21 05:58:34
 # 到期时间: 2026-08-11
 # 多线路自动切换模式
 
@@ -57,7 +57,7 @@ proxies:
   - name: "台湾-HY2-线路1 (Herman-windows)"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 50020
+    port: 24660
     password: 4c1a7de9-0181-4564-9a37-f22b3e074248
     sni: www.bing.com
     skip-cert-verify: true
@@ -66,13 +66,13 @@ proxies:
   - name: "台湾-VLESS-线路1 (Herman-windows)"
     type: vless
     server: s1.huhiuh.space
-    port: 50020
+    port: 24660
     uuid: 4c1a7de9-0181-4564-9a37-f22b3e074248
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: apple.com
+    servername: outlook.office365.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -81,7 +81,7 @@ proxies:
   - name: "台湾-HY2-线路2 (Herman-windows)"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 50020
+    port: 24660
     password: 4c1a7de9-0181-4564-9a37-f22b3e074248
     sni: www.bing.com
     skip-cert-verify: true
@@ -90,13 +90,13 @@ proxies:
   - name: "台湾-VLESS-线路2 (Herman-windows)"
     type: vless
     server: s2.huhiuh.space
-    port: 50020
+    port: 24660
     uuid: 4c1a7de9-0181-4564-9a37-f22b3e074248
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: apple.com
+    servername: outlook.office365.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -105,7 +105,7 @@ proxies:
   - name: "台湾-HY2-线路3 (Herman-windows)"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 50020
+    port: 24660
     password: 4c1a7de9-0181-4564-9a37-f22b3e074248
     sni: www.bing.com
     skip-cert-verify: true
@@ -114,13 +114,13 @@ proxies:
   - name: "台湾-VLESS-线路3 (Herman-windows)"
     type: vless
     server: s3.huhiuh.space
-    port: 50020
+    port: 24660
     uuid: 4c1a7de9-0181-4564-9a37-f22b3e074248
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: apple.com
+    servername: outlook.office365.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
