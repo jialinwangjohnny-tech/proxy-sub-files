@@ -128,8 +128,8 @@ proxy-groups:
       - "美国洛杉矶-VLESS-线路2"
       - "美国洛杉矶-HY2-线路3"
       - "美国洛杉矶-VLESS-线路3"
-    interval: 60
-    timeout: 3000
+    interval: 5
+    timeout: 5000
     tolerance: 100
     lazy: false
     url: https://www.gstatic.com/generate_204
