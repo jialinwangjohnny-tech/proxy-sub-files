@@ -17,8 +17,8 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
+    - "https://dns.google/dns-query#自动切换"
+    - "https://cloudflare-dns.com/dns-query#自动切换"
   proxy-server-nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -124,7 +124,7 @@ proxies:
 
 proxy-groups:
   - name: "自动切换"
-    type: url-test
+    type: fallback
     proxies:
       - "美国犹他州-HY2-线路1"
       - "美国犹他州-VLESS-线路1"
@@ -133,8 +133,7 @@ proxy-groups:
       - "美国犹他州-HY2-线路3"
       - "美国犹他州-VLESS-线路3"
     interval: 5
-    timeout: 5000
-    tolerance: 100
+    timeout: 3000
     lazy: false
     url: https://www.gstatic.com/generate_204
 
