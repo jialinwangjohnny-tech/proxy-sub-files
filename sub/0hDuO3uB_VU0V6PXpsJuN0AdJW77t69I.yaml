@@ -78,7 +78,7 @@ proxies:
   - name: "美国犹他州-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 27459
+    port: 37459
     password: "user211_mac:5876f92b-0a33-48e6-9e3d-484568bba2a5"
     sni: www.bing.com
     skip-cert-verify: true
