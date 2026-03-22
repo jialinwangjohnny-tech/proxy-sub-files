@@ -1,0 +1,142 @@
+# Xray + HY2 原版订阅 — user211
+# 自动生成，请勿手动编辑
+
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: warning
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:1053
+  nameserver:
+    - https://dns.google/dns-query#自动切换
+    - https://cloudflare-dns.com/dns-query#自动切换
+  proxy-server-nameserver:
+    - https://dns.google/dns-query
+    - https://1.1.1.1/dns-query
+  nameserver-policy:
+    "geosite:cn,private":
+      - 223.5.5.5
+      - 114.114.114.114
+    "+.cn,+.com.cn":
+      - 223.5.5.5
+      - 114.114.114.114
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.localhost"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "localhost.ptlogin2.qq.com"
+    - "+.srv.nintendo.net"
+    - "+.stun.playstation.net"
+    - "+.apple.com"
+    - "+.cdn.apple.com"
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+
+proxies:
+  - name: "美国犹他州-HY2-线路1"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 27459
+    password: "user211_phone:4309305d-6a48-4e78-be8d-b33e703750ba"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "美国犹他州-VLESS-线路1"
+    type: vless
+    server: s1.huhiuh.space
+    port: 27459
+    uuid: 4309305d-6a48-4e78-be8d-b33e703750ba
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "a8e92524"
+    client-fingerprint: chrome
+    fast-open: true
+  - name: "美国犹他州-HY2-线路2"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 27459
+    password: "user211_phone:4309305d-6a48-4e78-be8d-b33e703750ba"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "美国犹他州-VLESS-线路2"
+    type: vless
+    server: s2.huhiuh.space
+    port: 27459
+    uuid: 4309305d-6a48-4e78-be8d-b33e703750ba
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "a8e92524"
+    client-fingerprint: chrome
+    fast-open: true
+  - name: "美国犹他州-HY2-线路3"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 27459
+    password: "user211_phone:4309305d-6a48-4e78-be8d-b33e703750ba"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "美国犹他州-VLESS-线路3"
+    type: vless
+    server: s3.huhiuh.space
+    port: 27459
+    uuid: 4309305d-6a48-4e78-be8d-b33e703750ba
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "a8e92524"
+    client-fingerprint: chrome
+    fast-open: true
+
+proxy-groups:
+  - name: "自动切换"
+    type: url-test
+    proxies:
+      - "美国犹他州-HY2-线路1"
+      - "美国犹他州-VLESS-线路1"
+      - "美国犹他州-HY2-线路2"
+      - "美国犹他州-VLESS-线路2"
+      - "美国犹他州-HY2-线路3"
+      - "美国犹他州-VLESS-线路3"
+    interval: 5
+    timeout: 5000
+    tolerance: 100
+    lazy: false
+    url: https://www.gstatic.com/generate_204
+
+rules:
+  - GEOSITE,private,DIRECT
+  - GEOSITE,cn,DIRECT
+  - GEOIP,private,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,自动切换
