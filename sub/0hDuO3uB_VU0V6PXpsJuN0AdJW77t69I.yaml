@@ -57,6 +57,8 @@ proxies:
     server: s1.huhiuh.space
     port: 27459
     password: "user211_mac:5876f92b-0a33-48e6-9e3d-484568bba2a5"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -73,13 +75,15 @@ proxies:
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "a8e92524"
-    client-fingerprint: chrome
+    client-fingerprint: safari
     fast-open: true
   - name: "美国犹他州-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
     port: 27459
     password: "user211_mac:5876f92b-0a33-48e6-9e3d-484568bba2a5"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -96,13 +100,15 @@ proxies:
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "a8e92524"
-    client-fingerprint: chrome
+    client-fingerprint: safari
     fast-open: true
   - name: "美国犹他州-HY2-线路3"
     type: hysteria2
     server: s3.huhiuh.space
     port: 27459
     password: "user211_mac:5876f92b-0a33-48e6-9e3d-484568bba2a5"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -119,7 +125,7 @@ proxies:
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "a8e92524"
-    client-fingerprint: chrome
+    client-fingerprint: safari
     fast-open: true
 
 proxy-groups:
