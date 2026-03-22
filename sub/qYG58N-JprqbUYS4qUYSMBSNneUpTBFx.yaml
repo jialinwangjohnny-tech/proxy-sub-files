@@ -12,6 +12,10 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   listen: 0.0.0.0:1053
+  use-hosts: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
   nameserver:
     - https://dns.google/dns-query#自动切换
     - https://cloudflare-dns.com/dns-query#自动切换
