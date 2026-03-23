@@ -1,7 +1,7 @@
 # 用户: user194-phone
 # UUID: 3ebf58f2-ccc9-46ff-bca2-fbd088a8f050
 # 落地: 64.32.180.224:443 (美国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-18
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Victor-phone)
-      - 美国-VLESS-线路2 (Victor-phone)
-      - 美国-VLESS-线路3 (Victor-phone)
       - 美国-HY2-线路1 (Victor-phone)
       - 美国-HY2-线路2 (Victor-phone)
       - 美国-HY2-线路3 (Victor-phone)
+      - 美国-VLESS-线路1 (Victor-phone)
+      - 美国-VLESS-线路2 (Victor-phone)
+      - 美国-VLESS-线路3 (Victor-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Victor-phone)
-      - 美国-VLESS-线路2 (Victor-phone)
-      - 美国-VLESS-线路3 (Victor-phone)
       - 美国-HY2-线路1 (Victor-phone)
       - 美国-HY2-线路2 (Victor-phone)
       - 美国-HY2-线路3 (Victor-phone)
+      - 美国-VLESS-线路1 (Victor-phone)
+      - 美国-VLESS-线路2 (Victor-phone)
+      - 美国-VLESS-线路3 (Victor-phone)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

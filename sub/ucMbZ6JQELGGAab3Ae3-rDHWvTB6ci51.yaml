@@ -1,7 +1,7 @@
 # 用户: user188-mac
 # UUID: 53e929f0-c45b-48c3-95c0-e5d0c3e01259
 # 落地: 204.1.115.108:443 (美国洛杉矶)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-17
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国洛杉矶-VLESS-线路1 (DamaiLang-mac)
-      - 美国洛杉矶-VLESS-线路2 (DamaiLang-mac)
-      - 美国洛杉矶-VLESS-线路3 (DamaiLang-mac)
       - 美国洛杉矶-HY2-线路1 (DamaiLang-mac)
       - 美国洛杉矶-HY2-线路2 (DamaiLang-mac)
       - 美国洛杉矶-HY2-线路3 (DamaiLang-mac)
+      - 美国洛杉矶-VLESS-线路1 (DamaiLang-mac)
+      - 美国洛杉矶-VLESS-线路2 (DamaiLang-mac)
+      - 美国洛杉矶-VLESS-线路3 (DamaiLang-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国洛杉矶-VLESS-线路1 (DamaiLang-mac)
-      - 美国洛杉矶-VLESS-线路2 (DamaiLang-mac)
-      - 美国洛杉矶-VLESS-线路3 (DamaiLang-mac)
       - 美国洛杉矶-HY2-线路1 (DamaiLang-mac)
       - 美国洛杉矶-HY2-线路2 (DamaiLang-mac)
       - 美国洛杉矶-HY2-线路3 (DamaiLang-mac)
+      - 美国洛杉矶-VLESS-线路1 (DamaiLang-mac)
+      - 美国洛杉矶-VLESS-线路2 (DamaiLang-mac)
+      - 美国洛杉矶-VLESS-线路3 (DamaiLang-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

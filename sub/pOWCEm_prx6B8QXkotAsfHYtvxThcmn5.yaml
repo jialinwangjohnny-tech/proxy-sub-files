@@ -1,7 +1,7 @@
 # 用户: user034-windows
 # UUID: ed153940-6050-4f6b-a7ba-669f444c6344
 # 落地: 149.119.134.85:443 (美国)
-# 生成时间: 2026-03-21 19:48:00
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-20
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (one-windows)
-      - 美国-VLESS-线路2 (one-windows)
-      - 美国-VLESS-线路3 (one-windows)
       - 美国-HY2-线路1 (one-windows)
       - 美国-HY2-线路2 (one-windows)
       - 美国-HY2-线路3 (one-windows)
+      - 美国-VLESS-线路1 (one-windows)
+      - 美国-VLESS-线路2 (one-windows)
+      - 美国-VLESS-线路3 (one-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (one-windows)
-      - 美国-VLESS-线路2 (one-windows)
-      - 美国-VLESS-线路3 (one-windows)
       - 美国-HY2-线路1 (one-windows)
       - 美国-HY2-线路2 (one-windows)
       - 美国-HY2-线路3 (one-windows)
+      - 美国-VLESS-线路1 (one-windows)
+      - 美国-VLESS-线路2 (one-windows)
+      - 美国-VLESS-线路3 (one-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

@@ -1,7 +1,7 @@
 # 用户: user168-windows
 # UUID: dca6666c-5778-4a53-983d-bd32df0824ac
 # 落地: 31.22.74.110:443 (德国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-14
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 德国-VLESS-线路1 (CFESSD3-windows)
-      - 德国-VLESS-线路2 (CFESSD3-windows)
-      - 德国-VLESS-线路3 (CFESSD3-windows)
       - 德国-HY2-线路1 (CFESSD3-windows)
       - 德国-HY2-线路2 (CFESSD3-windows)
       - 德国-HY2-线路3 (CFESSD3-windows)
+      - 德国-VLESS-线路1 (CFESSD3-windows)
+      - 德国-VLESS-线路2 (CFESSD3-windows)
+      - 德国-VLESS-线路3 (CFESSD3-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 德国-VLESS-线路1 (CFESSD3-windows)
-      - 德国-VLESS-线路2 (CFESSD3-windows)
-      - 德国-VLESS-线路3 (CFESSD3-windows)
       - 德国-HY2-线路1 (CFESSD3-windows)
       - 德国-HY2-线路2 (CFESSD3-windows)
       - 德国-HY2-线路3 (CFESSD3-windows)
+      - 德国-VLESS-线路1 (CFESSD3-windows)
+      - 德国-VLESS-线路2 (CFESSD3-windows)
+      - 德国-VLESS-线路3 (CFESSD3-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

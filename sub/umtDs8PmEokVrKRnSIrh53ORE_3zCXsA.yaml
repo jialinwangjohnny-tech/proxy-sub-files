@@ -1,7 +1,7 @@
 # 用户: user121-phone
 # UUID: 1a51ac2c-936a-43d8-9cd4-0186c209670c
 # 落地: 38.248.250.52:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-03-25 10:23
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (刘迟-phone)
-      - 美国-VLESS-线路2 (刘迟-phone)
-      - 美国-VLESS-线路3 (刘迟-phone)
       - 美国-HY2-线路1 (刘迟-phone)
       - 美国-HY2-线路2 (刘迟-phone)
       - 美国-HY2-线路3 (刘迟-phone)
+      - 美国-VLESS-线路1 (刘迟-phone)
+      - 美国-VLESS-线路2 (刘迟-phone)
+      - 美国-VLESS-线路3 (刘迟-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (刘迟-phone)
-      - 美国-VLESS-线路2 (刘迟-phone)
-      - 美国-VLESS-线路3 (刘迟-phone)
       - 美国-HY2-线路1 (刘迟-phone)
       - 美国-HY2-线路2 (刘迟-phone)
       - 美国-HY2-线路3 (刘迟-phone)
+      - 美国-VLESS-线路1 (刘迟-phone)
+      - 美国-VLESS-线路2 (刘迟-phone)
+      - 美国-VLESS-线路3 (刘迟-phone)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

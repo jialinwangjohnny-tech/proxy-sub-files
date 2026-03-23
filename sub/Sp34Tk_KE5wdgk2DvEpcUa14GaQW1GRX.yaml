@@ -1,7 +1,7 @@
 # 用户: user080-mac
 # UUID: c76466a0-3be3-46ab-a67a-40d6839ee807
 # 落地: 68.167.147.74:443 (美国洛杉矶)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-12 16:10
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国洛杉矶-VLESS-线路1 (Diony-mac)
-      - 美国洛杉矶-VLESS-线路2 (Diony-mac)
-      - 美国洛杉矶-VLESS-线路3 (Diony-mac)
       - 美国洛杉矶-HY2-线路1 (Diony-mac)
       - 美国洛杉矶-HY2-线路2 (Diony-mac)
       - 美国洛杉矶-HY2-线路3 (Diony-mac)
+      - 美国洛杉矶-VLESS-线路1 (Diony-mac)
+      - 美国洛杉矶-VLESS-线路2 (Diony-mac)
+      - 美国洛杉矶-VLESS-线路3 (Diony-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国洛杉矶-VLESS-线路1 (Diony-mac)
-      - 美国洛杉矶-VLESS-线路2 (Diony-mac)
-      - 美国洛杉矶-VLESS-线路3 (Diony-mac)
       - 美国洛杉矶-HY2-线路1 (Diony-mac)
       - 美国洛杉矶-HY2-线路2 (Diony-mac)
       - 美国洛杉矶-HY2-线路3 (Diony-mac)
+      - 美国洛杉矶-VLESS-线路1 (Diony-mac)
+      - 美国洛杉矶-VLESS-线路2 (Diony-mac)
+      - 美国洛杉矶-VLESS-线路3 (Diony-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

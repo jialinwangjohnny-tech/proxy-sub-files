@@ -1,7 +1,7 @@
 # 用户: user176-windows
 # UUID: 504a3b01-4bf3-40ca-9771-526c3e6a6570
 # 落地: 203.166.136.131:443 (新加坡)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-15 12:29
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 新加坡-VLESS-线路1 (chenjiesong75-windows)
-      - 新加坡-VLESS-线路2 (chenjiesong75-windows)
-      - 新加坡-VLESS-线路3 (chenjiesong75-windows)
       - 新加坡-HY2-线路1 (chenjiesong75-windows)
       - 新加坡-HY2-线路2 (chenjiesong75-windows)
       - 新加坡-HY2-线路3 (chenjiesong75-windows)
+      - 新加坡-VLESS-线路1 (chenjiesong75-windows)
+      - 新加坡-VLESS-线路2 (chenjiesong75-windows)
+      - 新加坡-VLESS-线路3 (chenjiesong75-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 新加坡-VLESS-线路1 (chenjiesong75-windows)
-      - 新加坡-VLESS-线路2 (chenjiesong75-windows)
-      - 新加坡-VLESS-线路3 (chenjiesong75-windows)
       - 新加坡-HY2-线路1 (chenjiesong75-windows)
       - 新加坡-HY2-线路2 (chenjiesong75-windows)
       - 新加坡-HY2-线路3 (chenjiesong75-windows)
+      - 新加坡-VLESS-线路1 (chenjiesong75-windows)
+      - 新加坡-VLESS-线路2 (chenjiesong75-windows)
+      - 新加坡-VLESS-线路3 (chenjiesong75-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

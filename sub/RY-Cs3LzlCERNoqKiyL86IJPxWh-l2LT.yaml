@@ -1,7 +1,7 @@
 # 用户: user082-windows
 # UUID: f5502897-4602-4d7b-a4c9-a57fff2f6be0
 # 落地: 64.50.130.222:443 (美国)
-# 生成时间: 2026-03-21 03:01:54
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-12 16:10
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Mira_Wang-windows)
-      - 美国-VLESS-线路2 (Mira_Wang-windows)
-      - 美国-VLESS-线路3 (Mira_Wang-windows)
       - 美国-HY2-线路1 (Mira_Wang-windows)
       - 美国-HY2-线路2 (Mira_Wang-windows)
       - 美国-HY2-线路3 (Mira_Wang-windows)
+      - 美国-VLESS-线路1 (Mira_Wang-windows)
+      - 美国-VLESS-线路2 (Mira_Wang-windows)
+      - 美国-VLESS-线路3 (Mira_Wang-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Mira_Wang-windows)
-      - 美国-VLESS-线路2 (Mira_Wang-windows)
-      - 美国-VLESS-线路3 (Mira_Wang-windows)
       - 美国-HY2-线路1 (Mira_Wang-windows)
       - 美国-HY2-线路2 (Mira_Wang-windows)
       - 美国-HY2-线路3 (Mira_Wang-windows)
+      - 美国-VLESS-线路1 (Mira_Wang-windows)
+      - 美国-VLESS-线路2 (Mira_Wang-windows)
+      - 美国-VLESS-线路3 (Mira_Wang-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

@@ -1,7 +1,7 @@
 # 用户: user114-windows
 # UUID: a89eab0b-c7f6-4324-9a32-d6a65d375691
 # 落地: 168.158.214.50:12323 (美国纽约)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-03-20
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国纽约-VLESS-线路1 (禅-windows)
-      - 美国纽约-VLESS-线路2 (禅-windows)
-      - 美国纽约-VLESS-线路3 (禅-windows)
       - 美国纽约-HY2-线路1 (禅-windows)
       - 美国纽约-HY2-线路2 (禅-windows)
       - 美国纽约-HY2-线路3 (禅-windows)
+      - 美国纽约-VLESS-线路1 (禅-windows)
+      - 美国纽约-VLESS-线路2 (禅-windows)
+      - 美国纽约-VLESS-线路3 (禅-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国纽约-VLESS-线路1 (禅-windows)
-      - 美国纽约-VLESS-线路2 (禅-windows)
-      - 美国纽约-VLESS-线路3 (禅-windows)
       - 美国纽约-HY2-线路1 (禅-windows)
       - 美国纽约-HY2-线路2 (禅-windows)
       - 美国纽约-HY2-线路3 (禅-windows)
+      - 美国纽约-VLESS-线路1 (禅-windows)
+      - 美国纽约-VLESS-线路2 (禅-windows)
+      - 美国纽约-VLESS-线路3 (禅-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

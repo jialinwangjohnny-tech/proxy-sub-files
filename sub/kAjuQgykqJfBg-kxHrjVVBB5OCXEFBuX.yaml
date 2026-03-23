@@ -1,7 +1,7 @@
 # 用户: user060-windows
 # UUID: 1d30657a-d332-490b-938a-45fb04fce722
 # 落地: 64.32.180.96:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-08
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Nayanovo-windows)
-      - 美国-VLESS-线路2 (Nayanovo-windows)
-      - 美国-VLESS-线路3 (Nayanovo-windows)
       - 美国-HY2-线路1 (Nayanovo-windows)
       - 美国-HY2-线路2 (Nayanovo-windows)
       - 美国-HY2-线路3 (Nayanovo-windows)
+      - 美国-VLESS-线路1 (Nayanovo-windows)
+      - 美国-VLESS-线路2 (Nayanovo-windows)
+      - 美国-VLESS-线路3 (Nayanovo-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Nayanovo-windows)
-      - 美国-VLESS-线路2 (Nayanovo-windows)
-      - 美国-VLESS-线路3 (Nayanovo-windows)
       - 美国-HY2-线路1 (Nayanovo-windows)
       - 美国-HY2-线路2 (Nayanovo-windows)
       - 美国-HY2-线路3 (Nayanovo-windows)
+      - 美国-VLESS-线路1 (Nayanovo-windows)
+      - 美国-VLESS-线路2 (Nayanovo-windows)
+      - 美国-VLESS-线路3 (Nayanovo-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

@@ -1,7 +1,7 @@
 # 用户: user018
 # UUID: 688c90f2-db98-459e-b078-97ceeeccf849
 # 落地: 149.119.134.85:443 (--region=美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-05-15
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - --region=美国-VLESS-线路1
-      - --region=美国-VLESS-线路2
-      - --region=美国-VLESS-线路3
       - --region=美国-HY2-线路1
       - --region=美国-HY2-线路2
       - --region=美国-HY2-线路3
+      - --region=美国-VLESS-线路1
+      - --region=美国-VLESS-线路2
+      - --region=美国-VLESS-线路3
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - --region=美国-VLESS-线路1
-      - --region=美国-VLESS-线路2
-      - --region=美国-VLESS-线路3
       - --region=美国-HY2-线路1
       - --region=美国-HY2-线路2
       - --region=美国-HY2-线路3
+      - --region=美国-VLESS-线路1
+      - --region=美国-VLESS-线路2
+      - --region=美国-VLESS-线路3
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

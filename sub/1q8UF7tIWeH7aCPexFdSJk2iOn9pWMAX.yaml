@@ -1,7 +1,7 @@
 # 用户: user156-phone
 # UUID: cc34586c-951e-4a42-8fc3-84ec16e91b60
 # 落地: 64.32.180.224:443 (美国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-06-13
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (生活（静态美）-phone)
-      - 美国-VLESS-线路2 (生活（静态美）-phone)
-      - 美国-VLESS-线路3 (生活（静态美）-phone)
       - 美国-HY2-线路1 (生活（静态美）-phone)
       - 美国-HY2-线路2 (生活（静态美）-phone)
       - 美国-HY2-线路3 (生活（静态美）-phone)
+      - 美国-VLESS-线路1 (生活（静态美）-phone)
+      - 美国-VLESS-线路2 (生活（静态美）-phone)
+      - 美国-VLESS-线路3 (生活（静态美）-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (生活（静态美）-phone)
-      - 美国-VLESS-线路2 (生活（静态美）-phone)
-      - 美国-VLESS-线路3 (生活（静态美）-phone)
       - 美国-HY2-线路1 (生活（静态美）-phone)
       - 美国-HY2-线路2 (生活（静态美）-phone)
       - 美国-HY2-线路3 (生活（静态美）-phone)
+      - 美国-VLESS-线路1 (生活（静态美）-phone)
+      - 美国-VLESS-线路2 (生活（静态美）-phone)
+      - 美国-VLESS-线路3 (生活（静态美）-phone)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

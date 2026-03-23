@@ -1,7 +1,7 @@
 # 用户: user159-windows
 # UUID: 12e7fef5-0b1e-48cc-8205-38365354bb05
 # 落地: 38.248.234.172:443 (美国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Anren-windows)
-      - 美国-VLESS-线路2 (Anren-windows)
-      - 美国-VLESS-线路3 (Anren-windows)
       - 美国-HY2-线路1 (Anren-windows)
       - 美国-HY2-线路2 (Anren-windows)
       - 美国-HY2-线路3 (Anren-windows)
+      - 美国-VLESS-线路1 (Anren-windows)
+      - 美国-VLESS-线路2 (Anren-windows)
+      - 美国-VLESS-线路3 (Anren-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Anren-windows)
-      - 美国-VLESS-线路2 (Anren-windows)
-      - 美国-VLESS-线路3 (Anren-windows)
       - 美国-HY2-线路1 (Anren-windows)
       - 美国-HY2-线路2 (Anren-windows)
       - 美国-HY2-线路3 (Anren-windows)
+      - 美国-VLESS-线路1 (Anren-windows)
+      - 美国-VLESS-线路2 (Anren-windows)
+      - 美国-VLESS-线路3 (Anren-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

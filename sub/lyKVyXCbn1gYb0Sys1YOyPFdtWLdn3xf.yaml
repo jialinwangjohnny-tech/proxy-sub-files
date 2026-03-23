@@ -1,7 +1,7 @@
 # 用户: user088-mac
 # UUID: 3585a0d5-16b9-4bce-97e6-52b96f037baf
 # 落地: 64.32.180.223:443 (美国洛杉矶)
-# 生成时间: 2026-03-20 19:45:14
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-15
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国洛杉矶-VLESS-线路1 (liays-mac)
-      - 美国洛杉矶-VLESS-线路2 (liays-mac)
-      - 美国洛杉矶-VLESS-线路3 (liays-mac)
       - 美国洛杉矶-HY2-线路1 (liays-mac)
       - 美国洛杉矶-HY2-线路2 (liays-mac)
       - 美国洛杉矶-HY2-线路3 (liays-mac)
+      - 美国洛杉矶-VLESS-线路1 (liays-mac)
+      - 美国洛杉矶-VLESS-线路2 (liays-mac)
+      - 美国洛杉矶-VLESS-线路3 (liays-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国洛杉矶-VLESS-线路1 (liays-mac)
-      - 美国洛杉矶-VLESS-线路2 (liays-mac)
-      - 美国洛杉矶-VLESS-线路3 (liays-mac)
       - 美国洛杉矶-HY2-线路1 (liays-mac)
       - 美国洛杉矶-HY2-线路2 (liays-mac)
       - 美国洛杉矶-HY2-线路3 (liays-mac)
+      - 美国洛杉矶-VLESS-线路1 (liays-mac)
+      - 美国洛杉矶-VLESS-线路2 (liays-mac)
+      - 美国洛杉矶-VLESS-线路3 (liays-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

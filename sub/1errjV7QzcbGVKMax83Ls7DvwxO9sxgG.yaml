@@ -1,7 +1,7 @@
 # 用户: user004-windows
 # UUID: a67300de-0419-4b9f-be46-a0d0681f946a
 # 落地: 204.1.110.247:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-03-28
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (林-windows)
-      - 美国-VLESS-线路2 (林-windows)
-      - 美国-VLESS-线路3 (林-windows)
       - 美国-HY2-线路1 (林-windows)
       - 美国-HY2-线路2 (林-windows)
       - 美国-HY2-线路3 (林-windows)
+      - 美国-VLESS-线路1 (林-windows)
+      - 美国-VLESS-线路2 (林-windows)
+      - 美国-VLESS-线路3 (林-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (林-windows)
-      - 美国-VLESS-线路2 (林-windows)
-      - 美国-VLESS-线路3 (林-windows)
       - 美国-HY2-线路1 (林-windows)
       - 美国-HY2-线路2 (林-windows)
       - 美国-HY2-线路3 (林-windows)
+      - 美国-VLESS-线路1 (林-windows)
+      - 美国-VLESS-线路2 (林-windows)
+      - 美国-VLESS-线路3 (林-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

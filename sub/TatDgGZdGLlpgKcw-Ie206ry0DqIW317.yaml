@@ -1,7 +1,7 @@
 # 用户: user085-phone
 # UUID: 66ebccac-9a06-40ad-a72c-bb62ef5be2c5
 # 落地: 38.75.200.59:443 (美国)
-# 生成时间: 2026-03-20 20:59:51
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-15 10:20
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Water purifier-phone)
-      - 美国-VLESS-线路2 (Water purifier-phone)
-      - 美国-VLESS-线路3 (Water purifier-phone)
       - 美国-HY2-线路1 (Water purifier-phone)
       - 美国-HY2-线路2 (Water purifier-phone)
       - 美国-HY2-线路3 (Water purifier-phone)
+      - 美国-VLESS-线路1 (Water purifier-phone)
+      - 美国-VLESS-线路2 (Water purifier-phone)
+      - 美国-VLESS-线路3 (Water purifier-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Water purifier-phone)
-      - 美国-VLESS-线路2 (Water purifier-phone)
-      - 美国-VLESS-线路3 (Water purifier-phone)
       - 美国-HY2-线路1 (Water purifier-phone)
       - 美国-HY2-线路2 (Water purifier-phone)
       - 美国-HY2-线路3 (Water purifier-phone)
+      - 美国-VLESS-线路1 (Water purifier-phone)
+      - 美国-VLESS-线路2 (Water purifier-phone)
+      - 美国-VLESS-线路3 (Water purifier-phone)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

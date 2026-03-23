@@ -1,7 +1,7 @@
 # 用户: user167-phone
 # UUID: ae495fdf-565d-4e42-88d7-3d935c967696
 # 落地: 91.219.8.6:9804 (德国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 德国-VLESS-线路1 (CFESSD2-phone)
-      - 德国-VLESS-线路2 (CFESSD2-phone)
-      - 德国-VLESS-线路3 (CFESSD2-phone)
       - 德国-HY2-线路1 (CFESSD2-phone)
       - 德国-HY2-线路2 (CFESSD2-phone)
       - 德国-HY2-线路3 (CFESSD2-phone)
+      - 德国-VLESS-线路1 (CFESSD2-phone)
+      - 德国-VLESS-线路2 (CFESSD2-phone)
+      - 德国-VLESS-线路3 (CFESSD2-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 德国-VLESS-线路1 (CFESSD2-phone)
-      - 德国-VLESS-线路2 (CFESSD2-phone)
-      - 德国-VLESS-线路3 (CFESSD2-phone)
       - 德国-HY2-线路1 (CFESSD2-phone)
       - 德国-HY2-线路2 (CFESSD2-phone)
       - 德国-HY2-线路3 (CFESSD2-phone)
+      - 德国-VLESS-线路1 (CFESSD2-phone)
+      - 德国-VLESS-线路2 (CFESSD2-phone)
+      - 德国-VLESS-线路3 (CFESSD2-phone)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

@@ -1,7 +1,7 @@
 # 用户: user179-phone
 # UUID: f1b264cc-cf15-4446-bfff-a54e2489fa53
 # 落地: 204.0.18.83:9407 (美国洛杉矶)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-15
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国洛杉矶-VLESS-线路1 (hejun271828-phone)
-      - 美国洛杉矶-VLESS-线路2 (hejun271828-phone)
-      - 美国洛杉矶-VLESS-线路3 (hejun271828-phone)
       - 美国洛杉矶-HY2-线路1 (hejun271828-phone)
       - 美国洛杉矶-HY2-线路2 (hejun271828-phone)
       - 美国洛杉矶-HY2-线路3 (hejun271828-phone)
+      - 美国洛杉矶-VLESS-线路1 (hejun271828-phone)
+      - 美国洛杉矶-VLESS-线路2 (hejun271828-phone)
+      - 美国洛杉矶-VLESS-线路3 (hejun271828-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国洛杉矶-VLESS-线路1 (hejun271828-phone)
-      - 美国洛杉矶-VLESS-线路2 (hejun271828-phone)
-      - 美国洛杉矶-VLESS-线路3 (hejun271828-phone)
       - 美国洛杉矶-HY2-线路1 (hejun271828-phone)
       - 美国洛杉矶-HY2-线路2 (hejun271828-phone)
       - 美国洛杉矶-HY2-线路3 (hejun271828-phone)
+      - 美国洛杉矶-VLESS-线路1 (hejun271828-phone)
+      - 美国洛杉矶-VLESS-线路2 (hejun271828-phone)
+      - 美国洛杉矶-VLESS-线路3 (hejun271828-phone)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

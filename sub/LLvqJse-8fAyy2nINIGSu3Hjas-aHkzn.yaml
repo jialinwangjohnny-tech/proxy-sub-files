@@ -1,7 +1,7 @@
 # 用户: user141-windows
 # UUID: eba3e7ed-2577-4d86-89e4-8aefcd21f3dc
 # 落地: 38.248.250.80:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-03
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (vk-windows)
-      - 美国-VLESS-线路2 (vk-windows)
-      - 美国-VLESS-线路3 (vk-windows)
       - 美国-HY2-线路1 (vk-windows)
       - 美国-HY2-线路2 (vk-windows)
       - 美国-HY2-线路3 (vk-windows)
+      - 美国-VLESS-线路1 (vk-windows)
+      - 美国-VLESS-线路2 (vk-windows)
+      - 美国-VLESS-线路3 (vk-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (vk-windows)
-      - 美国-VLESS-线路2 (vk-windows)
-      - 美国-VLESS-线路3 (vk-windows)
       - 美国-HY2-线路1 (vk-windows)
       - 美国-HY2-线路2 (vk-windows)
       - 美国-HY2-线路3 (vk-windows)
+      - 美国-VLESS-线路1 (vk-windows)
+      - 美国-VLESS-线路2 (vk-windows)
+      - 美国-VLESS-线路3 (vk-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

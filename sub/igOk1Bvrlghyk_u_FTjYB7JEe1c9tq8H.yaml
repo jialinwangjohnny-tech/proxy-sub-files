@@ -1,7 +1,7 @@
 # 用户: user153-phone
 # UUID: 5925c467-7315-41b7-a5cd-3776cbffe981
 # 落地: 38.248.250.183:443 (美国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-12
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Pure Land-phone)
-      - 美国-VLESS-线路2 (Pure Land-phone)
-      - 美国-VLESS-线路3 (Pure Land-phone)
       - 美国-HY2-线路1 (Pure Land-phone)
       - 美国-HY2-线路2 (Pure Land-phone)
       - 美国-HY2-线路3 (Pure Land-phone)
+      - 美国-VLESS-线路1 (Pure Land-phone)
+      - 美国-VLESS-线路2 (Pure Land-phone)
+      - 美国-VLESS-线路3 (Pure Land-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Pure Land-phone)
-      - 美国-VLESS-线路2 (Pure Land-phone)
-      - 美国-VLESS-线路3 (Pure Land-phone)
       - 美国-HY2-线路1 (Pure Land-phone)
       - 美国-HY2-线路2 (Pure Land-phone)
       - 美国-HY2-线路3 (Pure Land-phone)
+      - 美国-VLESS-线路1 (Pure Land-phone)
+      - 美国-VLESS-线路2 (Pure Land-phone)
+      - 美国-VLESS-线路3 (Pure Land-phone)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

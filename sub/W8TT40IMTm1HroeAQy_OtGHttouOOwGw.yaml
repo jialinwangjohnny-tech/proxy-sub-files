@@ -1,7 +1,7 @@
 # 用户: user186-mac
 # UUID: fed52c43-7501-4111-aa05-636ce5997154
 # 落地: 103.229.198.7:443 (马来西亚)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-16 22:21
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 马来西亚-VLESS-线路1 (潦草小羊-mac)
-      - 马来西亚-VLESS-线路2 (潦草小羊-mac)
-      - 马来西亚-VLESS-线路3 (潦草小羊-mac)
       - 马来西亚-HY2-线路1 (潦草小羊-mac)
       - 马来西亚-HY2-线路2 (潦草小羊-mac)
       - 马来西亚-HY2-线路3 (潦草小羊-mac)
+      - 马来西亚-VLESS-线路1 (潦草小羊-mac)
+      - 马来西亚-VLESS-线路2 (潦草小羊-mac)
+      - 马来西亚-VLESS-线路3 (潦草小羊-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 马来西亚-VLESS-线路1 (潦草小羊-mac)
-      - 马来西亚-VLESS-线路2 (潦草小羊-mac)
-      - 马来西亚-VLESS-线路3 (潦草小羊-mac)
       - 马来西亚-HY2-线路1 (潦草小羊-mac)
       - 马来西亚-HY2-线路2 (潦草小羊-mac)
       - 马来西亚-HY2-线路3 (潦草小羊-mac)
+      - 马来西亚-VLESS-线路1 (潦草小羊-mac)
+      - 马来西亚-VLESS-线路2 (潦草小羊-mac)
+      - 马来西亚-VLESS-线路3 (潦草小羊-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

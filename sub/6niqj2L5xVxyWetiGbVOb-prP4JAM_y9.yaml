@@ -1,7 +1,7 @@
 # 用户: user077-windows
 # UUID: 44b0dbcf-4867-46e6-a760-c4c03dd440b9
 # 落地: 64.32.180.224:443 (美国)
-# 生成时间: 2026-03-21 06:03:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-12
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (。-windows)
-      - 美国-VLESS-线路2 (。-windows)
-      - 美国-VLESS-线路3 (。-windows)
       - 美国-HY2-线路1 (。-windows)
       - 美国-HY2-线路2 (。-windows)
       - 美国-HY2-线路3 (。-windows)
+      - 美国-VLESS-线路1 (。-windows)
+      - 美国-VLESS-线路2 (。-windows)
+      - 美国-VLESS-线路3 (。-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (。-windows)
-      - 美国-VLESS-线路2 (。-windows)
-      - 美国-VLESS-线路3 (。-windows)
       - 美国-HY2-线路1 (。-windows)
       - 美国-HY2-线路2 (。-windows)
       - 美国-HY2-线路3 (。-windows)
+      - 美国-VLESS-线路1 (。-windows)
+      - 美国-VLESS-线路2 (。-windows)
+      - 美国-VLESS-线路3 (。-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

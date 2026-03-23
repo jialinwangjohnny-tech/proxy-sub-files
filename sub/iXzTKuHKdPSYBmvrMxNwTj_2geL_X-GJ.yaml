@@ -1,7 +1,7 @@
 # 用户: user106-mac
 # UUID: dd5987ab-f641-44af-8614-28a99fb6d683
 # 落地: 63.125.92.4:50101 (美国)
-# 生成时间: 2026-03-22 22:42:38
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-17
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (David-mac)
-      - 美国-VLESS-线路2 (David-mac)
-      - 美国-VLESS-线路3 (David-mac)
       - 美国-HY2-线路1 (David-mac)
       - 美国-HY2-线路2 (David-mac)
       - 美国-HY2-线路3 (David-mac)
+      - 美国-VLESS-线路1 (David-mac)
+      - 美国-VLESS-线路2 (David-mac)
+      - 美国-VLESS-线路3 (David-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (David-mac)
-      - 美国-VLESS-线路2 (David-mac)
-      - 美国-VLESS-线路3 (David-mac)
       - 美国-HY2-线路1 (David-mac)
       - 美国-HY2-线路2 (David-mac)
       - 美国-HY2-线路3 (David-mac)
+      - 美国-VLESS-线路1 (David-mac)
+      - 美国-VLESS-线路2 (David-mac)
+      - 美国-VLESS-线路3 (David-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

@@ -1,7 +1,7 @@
 # 用户: user161-mac
 # UUID: 820dd6f9-df2b-441d-bf45-fcd0eb901fcb
 # 落地: 170.130.97.43:443 (美国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-14
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (yl4151045-mac)
-      - 美国-VLESS-线路2 (yl4151045-mac)
-      - 美国-VLESS-线路3 (yl4151045-mac)
       - 美国-HY2-线路1 (yl4151045-mac)
       - 美国-HY2-线路2 (yl4151045-mac)
       - 美国-HY2-线路3 (yl4151045-mac)
+      - 美国-VLESS-线路1 (yl4151045-mac)
+      - 美国-VLESS-线路2 (yl4151045-mac)
+      - 美国-VLESS-线路3 (yl4151045-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (yl4151045-mac)
-      - 美国-VLESS-线路2 (yl4151045-mac)
-      - 美国-VLESS-线路3 (yl4151045-mac)
       - 美国-HY2-线路1 (yl4151045-mac)
       - 美国-HY2-线路2 (yl4151045-mac)
       - 美国-HY2-线路3 (yl4151045-mac)
+      - 美国-VLESS-线路1 (yl4151045-mac)
+      - 美国-VLESS-线路2 (yl4151045-mac)
+      - 美国-VLESS-线路3 (yl4151045-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

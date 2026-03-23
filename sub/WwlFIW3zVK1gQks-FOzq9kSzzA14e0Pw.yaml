@@ -1,7 +1,7 @@
 # 用户: user201-windows
 # UUID: 9955b617-f568-431d-811d-790e9204d783
 # 落地: 38.248.251.14:443 (美国)
-# 生成时间: 2026-03-20 20:28:35
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-20
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (tts6668899-windows)
-      - 美国-VLESS-线路2 (tts6668899-windows)
-      - 美国-VLESS-线路3 (tts6668899-windows)
       - 美国-HY2-线路1 (tts6668899-windows)
       - 美国-HY2-线路2 (tts6668899-windows)
       - 美国-HY2-线路3 (tts6668899-windows)
+      - 美国-VLESS-线路1 (tts6668899-windows)
+      - 美国-VLESS-线路2 (tts6668899-windows)
+      - 美国-VLESS-线路3 (tts6668899-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (tts6668899-windows)
-      - 美国-VLESS-线路2 (tts6668899-windows)
-      - 美国-VLESS-线路3 (tts6668899-windows)
       - 美国-HY2-线路1 (tts6668899-windows)
       - 美国-HY2-线路2 (tts6668899-windows)
       - 美国-HY2-线路3 (tts6668899-windows)
+      - 美国-VLESS-线路1 (tts6668899-windows)
+      - 美国-VLESS-线路2 (tts6668899-windows)
+      - 美国-VLESS-线路3 (tts6668899-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

@@ -1,7 +1,7 @@
 # 用户: user150-mac
 # UUID: 8f0845b1-98bf-41e4-a654-625b89524f4d
 # 落地: 38.248.250.80:443 (美国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-12
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Bo-mac)
-      - 美国-VLESS-线路2 (Bo-mac)
-      - 美国-VLESS-线路3 (Bo-mac)
       - 美国-HY2-线路1 (Bo-mac)
       - 美国-HY2-线路2 (Bo-mac)
       - 美国-HY2-线路3 (Bo-mac)
+      - 美国-VLESS-线路1 (Bo-mac)
+      - 美国-VLESS-线路2 (Bo-mac)
+      - 美国-VLESS-线路3 (Bo-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Bo-mac)
-      - 美国-VLESS-线路2 (Bo-mac)
-      - 美国-VLESS-线路3 (Bo-mac)
       - 美国-HY2-线路1 (Bo-mac)
       - 美国-HY2-线路2 (Bo-mac)
       - 美国-HY2-线路3 (Bo-mac)
+      - 美国-VLESS-线路1 (Bo-mac)
+      - 美国-VLESS-线路2 (Bo-mac)
+      - 美国-VLESS-线路3 (Bo-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

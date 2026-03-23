@@ -1,7 +1,7 @@
 # 用户: user149-windows
 # UUID: e46cac9c-ef21-4d29-91c8-4d53adf0a6eb
 # 落地: 68.167.147.18:443 (美国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-10 11:08
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Lisa_Y-windows)
-      - 美国-VLESS-线路2 (Lisa_Y-windows)
-      - 美国-VLESS-线路3 (Lisa_Y-windows)
       - 美国-HY2-线路1 (Lisa_Y-windows)
       - 美国-HY2-线路2 (Lisa_Y-windows)
       - 美国-HY2-线路3 (Lisa_Y-windows)
+      - 美国-VLESS-线路1 (Lisa_Y-windows)
+      - 美国-VLESS-线路2 (Lisa_Y-windows)
+      - 美国-VLESS-线路3 (Lisa_Y-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Lisa_Y-windows)
-      - 美国-VLESS-线路2 (Lisa_Y-windows)
-      - 美国-VLESS-线路3 (Lisa_Y-windows)
       - 美国-HY2-线路1 (Lisa_Y-windows)
       - 美国-HY2-线路2 (Lisa_Y-windows)
       - 美国-HY2-线路3 (Lisa_Y-windows)
+      - 美国-VLESS-线路1 (Lisa_Y-windows)
+      - 美国-VLESS-线路2 (Lisa_Y-windows)
+      - 美国-VLESS-线路3 (Lisa_Y-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

@@ -1,7 +1,7 @@
 # 用户: user002
 # UUID: 8b4b3e4f-e1df-439b-9514-dc06e3aeb192
 # 落地: 216.132.151.211:443 (美国)
-# 生成时间: 2026-03-20 22:23:44
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-01
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Moshimoshi独享)
-      - 美国-VLESS-线路2 (Moshimoshi独享)
-      - 美国-VLESS-线路3 (Moshimoshi独享)
       - 美国-HY2-线路1 (Moshimoshi独享)
       - 美国-HY2-线路2 (Moshimoshi独享)
       - 美国-HY2-线路3 (Moshimoshi独享)
+      - 美国-VLESS-线路1 (Moshimoshi独享)
+      - 美国-VLESS-线路2 (Moshimoshi独享)
+      - 美国-VLESS-线路3 (Moshimoshi独享)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Moshimoshi独享)
-      - 美国-VLESS-线路2 (Moshimoshi独享)
-      - 美国-VLESS-线路3 (Moshimoshi独享)
       - 美国-HY2-线路1 (Moshimoshi独享)
       - 美国-HY2-线路2 (Moshimoshi独享)
       - 美国-HY2-线路3 (Moshimoshi独享)
+      - 美国-VLESS-线路1 (Moshimoshi独享)
+      - 美国-VLESS-线路2 (Moshimoshi独享)
+      - 美国-VLESS-线路3 (Moshimoshi独享)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

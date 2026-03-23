@@ -1,7 +1,7 @@
 # 用户: user101-windows
 # UUID: a738f838-a616-4f1c-973e-25d7a9e0b65e
 # 落地: 208.214.163.23:50101 (美国)
-# 生成时间: 2026-03-22 22:31:44
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-17
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (David-windows)
-      - 美国-VLESS-线路2 (David-windows)
-      - 美国-VLESS-线路3 (David-windows)
       - 美国-HY2-线路1 (David-windows)
       - 美国-HY2-线路2 (David-windows)
       - 美国-HY2-线路3 (David-windows)
+      - 美国-VLESS-线路1 (David-windows)
+      - 美国-VLESS-线路2 (David-windows)
+      - 美国-VLESS-线路3 (David-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (David-windows)
-      - 美国-VLESS-线路2 (David-windows)
-      - 美国-VLESS-线路3 (David-windows)
       - 美国-HY2-线路1 (David-windows)
       - 美国-HY2-线路2 (David-windows)
       - 美国-HY2-线路3 (David-windows)
+      - 美国-VLESS-线路1 (David-windows)
+      - 美国-VLESS-线路2 (David-windows)
+      - 美国-VLESS-线路3 (David-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

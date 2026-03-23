@@ -1,7 +1,7 @@
 # 用户: user123-mac
 # UUID: 5fbd557c-a6a3-40f2-a091-6d6388e87b37
 # 落地: 38.79.47.37:443 (美国华盛顿)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-03-26 23:23
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国华盛顿-VLESS-线路1 (简凡4-mac)
-      - 美国华盛顿-VLESS-线路2 (简凡4-mac)
-      - 美国华盛顿-VLESS-线路3 (简凡4-mac)
       - 美国华盛顿-HY2-线路1 (简凡4-mac)
       - 美国华盛顿-HY2-线路2 (简凡4-mac)
       - 美国华盛顿-HY2-线路3 (简凡4-mac)
+      - 美国华盛顿-VLESS-线路1 (简凡4-mac)
+      - 美国华盛顿-VLESS-线路2 (简凡4-mac)
+      - 美国华盛顿-VLESS-线路3 (简凡4-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国华盛顿-VLESS-线路1 (简凡4-mac)
-      - 美国华盛顿-VLESS-线路2 (简凡4-mac)
-      - 美国华盛顿-VLESS-线路3 (简凡4-mac)
       - 美国华盛顿-HY2-线路1 (简凡4-mac)
       - 美国华盛顿-HY2-线路2 (简凡4-mac)
       - 美国华盛顿-HY2-线路3 (简凡4-mac)
+      - 美国华盛顿-VLESS-线路1 (简凡4-mac)
+      - 美国华盛顿-VLESS-线路2 (简凡4-mac)
+      - 美国华盛顿-VLESS-线路3 (简凡4-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

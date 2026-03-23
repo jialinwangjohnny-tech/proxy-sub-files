@@ -1,7 +1,7 @@
 # 用户: user040-windows3
 # UUID: 05926bc4-184e-42f0-b294-1154f7b55350
 # 落地: 69.17.104.104:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-06-06 09:11
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Twenty-windows3)
-      - 美国-VLESS-线路2 (Twenty-windows3)
-      - 美国-VLESS-线路3 (Twenty-windows3)
       - 美国-HY2-线路1 (Twenty-windows3)
       - 美国-HY2-线路2 (Twenty-windows3)
       - 美国-HY2-线路3 (Twenty-windows3)
+      - 美国-VLESS-线路1 (Twenty-windows3)
+      - 美国-VLESS-线路2 (Twenty-windows3)
+      - 美国-VLESS-线路3 (Twenty-windows3)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Twenty-windows3)
-      - 美国-VLESS-线路2 (Twenty-windows3)
-      - 美国-VLESS-线路3 (Twenty-windows3)
       - 美国-HY2-线路1 (Twenty-windows3)
       - 美国-HY2-线路2 (Twenty-windows3)
       - 美国-HY2-线路3 (Twenty-windows3)
+      - 美国-VLESS-线路1 (Twenty-windows3)
+      - 美国-VLESS-线路2 (Twenty-windows3)
+      - 美国-VLESS-线路3 (Twenty-windows3)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

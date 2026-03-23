@@ -1,7 +1,7 @@
 # 用户: user172-windows
 # UUID: 6c8428d3-4776-4db9-8d3e-8787481190ec
 # 落地: 202.68.181.205:12324 (新加坡)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-14
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 新加坡-VLESS-线路1 (孙铭浩-windows)
-      - 新加坡-VLESS-线路2 (孙铭浩-windows)
-      - 新加坡-VLESS-线路3 (孙铭浩-windows)
       - 新加坡-HY2-线路1 (孙铭浩-windows)
       - 新加坡-HY2-线路2 (孙铭浩-windows)
       - 新加坡-HY2-线路3 (孙铭浩-windows)
+      - 新加坡-VLESS-线路1 (孙铭浩-windows)
+      - 新加坡-VLESS-线路2 (孙铭浩-windows)
+      - 新加坡-VLESS-线路3 (孙铭浩-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 新加坡-VLESS-线路1 (孙铭浩-windows)
-      - 新加坡-VLESS-线路2 (孙铭浩-windows)
-      - 新加坡-VLESS-线路3 (孙铭浩-windows)
       - 新加坡-HY2-线路1 (孙铭浩-windows)
       - 新加坡-HY2-线路2 (孙铭浩-windows)
       - 新加坡-HY2-线路3 (孙铭浩-windows)
+      - 新加坡-VLESS-线路1 (孙铭浩-windows)
+      - 新加坡-VLESS-线路2 (孙铭浩-windows)
+      - 新加坡-VLESS-线路3 (孙铭浩-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

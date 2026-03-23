@@ -1,7 +1,7 @@
 # 用户: user166-mac
 # UUID: 6a7ad633-1f5f-4bb2-ab60-28a2ed0a50ed
 # 落地: 145.79.120.248:443 (德国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-14
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 德国-VLESS-线路1 (CFESSD1-mac)
-      - 德国-VLESS-线路2 (CFESSD1-mac)
-      - 德国-VLESS-线路3 (CFESSD1-mac)
       - 德国-HY2-线路1 (CFESSD1-mac)
       - 德国-HY2-线路2 (CFESSD1-mac)
       - 德国-HY2-线路3 (CFESSD1-mac)
+      - 德国-VLESS-线路1 (CFESSD1-mac)
+      - 德国-VLESS-线路2 (CFESSD1-mac)
+      - 德国-VLESS-线路3 (CFESSD1-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 德国-VLESS-线路1 (CFESSD1-mac)
-      - 德国-VLESS-线路2 (CFESSD1-mac)
-      - 德国-VLESS-线路3 (CFESSD1-mac)
       - 德国-HY2-线路1 (CFESSD1-mac)
       - 德国-HY2-线路2 (CFESSD1-mac)
       - 德国-HY2-线路3 (CFESSD1-mac)
+      - 德国-VLESS-线路1 (CFESSD1-mac)
+      - 德国-VLESS-线路2 (CFESSD1-mac)
+      - 德国-VLESS-线路3 (CFESSD1-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

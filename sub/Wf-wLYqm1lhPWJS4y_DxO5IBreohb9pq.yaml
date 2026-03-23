@@ -1,7 +1,7 @@
 # 用户: user139-mac
 # UUID: 701defe3-32ea-4109-9f7b-31f634846500
 # 落地: 149.51.95.28:8886 (墨西哥)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2099-12-31
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 墨西哥-VLESS-线路1 (WrXiaohu12-mac)
-      - 墨西哥-VLESS-线路2 (WrXiaohu12-mac)
-      - 墨西哥-VLESS-线路3 (WrXiaohu12-mac)
       - 墨西哥-HY2-线路1 (WrXiaohu12-mac)
       - 墨西哥-HY2-线路2 (WrXiaohu12-mac)
       - 墨西哥-HY2-线路3 (WrXiaohu12-mac)
+      - 墨西哥-VLESS-线路1 (WrXiaohu12-mac)
+      - 墨西哥-VLESS-线路2 (WrXiaohu12-mac)
+      - 墨西哥-VLESS-线路3 (WrXiaohu12-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 墨西哥-VLESS-线路1 (WrXiaohu12-mac)
-      - 墨西哥-VLESS-线路2 (WrXiaohu12-mac)
-      - 墨西哥-VLESS-线路3 (WrXiaohu12-mac)
       - 墨西哥-HY2-线路1 (WrXiaohu12-mac)
       - 墨西哥-HY2-线路2 (WrXiaohu12-mac)
       - 墨西哥-HY2-线路3 (WrXiaohu12-mac)
+      - 墨西哥-VLESS-线路1 (WrXiaohu12-mac)
+      - 墨西哥-VLESS-线路2 (WrXiaohu12-mac)
+      - 墨西哥-VLESS-线路3 (WrXiaohu12-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

@@ -1,7 +1,7 @@
 # 用户: user119-windows
 # UUID: c5a6540d-fa7a-4757-9674-7c715a0c33f5
 # 落地: 69.3.141.173:443 (美国洛杉矶)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-03-21 17:59
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国洛杉矶-VLESS-线路1 (上善若水-windows)
-      - 美国洛杉矶-VLESS-线路2 (上善若水-windows)
-      - 美国洛杉矶-VLESS-线路3 (上善若水-windows)
       - 美国洛杉矶-HY2-线路1 (上善若水-windows)
       - 美国洛杉矶-HY2-线路2 (上善若水-windows)
       - 美国洛杉矶-HY2-线路3 (上善若水-windows)
+      - 美国洛杉矶-VLESS-线路1 (上善若水-windows)
+      - 美国洛杉矶-VLESS-线路2 (上善若水-windows)
+      - 美国洛杉矶-VLESS-线路3 (上善若水-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国洛杉矶-VLESS-线路1 (上善若水-windows)
-      - 美国洛杉矶-VLESS-线路2 (上善若水-windows)
-      - 美国洛杉矶-VLESS-线路3 (上善若水-windows)
       - 美国洛杉矶-HY2-线路1 (上善若水-windows)
       - 美国洛杉矶-HY2-线路2 (上善若水-windows)
       - 美国洛杉矶-HY2-线路3 (上善若水-windows)
+      - 美国洛杉矶-VLESS-线路1 (上善若水-windows)
+      - 美国洛杉矶-VLESS-线路2 (上善若水-windows)
+      - 美国洛杉矶-VLESS-线路3 (上善若水-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

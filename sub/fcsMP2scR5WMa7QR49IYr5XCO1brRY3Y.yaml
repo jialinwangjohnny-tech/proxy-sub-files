@@ -1,7 +1,7 @@
 # 用户: user055-windows
 # UUID: d1736c87-a812-415a-9478-b8cb0c5f0ac7
 # 落地: 170.130.97.43:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-05
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Warwick-windows)
-      - 美国-VLESS-线路2 (Warwick-windows)
-      - 美国-VLESS-线路3 (Warwick-windows)
       - 美国-HY2-线路1 (Warwick-windows)
       - 美国-HY2-线路2 (Warwick-windows)
       - 美国-HY2-线路3 (Warwick-windows)
+      - 美国-VLESS-线路1 (Warwick-windows)
+      - 美国-VLESS-线路2 (Warwick-windows)
+      - 美国-VLESS-线路3 (Warwick-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Warwick-windows)
-      - 美国-VLESS-线路2 (Warwick-windows)
-      - 美国-VLESS-线路3 (Warwick-windows)
       - 美国-HY2-线路1 (Warwick-windows)
       - 美国-HY2-线路2 (Warwick-windows)
       - 美国-HY2-线路3 (Warwick-windows)
+      - 美国-VLESS-线路1 (Warwick-windows)
+      - 美国-VLESS-线路2 (Warwick-windows)
+      - 美国-VLESS-线路3 (Warwick-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

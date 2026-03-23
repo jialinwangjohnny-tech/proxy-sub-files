@@ -1,7 +1,7 @@
 # 用户: user200-mac
 # UUID: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
 # 落地: 64.32.180.223:443 (美国洛杉矶)
-# 生成时间: 2026-03-20 20:13:55
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-20
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国洛杉矶-VLESS-线路1 (Darrick-mac)
-      - 美国洛杉矶-VLESS-线路2 (Darrick-mac)
-      - 美国洛杉矶-VLESS-线路3 (Darrick-mac)
       - 美国洛杉矶-HY2-线路1 (Darrick-mac)
       - 美国洛杉矶-HY2-线路2 (Darrick-mac)
       - 美国洛杉矶-HY2-线路3 (Darrick-mac)
+      - 美国洛杉矶-VLESS-线路1 (Darrick-mac)
+      - 美国洛杉矶-VLESS-线路2 (Darrick-mac)
+      - 美国洛杉矶-VLESS-线路3 (Darrick-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国洛杉矶-VLESS-线路1 (Darrick-mac)
-      - 美国洛杉矶-VLESS-线路2 (Darrick-mac)
-      - 美国洛杉矶-VLESS-线路3 (Darrick-mac)
       - 美国洛杉矶-HY2-线路1 (Darrick-mac)
       - 美国洛杉矶-HY2-线路2 (Darrick-mac)
       - 美国洛杉矶-HY2-线路3 (Darrick-mac)
+      - 美国洛杉矶-VLESS-线路1 (Darrick-mac)
+      - 美国洛杉矶-VLESS-线路2 (Darrick-mac)
+      - 美国洛杉矶-VLESS-线路3 (Darrick-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

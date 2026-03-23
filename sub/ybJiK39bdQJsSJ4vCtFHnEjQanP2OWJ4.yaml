@@ -1,7 +1,7 @@
 # 用户: user163-mac
 # UUID: ed669a08-50f4-454b-b269-d1c88f2faf18
 # 落地: 204.1.64.99:9426 (美国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (阿鹏 国芯GPS-mac)
-      - 美国-VLESS-线路2 (阿鹏 国芯GPS-mac)
-      - 美国-VLESS-线路3 (阿鹏 国芯GPS-mac)
       - 美国-HY2-线路1 (阿鹏 国芯GPS-mac)
       - 美国-HY2-线路2 (阿鹏 国芯GPS-mac)
       - 美国-HY2-线路3 (阿鹏 国芯GPS-mac)
+      - 美国-VLESS-线路1 (阿鹏 国芯GPS-mac)
+      - 美国-VLESS-线路2 (阿鹏 国芯GPS-mac)
+      - 美国-VLESS-线路3 (阿鹏 国芯GPS-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (阿鹏 国芯GPS-mac)
-      - 美国-VLESS-线路2 (阿鹏 国芯GPS-mac)
-      - 美国-VLESS-线路3 (阿鹏 国芯GPS-mac)
       - 美国-HY2-线路1 (阿鹏 国芯GPS-mac)
       - 美国-HY2-线路2 (阿鹏 国芯GPS-mac)
       - 美国-HY2-线路3 (阿鹏 国芯GPS-mac)
+      - 美国-VLESS-线路1 (阿鹏 国芯GPS-mac)
+      - 美国-VLESS-线路2 (阿鹏 国芯GPS-mac)
+      - 美国-VLESS-线路3 (阿鹏 国芯GPS-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

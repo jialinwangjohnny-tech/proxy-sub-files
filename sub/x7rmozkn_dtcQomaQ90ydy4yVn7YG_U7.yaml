@@ -1,7 +1,7 @@
 # 用户: user082-mac
 # UUID: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
 # 落地: 64.50.130.222:443 (美国)
-# 生成时间: 2026-03-21 03:01:54
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-12 16:10
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Mira_Wang-mac)
-      - 美国-VLESS-线路2 (Mira_Wang-mac)
-      - 美国-VLESS-线路3 (Mira_Wang-mac)
       - 美国-HY2-线路1 (Mira_Wang-mac)
       - 美国-HY2-线路2 (Mira_Wang-mac)
       - 美国-HY2-线路3 (Mira_Wang-mac)
+      - 美国-VLESS-线路1 (Mira_Wang-mac)
+      - 美国-VLESS-线路2 (Mira_Wang-mac)
+      - 美国-VLESS-线路3 (Mira_Wang-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Mira_Wang-mac)
-      - 美国-VLESS-线路2 (Mira_Wang-mac)
-      - 美国-VLESS-线路3 (Mira_Wang-mac)
       - 美国-HY2-线路1 (Mira_Wang-mac)
       - 美国-HY2-线路2 (Mira_Wang-mac)
       - 美国-HY2-线路3 (Mira_Wang-mac)
+      - 美国-VLESS-线路1 (Mira_Wang-mac)
+      - 美国-VLESS-线路2 (Mira_Wang-mac)
+      - 美国-VLESS-线路3 (Mira_Wang-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

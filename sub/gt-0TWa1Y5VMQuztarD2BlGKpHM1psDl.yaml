@@ -1,7 +1,7 @@
 # 用户: user135-mac
 # UUID: c44cc5f2-3815-4896-b2d4-739491f35899
 # 落地: 38.248.250.80:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-02
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (U-mac)
-      - 美国-VLESS-线路2 (U-mac)
-      - 美国-VLESS-线路3 (U-mac)
       - 美国-HY2-线路1 (U-mac)
       - 美国-HY2-线路2 (U-mac)
       - 美国-HY2-线路3 (U-mac)
+      - 美国-VLESS-线路1 (U-mac)
+      - 美国-VLESS-线路2 (U-mac)
+      - 美国-VLESS-线路3 (U-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (U-mac)
-      - 美国-VLESS-线路2 (U-mac)
-      - 美国-VLESS-线路3 (U-mac)
       - 美国-HY2-线路1 (U-mac)
       - 美国-HY2-线路2 (U-mac)
       - 美国-HY2-线路3 (U-mac)
+      - 美国-VLESS-线路1 (U-mac)
+      - 美国-VLESS-线路2 (U-mac)
+      - 美国-VLESS-线路3 (U-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

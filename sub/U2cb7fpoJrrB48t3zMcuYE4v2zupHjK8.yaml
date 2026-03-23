@@ -1,7 +1,7 @@
 # 用户: user032
 # UUID: 1cb2d490-75b5-40db-979f-4fc5937e8508
 # 落地: 38.248.251.149:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-16 19:57
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (ccccx独享)
-      - 美国-VLESS-线路2 (ccccx独享)
-      - 美国-VLESS-线路3 (ccccx独享)
       - 美国-HY2-线路1 (ccccx独享)
       - 美国-HY2-线路2 (ccccx独享)
       - 美国-HY2-线路3 (ccccx独享)
+      - 美国-VLESS-线路1 (ccccx独享)
+      - 美国-VLESS-线路2 (ccccx独享)
+      - 美国-VLESS-线路3 (ccccx独享)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (ccccx独享)
-      - 美国-VLESS-线路2 (ccccx独享)
-      - 美国-VLESS-线路3 (ccccx独享)
       - 美国-HY2-线路1 (ccccx独享)
       - 美国-HY2-线路2 (ccccx独享)
       - 美国-HY2-线路3 (ccccx独享)
+      - 美国-VLESS-线路1 (ccccx独享)
+      - 美国-VLESS-线路2 (ccccx独享)
+      - 美国-VLESS-线路3 (ccccx独享)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

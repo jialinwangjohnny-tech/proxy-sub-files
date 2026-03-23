@@ -1,7 +1,7 @@
 # 用户: user062-phone
 # UUID: 58a07bf0-07f0-4c76-ab3e-496ada91b5b5
 # 落地: 64.32.180.12:443 (美国洛杉矶)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-09
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国洛杉矶-VLESS-线路1 (大政网络科技-phone)
-      - 美国洛杉矶-VLESS-线路2 (大政网络科技-phone)
-      - 美国洛杉矶-VLESS-线路3 (大政网络科技-phone)
       - 美国洛杉矶-HY2-线路1 (大政网络科技-phone)
       - 美国洛杉矶-HY2-线路2 (大政网络科技-phone)
       - 美国洛杉矶-HY2-线路3 (大政网络科技-phone)
+      - 美国洛杉矶-VLESS-线路1 (大政网络科技-phone)
+      - 美国洛杉矶-VLESS-线路2 (大政网络科技-phone)
+      - 美国洛杉矶-VLESS-线路3 (大政网络科技-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国洛杉矶-VLESS-线路1 (大政网络科技-phone)
-      - 美国洛杉矶-VLESS-线路2 (大政网络科技-phone)
-      - 美国洛杉矶-VLESS-线路3 (大政网络科技-phone)
       - 美国洛杉矶-HY2-线路1 (大政网络科技-phone)
       - 美国洛杉矶-HY2-线路2 (大政网络科技-phone)
       - 美国洛杉矶-HY2-线路3 (大政网络科技-phone)
+      - 美国洛杉矶-VLESS-线路1 (大政网络科技-phone)
+      - 美国洛杉矶-VLESS-线路2 (大政网络科技-phone)
+      - 美国洛杉矶-VLESS-线路3 (大政网络科技-phone)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

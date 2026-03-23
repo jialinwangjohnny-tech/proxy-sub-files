@@ -1,7 +1,7 @@
 # 用户: user053-mac
 # UUID: b3927738-753f-416f-988f-3698569a3f47
 # 落地: 207.97.137.178:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-08 23:26
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (😊嘻嘻-mac)
-      - 美国-VLESS-线路2 (😊嘻嘻-mac)
-      - 美国-VLESS-线路3 (😊嘻嘻-mac)
       - 美国-HY2-线路1 (😊嘻嘻-mac)
       - 美国-HY2-线路2 (😊嘻嘻-mac)
       - 美国-HY2-线路3 (😊嘻嘻-mac)
+      - 美国-VLESS-线路1 (😊嘻嘻-mac)
+      - 美国-VLESS-线路2 (😊嘻嘻-mac)
+      - 美国-VLESS-线路3 (😊嘻嘻-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (😊嘻嘻-mac)
-      - 美国-VLESS-线路2 (😊嘻嘻-mac)
-      - 美国-VLESS-线路3 (😊嘻嘻-mac)
       - 美国-HY2-线路1 (😊嘻嘻-mac)
       - 美国-HY2-线路2 (😊嘻嘻-mac)
       - 美国-HY2-线路3 (😊嘻嘻-mac)
+      - 美国-VLESS-线路1 (😊嘻嘻-mac)
+      - 美国-VLESS-线路2 (😊嘻嘻-mac)
+      - 美国-VLESS-线路3 (😊嘻嘻-mac)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

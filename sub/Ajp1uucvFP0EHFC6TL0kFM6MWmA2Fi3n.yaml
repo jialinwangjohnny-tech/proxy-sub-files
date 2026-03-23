@@ -1,7 +1,7 @@
 # 用户: user129-phone
 # UUID: afaa3119-4e22-43df-8f3f-3881e89cf69d
 # 落地: 38.248.250.193:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-03-29 20:22
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (星际飞行-phone)
-      - 美国-VLESS-线路2 (星际飞行-phone)
-      - 美国-VLESS-线路3 (星际飞行-phone)
       - 美国-HY2-线路1 (星际飞行-phone)
       - 美国-HY2-线路2 (星际飞行-phone)
       - 美国-HY2-线路3 (星际飞行-phone)
+      - 美国-VLESS-线路1 (星际飞行-phone)
+      - 美国-VLESS-线路2 (星际飞行-phone)
+      - 美国-VLESS-线路3 (星际飞行-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (星际飞行-phone)
-      - 美国-VLESS-线路2 (星际飞行-phone)
-      - 美国-VLESS-线路3 (星际飞行-phone)
       - 美国-HY2-线路1 (星际飞行-phone)
       - 美国-HY2-线路2 (星际飞行-phone)
       - 美国-HY2-线路3 (星际飞行-phone)
+      - 美国-VLESS-线路1 (星际飞行-phone)
+      - 美国-VLESS-线路2 (星际飞行-phone)
+      - 美国-VLESS-线路3 (星际飞行-phone)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

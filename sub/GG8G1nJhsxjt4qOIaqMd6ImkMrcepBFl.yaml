@@ -1,7 +1,7 @@
 # 用户: user131-windows
 # UUID: da896e06-c8f2-4229-aca6-38eb18a7391c
 # 落地: 173.44.178.94:443 (美国)
-# 生成时间: 2026-03-20 19:29:25
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-08-28 20:13
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (黄研-windows)
-      - 美国-VLESS-线路2 (黄研-windows)
-      - 美国-VLESS-线路3 (黄研-windows)
       - 美国-HY2-线路1 (黄研-windows)
       - 美国-HY2-线路2 (黄研-windows)
       - 美国-HY2-线路3 (黄研-windows)
+      - 美国-VLESS-线路1 (黄研-windows)
+      - 美国-VLESS-线路2 (黄研-windows)
+      - 美国-VLESS-线路3 (黄研-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (黄研-windows)
-      - 美国-VLESS-线路2 (黄研-windows)
-      - 美国-VLESS-线路3 (黄研-windows)
       - 美国-HY2-线路1 (黄研-windows)
       - 美国-HY2-线路2 (黄研-windows)
       - 美国-HY2-线路3 (黄研-windows)
+      - 美国-VLESS-线路1 (黄研-windows)
+      - 美国-VLESS-线路2 (黄研-windows)
+      - 美国-VLESS-线路3 (黄研-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

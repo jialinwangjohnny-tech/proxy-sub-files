@@ -1,7 +1,7 @@
 # 用户: user187-phone
 # UUID: 041252b9-2c2b-4d6d-9611-1a821ca554b2
 # 落地: 204.1.112.25:443 (美国)
-# 生成时间: 2026-03-20 19:29:26
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-17 00:03
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (GAO6865652-phone)
-      - 美国-VLESS-线路2 (GAO6865652-phone)
-      - 美国-VLESS-线路3 (GAO6865652-phone)
       - 美国-HY2-线路1 (GAO6865652-phone)
       - 美国-HY2-线路2 (GAO6865652-phone)
       - 美国-HY2-线路3 (GAO6865652-phone)
+      - 美国-VLESS-线路1 (GAO6865652-phone)
+      - 美国-VLESS-线路2 (GAO6865652-phone)
+      - 美国-VLESS-线路3 (GAO6865652-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (GAO6865652-phone)
-      - 美国-VLESS-线路2 (GAO6865652-phone)
-      - 美国-VLESS-线路3 (GAO6865652-phone)
       - 美国-HY2-线路1 (GAO6865652-phone)
       - 美国-HY2-线路2 (GAO6865652-phone)
       - 美国-HY2-线路3 (GAO6865652-phone)
+      - 美国-VLESS-线路1 (GAO6865652-phone)
+      - 美国-VLESS-线路2 (GAO6865652-phone)
+      - 美国-VLESS-线路3 (GAO6865652-phone)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000

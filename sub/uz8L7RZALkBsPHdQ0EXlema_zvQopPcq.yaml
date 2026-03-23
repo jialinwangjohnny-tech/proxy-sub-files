@@ -1,7 +1,7 @@
 # 用户: user202-windows
 # UUID: 1ae3ab7e-c624-4465-be3f-3a3a0144c769
 # 落地: 64.32.180.224:443 (美国)
-# 生成时间: 2026-03-20 23:32:09
+# 生成时间: 2026-03-23 09:41:09
 # 到期时间: 2026-04-20
 # 多线路自动切换模式
 
@@ -131,23 +131,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-VLESS-线路1 (Ngo300142-windows)
-      - 美国-VLESS-线路2 (Ngo300142-windows)
-      - 美国-VLESS-线路3 (Ngo300142-windows)
       - 美国-HY2-线路1 (Ngo300142-windows)
       - 美国-HY2-线路2 (Ngo300142-windows)
       - 美国-HY2-线路3 (Ngo300142-windows)
+      - 美国-VLESS-线路1 (Ngo300142-windows)
+      - 美国-VLESS-线路2 (Ngo300142-windows)
+      - 美国-VLESS-线路3 (Ngo300142-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-VLESS-线路1 (Ngo300142-windows)
-      - 美国-VLESS-线路2 (Ngo300142-windows)
-      - 美国-VLESS-线路3 (Ngo300142-windows)
       - 美国-HY2-线路1 (Ngo300142-windows)
       - 美国-HY2-线路2 (Ngo300142-windows)
       - 美国-HY2-线路3 (Ngo300142-windows)
+      - 美国-VLESS-线路1 (Ngo300142-windows)
+      - 美国-VLESS-线路2 (Ngo300142-windows)
+      - 美国-VLESS-线路3 (Ngo300142-windows)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
