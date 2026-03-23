@@ -55,7 +55,7 @@ proxies:
   - name: "美国-HY2-线路1"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 24214
+    port: 38013
     password: "user165_mac:d04bac12-6a23-4a76-99e5-489094bfe519"
     obfs: salamander
     obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
@@ -65,7 +65,7 @@ proxies:
   - name: "美国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
-    port: 24214
+    port: 38013
     uuid: d04bac12-6a23-4a76-99e5-489094bfe519
     flow: xtls-rprx-vision
     network: tcp
@@ -80,7 +80,7 @@ proxies:
   - name: "美国-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 24214
+    port: 38013
     password: "user165_mac:d04bac12-6a23-4a76-99e5-489094bfe519"
     obfs: salamander
     obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
@@ -90,7 +90,7 @@ proxies:
   - name: "美国-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
-    port: 24214
+    port: 38013
     uuid: d04bac12-6a23-4a76-99e5-489094bfe519
     flow: xtls-rprx-vision
     network: tcp
@@ -105,7 +105,7 @@ proxies:
   - name: "美国-HY2-线路3"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 24214
+    port: 38013
     password: "user165_mac:d04bac12-6a23-4a76-99e5-489094bfe519"
     obfs: salamander
     obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
@@ -115,7 +115,7 @@ proxies:
   - name: "美国-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
-    port: 24214
+    port: 38013
     uuid: d04bac12-6a23-4a76-99e5-489094bfe519
     flow: xtls-rprx-vision
     network: tcp
