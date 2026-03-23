@@ -1,7 +1,7 @@
 # 用户: user165-windows
 # UUID: 37cdedb4-5e43-46d2-9998-a428ec45c6a8
 # 落地: 204.1.66.51:9035 (美国)
-# 生成时间: 2026-03-22 19:15:48
+# 生成时间: 2026-03-23 02:46:54
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -72,7 +72,7 @@ proxies:
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: www.samsung.com
+    servername: gateway.icloud.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -96,7 +96,7 @@ proxies:
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: www.samsung.com
+    servername: gateway.icloud.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -120,7 +120,7 @@ proxies:
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: www.samsung.com
+    servername: gateway.icloud.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
