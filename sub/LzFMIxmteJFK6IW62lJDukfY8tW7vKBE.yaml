@@ -1,7 +1,7 @@
 # 用户: user084-windows
 # UUID: 2e7ea591-8a72-484f-8e5b-1672a294f994
 # 落地: 68.167.147.89:443 (美国洛杉矶)
-# 生成时间: 2026-03-21 04:32:16
+# 生成时间: 2026-03-23 03:47:45
 # 到期时间: 2026-04-13 09:47
 # 多线路自动切换模式
 
@@ -57,7 +57,7 @@ proxies:
   - name: "美国洛杉矶-HY2-线路1 (王小男Aina-windows)"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 50084
+    port: 37148
     password: 2e7ea591-8a72-484f-8e5b-1672a294f994
     sni: www.bing.com
     skip-cert-verify: true
@@ -66,7 +66,7 @@ proxies:
   - name: "美国洛杉矶-VLESS-线路1 (王小男Aina-windows)"
     type: vless
     server: s1.huhiuh.space
-    port: 50084
+    port: 37148
     uuid: 2e7ea591-8a72-484f-8e5b-1672a294f994
     network: tcp
     udp: true
@@ -81,7 +81,7 @@ proxies:
   - name: "美国洛杉矶-HY2-线路2 (王小男Aina-windows)"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 50084
+    port: 37148
     password: 2e7ea591-8a72-484f-8e5b-1672a294f994
     sni: www.bing.com
     skip-cert-verify: true
@@ -90,7 +90,7 @@ proxies:
   - name: "美国洛杉矶-VLESS-线路2 (王小男Aina-windows)"
     type: vless
     server: s2.huhiuh.space
-    port: 50084
+    port: 37148
     uuid: 2e7ea591-8a72-484f-8e5b-1672a294f994
     network: tcp
     udp: true
@@ -105,7 +105,7 @@ proxies:
   - name: "美国洛杉矶-HY2-线路3 (王小男Aina-windows)"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 50084
+    port: 37148
     password: 2e7ea591-8a72-484f-8e5b-1672a294f994
     sni: www.bing.com
     skip-cert-verify: true
@@ -114,7 +114,7 @@ proxies:
   - name: "美国洛杉矶-VLESS-线路3 (王小男Aina-windows)"
     type: vless
     server: s3.huhiuh.space
-    port: 50084
+    port: 37148
     uuid: 2e7ea591-8a72-484f-8e5b-1672a294f994
     network: tcp
     udp: true
