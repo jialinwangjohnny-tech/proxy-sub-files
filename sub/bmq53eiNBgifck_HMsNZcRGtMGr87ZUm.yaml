@@ -1,7 +1,7 @@
 # 用户: user137-mac
 # UUID: 5fc55927-89f6-40eb-94ee-bb68badbba27
 # 落地: 216.175.200.25:443 (美国)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-03
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (Bin.-mac)
       - 美国-VLESS-线路3 (Bin.-mac)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

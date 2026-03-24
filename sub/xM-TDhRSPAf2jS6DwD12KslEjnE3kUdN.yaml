@@ -1,7 +1,7 @@
 # 用户: user081-windows
 # UUID: 7ba0a778-40b1-44e1-b45e-f271271cda88
 # 落地: 64.32.180.224:443 (美国)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-16
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (Ευτυχισμένος-windows)
       - 美国-VLESS-线路3 (Ευτυχισμένος-windows)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

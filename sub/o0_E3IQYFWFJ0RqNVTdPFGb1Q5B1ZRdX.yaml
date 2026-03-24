@@ -1,7 +1,7 @@
 # 用户: user214-phone
 # UUID: 2c183f1d-0762-487c-85e0-492ee0cba8ea
 # 落地: 103.229.199.70:443 (马来西亚)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-22
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 马来西亚-VLESS-线路2 (HL416321-phone)
       - 马来西亚-VLESS-线路3 (HL416321-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

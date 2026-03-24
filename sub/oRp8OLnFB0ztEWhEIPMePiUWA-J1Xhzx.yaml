@@ -1,7 +1,7 @@
 # 用户: user096-phone
 # UUID: 1bc78c5f-34cb-4b24-b8b2-f61bf7a3a00c
 # 落地: 204.1.66.37:9035 (美国洛杉矶)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国洛杉矶-VLESS-线路2 (翩翩起舞-phone)
       - 美国洛杉矶-VLESS-线路3 (翩翩起舞-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

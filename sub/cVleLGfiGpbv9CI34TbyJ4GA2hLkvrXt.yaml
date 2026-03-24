@@ -1,7 +1,7 @@
 # 用户: user114-mac
 # UUID: 9e08ab0d-daa0-4dd9-85fd-bb3aa35a36d5
 # 落地: 168.158.214.50:12323 (美国纽约)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-03-20
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国纽约-VLESS-线路2 (禅-mac)
       - 美国纽约-VLESS-线路3 (禅-mac)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

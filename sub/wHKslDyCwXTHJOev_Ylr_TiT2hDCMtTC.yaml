@@ -1,7 +1,7 @@
 # 用户: user158-windows
 # UUID: dcf18f59-7147-4e01-8cff-55c02eb75c91
 # 落地: 38.248.234.112:443 (美国)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (展舒-windows)
       - 美国-VLESS-线路3 (展舒-windows)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

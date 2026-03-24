@@ -1,7 +1,7 @@
 # 用户: user216-windows
 # UUID: 226d8b82-2e04-4d03-bf37-311ea290340d
 # 落地: 216.175.194.44:443 (美国)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-23
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (ChenerLee1224-windows)
       - 美国-VLESS-线路3 (ChenerLee1224-windows)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

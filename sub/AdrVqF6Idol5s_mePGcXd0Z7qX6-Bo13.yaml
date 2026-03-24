@@ -1,7 +1,7 @@
 # 用户: user168-mac
 # UUID: f1b913d1-9e9d-4883-a7ae-1718dfbe4685
 # 落地: 31.22.74.110:443 (德国)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-14
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 德国-VLESS-线路2 (CFESSD3-mac)
       - 德国-VLESS-线路3 (CFESSD3-mac)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

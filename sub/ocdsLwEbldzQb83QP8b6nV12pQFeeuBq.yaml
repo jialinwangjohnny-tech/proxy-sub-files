@@ -1,7 +1,7 @@
 # 用户: user056-windows
 # UUID: 0cefc42a-d9a8-4730-82a8-a31cddcf8a5f
 # 落地: 64.32.180.96:443 (美国)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-07
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (XC-windows)
       - 美国-VLESS-线路3 (XC-windows)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

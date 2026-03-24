@@ -1,7 +1,7 @@
 # 用户: user165-mac
 # UUID: d04bac12-6a23-4a76-99e5-489094bfe519
 # 落地: 204.1.66.51:9035 (美国)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (黑渔-mac)
       - 美国-VLESS-线路3 (黑渔-mac)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

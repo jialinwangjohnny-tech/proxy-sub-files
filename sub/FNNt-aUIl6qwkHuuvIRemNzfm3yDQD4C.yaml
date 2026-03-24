@@ -1,7 +1,7 @@
 # 用户: user061-phone
 # UUID: c85f3fcb-0d6b-41fc-a8e0-77b174b3f2da
 # 落地: 68.167.147.228:443 (美国洛杉矶)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-09 19:23
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国洛杉矶-VLESS-线路2 (刘-phone)
       - 美国洛杉矶-VLESS-线路3 (刘-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

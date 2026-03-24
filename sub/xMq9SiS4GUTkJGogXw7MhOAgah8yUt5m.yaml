@@ -1,7 +1,7 @@
 # 用户: user066-windows
 # UUID: 7e50301f-05db-4d31-834e-9689ddc2c8b9
 # 落地: 168.158.89.142:12324 (美国纽约)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-10
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国纽约-VLESS-线路2 (Calvin-windows)
       - 美国纽约-VLESS-线路3 (Calvin-windows)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

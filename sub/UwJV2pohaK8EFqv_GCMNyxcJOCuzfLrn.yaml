@@ -1,7 +1,7 @@
 # 用户: user006
 # UUID: 9f383fc9-8318-4b35-8405-e6c6f27618de
 # 落地: 38.248.198.58:443 (美国)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-05-03
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (舟独享)
       - 美国-VLESS-线路3 (舟独享)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

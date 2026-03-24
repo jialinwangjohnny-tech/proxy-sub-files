@@ -1,7 +1,7 @@
 # 用户: user017
 # UUID: b36c44bf-47a8-4f6b-8509-99660d306e39
 # 落地: 43.249.240.121:443 (日本)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-22 15:04
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 日本-VLESS-线路2 (jin777777cr独享)
       - 日本-VLESS-线路3 (jin777777cr独享)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

@@ -1,7 +1,7 @@
 # 用户: user177-phone
 # UUID: 623f4822-33ba-4eb8-a8c6-a76679634acd
 # 落地: 216.175.196.231:443 (美国德克萨斯)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-15 12:44
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国德克萨斯-VLESS-线路2 (duxiang-phone)
       - 美国德克萨斯-VLESS-线路3 (duxiang-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

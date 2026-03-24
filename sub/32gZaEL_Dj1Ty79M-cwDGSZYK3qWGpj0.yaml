@@ -1,7 +1,7 @@
 # 用户: user133-windows
 # UUID: d9b365cb-4fe9-4043-907d-1f435ed3d838
 # 落地: 50.3.64.65:443 (美国)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-01 21:50
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (何佳瑶-windows)
       - 美国-VLESS-线路3 (何佳瑶-windows)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 

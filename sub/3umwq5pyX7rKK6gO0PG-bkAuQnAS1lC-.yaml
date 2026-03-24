@@ -1,7 +1,7 @@
 # 用户: user163-phone
 # UUID: 38958bc2-0f71-4433-83ba-e58e8e2bf9db
 # 落地: 204.1.64.99:9426 (美国)
-# 生成时间: 2026-03-24 06:21:42
+# 生成时间: 2026-03-24 07:41:39
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -149,7 +149,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (阿鹏 国芯GPS-phone)
       - 美国-VLESS-线路3 (阿鹏 国芯GPS-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 30
     timeout: 5000
     lazy: true
 
