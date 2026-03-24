@@ -12,19 +12,23 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   listen: 0.0.0.0:1053
+  use-hosts: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
   nameserver:
-    - https://dns.google/dns-query#自动切换
-    - https://cloudflare-dns.com/dns-query#自动切换
+    - "https://dns.google/dns-query#自动切换"
+    - "https://cloudflare-dns.com/dns-query#自动切换"
   proxy-server-nameserver:
-    - https://dns.google/dns-query
-    - https://1.1.1.1/dns-query
+    - 223.5.5.5
+    - 119.29.29.29
   nameserver-policy:
     "geosite:cn,private":
       - 223.5.5.5
-      - 114.114.114.114
+      - 119.29.29.29
     "+.cn,+.com.cn":
       - 223.5.5.5
-      - 114.114.114.114
+      - 119.29.29.29
   fake-ip-filter:
     - "*.lan"
     - "*.local"
@@ -53,6 +57,8 @@ proxies:
     server: s1.huhiuh.space
     port: 21069
     password: "user005:ee07f37f-931d-49d5-b9bb-cfc32857a7ce"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -69,13 +75,15 @@ proxies:
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "3fb237ac"
-    client-fingerprint: chrome
+    client-fingerprint: safari
     fast-open: true
   - name: "美国-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
     port: 21069
     password: "user005:ee07f37f-931d-49d5-b9bb-cfc32857a7ce"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -92,13 +100,15 @@ proxies:
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "3fb237ac"
-    client-fingerprint: chrome
+    client-fingerprint: safari
     fast-open: true
   - name: "美国-HY2-线路3"
     type: hysteria2
     server: s3.huhiuh.space
     port: 21069
     password: "user005:ee07f37f-931d-49d5-b9bb-cfc32857a7ce"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -115,12 +125,12 @@ proxies:
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "3fb237ac"
-    client-fingerprint: chrome
+    client-fingerprint: safari
     fast-open: true
 
 proxy-groups:
   - name: "自动切换"
-    type: url-test
+    type: fallback
     proxies:
       - "美国-HY2-线路1"
       - "美国-VLESS-线路1"
@@ -128,9 +138,8 @@ proxy-groups:
       - "美国-VLESS-线路2"
       - "美国-HY2-线路3"
       - "美国-VLESS-线路3"
-    interval: 60
+    interval: 5
     timeout: 3000
-    tolerance: 100
     lazy: false
     url: https://www.gstatic.com/generate_204
 
