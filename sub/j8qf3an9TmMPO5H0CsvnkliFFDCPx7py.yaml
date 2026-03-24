@@ -1,7 +1,7 @@
 # 用户: user040-phone
 # UUID: 80486799-e9db-4ad8-a624-3cf4674b0edc
 # 落地: 69.17.104.104:443 (美国)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-06-06 09:11
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

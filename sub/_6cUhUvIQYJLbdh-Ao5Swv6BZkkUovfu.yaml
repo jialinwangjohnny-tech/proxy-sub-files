@@ -1,7 +1,7 @@
 # 用户: user149-mac
 # UUID: 40bc93d1-8a3c-4b9b-b574-08a7d75437ee
 # 落地: 68.167.147.18:443 (美国)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-04-10 11:08
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

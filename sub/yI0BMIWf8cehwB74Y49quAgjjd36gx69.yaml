@@ -1,7 +1,7 @@
 # 用户: user061-mac
 # UUID: bd47471f-af08-4b08-a0d6-3e170f548673
 # 落地: 68.167.147.228:443 (美国洛杉矶)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-04-09 19:23
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

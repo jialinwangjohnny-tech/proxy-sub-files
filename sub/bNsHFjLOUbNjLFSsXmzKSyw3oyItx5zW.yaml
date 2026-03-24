@@ -1,7 +1,7 @@
 # 用户: user004-mac
 # UUID: 9077c98d-b67f-4616-b0af-fbe559608e5d
 # 落地: 204.1.110.247:443 (美国)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-03-28
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

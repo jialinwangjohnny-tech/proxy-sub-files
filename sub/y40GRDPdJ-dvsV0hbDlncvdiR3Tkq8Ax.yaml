@@ -1,7 +1,7 @@
 # 用户: user084-mac
 # UUID: e1a53305-f456-4d4e-ade6-5563417b50ff
 # 落地: 68.167.147.89:443 (美国洛杉矶)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-04-13 09:47
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

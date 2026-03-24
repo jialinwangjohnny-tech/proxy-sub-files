@@ -1,7 +1,7 @@
 # 用户: user055-mac
 # UUID: 85038f90-9cd2-4058-9493-bd26dc5df70b
 # 落地: 170.130.97.43:443 (美国)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-04-05
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

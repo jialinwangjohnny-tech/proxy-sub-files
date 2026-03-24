@@ -1,7 +1,7 @@
 # 用户: user187-phone
 # UUID: 041252b9-2c2b-4d6d-9611-1a821ca554b2
 # 落地: 204.1.112.25:443 (美国)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-04-17 00:03
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

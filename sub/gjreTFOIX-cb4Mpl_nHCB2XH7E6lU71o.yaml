@@ -1,7 +1,7 @@
 # 用户: user122-mac
 # UUID: 0482d2ac-cea9-42cf-9b54-af52583edae5
 # 落地: 38.248.192.95:443 (美国)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-03-26 19:02
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

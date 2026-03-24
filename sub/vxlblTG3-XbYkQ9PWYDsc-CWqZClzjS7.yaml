@@ -1,7 +1,7 @@
 # 用户: user125-windows
 # UUID: 683cc2cc-44eb-46e7-965b-63210bd2a5ac
 # 落地: 207.97.155.33:443 (美国洛杉矶)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-03-27 18:14
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

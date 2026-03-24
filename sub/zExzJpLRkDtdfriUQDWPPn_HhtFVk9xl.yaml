@@ -1,7 +1,7 @@
 # 用户: user176-phone
 # UUID: c3c1ac65-38c0-4ccf-9449-706a36a7b139
 # 落地: 203.166.136.131:443 (新加坡)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-04-15 12:29
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

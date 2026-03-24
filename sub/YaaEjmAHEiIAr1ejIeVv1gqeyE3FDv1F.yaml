@@ -1,7 +1,7 @@
 # 用户: user195-phone
 # UUID: 1e72d8b9-1b09-4d99-a87c-d749c53ba158
 # 落地: 204.1.110.55:443 (美国洛杉矶)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-04-18
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT

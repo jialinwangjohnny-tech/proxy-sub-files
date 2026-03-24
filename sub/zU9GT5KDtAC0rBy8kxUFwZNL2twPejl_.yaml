@@ -1,7 +1,7 @@
 # 用户: user102-mac
 # UUID: 483a4bb8-8452-48df-bf1f-d76907abde3a
 # 落地: 63.125.94.107:50101 (美国)
-# 生成时间: 2026-03-23 09:41:09
+# 生成时间: 2026-03-23 20:37:41
 # 到期时间: 2026-04-17
 # 多线路自动切换模式
 
@@ -151,6 +151,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 5000
+    lazy: true
 
 rules:
   - IP-CIDR,192.168.0.0/16,DIRECT
