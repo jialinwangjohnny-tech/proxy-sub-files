@@ -138,9 +138,9 @@ proxy-groups:
       - "马来西亚-VLESS-线路2"
       - "马来西亚-HY2-线路3"
       - "马来西亚-VLESS-线路3"
-    interval: 5
+    interval: 30
     timeout: 3000
-    lazy: false
+    lazy: true
     url: https://www.gstatic.com/generate_204
 
 rules:
