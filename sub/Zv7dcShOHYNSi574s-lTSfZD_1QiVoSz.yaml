@@ -1,7 +1,7 @@
 # 用户: user159-windows
 # UUID: 12e7fef5-0b1e-48cc-8205-38365354bb05
 # 落地: 38.248.234.172:443 (美国)
-# 生成时间: 2026-03-24 19:34:03
+# 生成时间: 2026-03-24 20:23:08
 # 到期时间: 2026-04-13
 # 多线路自动切换模式（节点每30分钟自动更新）
 
@@ -53,8 +53,81 @@ dns:
     - "+.claude.ai"
     - "+.sentry.io" 
 
+proxies:
+  - name: "美国-HY2-线路1 (Anren-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 20644
+    password: 12e7fef5-0b1e-48cc-8205-38365354bb05
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (Anren-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 20644
+    uuid: 12e7fef5-0b1e-48cc-8205-38365354bb05
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.samsung.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (Anren-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 20644
+    password: 12e7fef5-0b1e-48cc-8205-38365354bb05
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (Anren-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 20644
+    uuid: 12e7fef5-0b1e-48cc-8205-38365354bb05
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.samsung.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (Anren-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 20644
+    password: 12e7fef5-0b1e-48cc-8205-38365354bb05
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (Anren-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 20644
+    uuid: 12e7fef5-0b1e-48cc-8205-38365354bb05
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.samsung.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
 proxy-providers:
-  nodes:
+  auto-nodes:
     type: http
     url: "https://sub.huhiuh.space/sub/Zv7dcShOHYNSi574s-lTSfZD_1QiVoSz_nodes.yaml"
     interval: 1800
@@ -69,14 +142,27 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
+      - 美国-HY2-线路1 (Anren-windows)
+      - 美国-HY2-线路2 (Anren-windows)
+      - 美国-HY2-线路3 (Anren-windows)
+      - 美国-VLESS-线路1 (Anren-windows)
+      - 美国-VLESS-线路2 (Anren-windows)
+      - 美国-VLESS-线路3 (Anren-windows)
       - DIRECT
     use:
-      - nodes
+      - auto-nodes
 
   - name: "自动切换"
     type: fallback
+    proxies:
+      - 美国-HY2-线路1 (Anren-windows)
+      - 美国-HY2-线路2 (Anren-windows)
+      - 美国-HY2-线路3 (Anren-windows)
+      - 美国-VLESS-线路1 (Anren-windows)
+      - 美国-VLESS-线路2 (Anren-windows)
+      - 美国-VLESS-线路3 (Anren-windows)
     use:
-      - nodes
+      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000

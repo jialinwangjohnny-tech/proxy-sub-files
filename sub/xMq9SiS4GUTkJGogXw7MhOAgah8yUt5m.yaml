@@ -1,7 +1,7 @@
 # 用户: user066-windows
 # UUID: 7e50301f-05db-4d31-834e-9689ddc2c8b9
 # 落地: 168.158.89.142:12324 (美国纽约)
-# 生成时间: 2026-03-24 19:34:03
+# 生成时间: 2026-03-24 20:23:08
 # 到期时间: 2026-04-10
 # 多线路自动切换模式（节点每30分钟自动更新）
 
@@ -53,8 +53,81 @@ dns:
     - "+.claude.ai"
     - "+.sentry.io" 
 
+proxies:
+  - name: "美国纽约-HY2-线路1 (Calvin-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 50066
+    password: 7e50301f-05db-4d31-834e-9689ddc2c8b9
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国纽约-VLESS-线路1 (Calvin-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 50066
+    uuid: 7e50301f-05db-4d31-834e-9689ddc2c8b9
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国纽约-HY2-线路2 (Calvin-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 50066
+    password: 7e50301f-05db-4d31-834e-9689ddc2c8b9
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国纽约-VLESS-线路2 (Calvin-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 50066
+    uuid: 7e50301f-05db-4d31-834e-9689ddc2c8b9
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国纽约-HY2-线路3 (Calvin-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 50066
+    password: 7e50301f-05db-4d31-834e-9689ddc2c8b9
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国纽约-VLESS-线路3 (Calvin-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 50066
+    uuid: 7e50301f-05db-4d31-834e-9689ddc2c8b9
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
 proxy-providers:
-  nodes:
+  auto-nodes:
     type: http
     url: "https://sub.huhiuh.space/sub/xMq9SiS4GUTkJGogXw7MhOAgah8yUt5m_nodes.yaml"
     interval: 1800
@@ -69,14 +142,27 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
+      - 美国纽约-HY2-线路1 (Calvin-windows)
+      - 美国纽约-HY2-线路2 (Calvin-windows)
+      - 美国纽约-HY2-线路3 (Calvin-windows)
+      - 美国纽约-VLESS-线路1 (Calvin-windows)
+      - 美国纽约-VLESS-线路2 (Calvin-windows)
+      - 美国纽约-VLESS-线路3 (Calvin-windows)
       - DIRECT
     use:
-      - nodes
+      - auto-nodes
 
   - name: "自动切换"
     type: fallback
+    proxies:
+      - 美国纽约-HY2-线路1 (Calvin-windows)
+      - 美国纽约-HY2-线路2 (Calvin-windows)
+      - 美国纽约-HY2-线路3 (Calvin-windows)
+      - 美国纽约-VLESS-线路1 (Calvin-windows)
+      - 美国纽约-VLESS-线路2 (Calvin-windows)
+      - 美国纽约-VLESS-线路3 (Calvin-windows)
     use:
-      - nodes
+      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000

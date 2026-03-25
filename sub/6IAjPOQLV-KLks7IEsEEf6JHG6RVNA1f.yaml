@@ -1,7 +1,7 @@
 # 用户: user111-windows
 # UUID: e338470b-baff-4059-8fae-f51f47ca10e3
 # 落地: 38.111.61.186:443 (美国芝加哥)
-# 生成时间: 2026-03-24 19:34:03
+# 生成时间: 2026-03-24 20:23:08
 # 到期时间: 2026-04-19 17:42
 # 多线路自动切换模式（节点每30分钟自动更新）
 
@@ -53,8 +53,81 @@ dns:
     - "+.claude.ai"
     - "+.sentry.io" 
 
+proxies:
+  - name: "美国芝加哥-HY2-线路1 (盧鳴-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 26295
+    password: e338470b-baff-4059-8fae-f51f47ca10e3
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国芝加哥-VLESS-线路1 (盧鳴-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 26295
+    uuid: e338470b-baff-4059-8fae-f51f47ca10e3
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国芝加哥-HY2-线路2 (盧鳴-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 26295
+    password: e338470b-baff-4059-8fae-f51f47ca10e3
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国芝加哥-VLESS-线路2 (盧鳴-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 26295
+    uuid: e338470b-baff-4059-8fae-f51f47ca10e3
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国芝加哥-HY2-线路3 (盧鳴-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 26295
+    password: e338470b-baff-4059-8fae-f51f47ca10e3
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国芝加哥-VLESS-线路3 (盧鳴-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 26295
+    uuid: e338470b-baff-4059-8fae-f51f47ca10e3
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
 proxy-providers:
-  nodes:
+  auto-nodes:
     type: http
     url: "https://sub.huhiuh.space/sub/6IAjPOQLV-KLks7IEsEEf6JHG6RVNA1f_nodes.yaml"
     interval: 1800
@@ -69,14 +142,27 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
+      - 美国芝加哥-HY2-线路1 (盧鳴-windows)
+      - 美国芝加哥-HY2-线路2 (盧鳴-windows)
+      - 美国芝加哥-HY2-线路3 (盧鳴-windows)
+      - 美国芝加哥-VLESS-线路1 (盧鳴-windows)
+      - 美国芝加哥-VLESS-线路2 (盧鳴-windows)
+      - 美国芝加哥-VLESS-线路3 (盧鳴-windows)
       - DIRECT
     use:
-      - nodes
+      - auto-nodes
 
   - name: "自动切换"
     type: fallback
+    proxies:
+      - 美国芝加哥-HY2-线路1 (盧鳴-windows)
+      - 美国芝加哥-HY2-线路2 (盧鳴-windows)
+      - 美国芝加哥-HY2-线路3 (盧鳴-windows)
+      - 美国芝加哥-VLESS-线路1 (盧鳴-windows)
+      - 美国芝加哥-VLESS-线路2 (盧鳴-windows)
+      - 美国芝加哥-VLESS-线路3 (盧鳴-windows)
     use:
-      - nodes
+      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000

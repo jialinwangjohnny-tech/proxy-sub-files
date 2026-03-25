@@ -1,7 +1,7 @@
 # 用户: user172-phone
 # UUID: 35b56542-e461-405b-bc67-f14202bfd4f1
 # 落地: 202.68.181.205:12324 (新加坡)
-# 生成时间: 2026-03-24 19:34:03
+# 生成时间: 2026-03-24 20:23:09
 # 到期时间: 2026-04-14
 # 多线路自动切换模式（节点每30分钟自动更新）
 
@@ -53,8 +53,81 @@ dns:
     - "+.claude.ai"
     - "+.sentry.io" 
 
+proxies:
+  - name: "新加坡-HY2-线路1 (孙铭浩-phone)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 39648
+    password: 35b56542-e461-405b-bc67-f14202bfd4f1
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "新加坡-VLESS-线路1 (孙铭浩-phone)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 39648
+    uuid: 35b56542-e461-405b-bc67-f14202bfd4f1
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "新加坡-HY2-线路2 (孙铭浩-phone)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 39648
+    password: 35b56542-e461-405b-bc67-f14202bfd4f1
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "新加坡-VLESS-线路2 (孙铭浩-phone)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 39648
+    uuid: 35b56542-e461-405b-bc67-f14202bfd4f1
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "新加坡-HY2-线路3 (孙铭浩-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 39648
+    password: 35b56542-e461-405b-bc67-f14202bfd4f1
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "新加坡-VLESS-线路3 (孙铭浩-phone)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 39648
+    uuid: 35b56542-e461-405b-bc67-f14202bfd4f1
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
 proxy-providers:
-  nodes:
+  auto-nodes:
     type: http
     url: "https://sub.huhiuh.space/sub/SDRcEc0wgFK52hy6J1OxlZ2fegJuSV8i_nodes.yaml"
     interval: 1800
@@ -69,14 +142,27 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
+      - 新加坡-HY2-线路1 (孙铭浩-phone)
+      - 新加坡-HY2-线路2 (孙铭浩-phone)
+      - 新加坡-HY2-线路3 (孙铭浩-phone)
+      - 新加坡-VLESS-线路1 (孙铭浩-phone)
+      - 新加坡-VLESS-线路2 (孙铭浩-phone)
+      - 新加坡-VLESS-线路3 (孙铭浩-phone)
       - DIRECT
     use:
-      - nodes
+      - auto-nodes
 
   - name: "自动切换"
     type: fallback
+    proxies:
+      - 新加坡-HY2-线路1 (孙铭浩-phone)
+      - 新加坡-HY2-线路2 (孙铭浩-phone)
+      - 新加坡-HY2-线路3 (孙铭浩-phone)
+      - 新加坡-VLESS-线路1 (孙铭浩-phone)
+      - 新加坡-VLESS-线路2 (孙铭浩-phone)
+      - 新加坡-VLESS-线路3 (孙铭浩-phone)
     use:
-      - nodes
+      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000

@@ -1,7 +1,7 @@
 # 用户: user194-mac
 # UUID: 562f5e72-6686-464d-92bd-6ec24db93109
 # 落地: 64.32.180.224:443 (美国)
-# 生成时间: 2026-03-24 19:34:03
+# 生成时间: 2026-03-24 20:23:09
 # 到期时间: 2026-04-18
 # 多线路自动切换模式（节点每30分钟自动更新）
 
@@ -53,8 +53,81 @@ dns:
     - "+.claude.ai"
     - "+.sentry.io" 
 
+proxies:
+  - name: "美国-HY2-线路1 (Victor-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 22263
+    password: 562f5e72-6686-464d-92bd-6ec24db93109
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (Victor-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 22263
+    uuid: 562f5e72-6686-464d-92bd-6ec24db93109
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (Victor-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 22263
+    password: 562f5e72-6686-464d-92bd-6ec24db93109
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (Victor-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 22263
+    uuid: 562f5e72-6686-464d-92bd-6ec24db93109
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (Victor-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 22263
+    password: 562f5e72-6686-464d-92bd-6ec24db93109
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (Victor-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 22263
+    uuid: 562f5e72-6686-464d-92bd-6ec24db93109
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
 proxy-providers:
-  nodes:
+  auto-nodes:
     type: http
     url: "https://sub.huhiuh.space/sub/oqJO16usUAGe65yXeSOkIr0Diom-WOsT_nodes.yaml"
     interval: 1800
@@ -69,14 +142,27 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
+      - 美国-HY2-线路1 (Victor-mac)
+      - 美国-HY2-线路2 (Victor-mac)
+      - 美国-HY2-线路3 (Victor-mac)
+      - 美国-VLESS-线路1 (Victor-mac)
+      - 美国-VLESS-线路2 (Victor-mac)
+      - 美国-VLESS-线路3 (Victor-mac)
       - DIRECT
     use:
-      - nodes
+      - auto-nodes
 
   - name: "自动切换"
     type: fallback
+    proxies:
+      - 美国-HY2-线路1 (Victor-mac)
+      - 美国-HY2-线路2 (Victor-mac)
+      - 美国-HY2-线路3 (Victor-mac)
+      - 美国-VLESS-线路1 (Victor-mac)
+      - 美国-VLESS-线路2 (Victor-mac)
+      - 美国-VLESS-线路3 (Victor-mac)
     use:
-      - nodes
+      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000

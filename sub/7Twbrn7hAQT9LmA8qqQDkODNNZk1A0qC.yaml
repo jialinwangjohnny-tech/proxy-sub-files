@@ -1,7 +1,7 @@
 # 用户: user020-windows
 # UUID: 4c1a7de9-0181-4564-9a37-f22b3e074248
 # 落地: 202.160.71.65:443 (台湾)
-# 生成时间: 2026-03-24 19:34:03
+# 生成时间: 2026-03-24 20:23:08
 # 到期时间: 2026-08-11
 # 多线路自动切换模式（节点每30分钟自动更新）
 
@@ -53,8 +53,81 @@ dns:
     - "+.claude.ai"
     - "+.sentry.io" 
 
+proxies:
+  - name: "台湾-HY2-线路1 (Herman-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 24660
+    password: 4c1a7de9-0181-4564-9a37-f22b3e074248
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "台湾-VLESS-线路1 (Herman-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 24660
+    uuid: 4c1a7de9-0181-4564-9a37-f22b3e074248
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: outlook.office365.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "台湾-HY2-线路2 (Herman-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 24660
+    password: 4c1a7de9-0181-4564-9a37-f22b3e074248
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "台湾-VLESS-线路2 (Herman-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 24660
+    uuid: 4c1a7de9-0181-4564-9a37-f22b3e074248
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: outlook.office365.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "台湾-HY2-线路3 (Herman-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 24660
+    password: 4c1a7de9-0181-4564-9a37-f22b3e074248
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "台湾-VLESS-线路3 (Herman-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 24660
+    uuid: 4c1a7de9-0181-4564-9a37-f22b3e074248
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: outlook.office365.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
 proxy-providers:
-  nodes:
+  auto-nodes:
     type: http
     url: "https://sub.huhiuh.space/sub/7Twbrn7hAQT9LmA8qqQDkODNNZk1A0qC_nodes.yaml"
     interval: 1800
@@ -69,14 +142,27 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
+      - 台湾-HY2-线路1 (Herman-windows)
+      - 台湾-HY2-线路2 (Herman-windows)
+      - 台湾-HY2-线路3 (Herman-windows)
+      - 台湾-VLESS-线路1 (Herman-windows)
+      - 台湾-VLESS-线路2 (Herman-windows)
+      - 台湾-VLESS-线路3 (Herman-windows)
       - DIRECT
     use:
-      - nodes
+      - auto-nodes
 
   - name: "自动切换"
     type: fallback
+    proxies:
+      - 台湾-HY2-线路1 (Herman-windows)
+      - 台湾-HY2-线路2 (Herman-windows)
+      - 台湾-HY2-线路3 (Herman-windows)
+      - 台湾-VLESS-线路1 (Herman-windows)
+      - 台湾-VLESS-线路2 (Herman-windows)
+      - 台湾-VLESS-线路3 (Herman-windows)
     use:
-      - nodes
+      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000
