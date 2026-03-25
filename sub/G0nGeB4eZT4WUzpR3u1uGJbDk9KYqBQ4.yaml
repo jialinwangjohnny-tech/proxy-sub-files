@@ -1,9 +1,9 @@
 # 用户: user147-windows
 # UUID: f5884e73-099d-443c-893e-5b956f22751c
 # 落地: 64.51.26.249:443 (美国)
-# 生成时间: 2026-03-24 07:41:39
+# 生成时间: 2026-03-24 19:34:03
 # 到期时间: 2026-04-05 23:06
-# 多线路自动切换模式
+# 多线路自动切换模式（节点每30分钟自动更新）
 
 mixed-port: 7890
 allow-lan: true
@@ -53,104 +53,33 @@ dns:
     - "+.claude.ai"
     - "+.sentry.io" 
 
-proxies:
-  - name: "美国-HY2-线路1 (白丽娜-windows)"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 39816
-    password: f5884e73-099d-443c-893e-5b956f22751c
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-VLESS-线路1 (白丽娜-windows)"
-    type: vless
-    server: s1.huhiuh.space
-    port: 39816
-    uuid: f5884e73-099d-443c-893e-5b956f22751c
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: www.logitech.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国-HY2-线路2 (白丽娜-windows)"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 39816
-    password: f5884e73-099d-443c-893e-5b956f22751c
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-VLESS-线路2 (白丽娜-windows)"
-    type: vless
-    server: s2.huhiuh.space
-    port: 39816
-    uuid: f5884e73-099d-443c-893e-5b956f22751c
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: www.logitech.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国-HY2-线路3 (白丽娜-windows)"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 39816
-    password: f5884e73-099d-443c-893e-5b956f22751c
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-VLESS-线路3 (白丽娜-windows)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 39816
-    uuid: f5884e73-099d-443c-893e-5b956f22751c
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: www.logitech.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
+proxy-providers:
+  nodes:
+    type: http
+    url: "https://sub.huhiuh.space/sub/G0nGeB4eZT4WUzpR3u1uGJbDk9KYqBQ4_nodes.yaml"
+    interval: 1800
+    path: ./providers/proxy-nodes.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 120
 
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
-      - 美国-HY2-线路1 (白丽娜-windows)
-      - 美国-HY2-线路2 (白丽娜-windows)
-      - 美国-HY2-线路3 (白丽娜-windows)
-      - 美国-VLESS-线路1 (白丽娜-windows)
-      - 美国-VLESS-线路2 (白丽娜-windows)
-      - 美国-VLESS-线路3 (白丽娜-windows)
       - DIRECT
+    use:
+      - nodes
 
   - name: "自动切换"
     type: fallback
-    proxies:
-      - 美国-HY2-线路1 (白丽娜-windows)
-      - 美国-HY2-线路2 (白丽娜-windows)
-      - 美国-HY2-线路3 (白丽娜-windows)
-      - 美国-VLESS-线路1 (白丽娜-windows)
-      - 美国-VLESS-线路2 (白丽娜-windows)
-      - 美国-VLESS-线路3 (白丽娜-windows)
+    use:
+      - nodes
     url: http://www.gstatic.com/generate_204
-    interval: 30
-    timeout: 5000
+    interval: 5
+    timeout: 3000
     lazy: true
 
 rules:

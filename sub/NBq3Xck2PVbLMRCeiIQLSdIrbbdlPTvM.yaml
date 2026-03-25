@@ -1,9 +1,9 @@
 # 用户: user137-phone
 # UUID: 94838e76-8b57-4af0-8f71-83b43600099d
 # 落地: 216.175.200.25:443 (美国)
-# 生成时间: 2026-03-24 07:41:39
+# 生成时间: 2026-03-24 19:34:03
 # 到期时间: 2026-04-03
-# 多线路自动切换模式
+# 多线路自动切换模式（节点每30分钟自动更新）
 
 mixed-port: 7890
 allow-lan: true
@@ -53,104 +53,33 @@ dns:
     - "+.claude.ai"
     - "+.sentry.io" 
 
-proxies:
-  - name: "美国-HY2-线路1 (Bin.-phone)"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 11747
-    password: 94838e76-8b57-4af0-8f71-83b43600099d
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-VLESS-线路1 (Bin.-phone)"
-    type: vless
-    server: s1.huhiuh.space
-    port: 11747
-    uuid: 94838e76-8b57-4af0-8f71-83b43600099d
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国-HY2-线路2 (Bin.-phone)"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 11747
-    password: 94838e76-8b57-4af0-8f71-83b43600099d
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-VLESS-线路2 (Bin.-phone)"
-    type: vless
-    server: s2.huhiuh.space
-    port: 11747
-    uuid: 94838e76-8b57-4af0-8f71-83b43600099d
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国-HY2-线路3 (Bin.-phone)"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 11747
-    password: 94838e76-8b57-4af0-8f71-83b43600099d
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-VLESS-线路3 (Bin.-phone)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 11747
-    uuid: 94838e76-8b57-4af0-8f71-83b43600099d
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
+proxy-providers:
+  nodes:
+    type: http
+    url: "https://sub.huhiuh.space/sub/NBq3Xck2PVbLMRCeiIQLSdIrbbdlPTvM_nodes.yaml"
+    interval: 1800
+    path: ./providers/proxy-nodes.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 120
 
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
-      - 美国-HY2-线路1 (Bin.-phone)
-      - 美国-HY2-线路2 (Bin.-phone)
-      - 美国-HY2-线路3 (Bin.-phone)
-      - 美国-VLESS-线路1 (Bin.-phone)
-      - 美国-VLESS-线路2 (Bin.-phone)
-      - 美国-VLESS-线路3 (Bin.-phone)
       - DIRECT
+    use:
+      - nodes
 
   - name: "自动切换"
     type: fallback
-    proxies:
-      - 美国-HY2-线路1 (Bin.-phone)
-      - 美国-HY2-线路2 (Bin.-phone)
-      - 美国-HY2-线路3 (Bin.-phone)
-      - 美国-VLESS-线路1 (Bin.-phone)
-      - 美国-VLESS-线路2 (Bin.-phone)
-      - 美国-VLESS-线路3 (Bin.-phone)
+    use:
+      - nodes
     url: http://www.gstatic.com/generate_204
-    interval: 30
-    timeout: 5000
+    interval: 5
+    timeout: 3000
     lazy: true
 
 rules:
