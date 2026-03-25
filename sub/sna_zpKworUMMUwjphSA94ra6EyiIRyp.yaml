@@ -1,7 +1,7 @@
 # 用户: user008-mac
 # UUID: 012b1b9c-3a21-4aca-80f9-f74f496070ce
 # 落地: 38.248.251.182:443 (美国洛杉矶)
-# 生成时间: 2026-03-24 21:35:22
+# 生成时间: 2026-03-24 21:40:44
 # 到期时间: 2026-04-11 19:47
 # 多线路自动切换模式（节点每30分钟自动更新）
 
@@ -58,7 +58,7 @@ proxy-providers:
   nodes:
     type: http
     url: "https://sub.huhiuh.space/sub/sna_zpKworUMMUwjphSA94ra6EyiIRyp_nodes.yaml"
-    interval: 60
+    interval: 300
     path: ./providers/proxy-nodes.yaml
     health-check:
       enable: true
