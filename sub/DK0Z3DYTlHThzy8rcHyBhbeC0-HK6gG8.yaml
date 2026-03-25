@@ -1,9 +1,9 @@
 # 用户: user146-windows
 # UUID: 66d13f48-a961-4a5c-86ce-9f39735bbc05
 # 落地: 23.134.60.87:443 (美国)
-# 生成时间: 2026-03-24 20:23:08
+# 生成时间: 2026-03-24 20:28:26
 # 到期时间: 2026-04-05
-# 多线路自动切换模式（节点每30分钟自动更新）
+# 多线路自动切换模式
 
 mixed-port: 7890
 allow-lan: true
@@ -126,17 +126,6 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-proxy-providers:
-  auto-nodes:
-    type: http
-    url: "https://sub.huhiuh.space/sub/DK0Z3DYTlHThzy8rcHyBhbeC0-HK6gG8_nodes.yaml"
-    interval: 1800
-    path: ./providers/proxy-nodes.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 120
-
 proxy-groups:
   - name: "Proxy"
     type: select
@@ -149,8 +138,6 @@ proxy-groups:
       - 美国-VLESS-线路2 (Marc并弄了个大新闻-windows)
       - 美国-VLESS-线路3 (Marc并弄了个大新闻-windows)
       - DIRECT
-    use:
-      - auto-nodes
 
   - name: "自动切换"
     type: fallback
@@ -161,8 +148,6 @@ proxy-groups:
       - 美国-VLESS-线路1 (Marc并弄了个大新闻-windows)
       - 美国-VLESS-线路2 (Marc并弄了个大新闻-windows)
       - 美国-VLESS-线路3 (Marc并弄了个大新闻-windows)
-    use:
-      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000

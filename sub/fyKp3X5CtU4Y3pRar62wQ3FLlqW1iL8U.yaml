@@ -1,9 +1,9 @@
 # 用户: user184-mac
 # UUID: a3ab15af-10bf-45b2-a3e5-65149c2f27cf
 # 落地: 38.248.251.107:443 (美国)
-# 生成时间: 2026-03-24 20:23:09
+# 生成时间: 2026-03-24 20:28:26
 # 到期时间: 2026-04-16 20:13
-# 多线路自动切换模式（节点每30分钟自动更新）
+# 多线路自动切换模式
 
 mixed-port: 7890
 allow-lan: true
@@ -126,17 +126,6 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-proxy-providers:
-  auto-nodes:
-    type: http
-    url: "https://sub.huhiuh.space/sub/fyKp3X5CtU4Y3pRar62wQ3FLlqW1iL8U_nodes.yaml"
-    interval: 1800
-    path: ./providers/proxy-nodes.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 120
-
 proxy-groups:
   - name: "Proxy"
     type: select
@@ -149,8 +138,6 @@ proxy-groups:
       - 美国-VLESS-线路2 (jiaopwrrs-mac)
       - 美国-VLESS-线路3 (jiaopwrrs-mac)
       - DIRECT
-    use:
-      - auto-nodes
 
   - name: "自动切换"
     type: fallback
@@ -161,8 +148,6 @@ proxy-groups:
       - 美国-VLESS-线路1 (jiaopwrrs-mac)
       - 美国-VLESS-线路2 (jiaopwrrs-mac)
       - 美国-VLESS-线路3 (jiaopwrrs-mac)
-    use:
-      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000

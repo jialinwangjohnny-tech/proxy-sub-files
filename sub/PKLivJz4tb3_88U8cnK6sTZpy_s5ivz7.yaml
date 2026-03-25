@@ -1,9 +1,9 @@
 # 用户: user062-windows
 # UUID: 51a9aa63-fbc7-4227-a848-55fbf7f54604
 # 落地: 64.32.180.12:443 (美国洛杉矶)
-# 生成时间: 2026-03-24 20:23:08
+# 生成时间: 2026-03-24 20:28:26
 # 到期时间: 2026-04-09
-# 多线路自动切换模式（节点每30分钟自动更新）
+# 多线路自动切换模式
 
 mixed-port: 7890
 allow-lan: true
@@ -126,17 +126,6 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-proxy-providers:
-  auto-nodes:
-    type: http
-    url: "https://sub.huhiuh.space/sub/PKLivJz4tb3_88U8cnK6sTZpy_s5ivz7_nodes.yaml"
-    interval: 1800
-    path: ./providers/proxy-nodes.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 120
-
 proxy-groups:
   - name: "Proxy"
     type: select
@@ -149,8 +138,6 @@ proxy-groups:
       - 美国洛杉矶-VLESS-线路2 (大政网络科技-windows)
       - 美国洛杉矶-VLESS-线路3 (大政网络科技-windows)
       - DIRECT
-    use:
-      - auto-nodes
 
   - name: "自动切换"
     type: fallback
@@ -161,8 +148,6 @@ proxy-groups:
       - 美国洛杉矶-VLESS-线路1 (大政网络科技-windows)
       - 美国洛杉矶-VLESS-线路2 (大政网络科技-windows)
       - 美国洛杉矶-VLESS-线路3 (大政网络科技-windows)
-    use:
-      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000

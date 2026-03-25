@@ -1,9 +1,9 @@
 # 用户: user149-phone
 # UUID: f3eef39a-fc19-4be1-9f6f-8e040c5f6d76
 # 落地: 68.167.147.18:443 (美国)
-# 生成时间: 2026-03-24 20:23:08
+# 生成时间: 2026-03-24 20:28:26
 # 到期时间: 2026-04-10 11:08
-# 多线路自动切换模式（节点每30分钟自动更新）
+# 多线路自动切换模式
 
 mixed-port: 7890
 allow-lan: true
@@ -126,17 +126,6 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-proxy-providers:
-  auto-nodes:
-    type: http
-    url: "https://sub.huhiuh.space/sub/0pFZP352Y8L6lKF3sXDSxl9pTR2965e8_nodes.yaml"
-    interval: 1800
-    path: ./providers/proxy-nodes.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 120
-
 proxy-groups:
   - name: "Proxy"
     type: select
@@ -149,8 +138,6 @@ proxy-groups:
       - 美国-VLESS-线路2 (Lisa_Y-phone)
       - 美国-VLESS-线路3 (Lisa_Y-phone)
       - DIRECT
-    use:
-      - auto-nodes
 
   - name: "自动切换"
     type: fallback
@@ -161,8 +148,6 @@ proxy-groups:
       - 美国-VLESS-线路1 (Lisa_Y-phone)
       - 美国-VLESS-线路2 (Lisa_Y-phone)
       - 美国-VLESS-线路3 (Lisa_Y-phone)
-    use:
-      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000

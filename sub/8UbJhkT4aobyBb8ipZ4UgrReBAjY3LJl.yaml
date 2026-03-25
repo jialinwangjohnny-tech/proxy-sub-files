@@ -1,9 +1,9 @@
 # 用户: user108-mac
 # UUID: 133523ea-7ef9-454e-9bb3-4f9a443ed572
 # 落地: 161.77.141.185:50101 (美国)
-# 生成时间: 2026-03-24 20:23:08
+# 生成时间: 2026-03-24 20:28:26
 # 到期时间: 2026-04-17
-# 多线路自动切换模式（节点每30分钟自动更新）
+# 多线路自动切换模式
 
 mixed-port: 7890
 allow-lan: true
@@ -126,17 +126,6 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-proxy-providers:
-  auto-nodes:
-    type: http
-    url: "https://sub.huhiuh.space/sub/8UbJhkT4aobyBb8ipZ4UgrReBAjY3LJl_nodes.yaml"
-    interval: 1800
-    path: ./providers/proxy-nodes.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 120
-
 proxy-groups:
   - name: "Proxy"
     type: select
@@ -149,8 +138,6 @@ proxy-groups:
       - 美国-VLESS-线路2 (David-mac)
       - 美国-VLESS-线路3 (David-mac)
       - DIRECT
-    use:
-      - auto-nodes
 
   - name: "自动切换"
     type: fallback
@@ -161,8 +148,6 @@ proxy-groups:
       - 美国-VLESS-线路1 (David-mac)
       - 美国-VLESS-线路2 (David-mac)
       - 美国-VLESS-线路3 (David-mac)
-    use:
-      - auto-nodes
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000
