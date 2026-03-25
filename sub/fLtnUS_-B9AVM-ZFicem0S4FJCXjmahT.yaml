@@ -1,10 +1,9 @@
 # 用户: user008-phone
 # UUID: f92f9ab7-97d2-461f-9107-99d95f25108a
 # 落地: 38.248.251.182:443 (美国洛杉矶)
-# 生成时间: 2026-03-24 21:17:46
+# 生成时间: 2026-03-24 21:35:22
 # 到期时间: 2026-04-11 19:47
 # 多线路自动切换模式（节点每30分钟自动更新）
-# ⚠️ proxy-providers 测试版
 
 mixed-port: 7890
 allow-lan: true
@@ -53,13 +52,13 @@ dns:
     - "+.anthropic.com"
     - "+.claude.ai"
     - "+.sentry.io"
-    - "+.huhiuh.space"
+    - "+.huhiuh.space" 
 
 proxy-providers:
   nodes:
     type: http
     url: "https://sub.huhiuh.space/sub/fLtnUS_-B9AVM-ZFicem0S4FJCXjmahT_nodes.yaml"
-    interval: 1800
+    interval: 60
     path: ./providers/proxy-nodes.yaml
     health-check:
       enable: true
