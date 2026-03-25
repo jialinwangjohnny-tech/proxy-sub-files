@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (木犀烨-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 10380
+    password: a0beb90c-d06e-4c43-8b88-6766c324d569
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (木犀烨-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 10380
+    uuid: a0beb90c-d06e-4c43-8b88-6766c324d569
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (木犀烨-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 10380
+    password: a0beb90c-d06e-4c43-8b88-6766c324d569
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (木犀烨-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 10380
+    uuid: a0beb90c-d06e-4c43-8b88-6766c324d569
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (木犀烨-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 10380
+    password: a0beb90c-d06e-4c43-8b88-6766c324d569
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (木犀烨-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 10380
+    uuid: a0beb90c-d06e-4c43-8b88-6766c324d569
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

@@ -1,0 +1,72 @@
+proxies:
+  - name: "Dubai,AE-HY2-线路1 (王旭峰-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 48911
+    password: 60926c88-4443-4e98-bbb2-960d556ab3c6
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "Dubai,AE-VLESS-线路1 (王旭峰-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 48911
+    uuid: 60926c88-4443-4e98-bbb2-960d556ab3c6
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: outlook.office365.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "Dubai,AE-HY2-线路2 (王旭峰-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 48911
+    password: 60926c88-4443-4e98-bbb2-960d556ab3c6
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "Dubai,AE-VLESS-线路2 (王旭峰-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 48911
+    uuid: 60926c88-4443-4e98-bbb2-960d556ab3c6
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: outlook.office365.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "Dubai,AE-HY2-线路3 (王旭峰-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 48911
+    password: 60926c88-4443-4e98-bbb2-960d556ab3c6
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "Dubai,AE-VLESS-线路3 (王旭峰-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 48911
+    uuid: 60926c88-4443-4e98-bbb2-960d556ab3c6
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: outlook.office365.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

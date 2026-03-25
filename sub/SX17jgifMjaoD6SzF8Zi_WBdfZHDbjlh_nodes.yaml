@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (星际飞行-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 21695
+    password: c87e52d5-1c8d-4423-952a-a4b627ada3e0
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (星际飞行-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 21695
+    uuid: c87e52d5-1c8d-4423-952a-a4b627ada3e0
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (星际飞行-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 21695
+    password: c87e52d5-1c8d-4423-952a-a4b627ada3e0
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (星际飞行-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 21695
+    uuid: c87e52d5-1c8d-4423-952a-a4b627ada3e0
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (星际飞行-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 21695
+    password: c87e52d5-1c8d-4423-952a-a4b627ada3e0
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (星际飞行-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 21695
+    uuid: c87e52d5-1c8d-4423-952a-a4b627ada3e0
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

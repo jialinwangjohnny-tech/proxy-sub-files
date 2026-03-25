@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国洛杉矶-HY2-线路1 (王小男Aina-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 37148
+    password: e1a53305-f456-4d4e-ade6-5563417b50ff
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国洛杉矶-VLESS-线路1 (王小男Aina-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 37148
+    uuid: e1a53305-f456-4d4e-ade6-5563417b50ff
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国洛杉矶-HY2-线路2 (王小男Aina-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 37148
+    password: e1a53305-f456-4d4e-ade6-5563417b50ff
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国洛杉矶-VLESS-线路2 (王小男Aina-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 37148
+    uuid: e1a53305-f456-4d4e-ade6-5563417b50ff
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国洛杉矶-HY2-线路3 (王小男Aina-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 37148
+    password: e1a53305-f456-4d4e-ade6-5563417b50ff
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国洛杉矶-VLESS-线路3 (王小男Aina-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 37148
+    uuid: e1a53305-f456-4d4e-ade6-5563417b50ff
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

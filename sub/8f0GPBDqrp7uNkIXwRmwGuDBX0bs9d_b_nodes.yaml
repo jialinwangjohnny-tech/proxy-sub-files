@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国德克萨斯-HY2-线路1 (duxiang-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 43402
+    password: 61a857b9-4ecc-47e6-a10f-52a6749b46b6
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国德克萨斯-VLESS-线路1 (duxiang-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 43402
+    uuid: 61a857b9-4ecc-47e6-a10f-52a6749b46b6
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国德克萨斯-HY2-线路2 (duxiang-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 43402
+    password: 61a857b9-4ecc-47e6-a10f-52a6749b46b6
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国德克萨斯-VLESS-线路2 (duxiang-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 43402
+    uuid: 61a857b9-4ecc-47e6-a10f-52a6749b46b6
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国德克萨斯-HY2-线路3 (duxiang-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 43402
+    password: 61a857b9-4ecc-47e6-a10f-52a6749b46b6
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国德克萨斯-VLESS-线路3 (duxiang-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 43402
+    uuid: 61a857b9-4ecc-47e6-a10f-52a6749b46b6
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

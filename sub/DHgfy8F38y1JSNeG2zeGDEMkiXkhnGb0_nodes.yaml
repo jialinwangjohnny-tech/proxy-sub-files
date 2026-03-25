@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (Water purifier-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 45292
+    password: f990868e-98d1-4a8f-a866-466dde8e9a05
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (Water purifier-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 45292
+    uuid: f990868e-98d1-4a8f-a866-466dde8e9a05
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (Water purifier-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 45292
+    password: f990868e-98d1-4a8f-a866-466dde8e9a05
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (Water purifier-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 45292
+    uuid: f990868e-98d1-4a8f-a866-466dde8e9a05
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (Water purifier-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 45292
+    password: f990868e-98d1-4a8f-a866-466dde8e9a05
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (Water purifier-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 45292
+    uuid: f990868e-98d1-4a8f-a866-466dde8e9a05
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

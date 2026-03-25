@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国洛杉矶-HY2-线路1 (DamaiLang-phone)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 38340
+    password: 1de69906-aadb-452d-a2c8-0dc629222d21
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国洛杉矶-VLESS-线路1 (DamaiLang-phone)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 38340
+    uuid: 1de69906-aadb-452d-a2c8-0dc629222d21
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国洛杉矶-HY2-线路2 (DamaiLang-phone)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 38340
+    password: 1de69906-aadb-452d-a2c8-0dc629222d21
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国洛杉矶-VLESS-线路2 (DamaiLang-phone)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 38340
+    uuid: 1de69906-aadb-452d-a2c8-0dc629222d21
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国洛杉矶-HY2-线路3 (DamaiLang-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 38340
+    password: 1de69906-aadb-452d-a2c8-0dc629222d21
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国洛杉矶-VLESS-线路3 (DamaiLang-phone)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 38340
+    uuid: 1de69906-aadb-452d-a2c8-0dc629222d21
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

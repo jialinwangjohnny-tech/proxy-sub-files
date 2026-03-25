@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国洛杉矶-HY2-线路1 (liays-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 45882
+    password: 3585a0d5-16b9-4bce-97e6-52b96f037baf
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国洛杉矶-VLESS-线路1 (liays-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 45882
+    uuid: 3585a0d5-16b9-4bce-97e6-52b96f037baf
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国洛杉矶-HY2-线路2 (liays-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 45882
+    password: 3585a0d5-16b9-4bce-97e6-52b96f037baf
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国洛杉矶-VLESS-线路2 (liays-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 45882
+    uuid: 3585a0d5-16b9-4bce-97e6-52b96f037baf
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国洛杉矶-HY2-线路3 (liays-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 45882
+    password: 3585a0d5-16b9-4bce-97e6-52b96f037baf
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国洛杉矶-VLESS-线路3 (liays-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 45882
+    uuid: 3585a0d5-16b9-4bce-97e6-52b96f037baf
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

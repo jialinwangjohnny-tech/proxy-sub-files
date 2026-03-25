@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (简凡3-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 20050
+    password: 0482d2ac-cea9-42cf-9b54-af52583edae5
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (简凡3-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 20050
+    uuid: 0482d2ac-cea9-42cf-9b54-af52583edae5
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (简凡3-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 20050
+    password: 0482d2ac-cea9-42cf-9b54-af52583edae5
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (简凡3-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 20050
+    uuid: 0482d2ac-cea9-42cf-9b54-af52583edae5
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (简凡3-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 20050
+    password: 0482d2ac-cea9-42cf-9b54-af52583edae5
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (简凡3-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 20050
+    uuid: 0482d2ac-cea9-42cf-9b54-af52583edae5
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

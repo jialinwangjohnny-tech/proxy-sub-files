@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (Twenty-windows2)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 50040
+    password: 6843184e-c539-494e-8727-5f0de99e0d40
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (Twenty-windows2)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 50040
+    uuid: 6843184e-c539-494e-8727-5f0de99e0d40
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (Twenty-windows2)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 50040
+    password: 6843184e-c539-494e-8727-5f0de99e0d40
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (Twenty-windows2)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 50040
+    uuid: 6843184e-c539-494e-8727-5f0de99e0d40
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (Twenty-windows2)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 50040
+    password: 6843184e-c539-494e-8727-5f0de99e0d40
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (Twenty-windows2)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 50040
+    uuid: 6843184e-c539-494e-8727-5f0de99e0d40
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

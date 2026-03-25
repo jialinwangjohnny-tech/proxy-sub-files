@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 50028
+    password: 35fbaeec-4e8a-4bd7-9f14-d7fed40892c1
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1"
+    type: vless
+    server: s1.huhiuh.space
+    port: 50028
+    uuid: 35fbaeec-4e8a-4bd7-9f14-d7fed40892c1
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 50028
+    password: 35fbaeec-4e8a-4bd7-9f14-d7fed40892c1
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2"
+    type: vless
+    server: s2.huhiuh.space
+    port: 50028
+    uuid: 35fbaeec-4e8a-4bd7-9f14-d7fed40892c1
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 50028
+    password: 35fbaeec-4e8a-4bd7-9f14-d7fed40892c1
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3"
+    type: vless
+    server: s3.huhiuh.space
+    port: 50028
+    uuid: 35fbaeec-4e8a-4bd7-9f14-d7fed40892c1
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

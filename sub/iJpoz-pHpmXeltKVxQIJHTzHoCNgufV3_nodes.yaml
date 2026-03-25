@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国华盛顿-HY2-线路1 (简凡4-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 33572
+    password: 5fbd557c-a6a3-40f2-a091-6d6388e87b37
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国华盛顿-VLESS-线路1 (简凡4-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 33572
+    uuid: 5fbd557c-a6a3-40f2-a091-6d6388e87b37
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国华盛顿-HY2-线路2 (简凡4-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 33572
+    password: 5fbd557c-a6a3-40f2-a091-6d6388e87b37
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国华盛顿-VLESS-线路2 (简凡4-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 33572
+    uuid: 5fbd557c-a6a3-40f2-a091-6d6388e87b37
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国华盛顿-HY2-线路3 (简凡4-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 33572
+    password: 5fbd557c-a6a3-40f2-a091-6d6388e87b37
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国华盛顿-VLESS-线路3 (简凡4-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 33572
+    uuid: 5fbd557c-a6a3-40f2-a091-6d6388e87b37
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

@@ -1,0 +1,72 @@
+proxies:
+  - name: "新加坡-HY2-线路1 (十月-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 53542
+    password: 127c8180-3c44-4f2a-be41-cf2d95250757
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "新加坡-VLESS-线路1 (十月-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 53542
+    uuid: 127c8180-3c44-4f2a-be41-cf2d95250757
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "新加坡-HY2-线路2 (十月-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 53542
+    password: 127c8180-3c44-4f2a-be41-cf2d95250757
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "新加坡-VLESS-线路2 (十月-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 53542
+    uuid: 127c8180-3c44-4f2a-be41-cf2d95250757
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "新加坡-HY2-线路3 (十月-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 53542
+    password: 127c8180-3c44-4f2a-be41-cf2d95250757
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "新加坡-VLESS-线路3 (十月-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 53542
+    uuid: 127c8180-3c44-4f2a-be41-cf2d95250757
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

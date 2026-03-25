@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (Sandy-JH Printer Spare Parts-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 52373
+    password: 31e37f41-ceb3-4b2b-91a3-2f48628b53ae
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (Sandy-JH Printer Spare Parts-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 52373
+    uuid: 31e37f41-ceb3-4b2b-91a3-2f48628b53ae
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (Sandy-JH Printer Spare Parts-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 52373
+    password: 31e37f41-ceb3-4b2b-91a3-2f48628b53ae
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (Sandy-JH Printer Spare Parts-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 52373
+    uuid: 31e37f41-ceb3-4b2b-91a3-2f48628b53ae
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (Sandy-JH Printer Spare Parts-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 52373
+    password: 31e37f41-ceb3-4b2b-91a3-2f48628b53ae
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (Sandy-JH Printer Spare Parts-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 52373
+    uuid: 31e37f41-ceb3-4b2b-91a3-2f48628b53ae
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

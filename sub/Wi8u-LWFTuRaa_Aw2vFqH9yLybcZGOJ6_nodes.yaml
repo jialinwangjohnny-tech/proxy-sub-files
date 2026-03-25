@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (黄小美-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 40194
+    password: f2d930df-ac88-4ae9-bbd2-e5883383d0d2
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (黄小美-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 40194
+    uuid: f2d930df-ac88-4ae9-bbd2-e5883383d0d2
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (黄小美-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 40194
+    password: f2d930df-ac88-4ae9-bbd2-e5883383d0d2
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (黄小美-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 40194
+    uuid: f2d930df-ac88-4ae9-bbd2-e5883383d0d2
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (黄小美-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 40194
+    password: f2d930df-ac88-4ae9-bbd2-e5883383d0d2
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (黄小美-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 40194
+    uuid: f2d930df-ac88-4ae9-bbd2-e5883383d0d2
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (pengtruman-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 51138
+    password: b4cd236d-80b6-4bc1-a2f6-4223d0de62ce
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (pengtruman-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 51138
+    uuid: b4cd236d-80b6-4bc1-a2f6-4223d0de62ce
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (pengtruman-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 51138
+    password: b4cd236d-80b6-4bc1-a2f6-4223d0de62ce
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (pengtruman-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 51138
+    uuid: b4cd236d-80b6-4bc1-a2f6-4223d0de62ce
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (pengtruman-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 51138
+    password: b4cd236d-80b6-4bc1-a2f6-4223d0de62ce
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (pengtruman-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 51138
+    uuid: b4cd236d-80b6-4bc1-a2f6-4223d0de62ce
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

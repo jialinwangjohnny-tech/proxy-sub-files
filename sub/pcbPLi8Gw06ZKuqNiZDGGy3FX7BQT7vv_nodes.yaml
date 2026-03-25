@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (tts6668899-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 22980
+    password: f933f20e-6a95-415f-ace2-4c4cc958be0f
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (tts6668899-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 22980
+    uuid: f933f20e-6a95-415f-ace2-4c4cc958be0f
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.ea.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (tts6668899-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 22980
+    password: f933f20e-6a95-415f-ace2-4c4cc958be0f
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (tts6668899-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 22980
+    uuid: f933f20e-6a95-415f-ace2-4c4cc958be0f
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.ea.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (tts6668899-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 22980
+    password: f933f20e-6a95-415f-ace2-4c4cc958be0f
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (tts6668899-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 22980
+    uuid: f933f20e-6a95-415f-ace2-4c4cc958be0f
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.ea.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

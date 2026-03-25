@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国纽约-HY2-线路1 (禅-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 50139
+    password: a89eab0b-c7f6-4324-9a32-d6a65d375691
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国纽约-VLESS-线路1 (禅-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 50139
+    uuid: a89eab0b-c7f6-4324-9a32-d6a65d375691
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国纽约-HY2-线路2 (禅-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 50139
+    password: a89eab0b-c7f6-4324-9a32-d6a65d375691
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国纽约-VLESS-线路2 (禅-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 50139
+    uuid: a89eab0b-c7f6-4324-9a32-d6a65d375691
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国纽约-HY2-线路3 (禅-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 50139
+    password: a89eab0b-c7f6-4324-9a32-d6a65d375691
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国纽约-VLESS-线路3 (禅-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 50139
+    uuid: a89eab0b-c7f6-4324-9a32-d6a65d375691
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

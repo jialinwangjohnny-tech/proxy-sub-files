@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (Moshimoshi-phone)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 43931
+    password: cc64b788-a25e-464c-a12a-f20a2c07b0c0
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (Moshimoshi-phone)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 43931
+    uuid: cc64b788-a25e-464c-a12a-f20a2c07b0c0
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (Moshimoshi-phone)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 43931
+    password: cc64b788-a25e-464c-a12a-f20a2c07b0c0
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (Moshimoshi-phone)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 43931
+    uuid: cc64b788-a25e-464c-a12a-f20a2c07b0c0
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (Moshimoshi-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 43931
+    password: cc64b788-a25e-464c-a12a-f20a2c07b0c0
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (Moshimoshi-phone)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 43931
+    uuid: cc64b788-a25e-464c-a12a-f20a2c07b0c0
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
