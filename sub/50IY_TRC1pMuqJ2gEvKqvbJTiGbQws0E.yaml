@@ -1,5 +1,5 @@
-# 用户: user084-mac
-# UUID: e1a53305-f456-4d4e-ade6-5563417b50ff
+# 用户: user084-ipad
+# UUID: 0bebee29-c62c-46f4-a549-666adb634e3f
 # 落地: 68.167.147.89:443 (美国洛杉矶)
 # 生成时间: 2026-03-26 04:53:38
 # 到期时间: 2026-04-13 09:47
@@ -57,7 +57,7 @@ dns:
 proxy-providers:
   nodes:
     type: http
-    url: "https://sub.huhiuh.space/sub/y40GRDPdJ-dvsV0hbDlncvdiR3Tkq8Ax_nodes.yaml"
+    url: "https://sub.huhiuh.space/sub/50IY_TRC1pMuqJ2gEvKqvbJTiGbQws0E_nodes.yaml"
     interval: 300
     path: ./providers/proxy-nodes.yaml
     health-check:

@@ -8,6 +8,24 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
+  - name: "美国洛杉矶-HY2-线路2 (王小男Aina-phone)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 37148
+    password: a136c783-e8ff-4de5-828f-53ffa4911c4e
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国洛杉矶-HY2-线路3 (王小男Aina-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 37148
+    password: a136c783-e8ff-4de5-828f-53ffa4911c4e
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
   - name: "美国洛杉矶-VLESS-线路1 (王小男Aina-phone)"
     type: vless
     server: s1.huhiuh.space
@@ -23,15 +41,6 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "美国洛杉矶-HY2-线路2 (王小男Aina-phone)"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 37148
-    password: a136c783-e8ff-4de5-828f-53ffa4911c4e
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
   - name: "美国洛杉矶-VLESS-线路2 (王小男Aina-phone)"
     type: vless
     server: s2.huhiuh.space
@@ -46,15 +55,6 @@ proxies:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
     client-fingerprint: chrome
-
-  - name: "美国洛杉矶-HY2-线路3 (王小男Aina-phone)"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 37148
-    password: a136c783-e8ff-4de5-828f-53ffa4911c4e
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
 
   - name: "美国洛杉矶-VLESS-线路3 (王小男Aina-phone)"
     type: vless
