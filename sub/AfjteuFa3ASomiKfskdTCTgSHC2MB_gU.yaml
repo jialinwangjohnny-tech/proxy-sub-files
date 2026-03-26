@@ -1,7 +1,7 @@
 # 用户: user225-phone
 # UUID: 1a93a2d4-e83a-4491-9034-d4db9b1c876b
 # 落地: 204.1.108.160:443 (美国)
-# 生成时间: 2026-03-26 08:03:03
+# 生成时间: 2026-03-26 08:45:31
 # 到期时间: 2026-04-25
 # 多线路自动切换模式
 
@@ -58,7 +58,7 @@ proxies:
   - name: "美国-HY2-线路1 (wyangsjt-phone)"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 11094
+    port: 44530
     password: 1a93a2d4-e83a-4491-9034-d4db9b1c876b
     sni: www.bing.com
     skip-cert-verify: true
@@ -67,7 +67,7 @@ proxies:
   - name: "美国-HY2-线路2 (wyangsjt-phone)"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 11094
+    port: 44530
     password: 1a93a2d4-e83a-4491-9034-d4db9b1c876b
     sni: www.bing.com
     skip-cert-verify: true
@@ -76,7 +76,7 @@ proxies:
   - name: "美国-HY2-线路3 (wyangsjt-phone)"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 11094
+    port: 44530
     password: 1a93a2d4-e83a-4491-9034-d4db9b1c876b
     sni: www.bing.com
     skip-cert-verify: true
@@ -85,13 +85,13 @@ proxies:
   - name: "美国-VLESS-线路1 (wyangsjt-phone)"
     type: vless
     server: s1.huhiuh.space
-    port: 11094
+    port: 44530
     uuid: 1a93a2d4-e83a-4491-9034-d4db9b1c876b
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: itunes.apple.com
+    servername: download.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -100,13 +100,13 @@ proxies:
   - name: "美国-VLESS-线路2 (wyangsjt-phone)"
     type: vless
     server: s2.huhiuh.space
-    port: 11094
+    port: 44530
     uuid: 1a93a2d4-e83a-4491-9034-d4db9b1c876b
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: itunes.apple.com
+    servername: download.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -115,13 +115,13 @@ proxies:
   - name: "美国-VLESS-线路3 (wyangsjt-phone)"
     type: vless
     server: s3.huhiuh.space
-    port: 11094
+    port: 44530
     uuid: 1a93a2d4-e83a-4491-9034-d4db9b1c876b
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: itunes.apple.com
+    servername: download.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
