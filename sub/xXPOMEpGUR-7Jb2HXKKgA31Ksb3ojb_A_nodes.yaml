@@ -2,7 +2,7 @@ proxies:
   - name: "新加坡-HY2-线路1 (q33345666-windows)"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 56260
+    port: 16227
     password: 09ff8aef-22ad-4702-8eb4-88a8cfb8cf8d
     sni: www.bing.com
     skip-cert-verify: true
@@ -11,7 +11,7 @@ proxies:
   - name: "新加坡-HY2-线路2 (q33345666-windows)"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 56260
+    port: 16227
     password: 09ff8aef-22ad-4702-8eb4-88a8cfb8cf8d
     sni: www.bing.com
     skip-cert-verify: true
@@ -20,7 +20,7 @@ proxies:
   - name: "新加坡-HY2-线路3 (q33345666-windows)"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 56260
+    port: 16227
     password: 09ff8aef-22ad-4702-8eb4-88a8cfb8cf8d
     sni: www.bing.com
     skip-cert-verify: true
@@ -29,13 +29,13 @@ proxies:
   - name: "新加坡-VLESS-线路1 (q33345666-windows)"
     type: vless
     server: s1.huhiuh.space
-    port: 56260
+    port: 16227
     uuid: 09ff8aef-22ad-4702-8eb4-88a8cfb8cf8d
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: download.microsoft.com
+    servername: swdist.apple.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -44,13 +44,13 @@ proxies:
   - name: "新加坡-VLESS-线路2 (q33345666-windows)"
     type: vless
     server: s2.huhiuh.space
-    port: 56260
+    port: 16227
     uuid: 09ff8aef-22ad-4702-8eb4-88a8cfb8cf8d
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: download.microsoft.com
+    servername: swdist.apple.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -59,13 +59,13 @@ proxies:
   - name: "新加坡-VLESS-线路3 (q33345666-windows)"
     type: vless
     server: s3.huhiuh.space
-    port: 56260
+    port: 16227
     uuid: 09ff8aef-22ad-4702-8eb4-88a8cfb8cf8d
     network: tcp
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: download.microsoft.com
+    servername: swdist.apple.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
