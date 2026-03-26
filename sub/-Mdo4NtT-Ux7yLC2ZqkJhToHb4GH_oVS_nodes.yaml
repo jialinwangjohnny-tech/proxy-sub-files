@@ -1,0 +1,72 @@
+proxies:
+  - name: "美国-HY2-线路1 (Bin2-phone)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 39233
+    password: c67cd084-3190-42e3-bcb0-0792b275e034
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-HY2-线路2 (Bin2-phone)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 39233
+    password: c67cd084-3190-42e3-bcb0-0792b275e034
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-HY2-线路3 (Bin2-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 39233
+    password: c67cd084-3190-42e3-bcb0-0792b275e034
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (Bin2-phone)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 39233
+    uuid: c67cd084-3190-42e3-bcb0-0792b275e034
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-VLESS-线路2 (Bin2-phone)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 39233
+    uuid: c67cd084-3190-42e3-bcb0-0792b275e034
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-VLESS-线路3 (Bin2-phone)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 39233
+    uuid: c67cd084-3190-42e3-bcb0-0792b275e034
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
