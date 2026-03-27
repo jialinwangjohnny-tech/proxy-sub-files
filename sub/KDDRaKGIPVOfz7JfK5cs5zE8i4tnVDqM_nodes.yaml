@@ -1,72 +1,76 @@
 proxies:
-  - name: "美国-HY2-线路1 (Ngo300142-mac)"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 22614
-    password: 51567176-9ef8-4e06-856f-d617e7aa3846
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-VLESS-线路1 (Ngo300142-mac)"
-    type: vless
-    server: s1.huhiuh.space
-    port: 22614
-    uuid: 51567176-9ef8-4e06-856f-d617e7aa3846
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: itunes.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国-HY2-线路2 (Ngo300142-mac)"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 22614
-    password: 51567176-9ef8-4e06-856f-d617e7aa3846
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-VLESS-线路2 (Ngo300142-mac)"
-    type: vless
-    server: s2.huhiuh.space
-    port: 22614
-    uuid: 51567176-9ef8-4e06-856f-d617e7aa3846
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: itunes.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国-HY2-线路3 (Ngo300142-mac)"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 22614
-    password: 51567176-9ef8-4e06-856f-d617e7aa3846
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-VLESS-线路3 (Ngo300142-mac)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 22614
-    uuid: 51567176-9ef8-4e06-856f-d617e7aa3846
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: itunes.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
+- name: 美国-HY2-线路1
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user202_mac:51567176-9ef8-4e06-856f-d617e7aa3846
+  port: 13584
+  server: s1.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: edge
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国-VLESS-线路1
+  network: tcp
+  port: 13584
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: c94c2b3f
+  server: s1.huhiuh.space
+  servername: itunes.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 51567176-9ef8-4e06-856f-d617e7aa3846
+- name: 美国-HY2-线路2
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user202_mac:51567176-9ef8-4e06-856f-d617e7aa3846
+  port: 13584
+  server: s2.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: edge
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国-VLESS-线路2
+  network: tcp
+  port: 13584
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: c94c2b3f
+  server: s2.huhiuh.space
+  servername: itunes.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 51567176-9ef8-4e06-856f-d617e7aa3846
+- name: 美国-HY2-线路3
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user202_mac:51567176-9ef8-4e06-856f-d617e7aa3846
+  port: 13584
+  server: s3.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: edge
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国-VLESS-线路3
+  network: tcp
+  port: 13584
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: c94c2b3f
+  server: s3.huhiuh.space
+  servername: itunes.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 51567176-9ef8-4e06-856f-d617e7aa3846

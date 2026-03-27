@@ -1,72 +1,76 @@
 proxies:
-  - name: "美国洛杉矶-HY2-线路1 (Darrick-mac)"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 21372
-    password: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国洛杉矶-VLESS-线路1 (Darrick-mac)"
-    type: vless
-    server: s1.huhiuh.space
-    port: 21372
-    uuid: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: swdist.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国洛杉矶-HY2-线路2 (Darrick-mac)"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 21372
-    password: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国洛杉矶-VLESS-线路2 (Darrick-mac)"
-    type: vless
-    server: s2.huhiuh.space
-    port: 21372
-    uuid: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: swdist.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国洛杉矶-HY2-线路3 (Darrick-mac)"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 21372
-    password: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国洛杉矶-VLESS-线路3 (Darrick-mac)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 21372
-    uuid: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: swdist.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
+- name: 美国洛杉矶-HY2-线路1
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user200_mac:3f384346-eeeb-47d5-9fc4-b096c6bee42d
+  port: 39873
+  server: s1.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: chrome
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国洛杉矶-VLESS-线路1
+  network: tcp
+  port: 39873
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 0723094b
+  server: s1.huhiuh.space
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
+- name: 美国洛杉矶-HY2-线路2
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user200_mac:3f384346-eeeb-47d5-9fc4-b096c6bee42d
+  port: 39873
+  server: s2.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: chrome
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国洛杉矶-VLESS-线路2
+  network: tcp
+  port: 39873
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 0723094b
+  server: s2.huhiuh.space
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
+- name: 美国洛杉矶-HY2-线路3
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user200_mac:3f384346-eeeb-47d5-9fc4-b096c6bee42d
+  port: 39873
+  server: s3.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: chrome
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国洛杉矶-VLESS-线路3
+  network: tcp
+  port: 39873
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 0723094b
+  server: s3.huhiuh.space
+  servername: swdist.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3f384346-eeeb-47d5-9fc4-b096c6bee42d

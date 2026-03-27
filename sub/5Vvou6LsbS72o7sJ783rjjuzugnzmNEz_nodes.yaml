@@ -1,72 +1,76 @@
 proxies:
-  - name: "美国洛杉矶-HY2-线路1 (DamaiLang-windows)"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 38340
-    password: 264cf97d-eda3-4ba8-8f92-6d30e6332b62
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国洛杉矶-VLESS-线路1 (DamaiLang-windows)"
-    type: vless
-    server: s1.huhiuh.space
-    port: 38340
-    uuid: 264cf97d-eda3-4ba8-8f92-6d30e6332b62
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国洛杉矶-HY2-线路2 (DamaiLang-windows)"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 38340
-    password: 264cf97d-eda3-4ba8-8f92-6d30e6332b62
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国洛杉矶-VLESS-线路2 (DamaiLang-windows)"
-    type: vless
-    server: s2.huhiuh.space
-    port: 38340
-    uuid: 264cf97d-eda3-4ba8-8f92-6d30e6332b62
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国洛杉矶-HY2-线路3 (DamaiLang-windows)"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 38340
-    password: 264cf97d-eda3-4ba8-8f92-6d30e6332b62
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国洛杉矶-VLESS-线路3 (DamaiLang-windows)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 38340
-    uuid: 264cf97d-eda3-4ba8-8f92-6d30e6332b62
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
+- name: 美国洛杉矶-HY2-线路1
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user188_windows:264cf97d-eda3-4ba8-8f92-6d30e6332b62
+  port: 56680
+  server: s1.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: firefox
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国洛杉矶-VLESS-线路1
+  network: tcp
+  port: 56680
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: e2ddcf79
+  server: s1.huhiuh.space
+  servername: download.microsoft.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 264cf97d-eda3-4ba8-8f92-6d30e6332b62
+- name: 美国洛杉矶-HY2-线路2
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user188_windows:264cf97d-eda3-4ba8-8f92-6d30e6332b62
+  port: 56680
+  server: s2.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: firefox
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国洛杉矶-VLESS-线路2
+  network: tcp
+  port: 56680
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: e2ddcf79
+  server: s2.huhiuh.space
+  servername: download.microsoft.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 264cf97d-eda3-4ba8-8f92-6d30e6332b62
+- name: 美国洛杉矶-HY2-线路3
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user188_windows:264cf97d-eda3-4ba8-8f92-6d30e6332b62
+  port: 56680
+  server: s3.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: firefox
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国洛杉矶-VLESS-线路3
+  network: tcp
+  port: 56680
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: e2ddcf79
+  server: s3.huhiuh.space
+  servername: download.microsoft.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 264cf97d-eda3-4ba8-8f92-6d30e6332b62

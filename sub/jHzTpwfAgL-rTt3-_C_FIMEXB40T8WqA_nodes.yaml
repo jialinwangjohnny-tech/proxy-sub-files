@@ -3,7 +3,7 @@ proxies:
   obfs: salamander
   obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
   password: user214_windows:39ab087f-b717-4c72-82c5-d093d969d79c
-  port: 31875
+  port: 57267
   server: s1.huhiuh.space
   skip-cert-verify: true
   sni: www.bing.com
@@ -14,7 +14,7 @@ proxies:
   flow: xtls-rprx-vision
   name: 马来西亚-VLESS-线路1
   network: tcp
-  port: 31875
+  port: 57267
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
     short-id: cc476dc1
@@ -28,7 +28,7 @@ proxies:
   obfs: salamander
   obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
   password: user214_windows:39ab087f-b717-4c72-82c5-d093d969d79c
-  port: 31875
+  port: 57267
   server: s2.huhiuh.space
   skip-cert-verify: true
   sni: www.bing.com
@@ -39,7 +39,7 @@ proxies:
   flow: xtls-rprx-vision
   name: 马来西亚-VLESS-线路2
   network: tcp
-  port: 31875
+  port: 57267
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
     short-id: cc476dc1
@@ -53,7 +53,7 @@ proxies:
   obfs: salamander
   obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
   password: user214_windows:39ab087f-b717-4c72-82c5-d093d969d79c
-  port: 31875
+  port: 57267
   server: s3.huhiuh.space
   skip-cert-verify: true
   sni: www.bing.com
@@ -64,7 +64,7 @@ proxies:
   flow: xtls-rprx-vision
   name: 马来西亚-VLESS-线路3
   network: tcp
-  port: 31875
+  port: 57267
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
     short-id: cc476dc1
