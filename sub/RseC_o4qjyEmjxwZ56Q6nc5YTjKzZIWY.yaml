@@ -57,8 +57,6 @@ proxies:
     server: s1.huhiuh.space
     port: 38563
     password: "user101_phone:fa50ddd2-3164-44cc-99f8-c8104b101cfb"
-    obfs: salamander
-    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -82,8 +80,6 @@ proxies:
     server: s2.huhiuh.space
     port: 38563
     password: "user101_phone:fa50ddd2-3164-44cc-99f8-c8104b101cfb"
-    obfs: salamander
-    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -107,8 +103,6 @@ proxies:
     server: s3.huhiuh.space
     port: 38563
     password: "user101_phone:fa50ddd2-3164-44cc-99f8-c8104b101cfb"
-    obfs: salamander
-    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
