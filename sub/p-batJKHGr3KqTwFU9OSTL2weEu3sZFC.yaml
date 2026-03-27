@@ -138,9 +138,9 @@ proxy-groups:
       - "美国芝加哥-VLESS-线路2"
       - "美国芝加哥-HY2-线路3"
       - "美国芝加哥-VLESS-线路3"
-    interval: 30
-    timeout: 3000
-    lazy: true
+    interval: 5
+    timeout: 1500
+    lazy: false
     url: https://www.gstatic.com/generate_204
 
 rules:
