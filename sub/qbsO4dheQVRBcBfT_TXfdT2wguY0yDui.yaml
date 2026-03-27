@@ -1,7 +1,7 @@
 # 用户: user087-mac
 # UUID: 00d06388-9841-4646-a873-36843bb550cc
 # 落地: 64.32.180.224:443 (美国)
-# 生成时间: 2026-03-24 20:28:26
+# 生成时间: 2026-03-27 01:14:49
 # 到期时间: 2026-04-12
 # 多线路自动切换模式
 
@@ -51,12 +51,31 @@ dns:
     - "+.com.cn"
     - "+.anthropic.com"
     - "+.claude.ai"
-    - "+.sentry.io" 
+    - "+.sentry.io"
+    - "+.huhiuh.space" 
 
 proxies:
   - name: "美国-HY2-线路1 (Cecilia_fan-mac)"
     type: hysteria2
     server: s1.huhiuh.space
+    port: 14978
+    password: 00d06388-9841-4646-a873-36843bb550cc
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-HY2-线路2 (Cecilia_fan-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 14978
+    password: 00d06388-9841-4646-a873-36843bb550cc
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-HY2-线路3 (Cecilia_fan-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
     port: 14978
     password: 00d06388-9841-4646-a873-36843bb550cc
     sni: www.bing.com
@@ -78,15 +97,6 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "美国-HY2-线路2 (Cecilia_fan-mac)"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 14978
-    password: 00d06388-9841-4646-a873-36843bb550cc
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
   - name: "美国-VLESS-线路2 (Cecilia_fan-mac)"
     type: vless
     server: s2.huhiuh.space
@@ -101,15 +111,6 @@ proxies:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
     client-fingerprint: chrome
-
-  - name: "美国-HY2-线路3 (Cecilia_fan-mac)"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 14978
-    password: 00d06388-9841-4646-a873-36843bb550cc
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
 
   - name: "美国-VLESS-线路3 (Cecilia_fan-mac)"
     type: vless
@@ -154,6 +155,7 @@ proxy-groups:
     lazy: true
 
 rules:
+  - DOMAIN-SUFFIX,huhiuh.space,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
