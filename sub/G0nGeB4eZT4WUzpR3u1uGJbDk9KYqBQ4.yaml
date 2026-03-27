@@ -1,7 +1,7 @@
 # 用户: user147-windows
 # UUID: f5884e73-099d-443c-893e-5b956f22751c
 # 落地: 64.51.26.249:443 (美国)
-# 生成时间: 2026-03-24 20:28:26
+# 生成时间: 2026-03-27 01:12:28
 # 到期时间: 2026-04-05 23:06
 # 多线路自动切换模式
 
@@ -51,12 +51,31 @@ dns:
     - "+.com.cn"
     - "+.anthropic.com"
     - "+.claude.ai"
-    - "+.sentry.io" 
+    - "+.sentry.io"
+    - "+.huhiuh.space" 
 
 proxies:
   - name: "美国-HY2-线路1 (白丽娜-windows)"
     type: hysteria2
     server: s1.huhiuh.space
+    port: 39816
+    password: f5884e73-099d-443c-893e-5b956f22751c
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-HY2-线路2 (白丽娜-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 39816
+    password: f5884e73-099d-443c-893e-5b956f22751c
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-HY2-线路3 (白丽娜-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
     port: 39816
     password: f5884e73-099d-443c-893e-5b956f22751c
     sni: www.bing.com
@@ -72,20 +91,11 @@ proxies:
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: www.logitech.com
+    servername: swdist.apple.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
     client-fingerprint: chrome
-
-  - name: "美国-HY2-线路2 (白丽娜-windows)"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 39816
-    password: f5884e73-099d-443c-893e-5b956f22751c
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
 
   - name: "美国-VLESS-线路2 (白丽娜-windows)"
     type: vless
@@ -96,20 +106,11 @@ proxies:
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: www.logitech.com
+    servername: swdist.apple.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
     client-fingerprint: chrome
-
-  - name: "美国-HY2-线路3 (白丽娜-windows)"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 39816
-    password: f5884e73-099d-443c-893e-5b956f22751c
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
 
   - name: "美国-VLESS-线路3 (白丽娜-windows)"
     type: vless
@@ -120,7 +121,7 @@ proxies:
     udp: true
     tls: true
     flow: xtls-rprx-vision
-    servername: www.logitech.com
+    servername: swdist.apple.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: 6febfac8
@@ -154,6 +155,7 @@ proxy-groups:
     lazy: true
 
 rules:
+  - DOMAIN-SUFFIX,huhiuh.space,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
