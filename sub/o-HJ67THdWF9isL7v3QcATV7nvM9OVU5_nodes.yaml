@@ -1,76 +1,72 @@
 proxies:
-- name: 新加坡-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user193_windows:89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
-  port: 26766
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 新加坡-VLESS-线路1
-  network: tcp
-  port: 26766
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 24ccfd60
-  server: s1.huhiuh.space
-  servername: gateway.icloud.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
-- name: 新加坡-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user193_windows:89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
-  port: 26766
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 新加坡-VLESS-线路2
-  network: tcp
-  port: 26766
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 24ccfd60
-  server: s2.huhiuh.space
-  servername: gateway.icloud.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
-- name: 新加坡-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user193_windows:89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
-  port: 26766
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 新加坡-VLESS-线路3
-  network: tcp
-  port: 26766
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 24ccfd60
-  server: s3.huhiuh.space
-  servername: gateway.icloud.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
+  - name: "新加坡-HY2-线路1 (j27237923-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 15529
+    password: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "新加坡-VLESS-线路1 (j27237923-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 15529
+    uuid: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "新加坡-HY2-线路2 (j27237923-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 15529
+    password: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "新加坡-VLESS-线路2 (j27237923-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 15529
+    uuid: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "新加坡-HY2-线路3 (j27237923-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 15529
+    password: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "新加坡-VLESS-线路3 (j27237923-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 15529
+    uuid: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

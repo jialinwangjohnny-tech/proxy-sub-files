@@ -1,76 +1,72 @@
 proxies:
-- name: 墨西哥-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user138_mac:e959be7f-c55b-4ed5-81ad-2337f5096030
-  port: 37304
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: firefox
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 墨西哥-VLESS-线路1
-  network: tcp
-  port: 37304
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 42d72d6e
-  server: s1.huhiuh.space
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e959be7f-c55b-4ed5-81ad-2337f5096030
-- name: 墨西哥-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user138_mac:e959be7f-c55b-4ed5-81ad-2337f5096030
-  port: 37304
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: firefox
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 墨西哥-VLESS-线路2
-  network: tcp
-  port: 37304
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 42d72d6e
-  server: s2.huhiuh.space
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e959be7f-c55b-4ed5-81ad-2337f5096030
-- name: 墨西哥-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user138_mac:e959be7f-c55b-4ed5-81ad-2337f5096030
-  port: 37304
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: firefox
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 墨西哥-VLESS-线路3
-  network: tcp
-  port: 37304
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 42d72d6e
-  server: s3.huhiuh.space
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: e959be7f-c55b-4ed5-81ad-2337f5096030
+  - name: "墨西哥-HY2-线路1 (WrXiaohu11-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 56860
+    password: e959be7f-c55b-4ed5-81ad-2337f5096030
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "墨西哥-VLESS-线路1 (WrXiaohu11-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 56860
+    uuid: e959be7f-c55b-4ed5-81ad-2337f5096030
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "墨西哥-HY2-线路2 (WrXiaohu11-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 56860
+    password: e959be7f-c55b-4ed5-81ad-2337f5096030
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "墨西哥-VLESS-线路2 (WrXiaohu11-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 56860
+    uuid: e959be7f-c55b-4ed5-81ad-2337f5096030
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "墨西哥-HY2-线路3 (WrXiaohu11-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 56860
+    password: e959be7f-c55b-4ed5-81ad-2337f5096030
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "墨西哥-VLESS-线路3 (WrXiaohu11-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 56860
+    uuid: e959be7f-c55b-4ed5-81ad-2337f5096030
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

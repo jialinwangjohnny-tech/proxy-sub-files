@@ -1,76 +1,72 @@
 proxies:
-- name: 美国-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user043_phone2:7064acf3-2cf1-406a-b5e6-0148534208d4
-  port: 22228
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路1
-  network: tcp
-  port: 22228
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c01fbe68
-  server: s1.huhiuh.space
-  servername: apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7064acf3-2cf1-406a-b5e6-0148534208d4
-- name: 美国-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user043_phone2:7064acf3-2cf1-406a-b5e6-0148534208d4
-  port: 22228
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路2
-  network: tcp
-  port: 22228
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c01fbe68
-  server: s2.huhiuh.space
-  servername: apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7064acf3-2cf1-406a-b5e6-0148534208d4
-- name: 美国-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user043_phone2:7064acf3-2cf1-406a-b5e6-0148534208d4
-  port: 22228
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路3
-  network: tcp
-  port: 22228
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c01fbe68
-  server: s3.huhiuh.space
-  servername: apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7064acf3-2cf1-406a-b5e6-0148534208d4
+  - name: "美国-HY2-线路1 (JuicyKwok-phone2)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 50043
+    password: 7064acf3-2cf1-406a-b5e6-0148534208d4
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (JuicyKwok-phone2)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 50043
+    uuid: 7064acf3-2cf1-406a-b5e6-0148534208d4
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (JuicyKwok-phone2)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 50043
+    password: 7064acf3-2cf1-406a-b5e6-0148534208d4
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (JuicyKwok-phone2)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 50043
+    uuid: 7064acf3-2cf1-406a-b5e6-0148534208d4
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (JuicyKwok-phone2)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 50043
+    password: 7064acf3-2cf1-406a-b5e6-0148534208d4
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (JuicyKwok-phone2)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 50043
+    uuid: 7064acf3-2cf1-406a-b5e6-0148534208d4
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

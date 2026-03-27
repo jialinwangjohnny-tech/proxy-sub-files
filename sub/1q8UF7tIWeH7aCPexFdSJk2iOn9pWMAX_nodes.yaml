@@ -1,76 +1,72 @@
 proxies:
-- name: 美国-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user156_phone:cc34586c-951e-4a42-8fc3-84ec16e91b60
-  port: 20657
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路1
-  network: tcp
-  port: 20657
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: cab4cc1b
-  server: s1.huhiuh.space
-  servername: itunes.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cc34586c-951e-4a42-8fc3-84ec16e91b60
-- name: 美国-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user156_phone:cc34586c-951e-4a42-8fc3-84ec16e91b60
-  port: 20657
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路2
-  network: tcp
-  port: 20657
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: cab4cc1b
-  server: s2.huhiuh.space
-  servername: itunes.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cc34586c-951e-4a42-8fc3-84ec16e91b60
-- name: 美国-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user156_phone:cc34586c-951e-4a42-8fc3-84ec16e91b60
-  port: 20657
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路3
-  network: tcp
-  port: 20657
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: cab4cc1b
-  server: s3.huhiuh.space
-  servername: itunes.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: cc34586c-951e-4a42-8fc3-84ec16e91b60
+  - name: "美国-HY2-线路1 (生活（静态美）-phone)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 59826
+    password: cc34586c-951e-4a42-8fc3-84ec16e91b60
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (生活（静态美）-phone)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 59826
+    uuid: cc34586c-951e-4a42-8fc3-84ec16e91b60
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (生活（静态美）-phone)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 59826
+    password: cc34586c-951e-4a42-8fc3-84ec16e91b60
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (生活（静态美）-phone)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 59826
+    uuid: cc34586c-951e-4a42-8fc3-84ec16e91b60
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (生活（静态美）-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 59826
+    password: cc34586c-951e-4a42-8fc3-84ec16e91b60
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (生活（静态美）-phone)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 59826
+    uuid: cc34586c-951e-4a42-8fc3-84ec16e91b60
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.logitech.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

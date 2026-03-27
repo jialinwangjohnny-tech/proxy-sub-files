@@ -1,76 +1,72 @@
 proxies:
-- name: 波兰-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user220_phone:f9f3116c-b4ef-4996-ab59-630d6d9b8f77
-  port: 46466
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 波兰-VLESS-线路1
-  network: tcp
-  port: 46466
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 250df39e
-  server: s1.huhiuh.space
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
-- name: 波兰-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user220_phone:f9f3116c-b4ef-4996-ab59-630d6d9b8f77
-  port: 46466
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 波兰-VLESS-线路2
-  network: tcp
-  port: 46466
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 250df39e
-  server: s2.huhiuh.space
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
-- name: 波兰-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user220_phone:f9f3116c-b4ef-4996-ab59-630d6d9b8f77
-  port: 46466
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 波兰-VLESS-线路3
-  network: tcp
-  port: 46466
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 250df39e
-  server: s3.huhiuh.space
-  servername: www.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
+  - name: "波兰-HY2-线路1 (Zhoumo185-phone)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 55106
+    password: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "波兰-HY2-线路2 (Zhoumo185-phone)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 55106
+    password: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "波兰-HY2-线路3 (Zhoumo185-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 55106
+    password: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "波兰-VLESS-线路1 (Zhoumo185-phone)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 55106
+    uuid: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "波兰-VLESS-线路2 (Zhoumo185-phone)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 55106
+    uuid: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "波兰-VLESS-线路3 (Zhoumo185-phone)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 55106
+    uuid: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

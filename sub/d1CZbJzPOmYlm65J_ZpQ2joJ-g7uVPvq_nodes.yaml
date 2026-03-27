@@ -1,76 +1,72 @@
 proxies:
-- name: 美国-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user100_mac:3bf5f297-712a-4922-af55-229b02f8819e
-  port: 54065
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路1
-  network: tcp
-  port: 54065
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: a91cdf78
-  server: s1.huhiuh.space
-  servername: gateway.icloud.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3bf5f297-712a-4922-af55-229b02f8819e
-- name: 美国-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user100_mac:3bf5f297-712a-4922-af55-229b02f8819e
-  port: 54065
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路2
-  network: tcp
-  port: 54065
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: a91cdf78
-  server: s2.huhiuh.space
-  servername: gateway.icloud.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3bf5f297-712a-4922-af55-229b02f8819e
-- name: 美国-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user100_mac:3bf5f297-712a-4922-af55-229b02f8819e
-  port: 54065
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路3
-  network: tcp
-  port: 54065
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: a91cdf78
-  server: s3.huhiuh.space
-  servername: gateway.icloud.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 3bf5f297-712a-4922-af55-229b02f8819e
+  - name: "美国-HY2-线路1 (David-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 20564
+    password: 3bf5f297-712a-4922-af55-229b02f8819e
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (David-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 20564
+    uuid: 3bf5f297-712a-4922-af55-229b02f8819e
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (David-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 20564
+    password: 3bf5f297-712a-4922-af55-229b02f8819e
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (David-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 20564
+    uuid: 3bf5f297-712a-4922-af55-229b02f8819e
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (David-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 20564
+    password: 3bf5f297-712a-4922-af55-229b02f8819e
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (David-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 20564
+    uuid: 3bf5f297-712a-4922-af55-229b02f8819e
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

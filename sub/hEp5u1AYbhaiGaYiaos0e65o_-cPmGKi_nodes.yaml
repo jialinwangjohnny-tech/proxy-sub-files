@@ -1,76 +1,72 @@
 proxies:
-- name: 美国纽约-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user066_mac:b22c359c-e447-4157-bc31-998235c007f8
-  port: 28531
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国纽约-VLESS-线路1
-  network: tcp
-  port: 28531
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c6e9e5d9
-  server: s1.huhiuh.space
-  servername: apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b22c359c-e447-4157-bc31-998235c007f8
-- name: 美国纽约-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user066_mac:b22c359c-e447-4157-bc31-998235c007f8
-  port: 28531
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国纽约-VLESS-线路2
-  network: tcp
-  port: 28531
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c6e9e5d9
-  server: s2.huhiuh.space
-  servername: apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b22c359c-e447-4157-bc31-998235c007f8
-- name: 美国纽约-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user066_mac:b22c359c-e447-4157-bc31-998235c007f8
-  port: 28531
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国纽约-VLESS-线路3
-  network: tcp
-  port: 28531
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c6e9e5d9
-  server: s3.huhiuh.space
-  servername: apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b22c359c-e447-4157-bc31-998235c007f8
+  - name: "美国纽约-HY2-线路1 (Calvin-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 50066
+    password: b22c359c-e447-4157-bc31-998235c007f8
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国纽约-VLESS-线路1 (Calvin-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 50066
+    uuid: b22c359c-e447-4157-bc31-998235c007f8
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国纽约-HY2-线路2 (Calvin-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 50066
+    password: b22c359c-e447-4157-bc31-998235c007f8
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国纽约-VLESS-线路2 (Calvin-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 50066
+    uuid: b22c359c-e447-4157-bc31-998235c007f8
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国纽约-HY2-线路3 (Calvin-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 50066
+    password: b22c359c-e447-4157-bc31-998235c007f8
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国纽约-VLESS-线路3 (Calvin-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 50066
+    uuid: b22c359c-e447-4157-bc31-998235c007f8
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

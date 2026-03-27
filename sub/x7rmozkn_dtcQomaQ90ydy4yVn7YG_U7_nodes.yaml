@@ -1,76 +1,72 @@
 proxies:
-- name: 美国-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user082_mac:42c7070b-650c-45e0-aa3f-e1ea47d67efc
-  port: 49100
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: firefox
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路1
-  network: tcp
-  port: 49100
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: fb474f98
-  server: s1.huhiuh.space
-  servername: download.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
-- name: 美国-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user082_mac:42c7070b-650c-45e0-aa3f-e1ea47d67efc
-  port: 49100
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: firefox
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路2
-  network: tcp
-  port: 49100
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: fb474f98
-  server: s2.huhiuh.space
-  servername: download.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
-- name: 美国-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user082_mac:42c7070b-650c-45e0-aa3f-e1ea47d67efc
-  port: 49100
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: firefox
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路3
-  network: tcp
-  port: 49100
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: fb474f98
-  server: s3.huhiuh.space
-  servername: download.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
+  - name: "美国-HY2-线路1 (Mira_Wang-mac)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 29682
+    password: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (Mira_Wang-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 29682
+    uuid: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (Mira_Wang-mac)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 29682
+    password: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (Mira_Wang-mac)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 29682
+    uuid: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (Mira_Wang-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 29682
+    password: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (Mira_Wang-mac)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 29682
+    uuid: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

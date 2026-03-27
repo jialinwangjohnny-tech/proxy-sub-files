@@ -1,76 +1,72 @@
 proxies:
-- name: 美国-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user137_windows:a0f30c69-4090-4b3d-a75d-884704f8b799
-  port: 22476
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: firefox
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路1
-  network: tcp
-  port: 22476
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 7ae9db01
-  server: s1.huhiuh.space
-  servername: download.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: a0f30c69-4090-4b3d-a75d-884704f8b799
-- name: 美国-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user137_windows:a0f30c69-4090-4b3d-a75d-884704f8b799
-  port: 22476
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: firefox
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路2
-  network: tcp
-  port: 22476
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 7ae9db01
-  server: s2.huhiuh.space
-  servername: download.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: a0f30c69-4090-4b3d-a75d-884704f8b799
-- name: 美国-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user137_windows:a0f30c69-4090-4b3d-a75d-884704f8b799
-  port: 22476
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: firefox
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路3
-  network: tcp
-  port: 22476
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 7ae9db01
-  server: s3.huhiuh.space
-  servername: download.microsoft.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: a0f30c69-4090-4b3d-a75d-884704f8b799
+  - name: "美国-HY2-线路1 (Bin.-windows)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 11747
+    password: a0f30c69-4090-4b3d-a75d-884704f8b799
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (Bin.-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 11747
+    uuid: a0f30c69-4090-4b3d-a75d-884704f8b799
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (Bin.-windows)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 11747
+    password: a0f30c69-4090-4b3d-a75d-884704f8b799
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (Bin.-windows)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 11747
+    uuid: a0f30c69-4090-4b3d-a75d-884704f8b799
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (Bin.-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 11747
+    password: a0f30c69-4090-4b3d-a75d-884704f8b799
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (Bin.-windows)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 11747
+    uuid: a0f30c69-4090-4b3d-a75d-884704f8b799
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

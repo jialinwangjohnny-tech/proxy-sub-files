@@ -1,76 +1,72 @@
 proxies:
-- name: 马来西亚-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user214_phone:2c183f1d-0762-487c-85e0-492ee0cba8ea
-  port: 57267
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: chrome
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 马来西亚-VLESS-线路1
-  network: tcp
-  port: 57267
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: cc476dc1
-  server: s1.huhiuh.space
-  servername: itunes.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
-- name: 马来西亚-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user214_phone:2c183f1d-0762-487c-85e0-492ee0cba8ea
-  port: 57267
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: chrome
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 马来西亚-VLESS-线路2
-  network: tcp
-  port: 57267
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: cc476dc1
-  server: s2.huhiuh.space
-  servername: itunes.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
-- name: 马来西亚-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user214_phone:2c183f1d-0762-487c-85e0-492ee0cba8ea
-  port: 57267
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: chrome
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 马来西亚-VLESS-线路3
-  network: tcp
-  port: 57267
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: cc476dc1
-  server: s3.huhiuh.space
-  servername: itunes.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
+  - name: "马来西亚-HY2-线路1 (HL416321-phone)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 10084
+    password: 2c183f1d-0762-487c-85e0-492ee0cba8ea
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "马来西亚-VLESS-线路1 (HL416321-phone)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 10084
+    uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "马来西亚-HY2-线路2 (HL416321-phone)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 10084
+    password: 2c183f1d-0762-487c-85e0-492ee0cba8ea
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "马来西亚-VLESS-线路2 (HL416321-phone)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 10084
+    uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "马来西亚-HY2-线路3 (HL416321-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 10084
+    password: 2c183f1d-0762-487c-85e0-492ee0cba8ea
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "马来西亚-VLESS-线路3 (HL416321-phone)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 10084
+    uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

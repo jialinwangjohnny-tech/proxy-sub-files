@@ -1,76 +1,72 @@
 proxies:
-- name: 美国-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user190_phone:37c18e85-9a9d-4569-887d-67a3bf30a6f8
-  port: 42878
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路1
-  network: tcp
-  port: 42878
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c3cfaea6
-  server: s1.huhiuh.space
-  servername: swdist.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 37c18e85-9a9d-4569-887d-67a3bf30a6f8
-- name: 美国-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user190_phone:37c18e85-9a9d-4569-887d-67a3bf30a6f8
-  port: 42878
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路2
-  network: tcp
-  port: 42878
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c3cfaea6
-  server: s2.huhiuh.space
-  servername: swdist.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 37c18e85-9a9d-4569-887d-67a3bf30a6f8
-- name: 美国-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user190_phone:37c18e85-9a9d-4569-887d-67a3bf30a6f8
-  port: 42878
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: edge
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路3
-  network: tcp
-  port: 42878
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c3cfaea6
-  server: s3.huhiuh.space
-  servername: swdist.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 37c18e85-9a9d-4569-887d-67a3bf30a6f8
+  - name: "美国-HY2-线路1 (阿拉迪恩-phone)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 43755
+    password: 37c18e85-9a9d-4569-887d-67a3bf30a6f8
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (阿拉迪恩-phone)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 43755
+    uuid: 37c18e85-9a9d-4569-887d-67a3bf30a6f8
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (阿拉迪恩-phone)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 43755
+    password: 37c18e85-9a9d-4569-887d-67a3bf30a6f8
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (阿拉迪恩-phone)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 43755
+    uuid: 37c18e85-9a9d-4569-887d-67a3bf30a6f8
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (阿拉迪恩-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 43755
+    password: 37c18e85-9a9d-4569-887d-67a3bf30a6f8
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (阿拉迪恩-phone)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 43755
+    uuid: 37c18e85-9a9d-4569-887d-67a3bf30a6f8
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome

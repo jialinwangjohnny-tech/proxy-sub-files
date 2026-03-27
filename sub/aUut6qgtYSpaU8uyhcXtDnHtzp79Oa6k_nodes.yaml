@@ -1,76 +1,72 @@
 proxies:
-- name: 美国-HY2-线路1
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user016_phone:9f8fda74-da05-48ce-b279-9b1cbf42e640
-  port: 50707
-  server: s1.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路1
-  network: tcp
-  port: 50707
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: bc257c3a
-  server: s1.huhiuh.space
-  servername: www.samsung.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9f8fda74-da05-48ce-b279-9b1cbf42e640
-- name: 美国-HY2-线路2
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user016_phone:9f8fda74-da05-48ce-b279-9b1cbf42e640
-  port: 50707
-  server: s2.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路2
-  network: tcp
-  port: 50707
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: bc257c3a
-  server: s2.huhiuh.space
-  servername: www.samsung.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9f8fda74-da05-48ce-b279-9b1cbf42e640
-- name: 美国-HY2-线路3
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  password: user016_phone:9f8fda74-da05-48ce-b279-9b1cbf42e640
-  port: 50707
-  server: s3.huhiuh.space
-  skip-cert-verify: true
-  sni: www.bing.com
-  type: hysteria2
-  udp: true
-- client-fingerprint: safari
-  fast-open: true
-  flow: xtls-rprx-vision
-  name: 美国-VLESS-线路3
-  network: tcp
-  port: 50707
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: bc257c3a
-  server: s3.huhiuh.space
-  servername: www.samsung.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 9f8fda74-da05-48ce-b279-9b1cbf42e640
+  - name: "美国-HY2-线路1 (妙谨-phone)"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 53771
+    password: 9f8fda74-da05-48ce-b279-9b1cbf42e640
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路1 (妙谨-phone)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 53771
+    uuid: 9f8fda74-da05-48ce-b279-9b1cbf42e640
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.samsung.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路2 (妙谨-phone)"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 53771
+    password: 9f8fda74-da05-48ce-b279-9b1cbf42e640
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路2 (妙谨-phone)"
+    type: vless
+    server: s2.huhiuh.space
+    port: 53771
+    uuid: 9f8fda74-da05-48ce-b279-9b1cbf42e640
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.samsung.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
+  - name: "美国-HY2-线路3 (妙谨-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 53771
+    password: 9f8fda74-da05-48ce-b279-9b1cbf42e640
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
+  - name: "美国-VLESS-线路3 (妙谨-phone)"
+    type: vless
+    server: s3.huhiuh.space
+    port: 53771
+    uuid: 9f8fda74-da05-48ce-b279-9b1cbf42e640
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.samsung.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
