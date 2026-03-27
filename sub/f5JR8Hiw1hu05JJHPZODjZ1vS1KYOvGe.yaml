@@ -55,15 +55,17 @@ proxies:
   - name: "美国-HY2-线路1"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 42771
+    port: 14062
     password: "user213_windows:9b780647-a6a2-403e-93a6-b653c35d25a2"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "美国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
-    port: 42771
+    port: 14062
     uuid: 9b780647-a6a2-403e-93a6-b653c35d25a2
     flow: xtls-rprx-vision
     network: tcp
@@ -73,20 +75,22 @@ proxies:
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "9567efbb"
-    client-fingerprint: chrome
+    client-fingerprint: edge
     fast-open: true
   - name: "美国-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 42771
+    port: 14062
     password: "user213_windows:9b780647-a6a2-403e-93a6-b653c35d25a2"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "美国-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
-    port: 42771
+    port: 14062
     uuid: 9b780647-a6a2-403e-93a6-b653c35d25a2
     flow: xtls-rprx-vision
     network: tcp
@@ -96,20 +100,22 @@ proxies:
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "9567efbb"
-    client-fingerprint: chrome
+    client-fingerprint: edge
     fast-open: true
   - name: "美国-HY2-线路3"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 42771
+    port: 14062
     password: "user213_windows:9b780647-a6a2-403e-93a6-b653c35d25a2"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "美国-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
-    port: 42771
+    port: 14062
     uuid: 9b780647-a6a2-403e-93a6-b653c35d25a2
     flow: xtls-rprx-vision
     network: tcp
@@ -119,7 +125,7 @@ proxies:
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "9567efbb"
-    client-fingerprint: chrome
+    client-fingerprint: edge
     fast-open: true
 
 proxy-groups:
@@ -132,9 +138,9 @@ proxy-groups:
       - "美国-VLESS-线路2"
       - "美国-HY2-线路3"
       - "美国-VLESS-线路3"
-    interval: 5
+    interval: 30
     timeout: 3000
-    lazy: false
+    lazy: true
     url: https://www.gstatic.com/generate_204
 
 rules:

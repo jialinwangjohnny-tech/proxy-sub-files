@@ -1,0 +1,151 @@
+# Xray + HY2 原版订阅 — user129
+# 自动生成，请勿手动编辑
+
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: warning
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:1053
+  use-hosts: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - "https://dns.google/dns-query#自动切换"
+    - "https://cloudflare-dns.com/dns-query#自动切换"
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver-policy:
+    "geosite:cn,private":
+      - 223.5.5.5
+      - 119.29.29.29
+    "+.cn,+.com.cn":
+      - 223.5.5.5
+      - 119.29.29.29
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.localhost"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "localhost.ptlogin2.qq.com"
+    - "+.srv.nintendo.net"
+    - "+.stun.playstation.net"
+    - "+.apple.com"
+    - "+.cdn.apple.com"
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+
+proxies:
+  - name: "美国-HY2-线路1"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 51620
+    password: "user129_phone:afaa3119-4e22-43df-8f3f-3881e89cf69d"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "美国-VLESS-线路1"
+    type: vless
+    server: s1.huhiuh.space
+    port: 51620
+    uuid: afaa3119-4e22-43df-8f3f-3881e89cf69d
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "da52d5cf"
+    client-fingerprint: safari
+    fast-open: true
+  - name: "美国-HY2-线路2"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 51620
+    password: "user129_phone:afaa3119-4e22-43df-8f3f-3881e89cf69d"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "美国-VLESS-线路2"
+    type: vless
+    server: s2.huhiuh.space
+    port: 51620
+    uuid: afaa3119-4e22-43df-8f3f-3881e89cf69d
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "da52d5cf"
+    client-fingerprint: safari
+    fast-open: true
+  - name: "美国-HY2-线路3"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 51620
+    password: "user129_phone:afaa3119-4e22-43df-8f3f-3881e89cf69d"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "美国-VLESS-线路3"
+    type: vless
+    server: s3.huhiuh.space
+    port: 51620
+    uuid: afaa3119-4e22-43df-8f3f-3881e89cf69d
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "da52d5cf"
+    client-fingerprint: safari
+    fast-open: true
+
+proxy-groups:
+  - name: "自动切换"
+    type: fallback
+    proxies:
+      - "美国-HY2-线路1"
+      - "美国-VLESS-线路1"
+      - "美国-HY2-线路2"
+      - "美国-VLESS-线路2"
+      - "美国-HY2-线路3"
+      - "美国-VLESS-线路3"
+    interval: 30
+    timeout: 3000
+    lazy: true
+    url: https://www.gstatic.com/generate_204
+
+rules:
+  - GEOSITE,private,DIRECT
+  - GEOSITE,cn,DIRECT
+  - GEOIP,private,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,自动切换

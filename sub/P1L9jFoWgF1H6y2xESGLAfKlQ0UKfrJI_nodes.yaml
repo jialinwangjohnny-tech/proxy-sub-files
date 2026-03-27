@@ -1,72 +1,76 @@
 proxies:
-  - name: "美国-HY2-线路1 (E201856880-mac)"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 43384
-    password: c998b953-7947-446d-b35a-20cc22d87855
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-HY2-线路2 (E201856880-mac)"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 43384
-    password: c998b953-7947-446d-b35a-20cc22d87855
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-HY2-线路3 (E201856880-mac)"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 43384
-    password: c998b953-7947-446d-b35a-20cc22d87855
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
-  - name: "美国-VLESS-线路1 (E201856880-mac)"
-    type: vless
-    server: s1.huhiuh.space
-    port: 43384
-    uuid: c998b953-7947-446d-b35a-20cc22d87855
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: www.ea.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国-VLESS-线路2 (E201856880-mac)"
-    type: vless
-    server: s2.huhiuh.space
-    port: 43384
-    uuid: c998b953-7947-446d-b35a-20cc22d87855
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: www.ea.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
-  - name: "美国-VLESS-线路3 (E201856880-mac)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 43384
-    uuid: c998b953-7947-446d-b35a-20cc22d87855
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: www.ea.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
+- name: 美国-HY2-线路1
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user221_mac:c998b953-7947-446d-b35a-20cc22d87855
+  port: 25955
+  server: s1.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: firefox
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国-VLESS-线路1
+  network: tcp
+  port: 25955
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 3aca58c9
+  server: s1.huhiuh.space
+  servername: www.microsoft.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: c998b953-7947-446d-b35a-20cc22d87855
+- name: 美国-HY2-线路2
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user221_mac:c998b953-7947-446d-b35a-20cc22d87855
+  port: 25955
+  server: s2.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: firefox
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国-VLESS-线路2
+  network: tcp
+  port: 25955
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 3aca58c9
+  server: s2.huhiuh.space
+  servername: www.microsoft.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: c998b953-7947-446d-b35a-20cc22d87855
+- name: 美国-HY2-线路3
+  obfs: salamander
+  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  password: user221_mac:c998b953-7947-446d-b35a-20cc22d87855
+  port: 25955
+  server: s3.huhiuh.space
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: hysteria2
+  udp: true
+- client-fingerprint: firefox
+  fast-open: true
+  flow: xtls-rprx-vision
+  name: 美国-VLESS-线路3
+  network: tcp
+  port: 25955
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 3aca58c9
+  server: s3.huhiuh.space
+  servername: www.microsoft.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: c998b953-7947-446d-b35a-20cc22d87855

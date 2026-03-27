@@ -55,7 +55,7 @@ proxies:
   - name: "马来西亚-HY2-线路1"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 31875
+    port: 57267
     password: "user214_phone:2c183f1d-0762-487c-85e0-492ee0cba8ea"
     obfs: salamander
     obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
@@ -65,7 +65,7 @@ proxies:
   - name: "马来西亚-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
-    port: 31875
+    port: 57267
     uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
     flow: xtls-rprx-vision
     network: tcp
@@ -80,7 +80,7 @@ proxies:
   - name: "马来西亚-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 31875
+    port: 57267
     password: "user214_phone:2c183f1d-0762-487c-85e0-492ee0cba8ea"
     obfs: salamander
     obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
@@ -90,7 +90,7 @@ proxies:
   - name: "马来西亚-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
-    port: 31875
+    port: 57267
     uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
     flow: xtls-rprx-vision
     network: tcp
@@ -105,7 +105,7 @@ proxies:
   - name: "马来西亚-HY2-线路3"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 31875
+    port: 57267
     password: "user214_phone:2c183f1d-0762-487c-85e0-492ee0cba8ea"
     obfs: salamander
     obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
@@ -115,7 +115,7 @@ proxies:
   - name: "马来西亚-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
-    port: 31875
+    port: 57267
     uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
     flow: xtls-rprx-vision
     network: tcp
@@ -138,9 +138,9 @@ proxy-groups:
       - "马来西亚-VLESS-线路2"
       - "马来西亚-HY2-线路3"
       - "马来西亚-VLESS-线路3"
-    interval: 5
+    interval: 30
     timeout: 3000
-    lazy: false
+    lazy: true
     url: https://www.gstatic.com/generate_204
 
 rules:

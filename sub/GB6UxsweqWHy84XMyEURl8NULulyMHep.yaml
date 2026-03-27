@@ -12,19 +12,23 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   listen: 0.0.0.0:1053
+  use-hosts: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
   nameserver:
-    - https://dns.google/dns-query#自动切换
-    - https://cloudflare-dns.com/dns-query#自动切换
+    - "https://dns.google/dns-query#自动切换"
+    - "https://cloudflare-dns.com/dns-query#自动切换"
   proxy-server-nameserver:
-    - https://dns.google/dns-query
-    - https://1.1.1.1/dns-query
+    - 223.5.5.5
+    - 119.29.29.29
   nameserver-policy:
     "geosite:cn,private":
       - 223.5.5.5
-      - 114.114.114.114
+      - 119.29.29.29
     "+.cn,+.com.cn":
       - 223.5.5.5
-      - 114.114.114.114
+      - 119.29.29.29
   fake-ip-filter:
     - "*.lan"
     - "*.local"
@@ -51,15 +55,17 @@ proxies:
   - name: "美国-HY2-线路1"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 24055
+    port: 48439
     password: "user207_phone:ebc6c190-1d30-450c-9b30-2aba73700dd1"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "美国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
-    port: 24055
+    port: 48439
     uuid: ebc6c190-1d30-450c-9b30-2aba73700dd1
     flow: xtls-rprx-vision
     network: tcp
@@ -74,15 +80,17 @@ proxies:
   - name: "美国-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 24055
+    port: 48439
     password: "user207_phone:ebc6c190-1d30-450c-9b30-2aba73700dd1"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "美国-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
-    port: 24055
+    port: 48439
     uuid: ebc6c190-1d30-450c-9b30-2aba73700dd1
     flow: xtls-rprx-vision
     network: tcp
@@ -97,15 +105,17 @@ proxies:
   - name: "美国-HY2-线路3"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 24055
+    port: 48439
     password: "user207_phone:ebc6c190-1d30-450c-9b30-2aba73700dd1"
+    obfs: salamander
+    obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "美国-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
-    port: 24055
+    port: 48439
     uuid: ebc6c190-1d30-450c-9b30-2aba73700dd1
     flow: xtls-rprx-vision
     network: tcp
@@ -120,7 +130,7 @@ proxies:
 
 proxy-groups:
   - name: "自动切换"
-    type: url-test
+    type: fallback
     proxies:
       - "美国-HY2-线路1"
       - "美国-VLESS-线路1"
@@ -128,10 +138,9 @@ proxy-groups:
       - "美国-VLESS-线路2"
       - "美国-HY2-线路3"
       - "美国-VLESS-线路3"
-    interval: 5
-    timeout: 5000
-    tolerance: 100
-    lazy: false
+    interval: 30
+    timeout: 3000
+    lazy: true
     url: https://www.gstatic.com/generate_204
 
 rules:
