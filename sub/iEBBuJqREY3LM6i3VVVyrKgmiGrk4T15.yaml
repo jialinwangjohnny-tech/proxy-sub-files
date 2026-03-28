@@ -69,7 +69,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: learn.microsoft.com
+    servername: apple.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "d8b0c03d"
@@ -92,7 +92,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: learn.microsoft.com
+    servername: apple.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "d8b0c03d"
@@ -115,7 +115,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: learn.microsoft.com
+    servername: apple.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "d8b0c03d"
