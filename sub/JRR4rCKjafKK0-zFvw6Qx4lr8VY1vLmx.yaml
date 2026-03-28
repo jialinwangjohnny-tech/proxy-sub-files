@@ -69,7 +69,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.samsung.com
+    servername: www.amd.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "c9f155f6"
@@ -92,7 +92,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.samsung.com
+    servername: www.amd.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "c9f155f6"
@@ -115,7 +115,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.samsung.com
+    servername: www.amd.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "c9f155f6"
@@ -132,9 +132,9 @@ proxy-groups:
       - "马来西亚-VLESS-线路2"
       - "马来西亚-HY2-线路3"
       - "马来西亚-VLESS-线路3"
-    interval: 5
-    timeout: 1500
-    lazy: false
+    interval: 300
+    timeout: 3000
+    lazy: true
     url: https://www.gstatic.com/generate_204
 
 rules:

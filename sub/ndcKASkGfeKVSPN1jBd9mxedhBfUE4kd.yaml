@@ -132,9 +132,9 @@ proxy-groups:
       - "印尼-VLESS-线路2"
       - "印尼-HY2-线路3"
       - "印尼-VLESS-线路3"
-    interval: 5
-    timeout: 1500
-    lazy: false
+    interval: 300
+    timeout: 3000
+    lazy: true
     url: https://www.gstatic.com/generate_204
 
 rules:
