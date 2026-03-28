@@ -1,8 +1,8 @@
 # 用户: user038
 # UUID: 7f87bf89-77d4-4814-b9c0-296fc1ff613a
 # 落地: 149.119.134.85:443 (美国)
-# 生成时间: 2026-03-27 17:58:49
-# 到期时间: 2026-03-27
+# 生成时间: 2026-03-28 06:00:00
+# 到期时间: 2026-04-28
 # 多线路自动切换模式
 
 mixed-port: 7890
@@ -55,7 +55,7 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
-  - name: "美国-HY2-线路1"
+  - name: "美国-HY2-线路1 (🐰独享)"
     type: hysteria2
     server: s1.huhiuh.space
     port: 50038
@@ -64,7 +64,7 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "美国-HY2-线路2"
+  - name: "美国-HY2-线路2 (🐰独享)"
     type: hysteria2
     server: s2.huhiuh.space
     port: 50038
@@ -73,7 +73,7 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "美国-HY2-线路3"
+  - name: "美国-HY2-线路3 (🐰独享)"
     type: hysteria2
     server: s3.huhiuh.space
     port: 50038
@@ -82,7 +82,7 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "美国-VLESS-线路1"
+  - name: "美国-VLESS-线路1 (🐰独享)"
     type: vless
     server: s1.huhiuh.space
     port: 50038
@@ -97,7 +97,7 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "美国-VLESS-线路2"
+  - name: "美国-VLESS-线路2 (🐰独享)"
     type: vless
     server: s2.huhiuh.space
     port: 50038
@@ -112,7 +112,7 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "美国-VLESS-线路3"
+  - name: "美国-VLESS-线路3 (🐰独享)"
     type: vless
     server: s3.huhiuh.space
     port: 50038
@@ -132,23 +132,23 @@ proxy-groups:
     type: select
     proxies:
       - 自动切换
-      - 美国-HY2-线路1
-      - 美国-HY2-线路2
-      - 美国-HY2-线路3
-      - 美国-VLESS-线路1
-      - 美国-VLESS-线路2
-      - 美国-VLESS-线路3
+      - 美国-HY2-线路1 (🐰独享)
+      - 美国-HY2-线路2 (🐰独享)
+      - 美国-HY2-线路3 (🐰独享)
+      - 美国-VLESS-线路1 (🐰独享)
+      - 美国-VLESS-线路2 (🐰独享)
+      - 美国-VLESS-线路3 (🐰独享)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-HY2-线路1
-      - 美国-HY2-线路2
-      - 美国-HY2-线路3
-      - 美国-VLESS-线路1
-      - 美国-VLESS-线路2
-      - 美国-VLESS-线路3
+      - 美国-HY2-线路1 (🐰独享)
+      - 美国-HY2-线路2 (🐰独享)
+      - 美国-HY2-线路3 (🐰独享)
+      - 美国-VLESS-线路1 (🐰独享)
+      - 美国-VLESS-线路2 (🐰独享)
+      - 美国-VLESS-线路3 (🐰独享)
     url: http://www.gstatic.com/generate_204
     interval: 5
     timeout: 3000
