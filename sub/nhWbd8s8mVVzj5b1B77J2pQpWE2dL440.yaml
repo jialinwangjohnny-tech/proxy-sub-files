@@ -1,7 +1,7 @@
 # 用户: user170-mac
 # UUID: 85084167-bdb3-4a7b-bba4-c0179828bc5c
 # 落地: 170.130.97.43:443 (美国)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-16
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (wanli0761-mac)
       - 美国-VLESS-线路3 (wanli0761-mac)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

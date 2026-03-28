@@ -1,7 +1,7 @@
 # 用户: user066-phone
 # UUID: 43800863-7825-4d06-9ad2-056d33137845
 # 落地: 168.158.89.142:12324 (美国纽约)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-10
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国纽约-VLESS-线路2 (Calvin-phone)
       - 美国纽约-VLESS-线路3 (Calvin-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

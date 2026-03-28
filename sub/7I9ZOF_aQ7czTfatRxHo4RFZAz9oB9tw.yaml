@@ -1,7 +1,7 @@
 # 用户: user133-phone
 # UUID: f325e4ec-a612-4d3a-af3d-b814704de783
 # 落地: 50.3.64.65:443 (美国)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2027-03-27 21:50
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (何佳瑶-phone)
       - 美国-VLESS-线路3 (何佳瑶-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

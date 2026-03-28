@@ -1,7 +1,7 @@
 # 用户: user223-phone
 # UUID: 37ee9d8d-eb70-41be-ad76-7b7a6e35eb0d
 # 落地: 45.92.209.15:443 (荷兰)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-25
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 荷兰-VLESS-线路2 (baixiaoleng20-phone)
       - 荷兰-VLESS-线路3 (baixiaoleng20-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

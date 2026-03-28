@@ -1,7 +1,7 @@
 # 用户: user162-windows
 # UUID: 70051863-9f1f-431d-8d39-46575f285de5
 # 落地: 170.130.97.43:443 (美国)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (康国青-windows)
       - 美国-VLESS-线路3 (康国青-windows)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

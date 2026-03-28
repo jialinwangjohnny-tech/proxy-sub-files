@@ -1,7 +1,7 @@
 # 用户: user008-mac
 # UUID: 012b1b9c-3a21-4aca-80f9-f74f496070ce
 # 落地: 38.248.251.182:443 (美国洛杉矶)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-11 19:47
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国洛杉矶-VLESS-线路2 (佳霖-mac)
       - 美国洛杉矶-VLESS-线路3 (佳霖-mac)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

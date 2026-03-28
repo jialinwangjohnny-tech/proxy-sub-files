@@ -1,7 +1,7 @@
 # 用户: user031-windows
 # UUID: f2d930df-ac88-4ae9-bbd2-e5883383d0d2
 # 落地: 149.119.169.48:443 (美国)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (黄小美-windows)
       - 美国-VLESS-线路3 (黄小美-windows)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

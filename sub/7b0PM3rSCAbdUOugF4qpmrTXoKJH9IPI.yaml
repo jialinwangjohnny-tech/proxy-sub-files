@@ -1,7 +1,7 @@
 # 用户: user139-phone
 # UUID: cc7d0bc2-db2c-42ce-beb8-6101288a45e9
 # 落地: 149.51.95.28:8886 (墨西哥)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2099-12-31
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 墨西哥-VLESS-线路2 (WrXiaohu12-phone)
       - 墨西哥-VLESS-线路3 (WrXiaohu12-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

@@ -1,7 +1,7 @@
 # 用户: user100-phone
 # UUID: 2938ae4c-326e-4cfd-a597-5402c96d7dc9
 # 落地: 208.214.165.220:50101 (美国)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-17
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (David-phone)
       - 美国-VLESS-线路3 (David-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

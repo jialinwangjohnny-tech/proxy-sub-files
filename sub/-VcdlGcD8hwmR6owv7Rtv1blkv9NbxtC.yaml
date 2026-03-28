@@ -1,7 +1,7 @@
 # 用户: user220-mac
 # UUID: 97d89fa2-4349-4030-983b-640cfde89ef8
 # 落地: 83.168.115.218:12323 (波兰)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-25
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 波兰-VLESS-线路2 (Zhoumo185-mac)
       - 波兰-VLESS-线路3 (Zhoumo185-mac)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

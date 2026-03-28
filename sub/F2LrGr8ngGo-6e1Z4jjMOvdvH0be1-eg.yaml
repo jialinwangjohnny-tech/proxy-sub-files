@@ -1,7 +1,7 @@
 # 用户: user001
 # UUID: 7cdf6f8d-41c4-4c18-a9f2-797a4bacfec7
 # 落地: 38.248.251.17:443 (美国)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-19
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (测试微信独享)
       - 美国-VLESS-线路3 (测试微信独享)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

@@ -1,8 +1,8 @@
 # 用户: user233-windows
 # UUID: 72cca28c-c39f-4a13-934d-61b157245dd6
-# 落地: unknown:443 (美国)
-# 生成时间: 2026-03-28 05:31:29
-# 到期时间: 
+# 落地: 170.130.97.43:443 (美国)
+# 生成时间: 2026-03-28 07:36:07
+# 到期时间: 2027-03-28
 # 多线路自动切换模式
 
 mixed-port: 7890
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (guyaru1234-windows)
       - 美国-VLESS-线路3 (guyaru1234-windows)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

@@ -1,7 +1,7 @@
 # 用户: user097-windows
 # UUID: 4fc44f1f-741b-4f5b-be0e-c6a0b34fe00d
 # 落地: 64.32.180.178:443 (美国洛杉矶)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-16 12:20
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国洛杉矶-VLESS-线路2 (Dawn-windows)
       - 美国洛杉矶-VLESS-线路3 (Dawn-windows)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

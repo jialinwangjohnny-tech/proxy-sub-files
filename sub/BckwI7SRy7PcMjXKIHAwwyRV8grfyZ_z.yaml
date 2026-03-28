@@ -1,7 +1,7 @@
 # 用户: user229-mac
 # UUID: 5e1202f7-f245-443d-a10e-e94391e464ab
 # 落地: 38.15.30.233:443 (美国)
-# 生成时间: 2026-03-28 04:14:24
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-26 21:45
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (kkjj202568-mac)
       - 美国-VLESS-线路3 (kkjj202568-mac)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 

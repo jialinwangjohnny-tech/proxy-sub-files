@@ -1,7 +1,7 @@
 # 用户: user216-phone
 # UUID: 6b14e1b5-d0f1-45b1-b5f2-2e67332bb8ba
 # 落地: 216.175.194.44:443 (美国)
-# 生成时间: 2026-03-27 17:58:49
+# 生成时间: 2026-03-28 07:36:07
 # 到期时间: 2026-04-23
 # 多线路自动切换模式
 
@@ -150,7 +150,7 @@ proxy-groups:
       - 美国-VLESS-线路2 (ChenerLee1224-phone)
       - 美国-VLESS-线路3 (ChenerLee1224-phone)
     url: http://www.gstatic.com/generate_204
-    interval: 5
+    interval: 300
     timeout: 3000
     lazy: true
 
