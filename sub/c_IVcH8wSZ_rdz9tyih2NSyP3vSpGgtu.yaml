@@ -55,7 +55,7 @@ proxies:
   - name: "美国-HY2-线路1"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 56972
+    port: 46067
     password: "user004_mac:9077c98d-b67f-4616-b0af-fbe559608e5d"
     sni: www.bing.com
     skip-cert-verify: true
@@ -63,7 +63,7 @@ proxies:
   - name: "美国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
-    port: 56972
+    port: 46067
     uuid: 9077c98d-b67f-4616-b0af-fbe559608e5d
     flow: xtls-rprx-vision
     network: tcp
@@ -78,7 +78,7 @@ proxies:
   - name: "美国-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 56972
+    port: 46067
     password: "user004_mac:9077c98d-b67f-4616-b0af-fbe559608e5d"
     sni: www.bing.com
     skip-cert-verify: true
@@ -86,7 +86,7 @@ proxies:
   - name: "美国-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
-    port: 56972
+    port: 46067
     uuid: 9077c98d-b67f-4616-b0af-fbe559608e5d
     flow: xtls-rprx-vision
     network: tcp
@@ -101,7 +101,7 @@ proxies:
   - name: "美国-HY2-线路3"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 56972
+    port: 46067
     password: "user004_mac:9077c98d-b67f-4616-b0af-fbe559608e5d"
     sni: www.bing.com
     skip-cert-verify: true
@@ -109,7 +109,7 @@ proxies:
   - name: "美国-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
-    port: 56972
+    port: 46067
     uuid: 9077c98d-b67f-4616-b0af-fbe559608e5d
     flow: xtls-rprx-vision
     network: tcp
