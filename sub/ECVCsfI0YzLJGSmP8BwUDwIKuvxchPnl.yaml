@@ -52,14 +52,6 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "Dubai,AE-HY2-线路1"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 57992
-    password: "user079_windows:c60d5bf3-dacf-41db-9f66-9e76f9e0402b"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "Dubai,AE-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -98,14 +90,6 @@ proxies:
       short-id: "1dbdeaa6"
     client-fingerprint: safari
     fast-open: true
-  - name: "Dubai,AE-HY2-线路3"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 57992
-    password: "user079_windows:c60d5bf3-dacf-41db-9f66-9e76f9e0402b"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "Dubai,AE-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
@@ -126,15 +110,13 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "Dubai,AE-HY2-线路1"
       - "Dubai,AE-VLESS-线路1"
       - "Dubai,AE-HY2-线路2"
       - "Dubai,AE-VLESS-线路2"
-      - "Dubai,AE-HY2-线路3"
       - "Dubai,AE-VLESS-线路3"
-    interval: 300
+    interval: 5
     timeout: 3000
-    lazy: true
+    lazy: false
     url: https://www.gstatic.com/generate_204
 
 rules:

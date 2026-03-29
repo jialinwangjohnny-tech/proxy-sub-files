@@ -52,14 +52,6 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "墨西哥-HY2-线路1"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 13835
-    password: "user139_phone:cc7d0bc2-db2c-42ce-beb8-6101288a45e9"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "墨西哥-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -98,14 +90,6 @@ proxies:
       short-id: "f6639025"
     client-fingerprint: firefox
     fast-open: true
-  - name: "墨西哥-HY2-线路3"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 13835
-    password: "user139_phone:cc7d0bc2-db2c-42ce-beb8-6101288a45e9"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "墨西哥-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
@@ -126,15 +110,13 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "墨西哥-HY2-线路1"
       - "墨西哥-VLESS-线路1"
       - "墨西哥-HY2-线路2"
       - "墨西哥-VLESS-线路2"
-      - "墨西哥-HY2-线路3"
       - "墨西哥-VLESS-线路3"
-    interval: 300
+    interval: 5
     timeout: 3000
-    lazy: true
+    lazy: false
     url: https://www.gstatic.com/generate_204
 
 rules:

@@ -52,14 +52,6 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国洛杉矶-HY2-线路1"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 51748
-    password: "user120_windows:c97a5a41-114e-4061-b13b-2601719c846d"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "美国洛杉矶-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -98,14 +90,6 @@ proxies:
       short-id: "dde9f125"
     client-fingerprint: edge
     fast-open: true
-  - name: "美国洛杉矶-HY2-线路3"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 51748
-    password: "user120_windows:c97a5a41-114e-4061-b13b-2601719c846d"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "美国洛杉矶-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
@@ -126,15 +110,13 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国洛杉矶-HY2-线路1"
       - "美国洛杉矶-VLESS-线路1"
       - "美国洛杉矶-HY2-线路2"
       - "美国洛杉矶-VLESS-线路2"
-      - "美国洛杉矶-HY2-线路3"
       - "美国洛杉矶-VLESS-线路3"
-    interval: 300
+    interval: 5
     timeout: 3000
-    lazy: true
+    lazy: false
     url: https://www.gstatic.com/generate_204
 
 rules:

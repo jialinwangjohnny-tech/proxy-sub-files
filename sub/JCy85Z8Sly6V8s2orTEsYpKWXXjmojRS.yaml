@@ -52,14 +52,6 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国德克萨斯-HY2-线路1"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 19906
-    password: "user177_mac:e345e043-231c-4f7c-ba93-9338876e792c"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "美国德克萨斯-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -98,14 +90,6 @@ proxies:
       short-id: "cab9d3f5"
     client-fingerprint: chrome
     fast-open: true
-  - name: "美国德克萨斯-HY2-线路3"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 19906
-    password: "user177_mac:e345e043-231c-4f7c-ba93-9338876e792c"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "美国德克萨斯-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
@@ -126,15 +110,13 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国德克萨斯-HY2-线路1"
       - "美国德克萨斯-VLESS-线路1"
       - "美国德克萨斯-HY2-线路2"
       - "美国德克萨斯-VLESS-线路2"
-      - "美国德克萨斯-HY2-线路3"
       - "美国德克萨斯-VLESS-线路3"
-    interval: 300
+    interval: 5
     timeout: 3000
-    lazy: true
+    lazy: false
     url: https://www.gstatic.com/generate_204
 
 rules:

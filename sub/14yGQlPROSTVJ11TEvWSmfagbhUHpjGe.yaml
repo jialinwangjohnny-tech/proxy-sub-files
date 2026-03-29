@@ -52,14 +52,6 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "德国-HY2-线路1"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 11520
-    password: "user168_phone:e2bfcd93-cab9-40cb-99f2-22eb5046e691"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "德国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -98,14 +90,6 @@ proxies:
       short-id: "ad9e21d5"
     client-fingerprint: safari
     fast-open: true
-  - name: "德国-HY2-线路3"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 11520
-    password: "user168_phone:e2bfcd93-cab9-40cb-99f2-22eb5046e691"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "德国-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
@@ -126,15 +110,13 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "德国-HY2-线路1"
       - "德国-VLESS-线路1"
       - "德国-HY2-线路2"
       - "德国-VLESS-线路2"
-      - "德国-HY2-线路3"
       - "德国-VLESS-线路3"
-    interval: 300
+    interval: 5
     timeout: 3000
-    lazy: true
+    lazy: false
     url: https://www.gstatic.com/generate_204
 
 rules:
