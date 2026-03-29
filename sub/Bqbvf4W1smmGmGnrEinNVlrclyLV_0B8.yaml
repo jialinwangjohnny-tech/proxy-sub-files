@@ -52,21 +52,6 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "波兰-VLESS-线路1"
-    type: vless
-    server: s1.huhiuh.space
-    port: 57702
-    uuid: f9427e7c-1d17-439f-8e27-67073659e420
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: gateway.icloud.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "9075c6ca"
-    client-fingerprint: safari
-    fast-open: true
   - name: "波兰-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
@@ -105,15 +90,30 @@ proxies:
       short-id: "9075c6ca"
     client-fingerprint: safari
     fast-open: true
+  - name: "波兰-VLESS-线路1"
+    type: vless
+    server: s1.huhiuh.space
+    port: 57702
+    uuid: f9427e7c-1d17-439f-8e27-67073659e420
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "9075c6ca"
+    client-fingerprint: safari
+    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "波兰-VLESS-线路1"
       - "波兰-HY2-线路2"
       - "波兰-VLESS-线路2"
       - "波兰-VLESS-线路3"
+      - "波兰-VLESS-线路1"
     interval: 5
     timeout: 3000
     lazy: false

@@ -52,6 +52,21 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "印度尼西亚-VLESS-线路3"
+    type: vless
+    server: s3.huhiuh.space
+    port: 28745
+    uuid: 726be1d5-66ad-4dc9-b0df-a598a5ce1047
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "b368e13a"
+    client-fingerprint: edge
+    fast-open: true
   - name: "印度尼西亚-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -90,30 +105,15 @@ proxies:
       short-id: "b368e13a"
     client-fingerprint: edge
     fast-open: true
-  - name: "印度尼西亚-VLESS-线路3"
-    type: vless
-    server: s3.huhiuh.space
-    port: 28745
-    uuid: 726be1d5-66ad-4dc9-b0df-a598a5ce1047
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: www.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "b368e13a"
-    client-fingerprint: edge
-    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "印度尼西亚-VLESS-线路3"
       - "印度尼西亚-VLESS-线路1"
       - "印度尼西亚-HY2-线路2"
       - "印度尼西亚-VLESS-线路2"
-      - "印度尼西亚-VLESS-线路3"
     interval: 5
     timeout: 3000
     lazy: false

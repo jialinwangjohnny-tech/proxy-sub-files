@@ -52,21 +52,6 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国-VLESS-线路1"
-    type: vless
-    server: s1.huhiuh.space
-    port: 14623
-    uuid: fd6e8858-bb44-4ebd-93df-2466839f62cb
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: swdist.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "86af9a16"
-    client-fingerprint: safari
-    fast-open: true
   - name: "美国-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
@@ -105,15 +90,30 @@ proxies:
       short-id: "86af9a16"
     client-fingerprint: safari
     fast-open: true
+  - name: "美国-VLESS-线路1"
+    type: vless
+    server: s1.huhiuh.space
+    port: 14623
+    uuid: fd6e8858-bb44-4ebd-93df-2466839f62cb
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "86af9a16"
+    client-fingerprint: safari
+    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国-VLESS-线路1"
       - "美国-HY2-线路2"
       - "美国-VLESS-线路2"
       - "美国-VLESS-线路3"
+      - "美国-VLESS-线路1"
     interval: 5
     timeout: 3000
     lazy: false

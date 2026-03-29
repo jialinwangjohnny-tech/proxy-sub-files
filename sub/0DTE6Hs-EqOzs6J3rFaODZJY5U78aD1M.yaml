@@ -52,21 +52,6 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "马来西亚-VLESS-线路1"
-    type: vless
-    server: s1.huhiuh.space
-    port: 57267
-    uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: itunes.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "cc476dc1"
-    client-fingerprint: chrome
-    fast-open: true
   - name: "马来西亚-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
@@ -105,15 +90,30 @@ proxies:
       short-id: "cc476dc1"
     client-fingerprint: chrome
     fast-open: true
+  - name: "马来西亚-VLESS-线路1"
+    type: vless
+    server: s1.huhiuh.space
+    port: 57267
+    uuid: 2c183f1d-0762-487c-85e0-492ee0cba8ea
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "cc476dc1"
+    client-fingerprint: chrome
+    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "马来西亚-VLESS-线路1"
       - "马来西亚-HY2-线路2"
       - "马来西亚-VLESS-线路2"
       - "马来西亚-VLESS-线路3"
+      - "马来西亚-VLESS-线路1"
     interval: 5
     timeout: 3000
     lazy: false

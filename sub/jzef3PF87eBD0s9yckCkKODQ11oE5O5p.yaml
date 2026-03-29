@@ -52,6 +52,21 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "美国德克萨斯-VLESS-线路3"
+    type: vless
+    server: s3.huhiuh.space
+    port: 19906
+    uuid: 623f4822-33ba-4eb8-a8c6-a76679634acd
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "cab9d3f5"
+    client-fingerprint: chrome
+    fast-open: true
   - name: "美国德克萨斯-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -90,30 +105,15 @@ proxies:
       short-id: "cab9d3f5"
     client-fingerprint: chrome
     fast-open: true
-  - name: "美国德克萨斯-VLESS-线路3"
-    type: vless
-    server: s3.huhiuh.space
-    port: 19906
-    uuid: 623f4822-33ba-4eb8-a8c6-a76679634acd
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "cab9d3f5"
-    client-fingerprint: chrome
-    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "美国德克萨斯-VLESS-线路3"
       - "美国德克萨斯-VLESS-线路1"
       - "美国德克萨斯-HY2-线路2"
       - "美国德克萨斯-VLESS-线路2"
-      - "美国德克萨斯-VLESS-线路3"
     interval: 5
     timeout: 3000
     lazy: false

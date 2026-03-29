@@ -52,6 +52,21 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "Dubai,AE-VLESS-线路3"
+    type: vless
+    server: s3.huhiuh.space
+    port: 57992
+    uuid: c60d5bf3-dacf-41db-9f66-9e76f9e0402b
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "1dbdeaa6"
+    client-fingerprint: safari
+    fast-open: true
   - name: "Dubai,AE-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -90,30 +105,15 @@ proxies:
       short-id: "1dbdeaa6"
     client-fingerprint: safari
     fast-open: true
-  - name: "Dubai,AE-VLESS-线路3"
-    type: vless
-    server: s3.huhiuh.space
-    port: 57992
-    uuid: c60d5bf3-dacf-41db-9f66-9e76f9e0402b
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "1dbdeaa6"
-    client-fingerprint: safari
-    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "Dubai,AE-VLESS-线路3"
       - "Dubai,AE-VLESS-线路1"
       - "Dubai,AE-HY2-线路2"
       - "Dubai,AE-VLESS-线路2"
-      - "Dubai,AE-VLESS-线路3"
     interval: 5
     timeout: 3000
     lazy: false

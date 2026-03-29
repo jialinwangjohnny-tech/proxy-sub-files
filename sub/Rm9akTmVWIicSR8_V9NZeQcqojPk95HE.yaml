@@ -52,6 +52,21 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "马来西亚-VLESS-线路3"
+    type: vless
+    server: s3.huhiuh.space
+    port: 55902
+    uuid: 310e1944-e1cc-4a93-8a5f-4d757071f45c
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: www.amd.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "c9f155f6"
+    client-fingerprint: safari
+    fast-open: true
   - name: "马来西亚-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -90,30 +105,15 @@ proxies:
       short-id: "c9f155f6"
     client-fingerprint: safari
     fast-open: true
-  - name: "马来西亚-VLESS-线路3"
-    type: vless
-    server: s3.huhiuh.space
-    port: 55902
-    uuid: 310e1944-e1cc-4a93-8a5f-4d757071f45c
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: www.amd.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "c9f155f6"
-    client-fingerprint: safari
-    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "马来西亚-VLESS-线路3"
       - "马来西亚-VLESS-线路1"
       - "马来西亚-HY2-线路2"
       - "马来西亚-VLESS-线路2"
-      - "马来西亚-VLESS-线路3"
     interval: 5
     timeout: 3000
     lazy: false

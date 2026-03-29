@@ -52,6 +52,21 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "美国-VLESS-线路3"
+    type: vless
+    server: s3.huhiuh.space
+    port: 25434
+    uuid: ced3e4d7-96d5-431c-b2a4-8470a76c9ba3
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: updates.cdn-apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "69a7f9aa"
+    client-fingerprint: firefox
+    fast-open: true
   - name: "美国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -90,30 +105,15 @@ proxies:
       short-id: "69a7f9aa"
     client-fingerprint: firefox
     fast-open: true
-  - name: "美国-VLESS-线路3"
-    type: vless
-    server: s3.huhiuh.space
-    port: 25434
-    uuid: ced3e4d7-96d5-431c-b2a4-8470a76c9ba3
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: updates.cdn-apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "69a7f9aa"
-    client-fingerprint: firefox
-    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "美国-VLESS-线路3"
       - "美国-VLESS-线路1"
       - "美国-HY2-线路2"
       - "美国-VLESS-线路2"
-      - "美国-VLESS-线路3"
     interval: 5
     timeout: 3000
     lazy: false

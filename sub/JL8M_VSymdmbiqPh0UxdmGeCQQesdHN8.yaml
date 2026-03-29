@@ -52,6 +52,21 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "新加坡-VLESS-线路3"
+    type: vless
+    server: s3.huhiuh.space
+    port: 44035
+    uuid: 0e42e6ad-c92b-4227-b0de-75773e4b4ef7
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "5a12479e"
+    client-fingerprint: chrome
+    fast-open: true
   - name: "新加坡-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -90,30 +105,15 @@ proxies:
       short-id: "5a12479e"
     client-fingerprint: chrome
     fast-open: true
-  - name: "新加坡-VLESS-线路3"
-    type: vless
-    server: s3.huhiuh.space
-    port: 44035
-    uuid: 0e42e6ad-c92b-4227-b0de-75773e4b4ef7
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: swdist.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "5a12479e"
-    client-fingerprint: chrome
-    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "新加坡-VLESS-线路3"
       - "新加坡-VLESS-线路1"
       - "新加坡-HY2-线路2"
       - "新加坡-VLESS-线路2"
-      - "新加坡-VLESS-线路3"
     interval: 5
     timeout: 3000
     lazy: false
