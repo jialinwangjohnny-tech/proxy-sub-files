@@ -1,7 +1,7 @@
 # 用户: user163-mac
 # UUID: ed669a08-50f4-454b-b269-d1c88f2faf18
 # 落地: 204.1.64.99:9426 (美国)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -55,15 +55,6 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
-  - name: "美国-HY2-线路1 (阿鹏 国芯GPS-mac)"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 15836
-    password: ed669a08-50f4-454b-b269-d1c88f2faf18
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
   - name: "美国-HY2-线路2 (阿鹏 国芯GPS-mac)"
     type: hysteria2
     server: s2.huhiuh.space
@@ -82,20 +73,14 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "美国-VLESS-线路1 (阿鹏 国芯GPS-mac)"
-    type: vless
+  - name: "美国-HY2-线路1 (阿鹏 国芯GPS-mac)"
+    type: hysteria2
     server: s1.huhiuh.space
     port: 15836
-    uuid: ed669a08-50f4-454b-b269-d1c88f2faf18
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
+    password: ed669a08-50f4-454b-b269-d1c88f2faf18
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
 
   - name: "美国-VLESS-线路2 (阿鹏 国芯GPS-mac)"
     type: vless
@@ -127,28 +112,43 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
+  - name: "美国-VLESS-线路1 (阿鹏 国芯GPS-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 15836
+    uuid: ed669a08-50f4-454b-b269-d1c88f2faf18
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
-      - 美国-HY2-线路1 (阿鹏 国芯GPS-mac)
       - 美国-HY2-线路2 (阿鹏 国芯GPS-mac)
       - 美国-HY2-线路3 (阿鹏 国芯GPS-mac)
-      - 美国-VLESS-线路1 (阿鹏 国芯GPS-mac)
+      - 美国-HY2-线路1 (阿鹏 国芯GPS-mac)
       - 美国-VLESS-线路2 (阿鹏 国芯GPS-mac)
       - 美国-VLESS-线路3 (阿鹏 国芯GPS-mac)
+      - 美国-VLESS-线路1 (阿鹏 国芯GPS-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-HY2-线路1 (阿鹏 国芯GPS-mac)
       - 美国-HY2-线路2 (阿鹏 国芯GPS-mac)
       - 美国-HY2-线路3 (阿鹏 国芯GPS-mac)
-      - 美国-VLESS-线路1 (阿鹏 国芯GPS-mac)
+      - 美国-HY2-线路1 (阿鹏 国芯GPS-mac)
       - 美国-VLESS-线路2 (阿鹏 国芯GPS-mac)
       - 美国-VLESS-线路3 (阿鹏 国芯GPS-mac)
+      - 美国-VLESS-线路1 (阿鹏 国芯GPS-mac)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

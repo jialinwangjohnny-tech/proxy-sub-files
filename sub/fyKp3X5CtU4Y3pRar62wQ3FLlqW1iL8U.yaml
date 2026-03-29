@@ -1,7 +1,7 @@
 # 用户: user184-mac
 # UUID: a3ab15af-10bf-45b2-a3e5-65149c2f27cf
 # 落地: 38.248.251.107:443 (美国)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-16 20:13
 # 多线路自动切换模式
 
@@ -55,6 +55,15 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
+  - name: "美国-HY2-线路3 (jiaopwrrs-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 15396
+    password: a3ab15af-10bf-45b2-a3e5-65149c2f27cf
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
   - name: "美国-HY2-线路1 (jiaopwrrs-mac)"
     type: hysteria2
     server: s1.huhiuh.space
@@ -73,14 +82,20 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "美国-HY2-线路3 (jiaopwrrs-mac)"
-    type: hysteria2
+  - name: "美国-VLESS-线路3 (jiaopwrrs-mac)"
+    type: vless
     server: s3.huhiuh.space
     port: 15396
-    password: a3ab15af-10bf-45b2-a3e5-65149c2f27cf
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
+    uuid: a3ab15af-10bf-45b2-a3e5-65149c2f27cf
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
 
   - name: "美国-VLESS-线路1 (jiaopwrrs-mac)"
     type: vless
@@ -112,43 +127,28 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "美国-VLESS-线路3 (jiaopwrrs-mac)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 15396
-    uuid: a3ab15af-10bf-45b2-a3e5-65149c2f27cf
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: www.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
+      - 美国-HY2-线路3 (jiaopwrrs-mac)
       - 美国-HY2-线路1 (jiaopwrrs-mac)
       - 美国-HY2-线路2 (jiaopwrrs-mac)
-      - 美国-HY2-线路3 (jiaopwrrs-mac)
+      - 美国-VLESS-线路3 (jiaopwrrs-mac)
       - 美国-VLESS-线路1 (jiaopwrrs-mac)
       - 美国-VLESS-线路2 (jiaopwrrs-mac)
-      - 美国-VLESS-线路3 (jiaopwrrs-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
+      - 美国-HY2-线路3 (jiaopwrrs-mac)
       - 美国-HY2-线路1 (jiaopwrrs-mac)
       - 美国-HY2-线路2 (jiaopwrrs-mac)
-      - 美国-HY2-线路3 (jiaopwrrs-mac)
+      - 美国-VLESS-线路3 (jiaopwrrs-mac)
       - 美国-VLESS-线路1 (jiaopwrrs-mac)
       - 美国-VLESS-线路2 (jiaopwrrs-mac)
-      - 美国-VLESS-线路3 (jiaopwrrs-mac)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

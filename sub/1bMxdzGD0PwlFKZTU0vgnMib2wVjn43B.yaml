@@ -1,7 +1,7 @@
 # 用户: user165-phone
 # UUID: e5b7ccb9-47b4-4b09-aba8-472ba9e9a05d
 # 落地: 204.1.66.51:9035 (美国)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-13
 # 多线路自动切换模式
 
@@ -55,15 +55,6 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
-  - name: "美国-HY2-线路1 (黑渔-phone)"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 35282
-    password: e5b7ccb9-47b4-4b09-aba8-472ba9e9a05d
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
   - name: "美国-HY2-线路2 (黑渔-phone)"
     type: hysteria2
     server: s2.huhiuh.space
@@ -82,20 +73,14 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "美国-VLESS-线路1 (黑渔-phone)"
-    type: vless
+  - name: "美国-HY2-线路1 (黑渔-phone)"
+    type: hysteria2
     server: s1.huhiuh.space
     port: 35282
-    uuid: e5b7ccb9-47b4-4b09-aba8-472ba9e9a05d
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: gateway.icloud.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
+    password: e5b7ccb9-47b4-4b09-aba8-472ba9e9a05d
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
 
   - name: "美国-VLESS-线路2 (黑渔-phone)"
     type: vless
@@ -127,28 +112,43 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
+  - name: "美国-VLESS-线路1 (黑渔-phone)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 35282
+    uuid: e5b7ccb9-47b4-4b09-aba8-472ba9e9a05d
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
-      - 美国-HY2-线路1 (黑渔-phone)
       - 美国-HY2-线路2 (黑渔-phone)
       - 美国-HY2-线路3 (黑渔-phone)
-      - 美国-VLESS-线路1 (黑渔-phone)
+      - 美国-HY2-线路1 (黑渔-phone)
       - 美国-VLESS-线路2 (黑渔-phone)
       - 美国-VLESS-线路3 (黑渔-phone)
+      - 美国-VLESS-线路1 (黑渔-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 美国-HY2-线路1 (黑渔-phone)
       - 美国-HY2-线路2 (黑渔-phone)
       - 美国-HY2-线路3 (黑渔-phone)
-      - 美国-VLESS-线路1 (黑渔-phone)
+      - 美国-HY2-线路1 (黑渔-phone)
       - 美国-VLESS-线路2 (黑渔-phone)
       - 美国-VLESS-线路3 (黑渔-phone)
+      - 美国-VLESS-线路1 (黑渔-phone)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

@@ -1,7 +1,7 @@
 # 用户: user186-windows
 # UUID: 3d786607-a9d4-4ec5-87c5-3a4e6bb2144e
 # 落地: 103.229.198.7:443 (马来西亚)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-16 22:21
 # 多线路自动切换模式
 
@@ -55,6 +55,15 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
+  - name: "马来西亚-HY2-线路3 (潦草小羊-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 38170
+    password: 3d786607-a9d4-4ec5-87c5-3a4e6bb2144e
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
   - name: "马来西亚-HY2-线路1 (潦草小羊-windows)"
     type: hysteria2
     server: s1.huhiuh.space
@@ -73,14 +82,20 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "马来西亚-HY2-线路3 (潦草小羊-windows)"
-    type: hysteria2
+  - name: "马来西亚-VLESS-线路3 (潦草小羊-windows)"
+    type: vless
     server: s3.huhiuh.space
     port: 38170
-    password: 3d786607-a9d4-4ec5-87c5-3a4e6bb2144e
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
+    uuid: 3d786607-a9d4-4ec5-87c5-3a4e6bb2144e
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
 
   - name: "马来西亚-VLESS-线路1 (潦草小羊-windows)"
     type: vless
@@ -112,43 +127,28 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "马来西亚-VLESS-线路3 (潦草小羊-windows)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 38170
-    uuid: 3d786607-a9d4-4ec5-87c5-3a4e6bb2144e
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: itunes.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
+      - 马来西亚-HY2-线路3 (潦草小羊-windows)
       - 马来西亚-HY2-线路1 (潦草小羊-windows)
       - 马来西亚-HY2-线路2 (潦草小羊-windows)
-      - 马来西亚-HY2-线路3 (潦草小羊-windows)
+      - 马来西亚-VLESS-线路3 (潦草小羊-windows)
       - 马来西亚-VLESS-线路1 (潦草小羊-windows)
       - 马来西亚-VLESS-线路2 (潦草小羊-windows)
-      - 马来西亚-VLESS-线路3 (潦草小羊-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
+      - 马来西亚-HY2-线路3 (潦草小羊-windows)
       - 马来西亚-HY2-线路1 (潦草小羊-windows)
       - 马来西亚-HY2-线路2 (潦草小羊-windows)
-      - 马来西亚-HY2-线路3 (潦草小羊-windows)
+      - 马来西亚-VLESS-线路3 (潦草小羊-windows)
       - 马来西亚-VLESS-线路1 (潦草小羊-windows)
       - 马来西亚-VLESS-线路2 (潦草小羊-windows)
-      - 马来西亚-VLESS-线路3 (潦草小羊-windows)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

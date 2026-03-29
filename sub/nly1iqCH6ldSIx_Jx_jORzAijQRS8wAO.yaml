@@ -1,7 +1,7 @@
 # 用户: user223-windows
 # UUID: 9b957547-2114-4231-bd3a-75f30b75c549
 # 落地: 45.92.209.15:443 (荷兰)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-25
 # 多线路自动切换模式
 
@@ -55,15 +55,6 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
-  - name: "荷兰-HY2-线路1 (baixiaoleng20-windows)"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 13325
-    password: 9b957547-2114-4231-bd3a-75f30b75c549
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
   - name: "荷兰-HY2-线路2 (baixiaoleng20-windows)"
     type: hysteria2
     server: s2.huhiuh.space
@@ -82,20 +73,14 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "荷兰-VLESS-线路1 (baixiaoleng20-windows)"
-    type: vless
+  - name: "荷兰-HY2-线路1 (baixiaoleng20-windows)"
+    type: hysteria2
     server: s1.huhiuh.space
     port: 13325
-    uuid: 9b957547-2114-4231-bd3a-75f30b75c549
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: itunes.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
+    password: 9b957547-2114-4231-bd3a-75f30b75c549
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
 
   - name: "荷兰-VLESS-线路2 (baixiaoleng20-windows)"
     type: vless
@@ -127,28 +112,43 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
+  - name: "荷兰-VLESS-线路1 (baixiaoleng20-windows)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 13325
+    uuid: 9b957547-2114-4231-bd3a-75f30b75c549
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
-      - 荷兰-HY2-线路1 (baixiaoleng20-windows)
       - 荷兰-HY2-线路2 (baixiaoleng20-windows)
       - 荷兰-HY2-线路3 (baixiaoleng20-windows)
-      - 荷兰-VLESS-线路1 (baixiaoleng20-windows)
+      - 荷兰-HY2-线路1 (baixiaoleng20-windows)
       - 荷兰-VLESS-线路2 (baixiaoleng20-windows)
       - 荷兰-VLESS-线路3 (baixiaoleng20-windows)
+      - 荷兰-VLESS-线路1 (baixiaoleng20-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 荷兰-HY2-线路1 (baixiaoleng20-windows)
       - 荷兰-HY2-线路2 (baixiaoleng20-windows)
       - 荷兰-HY2-线路3 (baixiaoleng20-windows)
-      - 荷兰-VLESS-线路1 (baixiaoleng20-windows)
+      - 荷兰-HY2-线路1 (baixiaoleng20-windows)
       - 荷兰-VLESS-线路2 (baixiaoleng20-windows)
       - 荷兰-VLESS-线路3 (baixiaoleng20-windows)
+      - 荷兰-VLESS-线路1 (baixiaoleng20-windows)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

@@ -1,7 +1,7 @@
 # 用户: user139-mac
 # UUID: 701defe3-32ea-4109-9f7b-31f634846500
 # 落地: 149.51.95.28:8886 (墨西哥)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2099-12-31
 # 多线路自动切换模式
 
@@ -55,6 +55,15 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
+  - name: "墨西哥-HY2-线路3 (WrXiaohu12-mac)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 17727
+    password: 701defe3-32ea-4109-9f7b-31f634846500
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
   - name: "墨西哥-HY2-线路1 (WrXiaohu12-mac)"
     type: hysteria2
     server: s1.huhiuh.space
@@ -73,14 +82,20 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "墨西哥-HY2-线路3 (WrXiaohu12-mac)"
-    type: hysteria2
+  - name: "墨西哥-VLESS-线路3 (WrXiaohu12-mac)"
+    type: vless
     server: s3.huhiuh.space
     port: 17727
-    password: 701defe3-32ea-4109-9f7b-31f634846500
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
+    uuid: 701defe3-32ea-4109-9f7b-31f634846500
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
 
   - name: "墨西哥-VLESS-线路1 (WrXiaohu12-mac)"
     type: vless
@@ -112,43 +127,28 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "墨西哥-VLESS-线路3 (WrXiaohu12-mac)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 17727
-    uuid: 701defe3-32ea-4109-9f7b-31f634846500
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: gateway.icloud.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
+      - 墨西哥-HY2-线路3 (WrXiaohu12-mac)
       - 墨西哥-HY2-线路1 (WrXiaohu12-mac)
       - 墨西哥-HY2-线路2 (WrXiaohu12-mac)
-      - 墨西哥-HY2-线路3 (WrXiaohu12-mac)
+      - 墨西哥-VLESS-线路3 (WrXiaohu12-mac)
       - 墨西哥-VLESS-线路1 (WrXiaohu12-mac)
       - 墨西哥-VLESS-线路2 (WrXiaohu12-mac)
-      - 墨西哥-VLESS-线路3 (WrXiaohu12-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
+      - 墨西哥-HY2-线路3 (WrXiaohu12-mac)
       - 墨西哥-HY2-线路1 (WrXiaohu12-mac)
       - 墨西哥-HY2-线路2 (WrXiaohu12-mac)
-      - 墨西哥-HY2-线路3 (WrXiaohu12-mac)
+      - 墨西哥-VLESS-线路3 (WrXiaohu12-mac)
       - 墨西哥-VLESS-线路1 (WrXiaohu12-mac)
       - 墨西哥-VLESS-线路2 (WrXiaohu12-mac)
-      - 墨西哥-VLESS-线路3 (WrXiaohu12-mac)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

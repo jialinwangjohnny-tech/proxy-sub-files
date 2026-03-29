@@ -1,7 +1,7 @@
 # 用户: user221-windows
 # UUID: ab31d5de-cfd1-4f75-a593-dd437f87d479
 # 落地: 207.97.151.24:443 (美国)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-25
 # 多线路自动切换模式
 
@@ -55,6 +55,15 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
+  - name: "美国-HY2-线路3 (E201856880-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 43384
+    password: ab31d5de-cfd1-4f75-a593-dd437f87d479
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
   - name: "美国-HY2-线路1 (E201856880-windows)"
     type: hysteria2
     server: s1.huhiuh.space
@@ -73,14 +82,20 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "美国-HY2-线路3 (E201856880-windows)"
-    type: hysteria2
+  - name: "美国-VLESS-线路3 (E201856880-windows)"
+    type: vless
     server: s3.huhiuh.space
     port: 43384
-    password: ab31d5de-cfd1-4f75-a593-dd437f87d479
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
+    uuid: ab31d5de-cfd1-4f75-a593-dd437f87d479
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
 
   - name: "美国-VLESS-线路1 (E201856880-windows)"
     type: vless
@@ -112,43 +127,28 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "美国-VLESS-线路3 (E201856880-windows)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 43384
-    uuid: ab31d5de-cfd1-4f75-a593-dd437f87d479
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: www.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
+      - 美国-HY2-线路3 (E201856880-windows)
       - 美国-HY2-线路1 (E201856880-windows)
       - 美国-HY2-线路2 (E201856880-windows)
-      - 美国-HY2-线路3 (E201856880-windows)
+      - 美国-VLESS-线路3 (E201856880-windows)
       - 美国-VLESS-线路1 (E201856880-windows)
       - 美国-VLESS-线路2 (E201856880-windows)
-      - 美国-VLESS-线路3 (E201856880-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
+      - 美国-HY2-线路3 (E201856880-windows)
       - 美国-HY2-线路1 (E201856880-windows)
       - 美国-HY2-线路2 (E201856880-windows)
-      - 美国-HY2-线路3 (E201856880-windows)
+      - 美国-VLESS-线路3 (E201856880-windows)
       - 美国-VLESS-线路1 (E201856880-windows)
       - 美国-VLESS-线路2 (E201856880-windows)
-      - 美国-VLESS-线路3 (E201856880-windows)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

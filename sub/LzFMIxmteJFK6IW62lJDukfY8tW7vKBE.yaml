@@ -1,7 +1,7 @@
 # 用户: user084-windows
 # UUID: 2e7ea591-8a72-484f-8e5b-1672a294f994
 # 落地: 68.167.147.89:443 (美国洛杉矶)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-13 09:47
 # 多线路自动切换模式
 
@@ -55,6 +55,15 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
+  - name: "美国洛杉矶-HY2-线路3 (王小男Aina-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 37148
+    password: 2e7ea591-8a72-484f-8e5b-1672a294f994
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
   - name: "美国洛杉矶-HY2-线路1 (王小男Aina-windows)"
     type: hysteria2
     server: s1.huhiuh.space
@@ -73,14 +82,20 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "美国洛杉矶-HY2-线路3 (王小男Aina-windows)"
-    type: hysteria2
+  - name: "美国洛杉矶-VLESS-线路3 (王小男Aina-windows)"
+    type: vless
     server: s3.huhiuh.space
     port: 37148
-    password: 2e7ea591-8a72-484f-8e5b-1672a294f994
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
+    uuid: 2e7ea591-8a72-484f-8e5b-1672a294f994
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
 
   - name: "美国洛杉矶-VLESS-线路1 (王小男Aina-windows)"
     type: vless
@@ -112,43 +127,28 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "美国洛杉矶-VLESS-线路3 (王小男Aina-windows)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 37148
-    uuid: 2e7ea591-8a72-484f-8e5b-1672a294f994
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
+      - 美国洛杉矶-HY2-线路3 (王小男Aina-windows)
       - 美国洛杉矶-HY2-线路1 (王小男Aina-windows)
       - 美国洛杉矶-HY2-线路2 (王小男Aina-windows)
-      - 美国洛杉矶-HY2-线路3 (王小男Aina-windows)
+      - 美国洛杉矶-VLESS-线路3 (王小男Aina-windows)
       - 美国洛杉矶-VLESS-线路1 (王小男Aina-windows)
       - 美国洛杉矶-VLESS-线路2 (王小男Aina-windows)
-      - 美国洛杉矶-VLESS-线路3 (王小男Aina-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
+      - 美国洛杉矶-HY2-线路3 (王小男Aina-windows)
       - 美国洛杉矶-HY2-线路1 (王小男Aina-windows)
       - 美国洛杉矶-HY2-线路2 (王小男Aina-windows)
-      - 美国洛杉矶-HY2-线路3 (王小男Aina-windows)
+      - 美国洛杉矶-VLESS-线路3 (王小男Aina-windows)
       - 美国洛杉矶-VLESS-线路1 (王小男Aina-windows)
       - 美国洛杉矶-VLESS-线路2 (王小男Aina-windows)
-      - 美国洛杉矶-VLESS-线路3 (王小男Aina-windows)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

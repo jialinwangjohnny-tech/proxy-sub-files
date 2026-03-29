@@ -1,7 +1,7 @@
 # 用户: user219-phone
 # UUID: f9427e7c-1d17-439f-8e27-67073659e420
 # 落地: 83.168.115.218:12323 (波兰)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-25
 # 多线路自动切换模式
 
@@ -55,6 +55,15 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
+  - name: "波兰-HY2-线路3 (Zhoumo185-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 41360
+    password: f9427e7c-1d17-439f-8e27-67073659e420
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
   - name: "波兰-HY2-线路1 (Zhoumo185-phone)"
     type: hysteria2
     server: s1.huhiuh.space
@@ -73,14 +82,20 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "波兰-HY2-线路3 (Zhoumo185-phone)"
-    type: hysteria2
+  - name: "波兰-VLESS-线路3 (Zhoumo185-phone)"
+    type: vless
     server: s3.huhiuh.space
     port: 41360
-    password: f9427e7c-1d17-439f-8e27-67073659e420
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
+    uuid: f9427e7c-1d17-439f-8e27-67073659e420
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
 
   - name: "波兰-VLESS-线路1 (Zhoumo185-phone)"
     type: vless
@@ -112,43 +127,28 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "波兰-VLESS-线路3 (Zhoumo185-phone)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 41360
-    uuid: f9427e7c-1d17-439f-8e27-67073659e420
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: gateway.icloud.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
+      - 波兰-HY2-线路3 (Zhoumo185-phone)
       - 波兰-HY2-线路1 (Zhoumo185-phone)
       - 波兰-HY2-线路2 (Zhoumo185-phone)
-      - 波兰-HY2-线路3 (Zhoumo185-phone)
+      - 波兰-VLESS-线路3 (Zhoumo185-phone)
       - 波兰-VLESS-线路1 (Zhoumo185-phone)
       - 波兰-VLESS-线路2 (Zhoumo185-phone)
-      - 波兰-VLESS-线路3 (Zhoumo185-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
+      - 波兰-HY2-线路3 (Zhoumo185-phone)
       - 波兰-HY2-线路1 (Zhoumo185-phone)
       - 波兰-HY2-线路2 (Zhoumo185-phone)
-      - 波兰-HY2-线路3 (Zhoumo185-phone)
+      - 波兰-VLESS-线路3 (Zhoumo185-phone)
       - 波兰-VLESS-线路1 (Zhoumo185-phone)
       - 波兰-VLESS-线路2 (Zhoumo185-phone)
-      - 波兰-VLESS-线路3 (Zhoumo185-phone)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

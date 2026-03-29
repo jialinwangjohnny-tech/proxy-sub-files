@@ -1,7 +1,7 @@
 # 用户: user040-windows2
 # UUID: 6843184e-c539-494e-8727-5f0de99e0d40
 # 落地: 69.17.104.104:443 (美国)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-06-06 09:11
 # 多线路自动切换模式
 
@@ -55,6 +55,15 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
+  - name: "美国-HY2-线路3 (Twenty-windows2)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 50040
+    password: 6843184e-c539-494e-8727-5f0de99e0d40
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
   - name: "美国-HY2-线路1 (Twenty-windows2)"
     type: hysteria2
     server: s1.huhiuh.space
@@ -73,14 +82,20 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "美国-HY2-线路3 (Twenty-windows2)"
-    type: hysteria2
+  - name: "美国-VLESS-线路3 (Twenty-windows2)"
+    type: vless
     server: s3.huhiuh.space
     port: 50040
-    password: 6843184e-c539-494e-8727-5f0de99e0d40
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
+    uuid: 6843184e-c539-494e-8727-5f0de99e0d40
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
 
   - name: "美国-VLESS-线路1 (Twenty-windows2)"
     type: vless
@@ -112,43 +127,28 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "美国-VLESS-线路3 (Twenty-windows2)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 50040
-    uuid: 6843184e-c539-494e-8727-5f0de99e0d40
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
+      - 美国-HY2-线路3 (Twenty-windows2)
       - 美国-HY2-线路1 (Twenty-windows2)
       - 美国-HY2-线路2 (Twenty-windows2)
-      - 美国-HY2-线路3 (Twenty-windows2)
+      - 美国-VLESS-线路3 (Twenty-windows2)
       - 美国-VLESS-线路1 (Twenty-windows2)
       - 美国-VLESS-线路2 (Twenty-windows2)
-      - 美国-VLESS-线路3 (Twenty-windows2)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
+      - 美国-HY2-线路3 (Twenty-windows2)
       - 美国-HY2-线路1 (Twenty-windows2)
       - 美国-HY2-线路2 (Twenty-windows2)
-      - 美国-HY2-线路3 (Twenty-windows2)
+      - 美国-VLESS-线路3 (Twenty-windows2)
       - 美国-VLESS-线路1 (Twenty-windows2)
       - 美国-VLESS-线路2 (Twenty-windows2)
-      - 美国-VLESS-线路3 (Twenty-windows2)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

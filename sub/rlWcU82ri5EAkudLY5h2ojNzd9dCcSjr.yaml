@@ -1,7 +1,7 @@
 # 用户: user079-windows
 # UUID: c60d5bf3-dacf-41db-9f66-9e76f9e0402b
 # 落地: 149.87.150.15:8886 (Dubai,AE)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-13 15:54
 # 多线路自动切换模式
 
@@ -55,6 +55,15 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
+  - name: "Dubai,AE-HY2-线路3 (王旭峰-windows)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 48911
+    password: c60d5bf3-dacf-41db-9f66-9e76f9e0402b
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
   - name: "Dubai,AE-HY2-线路1 (王旭峰-windows)"
     type: hysteria2
     server: s1.huhiuh.space
@@ -73,14 +82,20 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "Dubai,AE-HY2-线路3 (王旭峰-windows)"
-    type: hysteria2
+  - name: "Dubai,AE-VLESS-线路3 (王旭峰-windows)"
+    type: vless
     server: s3.huhiuh.space
     port: 48911
-    password: c60d5bf3-dacf-41db-9f66-9e76f9e0402b
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
+    uuid: c60d5bf3-dacf-41db-9f66-9e76f9e0402b
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
 
   - name: "Dubai,AE-VLESS-线路1 (王旭峰-windows)"
     type: vless
@@ -112,43 +127,28 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "Dubai,AE-VLESS-线路3 (王旭峰-windows)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 48911
-    uuid: c60d5bf3-dacf-41db-9f66-9e76f9e0402b
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
+      - Dubai,AE-HY2-线路3 (王旭峰-windows)
       - Dubai,AE-HY2-线路1 (王旭峰-windows)
       - Dubai,AE-HY2-线路2 (王旭峰-windows)
-      - Dubai,AE-HY2-线路3 (王旭峰-windows)
+      - Dubai,AE-VLESS-线路3 (王旭峰-windows)
       - Dubai,AE-VLESS-线路1 (王旭峰-windows)
       - Dubai,AE-VLESS-线路2 (王旭峰-windows)
-      - Dubai,AE-VLESS-线路3 (王旭峰-windows)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
+      - Dubai,AE-HY2-线路3 (王旭峰-windows)
       - Dubai,AE-HY2-线路1 (王旭峰-windows)
       - Dubai,AE-HY2-线路2 (王旭峰-windows)
-      - Dubai,AE-HY2-线路3 (王旭峰-windows)
+      - Dubai,AE-VLESS-线路3 (王旭峰-windows)
       - Dubai,AE-VLESS-线路1 (王旭峰-windows)
       - Dubai,AE-VLESS-线路2 (王旭峰-windows)
-      - Dubai,AE-VLESS-线路3 (王旭峰-windows)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

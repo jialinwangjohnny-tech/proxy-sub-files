@@ -1,7 +1,7 @@
 # 用户: user168-mac
 # UUID: f1b913d1-9e9d-4883-a7ae-1718dfbe4685
 # 落地: 31.22.74.110:443 (德国)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-14
 # 多线路自动切换模式
 
@@ -55,15 +55,6 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
-  - name: "德国-HY2-线路1 (CFESSD3-mac)"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 29912
-    password: f1b913d1-9e9d-4883-a7ae-1718dfbe4685
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
-
   - name: "德国-HY2-线路2 (CFESSD3-mac)"
     type: hysteria2
     server: s2.huhiuh.space
@@ -82,20 +73,14 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "德国-VLESS-线路1 (CFESSD3-mac)"
-    type: vless
+  - name: "德国-HY2-线路1 (CFESSD3-mac)"
+    type: hysteria2
     server: s1.huhiuh.space
     port: 29912
-    uuid: f1b913d1-9e9d-4883-a7ae-1718dfbe4685
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: swdist.apple.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
+    password: f1b913d1-9e9d-4883-a7ae-1718dfbe4685
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
 
   - name: "德国-VLESS-线路2 (CFESSD3-mac)"
     type: vless
@@ -127,28 +112,43 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
+  - name: "德国-VLESS-线路1 (CFESSD3-mac)"
+    type: vless
+    server: s1.huhiuh.space
+    port: 29912
+    uuid: f1b913d1-9e9d-4883-a7ae-1718dfbe4685
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: swdist.apple.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
+
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
-      - 德国-HY2-线路1 (CFESSD3-mac)
       - 德国-HY2-线路2 (CFESSD3-mac)
       - 德国-HY2-线路3 (CFESSD3-mac)
-      - 德国-VLESS-线路1 (CFESSD3-mac)
+      - 德国-HY2-线路1 (CFESSD3-mac)
       - 德国-VLESS-线路2 (CFESSD3-mac)
       - 德国-VLESS-线路3 (CFESSD3-mac)
+      - 德国-VLESS-线路1 (CFESSD3-mac)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
-      - 德国-HY2-线路1 (CFESSD3-mac)
       - 德国-HY2-线路2 (CFESSD3-mac)
       - 德国-HY2-线路3 (CFESSD3-mac)
-      - 德国-VLESS-线路1 (CFESSD3-mac)
+      - 德国-HY2-线路1 (CFESSD3-mac)
       - 德国-VLESS-线路2 (CFESSD3-mac)
       - 德国-VLESS-线路3 (CFESSD3-mac)
+      - 德国-VLESS-线路1 (CFESSD3-mac)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000

@@ -1,7 +1,7 @@
 # 用户: user187-phone
 # UUID: 041252b9-2c2b-4d6d-9611-1a821ca554b2
 # 落地: 204.1.112.25:443 (美国)
-# 生成时间: 2026-03-28 07:36:07
+# 生成时间: 2026-03-29 08:18:14
 # 到期时间: 2026-04-17 00:03
 # 多线路自动切换模式
 
@@ -55,6 +55,15 @@ dns:
     - "+.huhiuh.space" 
 
 proxies:
+  - name: "美国-HY2-线路3 (GAO6865652-phone)"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 57482
+    password: 041252b9-2c2b-4d6d-9611-1a821ca554b2
+    sni: www.bing.com
+    skip-cert-verify: true
+    fast-open: true
+
   - name: "美国-HY2-线路1 (GAO6865652-phone)"
     type: hysteria2
     server: s1.huhiuh.space
@@ -73,14 +82,20 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: "美国-HY2-线路3 (GAO6865652-phone)"
-    type: hysteria2
+  - name: "美国-VLESS-线路3 (GAO6865652-phone)"
+    type: vless
     server: s3.huhiuh.space
     port: 57482
-    password: 041252b9-2c2b-4d6d-9611-1a821ca554b2
-    sni: www.bing.com
-    skip-cert-verify: true
-    fast-open: true
+    uuid: 041252b9-2c2b-4d6d-9611-1a821ca554b2
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: download.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: 6febfac8
+    client-fingerprint: chrome
 
   - name: "美国-VLESS-线路1 (GAO6865652-phone)"
     type: vless
@@ -112,43 +127,28 @@ proxies:
       short-id: 6febfac8
     client-fingerprint: chrome
 
-  - name: "美国-VLESS-线路3 (GAO6865652-phone)"
-    type: vless
-    server: s3.huhiuh.space
-    port: 57482
-    uuid: 041252b9-2c2b-4d6d-9611-1a821ca554b2
-    network: tcp
-    udp: true
-    tls: true
-    flow: xtls-rprx-vision
-    servername: download.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: 6febfac8
-    client-fingerprint: chrome
-
 proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
       - 自动切换
+      - 美国-HY2-线路3 (GAO6865652-phone)
       - 美国-HY2-线路1 (GAO6865652-phone)
       - 美国-HY2-线路2 (GAO6865652-phone)
-      - 美国-HY2-线路3 (GAO6865652-phone)
+      - 美国-VLESS-线路3 (GAO6865652-phone)
       - 美国-VLESS-线路1 (GAO6865652-phone)
       - 美国-VLESS-线路2 (GAO6865652-phone)
-      - 美国-VLESS-线路3 (GAO6865652-phone)
       - DIRECT
 
   - name: "自动切换"
     type: fallback
     proxies:
+      - 美国-HY2-线路3 (GAO6865652-phone)
       - 美国-HY2-线路1 (GAO6865652-phone)
       - 美国-HY2-线路2 (GAO6865652-phone)
-      - 美国-HY2-线路3 (GAO6865652-phone)
+      - 美国-VLESS-线路3 (GAO6865652-phone)
       - 美国-VLESS-线路1 (GAO6865652-phone)
       - 美国-VLESS-线路2 (GAO6865652-phone)
-      - 美国-VLESS-线路3 (GAO6865652-phone)
     url: http://www.gstatic.com/generate_204
     interval: 300
     timeout: 3000
