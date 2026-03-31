@@ -56,7 +56,7 @@ proxies:
   - name: "美国-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 28118
+    port: 14145
     password: "user147_windows:f5884e73-099d-443c-893e-5b956f22751c"
     sni: www.bing.com
     skip-cert-verify: true
@@ -64,7 +64,7 @@ proxies:
   - name: "美国-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
-    port: 28118
+    port: 14145
     uuid: f5884e73-099d-443c-893e-5b956f22751c
     flow: xtls-rprx-vision
     network: tcp
@@ -79,7 +79,7 @@ proxies:
   - name: "美国-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
-    port: 28118
+    port: 14145
     uuid: f5884e73-099d-443c-893e-5b956f22751c
     flow: xtls-rprx-vision
     network: tcp
@@ -94,7 +94,7 @@ proxies:
   - name: "美国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
-    port: 28118
+    port: 14145
     uuid: f5884e73-099d-443c-893e-5b956f22751c
     flow: xtls-rprx-vision
     network: tcp
