@@ -70,7 +70,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.amd.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "f4115ad5"
@@ -85,7 +85,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.amd.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "f4115ad5"
@@ -100,7 +100,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.amd.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "f4115ad5"

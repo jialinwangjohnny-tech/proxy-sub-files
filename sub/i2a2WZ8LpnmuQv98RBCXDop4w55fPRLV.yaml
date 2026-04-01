@@ -6,6 +6,7 @@ socks-port: 7891
 allow-lan: false
 mode: rule
 log-level: warning
+ipv6: false
 
 dns:
   enable: true
@@ -69,7 +70,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.amd.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "91db52b3"
@@ -84,7 +85,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.amd.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "91db52b3"
@@ -99,7 +100,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.amd.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "91db52b3"

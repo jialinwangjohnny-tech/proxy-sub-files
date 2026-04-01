@@ -6,6 +6,7 @@ socks-port: 7891
 allow-lan: false
 mode: rule
 log-level: warning
+ipv6: false
 
 dns:
   enable: true
@@ -61,7 +62,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: download.microsoft.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "cab9d3f5"
@@ -76,7 +77,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: download.microsoft.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "cab9d3f5"
@@ -99,7 +100,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: download.microsoft.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "cab9d3f5"
