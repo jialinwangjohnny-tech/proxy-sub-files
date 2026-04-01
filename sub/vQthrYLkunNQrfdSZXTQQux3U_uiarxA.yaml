@@ -6,6 +6,7 @@ socks-port: 7891
 allow-lan: false
 mode: rule
 log-level: warning
+ipv6: false
 
 dns:
   enable: true
@@ -52,14 +53,21 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国-HY2-线路1"
-    type: hysteria2
-    server: s1.huhiuh.space
+  - name: "美国-VLESS-线路3"
+    type: vless
+    server: s3.huhiuh.space
     port: 42403
-    password: "user234_phone:21ef929d-3384-4450-b3ec-6858318e7dec"
-    sni: www.bing.com
-    skip-cert-verify: true
+    uuid: 21ef929d-3384-4450-b3ec-6858318e7dec
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
     udp: true
+    servername: www.nvidia.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "a86fb544"
+    client-fingerprint: firefox
+    fast-open: true
   - name: "美国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -98,40 +106,15 @@ proxies:
       short-id: "a86fb544"
     client-fingerprint: firefox
     fast-open: true
-  - name: "美国-HY2-线路3"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 42403
-    password: "user234_phone:21ef929d-3384-4450-b3ec-6858318e7dec"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
-  - name: "美国-VLESS-线路3"
-    type: vless
-    server: s3.huhiuh.space
-    port: 42403
-    uuid: 21ef929d-3384-4450-b3ec-6858318e7dec
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: www.nvidia.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "a86fb544"
-    client-fingerprint: firefox
-    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国-HY2-线路1"
+      - "美国-VLESS-线路3"
       - "美国-VLESS-线路1"
       - "美国-HY2-线路2"
       - "美国-VLESS-线路2"
-      - "美国-HY2-线路3"
-      - "美国-VLESS-线路3"
     interval: 5
     timeout: 3000
     lazy: false
