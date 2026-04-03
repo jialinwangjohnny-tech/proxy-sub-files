@@ -6,6 +6,7 @@ socks-port: 7891
 allow-lan: false
 mode: rule
 log-level: warning
+ipv6: false
 
 dns:
   enable: true
@@ -40,6 +41,7 @@ dns:
     - "+.stun.playstation.net"
     - "+.apple.com"
     - "+.cdn.apple.com"
+    - "+.huhiuh.space"
 
 tun:
   enable: true
@@ -52,6 +54,14 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "Dubai,AE-HY2-线路2"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 57992
+    password: "user079_mac:60926c88-4443-4e98-bbb2-960d556ab3c6"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
   - name: "Dubai,AE-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
@@ -61,7 +71,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: download.microsoft.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "1dbdeaa6"
@@ -76,20 +86,12 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: download.microsoft.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "1dbdeaa6"
     client-fingerprint: safari
     fast-open: true
-  - name: "Dubai,AE-HY2-线路2"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 57992
-    password: "user079_mac:60926c88-4443-4e98-bbb2-960d556ab3c6"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "Dubai,AE-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
@@ -99,7 +101,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: download.microsoft.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "1dbdeaa6"
@@ -110,9 +112,9 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "Dubai,AE-HY2-线路2"
       - "Dubai,AE-VLESS-线路3"
       - "Dubai,AE-VLESS-线路1"
-      - "Dubai,AE-HY2-线路2"
       - "Dubai,AE-VLESS-线路2"
     interval: 5
     timeout: 3000
@@ -120,6 +122,7 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
 
 rules:
+  - DOMAIN-SUFFIX,huhiuh.space,DIRECT
   - GEOSITE,private,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOIP,private,DIRECT

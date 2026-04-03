@@ -6,6 +6,7 @@ socks-port: 7891
 allow-lan: false
 mode: rule
 log-level: warning
+ipv6: false
 
 dns:
   enable: true
@@ -40,6 +41,7 @@ dns:
     - "+.stun.playstation.net"
     - "+.apple.com"
     - "+.cdn.apple.com"
+    - "+.huhiuh.space"
 
 tun:
   enable: true
@@ -69,7 +71,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: download.microsoft.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "fb474f98"
@@ -84,7 +86,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: download.microsoft.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "fb474f98"
@@ -99,7 +101,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: download.microsoft.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "fb474f98"
@@ -120,6 +122,7 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
 
 rules:
+  - DOMAIN-SUFFIX,huhiuh.space,DIRECT
   - GEOSITE,private,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOIP,private,DIRECT

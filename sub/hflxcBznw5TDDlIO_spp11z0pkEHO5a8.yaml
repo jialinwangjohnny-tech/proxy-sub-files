@@ -54,6 +54,14 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "美国-HY2-线路2"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 42516
+    password: "user108_mac:133523ea-7ef9-454e-9bb3-4f9a443ed572"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
   - name: "美国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -69,14 +77,6 @@ proxies:
       short-id: "638a72ff"
     client-fingerprint: edge
     fast-open: true
-  - name: "美国-HY2-线路2"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 42516
-    password: "user108_mac:133523ea-7ef9-454e-9bb3-4f9a443ed572"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "美国-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
@@ -112,8 +112,8 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国-VLESS-线路1"
       - "美国-HY2-线路2"
+      - "美国-VLESS-线路1"
       - "美国-VLESS-线路2"
       - "美国-VLESS-线路3"
     interval: 5

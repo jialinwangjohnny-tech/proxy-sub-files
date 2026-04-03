@@ -54,6 +54,14 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "新加坡-HY2-线路2"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 12122
+    password: "user176_windows:504a3b01-4bf3-40ca-9771-526c3e6a6570"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
   - name: "新加坡-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
@@ -69,14 +77,6 @@ proxies:
       short-id: "a085803c"
     client-fingerprint: firefox
     fast-open: true
-  - name: "新加坡-HY2-线路2"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 12122
-    password: "user176_windows:504a3b01-4bf3-40ca-9771-526c3e6a6570"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "新加坡-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
@@ -112,8 +112,8 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "新加坡-VLESS-线路1"
       - "新加坡-HY2-线路2"
+      - "新加坡-VLESS-线路1"
       - "新加坡-VLESS-线路2"
       - "新加坡-VLESS-线路3"
     interval: 5

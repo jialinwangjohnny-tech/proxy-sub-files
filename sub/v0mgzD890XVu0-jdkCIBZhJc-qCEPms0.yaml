@@ -6,6 +6,7 @@ socks-port: 7891
 allow-lan: false
 mode: rule
 log-level: warning
+ipv6: false
 
 dns:
   enable: true
@@ -40,6 +41,7 @@ dns:
     - "+.stun.playstation.net"
     - "+.apple.com"
     - "+.cdn.apple.com"
+    - "+.huhiuh.space"
 
 tun:
   enable: true
@@ -52,6 +54,14 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "美国-HY2-线路2"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 34386
+    password: "user049_windows:ae3decef-2b36-400b-b7ca-7178369ca751"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
   - name: "美国-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
@@ -82,14 +92,6 @@ proxies:
       short-id: "a37716a1"
     client-fingerprint: safari
     fast-open: true
-  - name: "美国-HY2-线路2"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 34386
-    password: "user049_windows:ae3decef-2b36-400b-b7ca-7178369ca751"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "美国-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
@@ -110,9 +112,9 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "美国-HY2-线路2"
       - "美国-VLESS-线路3"
       - "美国-VLESS-线路1"
-      - "美国-HY2-线路2"
       - "美国-VLESS-线路2"
     interval: 5
     timeout: 3000
@@ -120,6 +122,7 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
 
 rules:
+  - DOMAIN-SUFFIX,huhiuh.space,DIRECT
   - GEOSITE,private,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOIP,private,DIRECT

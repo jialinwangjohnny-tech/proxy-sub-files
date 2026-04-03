@@ -54,6 +54,14 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "马来西亚-HY2-线路2"
+    type: hysteria2
+    server: s2.huhiuh.space
+    port: 55902
+    password: "user215_windows:f2f9eb24-509a-4ec2-bb43-46aca29b0149"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
   - name: "马来西亚-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
@@ -84,14 +92,6 @@ proxies:
       short-id: "c9f155f6"
     client-fingerprint: safari
     fast-open: true
-  - name: "马来西亚-HY2-线路2"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 55902
-    password: "user215_windows:f2f9eb24-509a-4ec2-bb43-46aca29b0149"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "马来西亚-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
@@ -112,9 +112,9 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "马来西亚-HY2-线路2"
       - "马来西亚-VLESS-线路3"
       - "马来西亚-VLESS-线路1"
-      - "马来西亚-HY2-线路2"
       - "马来西亚-VLESS-线路2"
     interval: 5
     timeout: 3000
