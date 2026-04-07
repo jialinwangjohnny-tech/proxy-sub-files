@@ -71,7 +71,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: apple.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "8c81006b"
@@ -86,7 +86,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: apple.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "8c81006b"
@@ -101,7 +101,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: apple.com
+    servername: www.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "8c81006b"
