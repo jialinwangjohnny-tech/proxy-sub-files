@@ -26,8 +26,10 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver:
-    - "https://dns.google/dns-query#自动切换"
-    - "https://cloudflare-dns.com/dns-query#自动切换"
+    # IP-based DOH URLs eliminate the chicken-and-egg bootstrap issue
+    # mihomo doesn't need to resolve "dns.google" first because the URL has the IP
+    - "https://1.1.1.1/dns-query#自动切换"
+    - "https://8.8.8.8/dns-query#自动切换"
   proxy-server-nameserver:
     - 223.5.5.5
     - 119.29.29.29
