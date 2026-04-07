@@ -8,14 +8,6 @@ mode: rule
 log-level: warning
 ipv6: false
 
-# Hardcode DOH endpoint IPs to break the chicken-and-egg bootstrap
-# in TUN mode (mihomo can't resolve dns.google because it needs proxy
-# which needs DNS which needs dns.google → loop)
-hosts:
-  "dns.google": [8.8.8.8, 8.8.4.4]
-  "cloudflare-dns.com": [1.1.1.1, 1.0.0.1]
-  "one.one.one.one": [1.1.1.1, 1.0.0.1]
-
 dns:
   enable: true
   enhanced-mode: fake-ip
@@ -26,10 +18,8 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver:
-    # IP-based DOH URLs eliminate the chicken-and-egg bootstrap issue
-    # mihomo doesn't need to resolve "dns.google" first because the URL has the IP
-    - "https://1.1.1.1/dns-query#自动切换"
-    - "https://8.8.8.8/dns-query#自动切换"
+    - "https://dns.google/dns-query#自动切换"
+    - "https://cloudflare-dns.com/dns-query#自动切换"
   proxy-server-nameserver:
     - 223.5.5.5
     - 119.29.29.29
