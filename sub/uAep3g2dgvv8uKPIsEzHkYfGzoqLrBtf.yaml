@@ -8,6 +8,14 @@ mode: rule
 log-level: warning
 ipv6: false
 
+# Hardcode DOH endpoint IPs to break the chicken-and-egg bootstrap
+# in TUN mode (mihomo can't resolve dns.google because it needs proxy
+# which needs DNS which needs dns.google → loop)
+hosts:
+  "dns.google": [8.8.8.8, 8.8.4.4]
+  "cloudflare-dns.com": [1.1.1.1, 1.0.0.1]
+  "one.one.one.one": [1.1.1.1, 1.0.0.1]
+
 dns:
   enable: true
   enhanced-mode: fake-ip
