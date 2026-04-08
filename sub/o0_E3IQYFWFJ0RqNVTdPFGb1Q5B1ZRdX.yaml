@@ -62,6 +62,22 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
+  - name: "马来西亚-HY2-线路3"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 57267
+    password: "user214_phone:2c183f1d-0762-487c-85e0-492ee0cba8ea"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "马来西亚-HY2-线路1"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 57267
+    password: "user214_phone:2c183f1d-0762-487c-85e0-492ee0cba8ea"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
   - name: "马来西亚-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
@@ -113,6 +129,8 @@ proxy-groups:
     type: fallback
     proxies:
       - "马来西亚-HY2-线路2"
+      - "马来西亚-HY2-线路3"
+      - "马来西亚-HY2-线路1"
       - "马来西亚-VLESS-线路2"
       - "马来西亚-VLESS-线路3"
       - "马来西亚-VLESS-线路1"

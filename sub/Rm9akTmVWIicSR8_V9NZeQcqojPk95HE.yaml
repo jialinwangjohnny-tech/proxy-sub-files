@@ -54,6 +54,22 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "马来西亚-HY2-线路3"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 55902
+    password: "user215_phone:310e1944-e1cc-4a93-8a5f-4d757071f45c"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "马来西亚-HY2-线路1"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 55902
+    password: "user215_phone:310e1944-e1cc-4a93-8a5f-4d757071f45c"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
   - name: "马来西亚-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
@@ -112,6 +128,8 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "马来西亚-HY2-线路3"
+      - "马来西亚-HY2-线路1"
       - "马来西亚-HY2-线路2"
       - "马来西亚-VLESS-线路3"
       - "马来西亚-VLESS-线路1"

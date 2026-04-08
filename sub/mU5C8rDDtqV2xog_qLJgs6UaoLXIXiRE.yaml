@@ -62,6 +62,22 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
+  - name: "美国-HY2-线路3"
+    type: hysteria2
+    server: s3.huhiuh.space
+    port: 42878
+    password: "user190_windows:70d9db3a-fad6-4940-9c13-f4a0b5cd90b1"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "美国-HY2-线路1"
+    type: hysteria2
+    server: s1.huhiuh.space
+    port: 42878
+    password: "user190_windows:70d9db3a-fad6-4940-9c13-f4a0b5cd90b1"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
   - name: "美国-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
@@ -113,6 +129,8 @@ proxy-groups:
     type: fallback
     proxies:
       - "美国-HY2-线路2"
+      - "美国-HY2-线路3"
+      - "美国-HY2-线路1"
       - "美国-VLESS-线路2"
       - "美国-VLESS-线路3"
       - "美国-VLESS-线路1"
