@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>试用订阅 · XiaoleRen-sealing</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f4f5f7; color: #1a202c; margin: 0; padding: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 540px; margin: 0 auto; }
+.hdr {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: #fff; padding: 24px 20px; border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, .25); margin-bottom: 16px;
+}
+.hdr h1 { margin: 0 0 4px; font-size: 22px; font-weight: 600; }
+.hdr .sub { font-size: 13px; opacity: .85; }
+.warn {
+  background: #fef3c7; color: #92400e; padding: 12px 14px;
+  border-radius: 12px; font-size: 13px; line-height: 1.6;
+  border: 1px solid #fcd34d; margin-bottom: 16px;
+}
+.warn b { color: #78350f; }
+.card {
+  background: #fff; border-radius: 16px; padding: 18px 18px 22px;
+  margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+.card h2 {
+  margin: 0 0 4px; font-size: 16px; display: flex; align-items: center; gap: 8px;
+}
+.card .desc { color: #64748b; font-size: 12px; margin-bottom: 12px; }
+.url {
+  background: #f1f5f9; padding: 10px 12px; border-radius: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px; word-break: break-all; line-height: 1.5;
+  color: #334155; margin-bottom: 10px;
+}
+.btn {
+  display: block; width: 100%; padding: 12px 16px;
+  background: #4f46e5; color: #fff; border: none; border-radius: 10px;
+  font-size: 14px; font-weight: 500; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active { background: #4338ca; }
+.btn.ok { background: #10b981; }
+.qr-wrap { text-align: center; margin: 14px 0 4px; }
+.qr-wrap img {
+  width: 160px; height: 160px; border-radius: 8px;
+  background: #fff; padding: 4px; box-shadow: 0 1px 6px rgba(0,0,0,.08);
+}
+.qr-hint { font-size: 11px; color: #94a3b8; margin-top: 6px; }
+.tip {
+  background: #ecfeff; border: 1px solid #a5f3fc; padding: 12px 14px;
+  border-radius: 12px; font-size: 12px; color: #0e7490; line-height: 1.7;
+  margin-bottom: 14px;
+}
+.tip b { color: #155e75; }
+.foot {
+  text-align: center; color: #94a3b8; font-size: 11px;
+  margin: 20px 0 8px;
+}
+.tag {
+  display: inline-block; background: #ede9fe; color: #5b21b6;
+  font-size: 11px; padding: 2px 8px; border-radius: 999px; font-weight: 500;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hdr">
+    <h1>试用订阅 · XiaoleRen-sealing</h1>
+    <div class="sub">美国 · 服务到期 2026-05-09</div>
+  </div>
+
+  <div class="warn">
+    <b>⏱ 一次性试用链接</b><br>
+    本页面在<b>首次打开 24 小时后自动失效</b>，下方订阅链接同步过期。<br>
+    请尽快导入到客户端。链接失效后请联系管理员开通正式服务。
+  </div>
+
+  <div class="card">
+    <h2>📱 小火箭 Shadowrocket <span class="tag">iOS</span></h2>
+    <div class="desc">复制下方链接，打开小火箭 → 左上角加号 → Type 选 Subscribe → 粘贴 → 完成</div>
+    <div class="url" id="sr-url">https://sub.huhiuh.space/trial/O2dDtA2CYwavTGjq621tX7d01YmwcaIP.conf</div>
+    <button class="btn" onclick="copyTo('sr-url', this)">复制小火箭订阅链接</button>
+    <div class="qr-wrap">
+      <img src="data:image/png;base64,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" alt="小火箭 QR">
+      <div class="qr-hint">或用小火箭扫码导入</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>💻 Clash Verge / ClashMeta <span class="tag">Mac · Win · Android</span></h2>
+    <div class="desc">复制下方链接，打开 Clash Verge → 订阅 → 新建 → 粘贴 URL → 导入</div>
+    <div class="url" id="clash-url">https://sub.huhiuh.space/trial/O2dDtA2CYwavTGjq621tX7d01YmwcaIP.yaml</div>
+    <button class="btn" onclick="copyTo('clash-url', this)">复制 Clash 订阅链接</button>
+    <div class="qr-wrap">
+      <img src="data:image/png;base64,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" alt="Clash QR">
+      <div class="qr-hint">手机扫码可拷贝链接</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <b>导入前先关闭代理 / TUN 模式</b>，否则可能拉不到订阅文件。<br>
+    导入成功后再开启 TUN 即可正常使用。
+  </div>
+
+  <div class="foot">© 试用订阅 · 24h 一次性 · 链接到期请联系管理员</div>
+
+</div>
+
+<script>
+function copyTo(id, btn) {
+  var t = document.getElementById(id).innerText;
+  var ta = document.createElement('textarea');
+  ta.value = t;
+  ta.style.position = 'fixed';
+  ta.style.opacity = 0;
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+    var orig = btn.innerText;
+    btn.classList.add('ok');
+    btn.innerText = '✓ 已复制';
+    setTimeout(function() {
+      btn.classList.remove('ok');
+      btn.innerText = orig;
+    }, 1500);
+  } catch (e) {
+    alert('复制失败，请长按上方链接手动复制');
+  }
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
