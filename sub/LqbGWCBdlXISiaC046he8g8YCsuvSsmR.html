@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>AI 维护服务指南</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #333; line-height: 1.6; }
+.container { max-width: 540px; margin: 0 auto; padding: 16px; }
+.card { background: #fff; border-radius: 14px; padding: 22px; margin-bottom: 14px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+.title { text-align: center; padding: 28px 0 16px; }
+.title h1 { font-size: 22px; color: #1a1a1a; font-weight: 700; }
+.title p { font-size: 12px; color: #999; margin-top: 6px; }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.info-item { background: #f8f9fa; border-radius: 10px; padding: 12px 14px; }
+.info-item .label { font-size: 12px; color: #999; margin-bottom: 2px; }
+.info-item .value { font-size: 15px; font-weight: 700; color: #1a1a1a; }
+.action-card { padding: 28px 22px; }
+.device-tag { display: inline-block; background: #e6f4ff; color: #0958d9; padding: 4px 12px; border-radius: 16px; font-size: 12px; margin-bottom: 14px; }
+.action-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; color: #1a1a1a; }
+.action-desc { font-size: 13px; color: #666; margin-bottom: 18px; }
+.btn-primary { display: block; width: 100%; padding: 16px; background: #1677ff; color: #fff; border: none; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; text-align: center; text-decoration: none; box-shadow: 0 2px 8px rgba(22,119,255,0.25); }
+.btn-primary:active { background: #0958d9; transform: scale(0.98); }
+.btn-secondary { display: block; width: 100%; padding: 12px; background: #fff; color: #1677ff; border: 2px solid #1677ff; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; margin-top: 10px; }
+.btn-secondary:active { background: #f0f5ff; }
+.device-switcher { margin-top: 18px; padding-top: 16px; border-top: 1px solid #f0f0f0; }
+.switch-label { font-size: 12px; color: #999; margin-bottom: 8px; }
+.device-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.device-tab { padding: 6px 14px; background: #f5f5f5; color: #666; border-radius: 16px; font-size: 12px; cursor: pointer; user-select: none; }
+.device-tab.active { background: #1677ff; color: #fff; }
+.platform-switcher { margin-top: 14px; padding-top: 14px; border-top: 1px solid #f0f0f0; }
+.platform-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.platform-tab { padding: 5px 12px; background: #f5f5f5; color: #666; border-radius: 14px; font-size: 11px; cursor: pointer; user-select: none; }
+.platform-tab.active { background: #1677ff; color: #fff; }
+.help-section details { margin-bottom: 8px; }
+.help-section summary { cursor: pointer; font-size: 13px; color: #1677ff; padding: 8px 0; user-select: none; }
+.help-section .help-body { font-size: 13px; color: #555; padding: 6px 0 10px 12px; line-height: 1.7; }
+.help-section a { color: #1677ff; text-decoration: none; }
+.banner { background: #fff7e6; border: 1px solid #ffd591; border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; font-size: 13px; color: #ad6800; display: none; }
+.banner strong { display: block; margin-bottom: 4px; font-size: 14px; }
+.expire-warn { background: #fff1f0; border: 1px solid #ffa39e; border-radius: 10px; padding: 12px 14px; margin-bottom: 14px; font-size: 13px; color: #cf1322; display: none; }
+.footer { text-align: center; padding: 18px 0; font-size: 11px; color: #bbb; }
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.85); color: #fff; padding: 10px 22px; border-radius: 22px; font-size: 13px; opacity: 0; transition: opacity 0.3s; z-index: 999; pointer-events: none; }
+.toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="title">
+  <h1>AI 维护服务指南</h1>
+  <p>2026-04-09 07:48</p>
+</div>
+
+<div class="card">
+  <div class="info-grid">
+    <div class="info-item"><div class="label">套餐</div><div class="value">D</div></div>
+    <div class="info-item"><div class="label">服务等级</div><div class="value">VIP</div></div>
+    <div class="info-item"><div class="label">到期时间</div><div class="value" id="expire-value">2026-04-11 19:47</div></div>
+    <div class="info-item"><div class="label">设备数</div><div class="value">1 台</div></div>
+  </div>
+</div>
+
+<div class="banner" id="wechat-banner">
+  <strong>⚠️ 请在浏览器中打开</strong>
+  当前在微信内置浏览器，无法自动跳转。请点击右上角「···」→「在浏览器打开」后再操作。
+</div>
+
+<div class="expire-warn" id="expire-warn">
+  <strong>⏰ 即将到期</strong>请联系管理员续费。
+</div>
+
+<div class="card action-card">
+  <span class="device-tag" id="device-tag">检测中...</span>
+  <div class="action-title" id="action-title">准备中</div>
+  <div class="action-desc" id="action-desc">正在为您的设备准备配置...</div>
+  <div id="import-btns"></div>
+
+  <div class="platform-switcher">
+    <div class="switch-label">设备识别错误？手动选择：</div>
+    <div class="platform-tabs" id="platform-tabs">
+      <div class="platform-tab" data-platform="iphone" onclick="setPlatform('iphone')">iPhone</div>
+      <div class="platform-tab" data-platform="ipad" onclick="setPlatform('ipad')">iPad</div>
+      <div class="platform-tab" data-platform="android" onclick="setPlatform('android')">Android</div>
+      <div class="platform-tab" data-platform="mac" onclick="setPlatform('mac')">Mac</div>
+      <div class="platform-tab" data-platform="windows" onclick="setPlatform('windows')">Windows</div>
+    </div>
+  </div>
+</div>
+
+<div class="card help-section">
+  <details>
+    <summary>一键导入没有反应？</summary>
+    <div class="help-body">
+      1. 确认已经安装对应客户端（Mac/Windows: Clash Verge 或 V2RayN；iPhone: Shadowrocket；Android: V2RayTun）<br>
+      2. 如果在微信里打开，请先点右上角「···」→「在浏览器打开」<br>
+      3. 在弹出的"打开 XXX?"对话框上点「允许」<br>
+      4. 仍有问题请联系管理员
+    </div>
+  </details>
+  <details>
+    <summary>导入成功后怎么使用？</summary>
+    <div class="help-body">
+      导入成功后，打开客户端 → 点击「连接」或「启动」按钮即可。Mac/Windows 客户端首次使用建议在客户端首页开启「虚拟网卡模式」。
+    </div>
+  </details>
+  <details>
+    <summary>怎么知道是否成功？</summary>
+    <div class="help-body">
+      打开浏览器访问任意网页，能正常打开即说明配置正确。
+    </div>
+  </details>
+</div>
+
+<div class="footer">如有问题请联系管理员</div>
+
+<div class="toast" id="toast"></div>
+</div>
+
+<script>
+const DEVICES = {"main": {"label": "默认", "yaml": "https://sub.huhiuh.space/trial/LqbGWCBdlXISiaC046he8g8YCsuvSsmR.yaml", "yaml_http": "http://s1.huhiuh.space/sub/LqbGWCBdlXISiaC046he8g8YCsuvSsmR.yaml", "txt": "https://sub.huhiuh.space/trial/LqbGWCBdlXISiaC046he8g8YCsuvSsmR.txt", "conf": "https://sub.huhiuh.space/trial/LqbGWCBdlXISiaC046he8g8YCsuvSsmR.conf"}};
+
+let currentDevice = Object.keys(DEVICES)[0];
+let currentPlatform = null;
+
+function detectPlatform() {
+  const ua = navigator.userAgent;
+  if (/iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) return 'ipad';
+  if (/iPhone|iPod/.test(ua)) return 'iphone';
+  if (/Android/.test(ua)) return 'android';
+  if (/Macintosh|Mac OS X/.test(ua)) return 'mac';
+  if (/Windows/.test(ua)) return 'windows';
+  return 'unknown';
+}
+
+function isWechat() {
+  return /MicroMessenger/i.test(navigator.userAgent);
+}
+
+const PROFILE_NAME = "佳霖";
+
+// 客户端注册表：每个客户端有自己的 scheme 构造方式 + 用什么 fileType
+const APPS = {
+  shadowrocket: {
+    label: 'Shadowrocket', fileType: 'conf',
+    build: function(url) { return 'shadowrocket://add/sub://' + btoa(url); }
+  },
+  clashverge: {
+    label: 'Clash Verge', fileType: 'yaml_http',
+    // 用 clash-verge:// 而非 clash://（专属 scheme，避免 Windows 上被其他 Clash 软件抢注）
+    // name 放 url 前面：避开 deep link parser 的尾部拼接 bug
+    // 必须用 HTTP 直连 URL（HTTPS+Cloudflare 会让 Clash Verge 的 fetcher 超时）
+    build: function(url) { return 'clash-verge://install-config?name=' + encodeURIComponent(PROFILE_NAME) + '&url=' + encodeURIComponent(url); }
+  },
+  v2rayn: {
+    label: 'V2RayN', fileType: 'txt',
+    build: function(url) { return 'v2rayn://install-sub?url=' + encodeURIComponent(url); }
+  },
+  v2raytun: {
+    label: 'V2RayTun', fileType: 'txt',
+    build: function(url) { return 'v2raytun://import?url=' + encodeURIComponent(url); }
+  }
+};
+
+// 平台 → 该平台主推的客户端列表
+const PLATFORM_INFO = {
+  iphone:  { tag: '\u{1F4F1} iPhone',  apps: ['shadowrocket'] },
+  ipad:    { tag: '\u{1F4F1} iPad',    apps: ['shadowrocket'] },
+  android: { tag: '\u{1F4F1} Android', apps: ['v2raytun'] },
+  mac:     { tag: '\u{1F4BB} Mac',     apps: ['clashverge', 'v2raytun'] },
+  windows: { tag: '\u{1F4BB} Windows', apps: ['clashverge', 'v2rayn'] },
+  unknown: { tag: '\u2753 未识别设备', apps: [] }
+};
+
+// 平台 → 设备的智能映射
+function pickDeviceForPlatform(platform) {
+  const keys = Object.keys(DEVICES);
+  if (keys.length === 0) return null;
+  // 直接匹配优先
+  const candidates = {
+    iphone:  ['phone', 'phone1', 'phone2', 'ipad'],
+    ipad:    ['ipad', 'phone', 'phone1'],
+    android: ['phone', 'phone1', 'phone2'],
+    mac:     ['mac', 'pc1'],
+    windows: ['windows', 'pc1', 'pc2']
+  }[platform] || [];
+  for (var i = 0; i < candidates.length; i++) {
+    if (DEVICES[candidates[i]]) return candidates[i];
+  }
+  return keys[0]; // 兜底用第一个设备
+}
+
+function renderForPlatform(platform) {
+  currentPlatform = platform;
+  const info = PLATFORM_INFO[platform] || PLATFORM_INFO.unknown;
+  document.getElementById('device-tag').textContent = info.tag;
+  document.querySelectorAll('.platform-tab').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-platform') === platform);
+  });
+  // 自动按平台选择对应的订阅设备 token
+  const bestDev = pickDeviceForPlatform(platform);
+  if (bestDev) currentDevice = bestDev;
+  renderImportButtons();
+}
+
+function renderImportButtons() {
+  const container = document.getElementById('import-btns');
+  container.innerHTML = '';
+  const info = PLATFORM_INFO[currentPlatform] || PLATFORM_INFO.unknown;
+  const dev = DEVICES[currentDevice];
+  if (!dev || info.apps.length === 0) {
+    document.getElementById('action-title').textContent = '请手动选择设备';
+    document.getElementById('action-desc').textContent = '在下方"手动选择"中选您的设备类型';
+    return;
+  }
+  if (info.apps.length === 1) {
+    const app = APPS[info.apps[0]];
+    document.getElementById('action-title').textContent = '点击下方按钮一键导入';
+    document.getElementById('action-desc').textContent = '浏览器会询问"打开 ' + app.label + '?"，点允许即可';
+  } else {
+    document.getElementById('action-title').textContent = '选择你使用的客户端';
+    document.getElementById('action-desc').textContent = '点击你已安装的客户端，浏览器会自动打开它';
+  }
+  info.apps.forEach(function(appId, idx) {
+    const app = APPS[appId];
+    if (!app) return;
+    const fileUrl = dev[app.fileType];
+    if (!fileUrl) return;
+    const url = app.build(fileUrl);
+    const btn = document.createElement('a');
+    btn.className = idx === 0 ? 'btn-primary' : 'btn-secondary';
+    btn.style.marginTop = idx === 0 ? '0' : '10px';
+    btn.style.display = 'block';
+    btn.href = url;
+    btn.textContent = '一键导入到 ' + app.label;
+    btn.onclick = function(e) { return onImportClick(e, app); };
+    container.appendChild(btn);
+  });
+}
+
+function setPlatform(platform) {
+  renderForPlatform(platform);
+}
+
+function onImportClick(e, app) {
+  if (isWechat()) {
+    e.preventDefault();
+    document.getElementById('wechat-banner').style.display = 'block';
+    showToast('请先在浏览器中打开');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return false;
+  }
+  showToast('正在跳转到 ' + app.label + '...');
+  setTimeout(function() {
+    if (!document.hidden) showToast('请打开 ' + app.label + ' 查看新配置（如未跳转，请确认已安装）');
+  }, 2500);
+  return true;
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function() { t.classList.remove('show'); }, 2000);
+}
+
+
+(function checkExpiry() {
+  const expVal = document.getElementById('expire-value');
+  if (!expVal) return;
+  const expText = expVal.textContent.trim();
+  if (!expText || expText === '未设置') return;
+  const expDate = new Date(expText.replace(' ', 'T'));
+  if (isNaN(expDate)) return;
+  const now = new Date();
+  const daysLeft = (expDate - now) / (1000 * 60 * 60 * 24);
+  if (daysLeft < 0) {
+    expVal.innerHTML = expText + ' <span style="color:#cf1322;">（已过期）</span>';
+    document.getElementById('expire-warn').style.display = 'block';
+  } else if (daysLeft <= 7) {
+    expVal.innerHTML = expText + ' <span style="color:#cf1322;">（剩余 ' + Math.ceil(daysLeft) + ' 天）</span>';
+    document.getElementById('expire-warn').style.display = 'block';
+  }
+})();
+
+renderForPlatform(detectPlatform());
+
+if (isWechat()) {
+  document.getElementById('wechat-banner').style.display = 'block';
+}
+</script>
+</body>
+</html>
