@@ -59,7 +59,7 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "日本-HY2-线路2"
+  - name: "美国-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
     port: 14925
@@ -67,7 +67,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "日本-HY2-线路3"
+  - name: "美国-HY2-线路3"
     type: hysteria2
     server: s3.huhiuh.space
     port: 14925
@@ -75,7 +75,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "日本-HY2-线路1"
+  - name: "美国-HY2-线路1"
     type: hysteria2
     server: s1.huhiuh.space
     port: 14925
@@ -83,7 +83,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "日本-VLESS-线路2"
+  - name: "美国-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
     port: 14925
@@ -98,7 +98,7 @@ proxies:
       short-id: "4ccb3094"
     client-fingerprint: edge
     fast-open: true
-  - name: "日本-VLESS-线路3"
+  - name: "美国-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
     port: 14925
@@ -113,7 +113,7 @@ proxies:
       short-id: "4ccb3094"
     client-fingerprint: edge
     fast-open: true
-  - name: "日本-VLESS-线路1"
+  - name: "美国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
     port: 14925
@@ -133,12 +133,12 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "日本-HY2-线路2"
-      - "日本-HY2-线路3"
-      - "日本-HY2-线路1"
-      - "日本-VLESS-线路2"
-      - "日本-VLESS-线路3"
-      - "日本-VLESS-线路1"
+      - "美国-HY2-线路2"
+      - "美国-HY2-线路3"
+      - "美国-HY2-线路1"
+      - "美国-VLESS-线路2"
+      - "美国-VLESS-线路3"
+      - "美国-VLESS-线路1"
     interval: 5
     timeout: 3000
     lazy: false
