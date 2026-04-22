@@ -1,154 +1,70 @@
-port: 7890
-socks-port: 7891
-allow-lan: false
-mode: rule
-log-level: warning
+# Clash Verge 完整配置文件 (mihomo 内核专用)
+# 生成时间: 2026-04-21
+
+mixed-port: 7890
+allow-lan: true
+stack: system
+log-level: info
 ipv6: false
 
+# 必须启用 dns 模块以支持高级分流
 dns:
   enable: true
+  listen: 0.0.0.0:1053
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  listen: 0.0.0.0:1053
-  use-hosts: true
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
-  fallback:
-    - "https://dns.google/dns-query#自动切换"
-    - "https://cloudflare-dns.com/dns-query#自动切换"
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-  proxy-server-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  nameserver-policy:
-    "geosite:cn,private":
-      - 223.5.5.5
-      - 119.29.29.29
-    "+.cn,+.com.cn":
-      - 223.5.5.5
-      - 119.29.29.29
-  fake-ip-filter:
-    - "*.lan"
-    - "*.local"
-    - "*.localhost"
-    - "+.msftconnecttest.com"
-    - "+.msftncsi.com"
-    - "localhost.ptlogin2.qq.com"
-    - "+.srv.nintendo.net"
-    - "+.stun.playstation.net"
-    - "+.apple.com"
-    - "+.cdn.apple.com"
-    - "+.huhiuh.space"
-
-tun:
-  enable: true
-  stack: mixed
-  auto-route: true
-  auto-detect-interface: true
-  strict-route: true
-  dns-hijack:
-    - any:53
-    - tcp://any:53
+    - 8.8.8.8
 
 proxies:
-  - name: "美国-HY2-线路1"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 41556
-    password: "user133_windows:d9b365cb-4fe9-4043-907d-1f435ed3d838"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
-  - name: "美国-HY2-线路2"
-    type: hysteria2
-    server: s2.huhiuh.space
-    port: 41556
-    password: "user133_windows:d9b365cb-4fe9-4043-907d-1f435ed3d838"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
-  - name: "美国-HY2-线路3"
-    type: hysteria2
-    server: s3.huhiuh.space
-    port: 41556
-    password: "user133_windows:d9b365cb-4fe9-4043-907d-1f435ed3d838"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
-  - name: "美国-VLESS-线路1"
+  - name: "US-Reality-8443-us-vip"
     type: vless
-    server: s1.huhiuh.space
-    port: 41556
-    uuid: d9b365cb-4fe9-4043-907d-1f435ed3d838
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
+    server: 103.255.209.201
+    port: 8443
+    uuid: 72b30bc1-1470-4e6b-8715-e5522b22d01c
     udp: true
-    servername: www.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "e4b10bfb"
-    client-fingerprint: firefox
-    fast-open: true
-  - name: "美国-VLESS-线路2"
-    type: vless
-    server: s2.huhiuh.space
-    port: 41556
-    uuid: d9b365cb-4fe9-4043-907d-1f435ed3d838
-    flow: xtls-rprx-vision
-    network: tcp
     tls: true
-    udp: true
-    servername: www.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "e4b10bfb"
-    client-fingerprint: firefox
-    fast-open: true
-  - name: "美国-VLESS-线路3"
-    type: vless
-    server: s3.huhiuh.space
-    port: 41556
-    uuid: d9b365cb-4fe9-4043-907d-1f435ed3d838
     flow: xtls-rprx-vision
+    servername: www.icloud.com
     network: tcp
-    tls: true
-    udp: true
-    servername: www.microsoft.com
     reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "e4b10bfb"
-    client-fingerprint: firefox
-    fast-open: true
+      public-key: BB1HHv8JT_gNUX57c3FGFvnYprlEPHuCL5csMjunISY
+      short-id: 63aa394d267b2f9f
+    client-fingerprint: chrome
 
 proxy-groups:
-  - name: "自动切换"
-    type: fallback
+  # 代理中心：控制所有流量切换
+  - name: 🚀 节点选择
+    type: select
     proxies:
-      - "美国-HY2-线路1"
-      - "美国-HY2-线路2"
-      - "美国-HY2-线路3"
-      - "美国-VLESS-线路1"
-      - "美国-VLESS-线路2"
-      - "美国-VLESS-线路3"
-    interval: 5
-    timeout: 3000
-    lazy: false
-    url: https://www.gstatic.com/generate_204
+      - "US-Reality-8443-us-vip"
+      - DIRECT
+
+  # 自动选择：在多个节点时可启用延迟检测（当前仅一个节点作为备份展示）
+  - name: ⚡️ 自动切换
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - "US-Reality-8443-us-vip"
+
+  # 拦截广告
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
 
 rules:
-  - DOMAIN-SUFFIX,huhiuh.space,DIRECT
-  - GEOSITE,private,DIRECT
-  - GEOSITE,cn,DIRECT
-  - GEOSITE,geolocation-!cn,自动切换
-  - GEOIP,private,DIRECT
+  # 基础分流规则 (覆盖核心边缘情况)
+  - DOMAIN-SUFFIX,google.com,🚀 节点选择
+  - DOMAIN-SUFFIX,github.com,🚀 节点选择
+  - DOMAIN-SUFFIX,youtube.com,🚀 节点选择
+  - DOMAIN-SUFFIX,twitter.com,🚀 节点选择
+  - DOMAIN-SUFFIX,telegram.org,🚀 节点选择
+  
+  # 局部区域直连 (中国域名直连)
   - GEOIP,CN,DIRECT
-  - MATCH,自动切换
+  - MATCH,🚀 节点选择
