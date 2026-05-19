@@ -145,6 +145,13 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
 
 rules:
+  - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
+  - DST-PORT,3478,REJECT
+  - DST-PORT,19302,REJECT
+  - DST-PORT,19305,REJECT
+  - DST-PORT,5349,REJECT
+  - DOMAIN-KEYWORD,stun,REJECT
+  - DOMAIN-KEYWORD,turn,REJECT
   - DOMAIN-SUFFIX,huhiuh.space,DIRECT
   - GEOSITE,private,DIRECT
   - GEOSITE,cn,DIRECT

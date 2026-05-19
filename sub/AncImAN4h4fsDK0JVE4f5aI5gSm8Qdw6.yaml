@@ -62,7 +62,7 @@ proxies:
   - name: "美国-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 20657
+    port: 43254
     password: "user156_windows:cfcd9854-9c92-440a-8868-928f94ae7241"
     sni: www.bing.com
     skip-cert-verify: true
@@ -70,7 +70,7 @@ proxies:
   - name: "美国-HY2-线路3"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 20657
+    port: 43254
     password: "user156_windows:cfcd9854-9c92-440a-8868-928f94ae7241"
     sni: www.bing.com
     skip-cert-verify: true
@@ -78,7 +78,7 @@ proxies:
   - name: "美国-HY2-线路1"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 20657
+    port: 43254
     password: "user156_windows:cfcd9854-9c92-440a-8868-928f94ae7241"
     sni: www.bing.com
     skip-cert-verify: true
@@ -86,7 +86,7 @@ proxies:
   - name: "美国-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
-    port: 20657
+    port: 43254
     uuid: cfcd9854-9c92-440a-8868-928f94ae7241
     flow: xtls-rprx-vision
     network: tcp
@@ -101,7 +101,7 @@ proxies:
   - name: "美国-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
-    port: 20657
+    port: 43254
     uuid: cfcd9854-9c92-440a-8868-928f94ae7241
     flow: xtls-rprx-vision
     network: tcp
@@ -116,7 +116,7 @@ proxies:
   - name: "美国-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
-    port: 20657
+    port: 43254
     uuid: cfcd9854-9c92-440a-8868-928f94ae7241
     flow: xtls-rprx-vision
     network: tcp
@@ -143,22 +143,16 @@ proxy-groups:
     timeout: 3000
     lazy: false
     url: https://www.gstatic.com/generate_204
-  - name: "Claude 安全锁"
-    type: select
-    proxies:
-      - "美国-HY2-线路2"
-      - "美国-HY2-线路3"
-      - "美国-HY2-线路1"
-      - "美国-VLESS-线路2"
-      - "美国-VLESS-线路3"
-      - "美国-VLESS-线路1"
-      - REJECT
 
 rules:
+  - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
+  - DST-PORT,3478,REJECT
+  - DST-PORT,19302,REJECT
+  - DST-PORT,19305,REJECT
+  - DST-PORT,5349,REJECT
+  - DOMAIN-KEYWORD,stun,REJECT
+  - DOMAIN-KEYWORD,turn,REJECT
   - DOMAIN-SUFFIX,huhiuh.space,DIRECT
-  - DOMAIN-SUFFIX,claude.ai,Claude 安全锁
-  - DOMAIN-SUFFIX,anthropic.com,Claude 安全锁
-  - DOMAIN-SUFFIX,claudeusercontent.com,Claude 安全锁
   - GEOSITE,private,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOSITE,geolocation-!cn,自动切换
