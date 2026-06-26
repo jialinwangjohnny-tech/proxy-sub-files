@@ -153,6 +153,8 @@ rules:
   - DOMAIN-KEYWORD,stun,REJECT
   - DOMAIN-KEYWORD,turn,REJECT
   - DOMAIN-SUFFIX,huhiuh.space,DIRECT
+  - DOMAIN-SUFFIX,apiplus.org,DIRECT
+  - DOMAIN-SUFFIX,zhongzhuan.chat,DIRECT
   - GEOSITE,private,DIRECT
   - GEOSITE,cn,DIRECT
   - GEOSITE,geolocation-!cn,自动切换
