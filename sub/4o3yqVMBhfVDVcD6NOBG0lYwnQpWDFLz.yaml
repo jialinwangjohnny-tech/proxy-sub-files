@@ -84,7 +84,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: gateway.icloud.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "e8703703"
@@ -99,7 +99,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: gateway.icloud.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "e8703703"
@@ -114,7 +114,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: gateway.icloud.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "e8703703"
