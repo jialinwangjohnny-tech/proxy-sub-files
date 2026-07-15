@@ -54,7 +54,7 @@ proxies:
   - name: "墨西哥-HY2-线路3"
     type: hysteria2
     server: s3.huhiuh.space
-    port: 35081
+    port: 52908
     password: "user295_windows:477b5a15-0a34-486e-a5ce-53faed9e3884"
     sni: www.bing.com
     skip-cert-verify: true
@@ -62,7 +62,7 @@ proxies:
   - name: "墨西哥-HY2-线路1"
     type: hysteria2
     server: s1.huhiuh.space
-    port: 35081
+    port: 52908
     password: "user295_windows:477b5a15-0a34-486e-a5ce-53faed9e3884"
     sni: www.bing.com
     skip-cert-verify: true
@@ -70,7 +70,7 @@ proxies:
   - name: "墨西哥-HY2-线路2"
     type: hysteria2
     server: s2.huhiuh.space
-    port: 35081
+    port: 52908
     password: "user295_windows:477b5a15-0a34-486e-a5ce-53faed9e3884"
     sni: www.bing.com
     skip-cert-verify: true
@@ -78,7 +78,7 @@ proxies:
   - name: "墨西哥-VLESS-线路3"
     type: vless
     server: s3.huhiuh.space
-    port: 35081
+    port: 52908
     uuid: 477b5a15-0a34-486e-a5ce-53faed9e3884
     flow: xtls-rprx-vision
     network: tcp
@@ -93,7 +93,7 @@ proxies:
   - name: "墨西哥-VLESS-线路1"
     type: vless
     server: s1.huhiuh.space
-    port: 35081
+    port: 52908
     uuid: 477b5a15-0a34-486e-a5ce-53faed9e3884
     flow: xtls-rprx-vision
     network: tcp
@@ -108,7 +108,7 @@ proxies:
   - name: "墨西哥-VLESS-线路2"
     type: vless
     server: s2.huhiuh.space
-    port: 35081
+    port: 52908
     uuid: 477b5a15-0a34-486e-a5ce-53faed9e3884
     flow: xtls-rprx-vision
     network: tcp
