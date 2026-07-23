@@ -51,9 +51,9 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "San Jose, California, US-HY2-线路2"
+  - name: "San Jose, California, US-HY2-线路1"
     type: hysteria2
-    server: s2.huhiuh.space
+    server: s1.huhiuh.space
     port: 51384
     password: "user316_phone:10a7eb7f-42ac-4f32-a3f7-cacfa9d609db"
     sni: www.bing.com
@@ -67,17 +67,9 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "San Jose, California, US-HY2-线路1"
-    type: hysteria2
-    server: s1.huhiuh.space
-    port: 51384
-    password: "user316_phone:10a7eb7f-42ac-4f32-a3f7-cacfa9d609db"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
-  - name: "San Jose, California, US-VLESS-线路2"
+  - name: "San Jose, California, US-VLESS-线路1"
     type: vless
-    server: s2.huhiuh.space
+    server: s1.huhiuh.space
     port: 51384
     uuid: 10a7eb7f-42ac-4f32-a3f7-cacfa9d609db
     flow: xtls-rprx-vision
@@ -105,32 +97,15 @@ proxies:
       short-id: "623715b5"
     client-fingerprint: safari
     fast-open: true
-  - name: "San Jose, California, US-VLESS-线路1"
-    type: vless
-    server: s1.huhiuh.space
-    port: 51384
-    uuid: 10a7eb7f-42ac-4f32-a3f7-cacfa9d609db
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: www.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "623715b5"
-    client-fingerprint: safari
-    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "San Jose, California, US-HY2-线路2"
-      - "San Jose, California, US-HY2-线路3"
       - "San Jose, California, US-HY2-线路1"
-      - "San Jose, California, US-VLESS-线路2"
-      - "San Jose, California, US-VLESS-线路3"
+      - "San Jose, California, US-HY2-线路3"
       - "San Jose, California, US-VLESS-线路1"
+      - "San Jose, California, US-VLESS-线路3"
     interval: 5
     timeout: 3000
     lazy: false
