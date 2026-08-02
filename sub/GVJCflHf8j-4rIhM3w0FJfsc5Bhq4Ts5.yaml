@@ -47,7 +47,7 @@ tun:
 proxies:
   - name: "新加坡-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 138.252.80.42
     port: 18642
     password: "user317_mac:465474f8-ac31-4d9e-b124-97ef9ee8c7c4"
     sni: www.bing.com
@@ -55,7 +55,15 @@ proxies:
     udp: true
   - name: "新加坡-HY2-线路1"
     type: hysteria2
-    server: s1.huhiuh.space
+    server: 138.252.80.42
+    port: 18642
+    password: "user317_mac:465474f8-ac31-4d9e-b124-97ef9ee8c7c4"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "新加坡-HY2-线路2"
+    type: hysteria2
+    server: 64.90.14.50
     port: 18642
     password: "user317_mac:465474f8-ac31-4d9e-b124-97ef9ee8c7c4"
     sni: www.bing.com
@@ -63,7 +71,7 @@ proxies:
     udp: true
   - name: "新加坡-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 138.252.80.42
     port: 18642
     uuid: 465474f8-ac31-4d9e-b124-97ef9ee8c7c4
     flow: xtls-rprx-vision
@@ -78,7 +86,22 @@ proxies:
     fast-open: true
   - name: "新加坡-VLESS-线路1"
     type: vless
-    server: s1.huhiuh.space
+    server: 138.252.80.42
+    port: 18642
+    uuid: 465474f8-ac31-4d9e-b124-97ef9ee8c7c4
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "4b71293d"
+    client-fingerprint: safari
+    fast-open: true
+  - name: "新加坡-VLESS-线路2"
+    type: vless
+    server: 64.90.14.50
     port: 18642
     uuid: 465474f8-ac31-4d9e-b124-97ef9ee8c7c4
     flow: xtls-rprx-vision
@@ -98,8 +121,10 @@ proxy-groups:
     proxies:
       - "新加坡-HY2-线路3"
       - "新加坡-HY2-线路1"
+      - "新加坡-HY2-线路2"
       - "新加坡-VLESS-线路3"
       - "新加坡-VLESS-线路1"
+      - "新加坡-VLESS-线路2"
     interval: 5
     timeout: 3000
     lazy: false

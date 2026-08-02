@@ -51,9 +51,9 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "San Jose, California, US-HY2-线路1"
+  - name: "San Jose, California, US-HY2-线路2"
     type: hysteria2
-    server: s1.huhiuh.space
+    server: 64.90.14.50
     port: 51384
     password: "user316_windows:cdfeb55a-29c3-4f29-a189-38d6af032fb2"
     sni: www.bing.com
@@ -61,15 +61,23 @@ proxies:
     udp: true
   - name: "San Jose, California, US-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 138.252.80.42
     port: 51384
     password: "user316_windows:cdfeb55a-29c3-4f29-a189-38d6af032fb2"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "San Jose, California, US-VLESS-线路1"
+  - name: "San Jose, California, US-HY2-线路1"
+    type: hysteria2
+    server: 138.252.80.42
+    port: 51384
+    password: "user316_windows:cdfeb55a-29c3-4f29-a189-38d6af032fb2"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "San Jose, California, US-VLESS-线路2"
     type: vless
-    server: s1.huhiuh.space
+    server: 64.90.14.50
     port: 51384
     uuid: cdfeb55a-29c3-4f29-a189-38d6af032fb2
     flow: xtls-rprx-vision
@@ -84,7 +92,22 @@ proxies:
     fast-open: true
   - name: "San Jose, California, US-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 138.252.80.42
+    port: 51384
+    uuid: cdfeb55a-29c3-4f29-a189-38d6af032fb2
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: www.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "623715b5"
+    client-fingerprint: safari
+    fast-open: true
+  - name: "San Jose, California, US-VLESS-线路1"
+    type: vless
+    server: 138.252.80.42
     port: 51384
     uuid: cdfeb55a-29c3-4f29-a189-38d6af032fb2
     flow: xtls-rprx-vision
@@ -102,10 +125,12 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "San Jose, California, US-HY2-线路1"
+      - "San Jose, California, US-HY2-线路2"
       - "San Jose, California, US-HY2-线路3"
-      - "San Jose, California, US-VLESS-线路1"
+      - "San Jose, California, US-HY2-线路1"
+      - "San Jose, California, US-VLESS-线路2"
       - "San Jose, California, US-VLESS-线路3"
+      - "San Jose, California, US-VLESS-线路1"
     interval: 5
     timeout: 3000
     lazy: false

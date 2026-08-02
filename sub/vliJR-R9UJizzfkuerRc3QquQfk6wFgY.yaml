@@ -15,16 +15,8 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  fallback:
     - "https://dns.google/dns-query#自动切换"
     - "https://cloudflare-dns.com/dns-query#自动切换"
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
   proxy-server-nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -59,33 +51,33 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国洛杉矶-HY2-线路2"
+  - name: "美国圣何塞-HY2-线路2"
     type: hysteria2
-    server: s2.huhiuh.space
+    server: 64.90.14.50
     port: 27172
     password: "user257_phone:bdd4915a-477f-43cf-ba66-6035a1d48a51"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国洛杉矶-HY2-线路3"
+  - name: "美国圣何塞-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 138.252.80.42
     port: 27172
     password: "user257_phone:bdd4915a-477f-43cf-ba66-6035a1d48a51"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国洛杉矶-HY2-线路1"
+  - name: "美国圣何塞-HY2-线路1"
     type: hysteria2
-    server: s1.huhiuh.space
+    server: 138.252.80.42
     port: 27172
     password: "user257_phone:bdd4915a-477f-43cf-ba66-6035a1d48a51"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国洛杉矶-VLESS-线路2"
+  - name: "美国圣何塞-VLESS-线路2"
     type: vless
-    server: s2.huhiuh.space
+    server: 64.90.14.50
     port: 27172
     uuid: bdd4915a-477f-43cf-ba66-6035a1d48a51
     flow: xtls-rprx-vision
@@ -98,9 +90,9 @@ proxies:
       short-id: "1b807138"
     client-fingerprint: firefox
     fast-open: true
-  - name: "美国洛杉矶-VLESS-线路3"
+  - name: "美国圣何塞-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 138.252.80.42
     port: 27172
     uuid: bdd4915a-477f-43cf-ba66-6035a1d48a51
     flow: xtls-rprx-vision
@@ -113,9 +105,9 @@ proxies:
       short-id: "1b807138"
     client-fingerprint: firefox
     fast-open: true
-  - name: "美国洛杉矶-VLESS-线路1"
+  - name: "美国圣何塞-VLESS-线路1"
     type: vless
-    server: s1.huhiuh.space
+    server: 138.252.80.42
     port: 27172
     uuid: bdd4915a-477f-43cf-ba66-6035a1d48a51
     flow: xtls-rprx-vision
@@ -133,12 +125,12 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国洛杉矶-HY2-线路2"
-      - "美国洛杉矶-HY2-线路3"
-      - "美国洛杉矶-HY2-线路1"
-      - "美国洛杉矶-VLESS-线路2"
-      - "美国洛杉矶-VLESS-线路3"
-      - "美国洛杉矶-VLESS-线路1"
+      - "美国圣何塞-HY2-线路2"
+      - "美国圣何塞-HY2-线路3"
+      - "美国圣何塞-HY2-线路1"
+      - "美国圣何塞-VLESS-线路2"
+      - "美国圣何塞-VLESS-线路3"
+      - "美国圣何塞-VLESS-线路1"
     interval: 5
     timeout: 3000
     lazy: false

@@ -15,16 +15,8 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  fallback:
     - "https://dns.google/dns-query#自动切换"
     - "https://cloudflare-dns.com/dns-query#自动切换"
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
   proxy-server-nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -61,7 +53,7 @@ tun:
 proxies:
   - name: "美国AT&T-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 138.252.80.42
     port: 51549
     password: "user189_windows:7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24"
     sni: www.bing.com
@@ -69,7 +61,7 @@ proxies:
     udp: true
   - name: "美国AT&T-HY2-线路1"
     type: hysteria2
-    server: s1.huhiuh.space
+    server: 138.252.80.42
     port: 51549
     password: "user189_windows:7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24"
     sni: www.bing.com
@@ -77,7 +69,7 @@ proxies:
     udp: true
   - name: "美国AT&T-HY2-线路2"
     type: hysteria2
-    server: s2.huhiuh.space
+    server: 64.90.14.50
     port: 51549
     password: "user189_windows:7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24"
     sni: www.bing.com
@@ -85,7 +77,7 @@ proxies:
     udp: true
   - name: "美国AT&T-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 138.252.80.42
     port: 51549
     uuid: 7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
     flow: xtls-rprx-vision
@@ -100,7 +92,7 @@ proxies:
     fast-open: true
   - name: "美国AT&T-VLESS-线路1"
     type: vless
-    server: s1.huhiuh.space
+    server: 138.252.80.42
     port: 51549
     uuid: 7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
     flow: xtls-rprx-vision
@@ -115,7 +107,7 @@ proxies:
     fast-open: true
   - name: "美国AT&T-VLESS-线路2"
     type: vless
-    server: s2.huhiuh.space
+    server: 64.90.14.50
     port: 51549
     uuid: 7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
     flow: xtls-rprx-vision
