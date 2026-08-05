@@ -49,7 +49,7 @@ proxies:
     type: hysteria2
     server: 138.252.80.42
     port: 18642
-    password: "user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2"
+    password: "user317_windows:ca988f1d-320c-46a3-b976-7aadc65bf5cc"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -57,7 +57,7 @@ proxies:
     type: hysteria2
     server: 138.252.80.42
     port: 18642
-    password: "user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2"
+    password: "user317_windows:ca988f1d-320c-46a3-b976-7aadc65bf5cc"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -65,7 +65,7 @@ proxies:
     type: hysteria2
     server: 64.90.14.50
     port: 18642
-    password: "user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2"
+    password: "user317_windows:ca988f1d-320c-46a3-b976-7aadc65bf5cc"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -73,7 +73,7 @@ proxies:
     type: vless
     server: 138.252.80.42
     port: 18642
-    uuid: c70565e9-a99f-40ef-b96c-469a3949eed2
+    uuid: ca988f1d-320c-46a3-b976-7aadc65bf5cc
     flow: xtls-rprx-vision
     network: tcp
     tls: true
@@ -88,7 +88,7 @@ proxies:
     type: vless
     server: 138.252.80.42
     port: 18642
-    uuid: c70565e9-a99f-40ef-b96c-469a3949eed2
+    uuid: ca988f1d-320c-46a3-b976-7aadc65bf5cc
     flow: xtls-rprx-vision
     network: tcp
     tls: true
@@ -103,7 +103,7 @@ proxies:
     type: vless
     server: 64.90.14.50
     port: 18642
-    uuid: c70565e9-a99f-40ef-b96c-469a3949eed2
+    uuid: ca988f1d-320c-46a3-b976-7aadc65bf5cc
     flow: xtls-rprx-vision
     network: tcp
     tls: true
