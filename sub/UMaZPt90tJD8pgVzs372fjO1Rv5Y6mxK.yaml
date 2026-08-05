@@ -51,7 +51,7 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国 Washington-HY2-线路2"
+  - name: "新加坡-HY2-线路2"
     type: hysteria2
     server: 64.90.14.50
     port: 14145
@@ -59,7 +59,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国 Washington-HY2-线路3"
+  - name: "新加坡-HY2-线路3"
     type: hysteria2
     server: 138.252.80.42
     port: 14145
@@ -67,7 +67,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国 Washington-HY2-线路1"
+  - name: "新加坡-HY2-线路1"
     type: hysteria2
     server: 138.252.80.42
     port: 14145
@@ -75,7 +75,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国 Washington-VLESS-线路2"
+  - name: "新加坡-VLESS-线路2"
     type: vless
     server: 64.90.14.50
     port: 14145
@@ -90,7 +90,7 @@ proxies:
       short-id: "a02e5b60"
     client-fingerprint: firefox
     fast-open: true
-  - name: "美国 Washington-VLESS-线路3"
+  - name: "新加坡-VLESS-线路3"
     type: vless
     server: 138.252.80.42
     port: 14145
@@ -105,7 +105,7 @@ proxies:
       short-id: "a02e5b60"
     client-fingerprint: firefox
     fast-open: true
-  - name: "美国 Washington-VLESS-线路1"
+  - name: "新加坡-VLESS-线路1"
     type: vless
     server: 138.252.80.42
     port: 14145
@@ -125,12 +125,12 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国 Washington-HY2-线路2"
-      - "美国 Washington-HY2-线路3"
-      - "美国 Washington-HY2-线路1"
-      - "美国 Washington-VLESS-线路2"
-      - "美国 Washington-VLESS-线路3"
-      - "美国 Washington-VLESS-线路1"
+      - "新加坡-HY2-线路2"
+      - "新加坡-HY2-线路3"
+      - "新加坡-HY2-线路1"
+      - "新加坡-VLESS-线路2"
+      - "新加坡-VLESS-线路3"
+      - "新加坡-VLESS-线路1"
     interval: 5
     timeout: 8000
     lazy: false
