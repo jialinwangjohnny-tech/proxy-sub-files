@@ -45,14 +45,6 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "新加坡-HY2-线路2"
-    type: hysteria2
-    server: 64.90.14.50
-    port: 14145
-    password: "user147_phone:187708f4-a1d0-4c33-84d4-d272a220efab"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "新加坡-HY2-线路3"
     type: hysteria2
     server: 138.252.80.42
@@ -69,21 +61,6 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "新加坡-VLESS-线路2"
-    type: vless
-    server: 64.90.14.50
-    port: 14145
-    uuid: 187708f4-a1d0-4c33-84d4-d272a220efab
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: www.nvidia.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "a02e5b60"
-    client-fingerprint: firefox
-    fast-open: true
   - name: "新加坡-VLESS-线路3"
     type: vless
     server: 138.252.80.42
@@ -119,10 +96,8 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "新加坡-HY2-线路2"
       - "新加坡-HY2-线路3"
       - "新加坡-HY2-线路1"
-      - "新加坡-VLESS-线路2"
       - "新加坡-VLESS-线路3"
       - "新加坡-VLESS-线路1"
     interval: 5
