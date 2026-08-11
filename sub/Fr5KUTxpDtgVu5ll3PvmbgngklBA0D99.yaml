@@ -51,7 +51,7 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国-HY2-线路3"
+  - name: "New York, US-HY2-线路3"
     type: hysteria2
     server: 138.252.80.42
     port: 30923
@@ -59,7 +59,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国-HY2-线路1"
+  - name: "New York, US-HY2-线路1"
     type: hysteria2
     server: 138.252.80.42
     port: 30923
@@ -67,7 +67,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国-HY2-线路2"
+  - name: "New York, US-HY2-线路2"
     type: hysteria2
     server: 64.90.14.50
     port: 30923
@@ -75,7 +75,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国-VLESS-线路3"
+  - name: "New York, US-VLESS-线路3"
     type: vless
     server: 138.252.80.42
     port: 30923
@@ -84,13 +84,13 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.dell.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "eaed8fa2"
     client-fingerprint: edge
     fast-open: true
-  - name: "美国-VLESS-线路1"
+  - name: "New York, US-VLESS-线路1"
     type: vless
     server: 138.252.80.42
     port: 30923
@@ -99,13 +99,13 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.dell.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "eaed8fa2"
     client-fingerprint: edge
     fast-open: true
-  - name: "美国-VLESS-线路2"
+  - name: "New York, US-VLESS-线路2"
     type: vless
     server: 64.90.14.50
     port: 30923
@@ -114,7 +114,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.dell.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "eaed8fa2"
@@ -125,14 +125,14 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国-HY2-线路3"
-      - "美国-HY2-线路1"
-      - "美国-HY2-线路2"
-      - "美国-VLESS-线路3"
-      - "美国-VLESS-线路1"
-      - "美国-VLESS-线路2"
+      - "New York, US-HY2-线路3"
+      - "New York, US-HY2-线路1"
+      - "New York, US-HY2-线路2"
+      - "New York, US-VLESS-线路3"
+      - "New York, US-VLESS-线路1"
+      - "New York, US-VLESS-线路2"
     interval: 5
-    timeout: 3000
+    timeout: 8000
     lazy: false
     url: https://www.gstatic.com/generate_204
 
