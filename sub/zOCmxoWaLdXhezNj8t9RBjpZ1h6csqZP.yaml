@@ -15,16 +15,8 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  fallback:
     - "https://dns.google/dns-query#自动切换"
     - "https://cloudflare-dns.com/dns-query#自动切换"
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
   proxy-server-nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -61,32 +53,32 @@ tun:
 proxies:
   - name: "墨西哥-HY2-线路1"
     type: hysteria2
-    server: s1.huhiuh.space
-    port: 48981
+    server: 138.252.80.42
+    port: 22096
     password: "user282_phone:304ac5f0-3176-4a43-9730-b4bdf7fe08ed"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "墨西哥-HY2-线路2"
     type: hysteria2
-    server: s2.huhiuh.space
-    port: 48981
+    server: 64.90.14.50
+    port: 22096
     password: "user282_phone:304ac5f0-3176-4a43-9730-b4bdf7fe08ed"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "墨西哥-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
-    port: 48981
+    server: 138.252.80.42
+    port: 22096
     password: "user282_phone:304ac5f0-3176-4a43-9730-b4bdf7fe08ed"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "墨西哥-VLESS-线路1"
     type: vless
-    server: s1.huhiuh.space
-    port: 48981
+    server: 138.252.80.42
+    port: 22096
     uuid: 304ac5f0-3176-4a43-9730-b4bdf7fe08ed
     flow: xtls-rprx-vision
     network: tcp
@@ -100,8 +92,8 @@ proxies:
     fast-open: true
   - name: "墨西哥-VLESS-线路2"
     type: vless
-    server: s2.huhiuh.space
-    port: 48981
+    server: 64.90.14.50
+    port: 22096
     uuid: 304ac5f0-3176-4a43-9730-b4bdf7fe08ed
     flow: xtls-rprx-vision
     network: tcp
@@ -115,8 +107,8 @@ proxies:
     fast-open: true
   - name: "墨西哥-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
-    port: 48981
+    server: 138.252.80.42
+    port: 22096
     uuid: 304ac5f0-3176-4a43-9730-b4bdf7fe08ed
     flow: xtls-rprx-vision
     network: tcp
@@ -140,7 +132,7 @@ proxy-groups:
       - "墨西哥-VLESS-线路2"
       - "墨西哥-VLESS-线路3"
     interval: 5
-    timeout: 3000
+    timeout: 8000
     lazy: false
     url: https://www.gstatic.com/generate_204
 
