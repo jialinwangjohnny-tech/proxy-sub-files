@@ -12,21 +12,15 @@ dns:
   listen: 0.0.0.0:1053
   use-hosts: true
   default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
+    - 1.1.1.1
+    - 8.8.8.8
+  respect-rules: true
   nameserver:
-    - "https://dns.google/dns-query#自动切换"
     - "https://cloudflare-dns.com/dns-query#自动切换"
+    - "https://dns.google/dns-query#自动切换"
   proxy-server-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  nameserver-policy:
-    "geosite:cn,private":
-      - 223.5.5.5
-      - 119.29.29.29
-    "+.cn,+.com.cn":
-      - 223.5.5.5
-      - 119.29.29.29
+    - 1.1.1.1
+    - 8.8.8.8
   fake-ip-filter:
     - "*.lan"
     - "*.local"
@@ -51,61 +45,61 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国-HY2-线路3"
+  - name: "菲律宾-马尼拉-HY2-线路3"
     type: hysteria2
     server: 138.252.80.42
-    port: 25434
-    password: "user132_mac:148dc407-216c-47fa-9fd6-6991c0921e92"
+    port: 43320
+    password: "user325_mac:1118328d-1a6d-477f-8236-56b19efbdc48"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国-HY2-线路1"
+  - name: "菲律宾-马尼拉-HY2-线路1"
     type: hysteria2
     server: 138.252.80.42
-    port: 25434
-    password: "user132_mac:148dc407-216c-47fa-9fd6-6991c0921e92"
+    port: 43320
+    password: "user325_mac:1118328d-1a6d-477f-8236-56b19efbdc48"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国-VLESS-线路3"
+  - name: "菲律宾-马尼拉-VLESS-线路3"
     type: vless
     server: 138.252.80.42
-    port: 25434
-    uuid: 148dc407-216c-47fa-9fd6-6991c0921e92
+    port: 43320
+    uuid: 1118328d-1a6d-477f-8236-56b19efbdc48
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: updates.cdn-apple.com
+    servername: learn.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "69a7f9aa"
-    client-fingerprint: firefox
+      short-id: "85c8eca8"
+    client-fingerprint: chrome
     fast-open: true
-  - name: "美国-VLESS-线路1"
+  - name: "菲律宾-马尼拉-VLESS-线路1"
     type: vless
     server: 138.252.80.42
-    port: 25434
-    uuid: 148dc407-216c-47fa-9fd6-6991c0921e92
+    port: 43320
+    uuid: 1118328d-1a6d-477f-8236-56b19efbdc48
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: updates.cdn-apple.com
+    servername: learn.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "69a7f9aa"
-    client-fingerprint: firefox
+      short-id: "85c8eca8"
+    client-fingerprint: chrome
     fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国-HY2-线路3"
-      - "美国-HY2-线路1"
-      - "美国-VLESS-线路3"
-      - "美国-VLESS-线路1"
+      - "菲律宾-马尼拉-HY2-线路3"
+      - "菲律宾-马尼拉-HY2-线路1"
+      - "菲律宾-马尼拉-VLESS-线路3"
+      - "菲律宾-马尼拉-VLESS-线路1"
     interval: 5
     timeout: 8000
     lazy: false
