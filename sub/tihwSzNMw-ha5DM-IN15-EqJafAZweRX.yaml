@@ -61,36 +61,6 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "菲律宾-马尼拉-VLESS-线路3"
-    type: vless
-    server: 138.252.80.42
-    port: 43320
-    uuid: 15ee70e6-51e0-40c3-bc3e-bef190bde190
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: learn.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "85c8eca8"
-    client-fingerprint: chrome
-    fast-open: true
-  - name: "菲律宾-马尼拉-VLESS-线路1"
-    type: vless
-    server: 138.252.80.42
-    port: 43320
-    uuid: 15ee70e6-51e0-40c3-bc3e-bef190bde190
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: learn.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "85c8eca8"
-    client-fingerprint: chrome
-    fast-open: true
 
 proxy-groups:
   - name: "自动切换"
@@ -98,8 +68,6 @@ proxy-groups:
     proxies:
       - "菲律宾-马尼拉-HY2-线路3"
       - "菲律宾-马尼拉-HY2-线路1"
-      - "菲律宾-马尼拉-VLESS-线路3"
-      - "菲律宾-马尼拉-VLESS-线路1"
     interval: 5
     timeout: 8000
     lazy: false
