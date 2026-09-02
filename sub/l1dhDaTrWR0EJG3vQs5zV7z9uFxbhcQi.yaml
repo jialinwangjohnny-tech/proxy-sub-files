@@ -76,7 +76,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.cloudflare.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "a9062e5c"
@@ -91,7 +91,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.cloudflare.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "a9062e5c"
