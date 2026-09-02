@@ -59,14 +59,6 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国-HY2-线路2"
-    type: hysteria2
-    server: 64.90.14.50
-    port: 31462
-    password: "user233_windows:72cca28c-c39f-4a13-934d-61b157245dd6"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "美国-HY2-线路3"
     type: hysteria2
     server: 138.252.80.42
@@ -78,21 +70,6 @@ proxies:
   - name: "美国-VLESS-线路1"
     type: vless
     server: 138.252.80.42
-    port: 31462
-    uuid: 72cca28c-c39f-4a13-934d-61b157245dd6
-    flow: xtls-rprx-vision
-    network: tcp
-    tls: true
-    udp: true
-    servername: learn.microsoft.com
-    reality-opts:
-      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "d8b0c03d"
-    client-fingerprint: edge
-    fast-open: true
-  - name: "美国-VLESS-线路2"
-    type: vless
-    server: 64.90.14.50
     port: 31462
     uuid: 72cca28c-c39f-4a13-934d-61b157245dd6
     flow: xtls-rprx-vision
@@ -126,13 +103,11 @@ proxy-groups:
     type: fallback
     proxies:
       - "美国-HY2-线路1"
-      - "美国-HY2-线路2"
       - "美国-HY2-线路3"
       - "美国-VLESS-线路1"
-      - "美国-VLESS-线路2"
       - "美国-VLESS-线路3"
     interval: 5
-    timeout: 3000
+    timeout: 8000
     lazy: false
     url: https://www.gstatic.com/generate_204
 
