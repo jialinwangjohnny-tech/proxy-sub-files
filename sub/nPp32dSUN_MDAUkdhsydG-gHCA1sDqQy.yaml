@@ -51,22 +51,6 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "Tokyo, JP-HY2-线路3"
-    type: hysteria2
-    server: 138.252.80.42
-    port: 10757
-    password: "user326_windows:a57e0496-84e0-476c-b1a0-d9680fdabb49"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
-  - name: "Tokyo, JP-HY2-线路1"
-    type: hysteria2
-    server: 138.252.80.42
-    port: 10757
-    password: "user326_windows:a57e0496-84e0-476c-b1a0-d9680fdabb49"
-    sni: www.bing.com
-    skip-cert-verify: true
-    udp: true
   - name: "Tokyo, JP-VLESS-线路3"
     type: vless
     server: 138.252.80.42
@@ -102,8 +86,6 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "Tokyo, JP-HY2-线路3"
-      - "Tokyo, JP-HY2-线路1"
       - "Tokyo, JP-VLESS-线路3"
       - "Tokyo, JP-VLESS-线路1"
     interval: 5
