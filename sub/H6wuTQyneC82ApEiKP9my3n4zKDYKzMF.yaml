@@ -51,61 +51,61 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国 · Draper, Utah-HY2-线路1"
+  - name: "美国-HY2-线路3"
     type: hysteria2
     server: 138.252.80.42
-    port: 26108
-    password: "user304_mac:ec4d5994-4555-49da-b8de-d5de193e3a98"
+    port: 40775
+    password: "user329_phone:e7ea554b-a402-4523-b6a9-1ce73c5711f3"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国 · Draper, Utah-HY2-线路3"
+  - name: "美国-HY2-线路1"
     type: hysteria2
     server: 138.252.80.42
-    port: 26108
-    password: "user304_mac:ec4d5994-4555-49da-b8de-d5de193e3a98"
+    port: 40775
+    password: "user329_phone:e7ea554b-a402-4523-b6a9-1ce73c5711f3"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国 · Draper, Utah-VLESS-线路1"
+  - name: "美国-VLESS-线路3"
     type: vless
     server: 138.252.80.42
-    port: 26108
-    uuid: ec4d5994-4555-49da-b8de-d5de193e3a98
+    port: 40775
+    uuid: e7ea554b-a402-4523-b6a9-1ce73c5711f3
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: www.bing.com
+    servername: www.dell.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "6a2356ca"
-    client-fingerprint: edge
+      short-id: "e2025c5d"
+    client-fingerprint: safari
     fast-open: true
-  - name: "美国 · Draper, Utah-VLESS-线路3"
+  - name: "美国-VLESS-线路1"
     type: vless
     server: 138.252.80.42
-    port: 26108
-    uuid: ec4d5994-4555-49da-b8de-d5de193e3a98
+    port: 40775
+    uuid: e7ea554b-a402-4523-b6a9-1ce73c5711f3
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: www.bing.com
+    servername: www.dell.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-      short-id: "6a2356ca"
-    client-fingerprint: edge
+      short-id: "e2025c5d"
+    client-fingerprint: safari
     fast-open: true
 
 proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国 · Draper, Utah-HY2-线路1"
-      - "美国 · Draper, Utah-HY2-线路3"
-      - "美国 · Draper, Utah-VLESS-线路1"
-      - "美国 · Draper, Utah-VLESS-线路3"
+      - "美国-HY2-线路3"
+      - "美国-HY2-线路1"
+      - "美国-VLESS-线路3"
+      - "美国-VLESS-线路1"
     interval: 5
     timeout: 8000
     lazy: false
