@@ -53,7 +53,7 @@ tun:
 proxies:
   - name: "美国-HY2-线路2"
     type: hysteria2
-    server: s2.huhiuh.space
+    server: 45.197.149.105
     port: 19583
     password: "user124_windows:6789b1ab-543b-44f5-b03e-8ef2a76c2ca4"
     sni: www.bing.com
@@ -61,7 +61,7 @@ proxies:
     udp: true
   - name: "美国-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 154.64.246.43
     port: 19583
     password: "user124_windows:6789b1ab-543b-44f5-b03e-8ef2a76c2ca4"
     sni: www.bing.com
@@ -69,7 +69,7 @@ proxies:
     udp: true
   - name: "美国-HY2-线路1"
     type: hysteria2
-    server: s1.huhiuh.space
+    server: 138.252.80.42
     port: 19583
     password: "user124_windows:6789b1ab-543b-44f5-b03e-8ef2a76c2ca4"
     sni: www.bing.com
@@ -77,14 +77,14 @@ proxies:
     udp: true
   - name: "美国-VLESS-线路2"
     type: vless
-    server: s2.huhiuh.space
+    server: 45.197.149.105
     port: 19583
     uuid: 6789b1ab-543b-44f5-b03e-8ef2a76c2ca4
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: www.logitech.com
+    servername: www.bing.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "37c22c4e"
@@ -92,14 +92,14 @@ proxies:
     fast-open: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 154.64.246.43
     port: 19583
     uuid: 6789b1ab-543b-44f5-b03e-8ef2a76c2ca4
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: www.logitech.com
+    servername: www.bing.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "37c22c4e"
@@ -107,14 +107,14 @@ proxies:
     fast-open: true
   - name: "美国-VLESS-线路1"
     type: vless
-    server: s1.huhiuh.space
+    server: 138.252.80.42
     port: 19583
     uuid: 6789b1ab-543b-44f5-b03e-8ef2a76c2ca4
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: www.logitech.com
+    servername: www.bing.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "37c22c4e"
@@ -132,7 +132,7 @@ proxy-groups:
       - "美国-VLESS-线路3"
       - "美国-VLESS-线路1"
     interval: 5
-    timeout: 3000
+    timeout: 8000
     lazy: false
     url: https://www.gstatic.com/generate_204
 
