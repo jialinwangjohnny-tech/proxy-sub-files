@@ -53,7 +53,7 @@ tun:
 proxies:
   - name: "新加坡-HY2-线路2"
     type: hysteria2
-    server: 64.90.14.50
+    server: 45.197.149.105
     port: 53946
     password: "user319_phone:067e2427-656d-45bc-abc3-6664a1f9fd2b"
     sni: www.bing.com
@@ -61,7 +61,7 @@ proxies:
     udp: true
   - name: "新加坡-HY2-线路3"
     type: hysteria2
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 53946
     password: "user319_phone:067e2427-656d-45bc-abc3-6664a1f9fd2b"
     sni: www.bing.com
@@ -77,7 +77,7 @@ proxies:
     udp: true
   - name: "新加坡-VLESS-线路2"
     type: vless
-    server: 64.90.14.50
+    server: 45.197.149.105
     port: 53946
     uuid: 067e2427-656d-45bc-abc3-6664a1f9fd2b
     flow: xtls-rprx-vision
@@ -92,7 +92,7 @@ proxies:
     fast-open: true
   - name: "新加坡-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 53946
     uuid: 067e2427-656d-45bc-abc3-6664a1f9fd2b
     flow: xtls-rprx-vision
