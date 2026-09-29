@@ -47,9 +47,9 @@ tun:
 proxies:
   - name: "新加坡-HY2-线路3"
     type: hysteria2
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 18642
-    password: "user317_windows:ca988f1d-320c-46a3-b976-7aadc65bf5cc"
+    password: "user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
@@ -57,28 +57,28 @@ proxies:
     type: hysteria2
     server: 138.252.80.42
     port: 18642
-    password: "user317_windows:ca988f1d-320c-46a3-b976-7aadc65bf5cc"
+    password: "user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "新加坡-HY2-线路2"
     type: hysteria2
-    server: 64.90.14.50
+    server: 45.197.149.105
     port: 18642
-    password: "user317_windows:ca988f1d-320c-46a3-b976-7aadc65bf5cc"
+    password: "user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
   - name: "新加坡-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 18642
-    uuid: ca988f1d-320c-46a3-b976-7aadc65bf5cc
+    uuid: c70565e9-a99f-40ef-b96c-469a3949eed2
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.bing.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "4b71293d"
@@ -88,12 +88,12 @@ proxies:
     type: vless
     server: 138.252.80.42
     port: 18642
-    uuid: ca988f1d-320c-46a3-b976-7aadc65bf5cc
+    uuid: c70565e9-a99f-40ef-b96c-469a3949eed2
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.bing.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "4b71293d"
@@ -101,14 +101,14 @@ proxies:
     fast-open: true
   - name: "新加坡-VLESS-线路2"
     type: vless
-    server: 64.90.14.50
+    server: 45.197.149.105
     port: 18642
-    uuid: ca988f1d-320c-46a3-b976-7aadc65bf5cc
+    uuid: c70565e9-a99f-40ef-b96c-469a3949eed2
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.bing.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "4b71293d"
@@ -126,7 +126,7 @@ proxy-groups:
       - "新加坡-VLESS-线路1"
       - "新加坡-VLESS-线路2"
     interval: 5
-    timeout: 3000
+    timeout: 8000
     lazy: false
     url: https://www.gstatic.com/generate_204
 

@@ -47,7 +47,7 @@ tun:
 proxies:
   - name: "新加坡-HY2-线路3"
     type: hysteria2
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 18642
     password: "user317_phone:d44daa27-f5e1-4a7d-be9e-447907c83aba"
     sni: www.bing.com
@@ -63,7 +63,7 @@ proxies:
     udp: true
   - name: "新加坡-HY2-线路2"
     type: hysteria2
-    server: 64.90.14.50
+    server: 45.197.149.105
     port: 18642
     password: "user317_phone:d44daa27-f5e1-4a7d-be9e-447907c83aba"
     sni: www.bing.com
@@ -71,14 +71,14 @@ proxies:
     udp: true
   - name: "新加坡-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 18642
     uuid: d44daa27-f5e1-4a7d-be9e-447907c83aba
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.bing.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "4b71293d"
@@ -93,7 +93,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.bing.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "4b71293d"
@@ -101,14 +101,14 @@ proxies:
     fast-open: true
   - name: "新加坡-VLESS-线路2"
     type: vless
-    server: 64.90.14.50
+    server: 45.197.149.105
     port: 18642
     uuid: d44daa27-f5e1-4a7d-be9e-447907c83aba
     flow: xtls-rprx-vision
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: www.bing.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "4b71293d"
@@ -126,7 +126,7 @@ proxy-groups:
       - "新加坡-VLESS-线路1"
       - "新加坡-VLESS-线路2"
     interval: 5
-    timeout: 3000
+    timeout: 8000
     lazy: false
     url: https://www.gstatic.com/generate_204
 
