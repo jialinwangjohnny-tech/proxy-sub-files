@@ -51,9 +51,9 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "Salt Lake City, US-HY2-线路1"
+  - name: "Salt Lake City, US-HY2-线路2"
     type: hysteria2
-    server: 138.252.80.42
+    server: 45.197.149.105
     port: 51748
     password: "user120_windows:c97a5a41-114e-4061-b13b-2601719c846d"
     sni: www.bing.com
@@ -67,9 +67,9 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "Salt Lake City, US-VLESS-线路1"
+  - name: "Salt Lake City, US-VLESS-线路2"
     type: vless
-    server: 138.252.80.42
+    server: 45.197.149.105
     port: 51748
     uuid: c97a5a41-114e-4061-b13b-2601719c846d
     flow: xtls-rprx-vision
@@ -102,9 +102,9 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "Salt Lake City, US-HY2-线路1"
+      - "Salt Lake City, US-HY2-线路2"
       - "Salt Lake City, US-HY2-线路3"
-      - "Salt Lake City, US-VLESS-线路1"
+      - "Salt Lake City, US-VLESS-线路2"
       - "Salt Lake City, US-VLESS-线路3"
     interval: 5
     timeout: 8000
