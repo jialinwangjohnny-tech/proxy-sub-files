@@ -53,7 +53,7 @@ tun:
 proxies:
   - name: "美国-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 50635
     uuid: 6dbff841-606f-4c6a-8d6b-a8e1606d86dc
     flow: xtls-rprx-vision

@@ -61,7 +61,7 @@ proxies:
     udp: true
   - name: "美国 · Draper, Utah-HY2-线路3"
     type: hysteria2
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 26108
     password: "user304_mac:ec4d5994-4555-49da-b8de-d5de193e3a98"
     sni: www.bing.com
@@ -84,7 +84,7 @@ proxies:
     fast-open: true
   - name: "美国 · Draper, Utah-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 26108
     uuid: ec4d5994-4555-49da-b8de-d5de193e3a98
     flow: xtls-rprx-vision

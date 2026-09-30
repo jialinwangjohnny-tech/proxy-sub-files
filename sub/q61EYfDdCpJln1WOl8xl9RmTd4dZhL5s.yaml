@@ -68,7 +68,7 @@ proxies:
     fast-open: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 31462
     uuid: 29fe161c-024d-4fca-a59e-f1aba49a163a
     flow: xtls-rprx-vision

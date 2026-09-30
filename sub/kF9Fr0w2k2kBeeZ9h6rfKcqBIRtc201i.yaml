@@ -61,7 +61,7 @@ proxies:
     udp: true
   - name: "美国-HY2-线路2"
     type: hysteria2
-    server: 64.90.14.50
+    server: 45.197.149.105
     port: 55136
     password: "user253_phone:4f2a4062-d3e5-4a63-8fc6-1d174cc9100f"
     sni: www.bing.com
@@ -69,7 +69,7 @@ proxies:
     udp: true
   - name: "美国-HY2-线路3"
     type: hysteria2
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 55136
     password: "user253_phone:4f2a4062-d3e5-4a63-8fc6-1d174cc9100f"
     sni: www.bing.com
@@ -92,7 +92,7 @@ proxies:
     fast-open: true
   - name: "美国-VLESS-线路2"
     type: vless
-    server: 64.90.14.50
+    server: 45.197.149.105
     port: 55136
     uuid: 4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
     flow: xtls-rprx-vision
@@ -107,7 +107,7 @@ proxies:
     fast-open: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 55136
     uuid: 4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
     flow: xtls-rprx-vision

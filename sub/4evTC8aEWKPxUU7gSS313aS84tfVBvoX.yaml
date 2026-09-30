@@ -61,7 +61,7 @@ proxies:
     udp: true
   - name: "Tokyo, JP-HY2-线路3"
     type: hysteria2
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 20403
     password: "user331_windows:2293b428-402e-40a5-9837-7bcc0693ad77"
     sni: www.bing.com
@@ -84,7 +84,7 @@ proxies:
     fast-open: true
   - name: "Tokyo, JP-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 20403
     uuid: 2293b428-402e-40a5-9837-7bcc0693ad77
     flow: xtls-rprx-vision

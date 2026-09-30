@@ -53,7 +53,7 @@ tun:
 proxies:
   - name: "美国 San Jose-HY2-线路2"
     type: hysteria2
-    server: 64.90.14.50
+    server: 45.197.149.105
     port: 40884
     password: "user300_mac:e408b202-5139-4c20-9d77-42ba1535e194"
     sni: www.bing.com
@@ -61,7 +61,7 @@ proxies:
     udp: true
   - name: "美国 San Jose-HY2-线路3"
     type: hysteria2
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 40884
     password: "user300_mac:e408b202-5139-4c20-9d77-42ba1535e194"
     sni: www.bing.com
@@ -77,7 +77,7 @@ proxies:
     udp: true
   - name: "美国 San Jose-VLESS-线路2"
     type: vless
-    server: 64.90.14.50
+    server: 45.197.149.105
     port: 40884
     uuid: e408b202-5139-4c20-9d77-42ba1535e194
     flow: xtls-rprx-vision
@@ -92,7 +92,7 @@ proxies:
     fast-open: true
   - name: "美国 San Jose-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 40884
     uuid: e408b202-5139-4c20-9d77-42ba1535e194
     flow: xtls-rprx-vision

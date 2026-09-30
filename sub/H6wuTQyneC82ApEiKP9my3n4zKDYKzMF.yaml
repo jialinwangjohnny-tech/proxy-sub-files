@@ -53,7 +53,7 @@ tun:
 proxies:
   - name: "Tokyo, JP-HY2-线路3"
     type: hysteria2
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 40775
     password: "user329_phone:e7ea554b-a402-4523-b6a9-1ce73c5711f3"
     sni: www.bing.com
@@ -69,7 +69,7 @@ proxies:
     udp: true
   - name: "Tokyo, JP-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 40775
     uuid: e7ea554b-a402-4523-b6a9-1ce73c5711f3
     flow: xtls-rprx-vision

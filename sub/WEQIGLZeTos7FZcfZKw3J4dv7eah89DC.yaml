@@ -61,7 +61,7 @@ proxies:
     udp: true
   - name: "Salt Lake City, US-HY2-线路3"
     type: hysteria2
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 51748
     password: "user120_mac:90283726-e426-44ec-a6a1-30aa7b0f002f"
     sni: www.bing.com
@@ -84,7 +84,7 @@ proxies:
     fast-open: true
   - name: "Salt Lake City, US-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 51748
     uuid: 90283726-e426-44ec-a6a1-30aa7b0f002f
     flow: xtls-rprx-vision
