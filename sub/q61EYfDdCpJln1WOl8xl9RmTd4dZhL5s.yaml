@@ -51,7 +51,7 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国-VLESS-线路1"
+  - name: "Los Angeles, US-VLESS-线路1"
     type: vless
     server: 138.252.80.42
     port: 31462
@@ -66,7 +66,22 @@ proxies:
       short-id: "d8b0c03d"
     client-fingerprint: edge
     fast-open: true
-  - name: "美国-VLESS-线路3"
+  - name: "Los Angeles, US-VLESS-线路2"
+    type: vless
+    server: 45.197.149.105
+    port: 31462
+    uuid: 29fe161c-024d-4fca-a59e-f1aba49a163a
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: learn.microsoft.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "d8b0c03d"
+    client-fingerprint: edge
+    fast-open: true
+  - name: "Los Angeles, US-VLESS-线路3"
     type: vless
     server: 154.64.246.43
     port: 31462
@@ -86,8 +101,9 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国-VLESS-线路1"
-      - "美国-VLESS-线路3"
+      - "Los Angeles, US-VLESS-线路1"
+      - "Los Angeles, US-VLESS-线路2"
+      - "Los Angeles, US-VLESS-线路3"
     interval: 5
     timeout: 8000
     lazy: false
