@@ -61,7 +61,7 @@ proxies:
     udp: true
   - name: "美国-HY2-线路3"
     type: hysteria2
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 51841
     password: "user040_phone:80486799-e9db-4ad8-a624-3cf4674b0edc"
     sni: www.bing.com
@@ -84,7 +84,7 @@ proxies:
     fast-open: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: 138.252.80.42
+    server: 154.64.246.43
     port: 51841
     uuid: 80486799-e9db-4ad8-a624-3cf4674b0edc
     flow: xtls-rprx-vision
