@@ -15,16 +15,8 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  fallback:
     - "https://dns.google/dns-query#自动切换"
     - "https://cloudflare-dns.com/dns-query#自动切换"
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
   proxy-server-nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -59,33 +51,33 @@ tun:
     - tcp://any:53
 
 proxies:
-  - name: "美国-HY2-线路1"
+  - name: "Los Angeles, US-HY2-线路1"
     type: hysteria2
-    server: s1.huhiuh.space
+    server: 138.252.80.42
     port: 13716
     password: "user287_windows:de3f525f-4e3b-43cc-b241-74e5e2b052c9"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国-HY2-线路2"
+  - name: "Los Angeles, US-HY2-线路2"
     type: hysteria2
-    server: s2.huhiuh.space
+    server: 45.197.149.105
     port: 13716
     password: "user287_windows:de3f525f-4e3b-43cc-b241-74e5e2b052c9"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国-HY2-线路3"
+  - name: "Los Angeles, US-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 154.64.246.43
     port: 13716
     password: "user287_windows:de3f525f-4e3b-43cc-b241-74e5e2b052c9"
     sni: www.bing.com
     skip-cert-verify: true
     udp: true
-  - name: "美国-VLESS-线路1"
+  - name: "Los Angeles, US-VLESS-线路1"
     type: vless
-    server: s1.huhiuh.space
+    server: 138.252.80.42
     port: 13716
     uuid: de3f525f-4e3b-43cc-b241-74e5e2b052c9
     flow: xtls-rprx-vision
@@ -98,9 +90,9 @@ proxies:
       short-id: "67a1bde4"
     client-fingerprint: chrome
     fast-open: true
-  - name: "美国-VLESS-线路2"
+  - name: "Los Angeles, US-VLESS-线路2"
     type: vless
-    server: s2.huhiuh.space
+    server: 45.197.149.105
     port: 13716
     uuid: de3f525f-4e3b-43cc-b241-74e5e2b052c9
     flow: xtls-rprx-vision
@@ -113,9 +105,9 @@ proxies:
       short-id: "67a1bde4"
     client-fingerprint: chrome
     fast-open: true
-  - name: "美国-VLESS-线路3"
+  - name: "Los Angeles, US-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 154.64.246.43
     port: 13716
     uuid: de3f525f-4e3b-43cc-b241-74e5e2b052c9
     flow: xtls-rprx-vision
@@ -133,14 +125,14 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
-      - "美国-HY2-线路1"
-      - "美国-HY2-线路2"
-      - "美国-HY2-线路3"
-      - "美国-VLESS-线路1"
-      - "美国-VLESS-线路2"
-      - "美国-VLESS-线路3"
+      - "Los Angeles, US-HY2-线路1"
+      - "Los Angeles, US-HY2-线路2"
+      - "Los Angeles, US-HY2-线路3"
+      - "Los Angeles, US-VLESS-线路1"
+      - "Los Angeles, US-VLESS-线路2"
+      - "Los Angeles, US-VLESS-线路3"
     interval: 5
-    timeout: 3000
+    timeout: 8000
     lazy: false
     url: https://www.gstatic.com/generate_204
 
