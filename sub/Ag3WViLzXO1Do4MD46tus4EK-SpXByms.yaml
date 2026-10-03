@@ -51,6 +51,30 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "Los Angeles, US-HY2-线路3"
+    type: hysteria2
+    server: 154.64.246.43
+    port: 50635
+    password: "user262_windows:07b3980f-2e5c-4244-aa16-f40e620cb933"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "Los Angeles, US-HY2-线路1"
+    type: hysteria2
+    server: 138.252.80.42
+    port: 50635
+    password: "user262_windows:07b3980f-2e5c-4244-aa16-f40e620cb933"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "Los Angeles, US-HY2-线路2"
+    type: hysteria2
+    server: 45.197.149.105
+    port: 50635
+    password: "user262_windows:07b3980f-2e5c-4244-aa16-f40e620cb933"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
   - name: "Los Angeles, US-VLESS-线路3"
     type: vless
     server: 154.64.246.43
@@ -101,6 +125,9 @@ proxy-groups:
   - name: "自动切换"
     type: fallback
     proxies:
+      - "Los Angeles, US-HY2-线路3"
+      - "Los Angeles, US-HY2-线路1"
+      - "Los Angeles, US-HY2-线路2"
       - "Los Angeles, US-VLESS-线路3"
       - "Los Angeles, US-VLESS-线路1"
       - "Los Angeles, US-VLESS-线路2"
