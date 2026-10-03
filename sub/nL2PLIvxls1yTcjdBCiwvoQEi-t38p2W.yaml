@@ -66,6 +66,21 @@ proxies:
       short-id: "b90c7c9b"
     client-fingerprint: firefox
     fast-open: true
+  - name: "Los Angeles, US-VLESS-线路1"
+    type: vless
+    server: 138.252.80.42
+    port: 50635
+    uuid: 6dbff841-606f-4c6a-8d6b-a8e1606d86dc
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: www.dell.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "b90c7c9b"
+    client-fingerprint: firefox
+    fast-open: true
   - name: "Los Angeles, US-VLESS-线路2"
     type: vless
     server: 45.197.149.105
@@ -87,6 +102,7 @@ proxy-groups:
     type: fallback
     proxies:
       - "Los Angeles, US-VLESS-线路3"
+      - "Los Angeles, US-VLESS-线路1"
       - "Los Angeles, US-VLESS-线路2"
     interval: 5
     timeout: 8000
