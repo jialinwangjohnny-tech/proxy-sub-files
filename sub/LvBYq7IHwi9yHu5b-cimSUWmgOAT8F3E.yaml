@@ -48,9 +48,17 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
+- name: 美国-HY2-线路2
+  type: hysteria2
+  server: 45.197.149.105
+  port: 12537
+  password: user286_phone:cd466827-6e35-4efe-86d5-b124003000ee
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: s3.huhiuh.space
+  server: 45.197.149.111
   port: 12537
   password: user286_phone:cd466827-6e35-4efe-86d5-b124003000ee
   sni: www.bing.com
@@ -58,15 +66,30 @@ proxies:
   udp: true
 - name: 美国-HY2-线路1
   type: hysteria2
-  server: s1.huhiuh.space
+  server: 138.252.80.42
   port: 12537
   password: user286_phone:cd466827-6e35-4efe-86d5-b124003000ee
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
+- name: 美国-VLESS-线路2
+  type: vless
+  server: 45.197.149.105
+  port: 12537
+  uuid: cd466827-6e35-4efe-86d5-b124003000ee
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 63694fd8
+  client-fingerprint: firefox
+  fast-open: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: s3.huhiuh.space
+  server: 45.197.149.111
   port: 12537
   uuid: cd466827-6e35-4efe-86d5-b124003000ee
   flow: xtls-rprx-vision
@@ -81,7 +104,7 @@ proxies:
   fast-open: true
 - name: 美国-VLESS-线路1
   type: vless
-  server: s1.huhiuh.space
+  server: 138.252.80.42
   port: 12537
   uuid: cd466827-6e35-4efe-86d5-b124003000ee
   flow: xtls-rprx-vision
@@ -98,8 +121,10 @@ proxy-groups:
 - name: 自动切换
   type: fallback
   proxies:
+  - 美国-HY2-线路2
   - 美国-HY2-线路3
   - 美国-HY2-线路1
+  - 美国-VLESS-线路2
   - 美国-VLESS-线路3
   - 美国-VLESS-线路1
   interval: 5

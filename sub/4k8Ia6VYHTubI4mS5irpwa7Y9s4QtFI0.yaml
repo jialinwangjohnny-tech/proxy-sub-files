@@ -48,85 +48,85 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国-HY2-线路2
+- name: 美国洛杉矶-HY2-线路2
   type: hysteria2
   server: 45.197.149.105
-  port: 40392
-  password: user312_mac:2671bee5-5ed3-4454-8cea-5c0f001d3268
+  port: 16922
+  password: user336_phone:369a0034-3cae-44c1-b8e2-9e89fc9af1ea
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国-HY2-线路3
+- name: 美国洛杉矶-HY2-线路3
   type: hysteria2
   server: 45.197.149.111
-  port: 40392
-  password: user312_mac:2671bee5-5ed3-4454-8cea-5c0f001d3268
+  port: 16922
+  password: user336_phone:369a0034-3cae-44c1-b8e2-9e89fc9af1ea
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国-HY2-线路1
+- name: 美国洛杉矶-HY2-线路1
   type: hysteria2
   server: 138.252.80.42
-  port: 40392
-  password: user312_mac:2671bee5-5ed3-4454-8cea-5c0f001d3268
+  port: 16922
+  password: user336_phone:369a0034-3cae-44c1-b8e2-9e89fc9af1ea
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国-VLESS-线路2
+- name: 美国洛杉矶-VLESS-线路2
   type: vless
   server: 45.197.149.105
-  port: 40392
-  uuid: 2671bee5-5ed3-4454-8cea-5c0f001d3268
+  port: 16922
+  uuid: 369a0034-3cae-44c1-b8e2-9e89fc9af1ea
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   udp: true
-  servername: www.bing.com
+  servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 45dd756a
-  client-fingerprint: edge
+    short-id: 74779b73
+  client-fingerprint: firefox
   fast-open: true
-- name: 美国-VLESS-线路3
+- name: 美国洛杉矶-VLESS-线路3
   type: vless
   server: 45.197.149.111
-  port: 40392
-  uuid: 2671bee5-5ed3-4454-8cea-5c0f001d3268
+  port: 16922
+  uuid: 369a0034-3cae-44c1-b8e2-9e89fc9af1ea
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   udp: true
-  servername: www.bing.com
+  servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 45dd756a
-  client-fingerprint: edge
+    short-id: 74779b73
+  client-fingerprint: firefox
   fast-open: true
-- name: 美国-VLESS-线路1
+- name: 美国洛杉矶-VLESS-线路1
   type: vless
   server: 138.252.80.42
-  port: 40392
-  uuid: 2671bee5-5ed3-4454-8cea-5c0f001d3268
+  port: 16922
+  uuid: 369a0034-3cae-44c1-b8e2-9e89fc9af1ea
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   udp: true
-  servername: www.bing.com
+  servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 45dd756a
-  client-fingerprint: edge
+    short-id: 74779b73
+  client-fingerprint: firefox
   fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
   proxies:
-  - 美国-HY2-线路2
-  - 美国-HY2-线路3
-  - 美国-HY2-线路1
-  - 美国-VLESS-线路2
-  - 美国-VLESS-线路3
-  - 美国-VLESS-线路1
+  - 美国洛杉矶-HY2-线路2
+  - 美国洛杉矶-HY2-线路3
+  - 美国洛杉矶-HY2-线路1
+  - 美国洛杉矶-VLESS-线路2
+  - 美国洛杉矶-VLESS-线路3
+  - 美国洛杉矶-VLESS-线路1
   interval: 5
   timeout: 8000
   lazy: false
