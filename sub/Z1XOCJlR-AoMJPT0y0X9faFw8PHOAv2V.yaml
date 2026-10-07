@@ -94,6 +94,29 @@ proxies:
     short-id: 9f53f0b9
   client-fingerprint: firefox
   fast-open: true
+- name: Virginia, US-HY2-线路2
+  type: hysteria2
+  server: 45.197.149.105
+  port: 44890
+  password: user323_windows:8f588d75-9fcf-4139-b881-83c10195dec9
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: Virginia, US-VLESS-线路2
+  type: vless
+  server: 45.197.149.105
+  port: 44890
+  uuid: 8f588d75-9fcf-4139-b881-83c10195dec9
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 9f53f0b9
+  client-fingerprint: firefox
+  fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
@@ -102,6 +125,8 @@ proxy-groups:
   - Virginia, US-HY2-线路1
   - Virginia, US-VLESS-线路3
   - Virginia, US-VLESS-线路1
+  - Virginia, US-HY2-线路2
+  - Virginia, US-VLESS-线路2
   interval: 5
   timeout: 8000
   lazy: false
