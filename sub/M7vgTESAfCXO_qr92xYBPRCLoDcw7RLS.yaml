@@ -52,7 +52,7 @@ proxies:
   udp: true
 - name: 新加坡-HY2-线路3
   type: hysteria2
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 14145
   password: user147_windows:f5884e73-099d-443c-893e-5b956f22751c
   sni: www.bing.com
@@ -60,7 +60,7 @@ proxies:
   udp: true
 - name: 新加坡-HY2-线路1
   type: hysteria2
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 14145
   password: user147_windows:f5884e73-099d-443c-893e-5b956f22751c
   sni: www.bing.com
@@ -83,7 +83,7 @@ proxies:
   fast-open: true
 - name: 新加坡-VLESS-线路3
   type: vless
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 14145
   uuid: f5884e73-099d-443c-893e-5b956f22751c
   flow: xtls-rprx-vision
@@ -98,7 +98,7 @@ proxies:
   fast-open: true
 - name: 新加坡-VLESS-线路1
   type: vless
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 14145
   uuid: f5884e73-099d-443c-893e-5b956f22751c
   flow: xtls-rprx-vision

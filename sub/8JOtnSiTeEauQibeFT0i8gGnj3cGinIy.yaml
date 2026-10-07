@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: 美国-HY2-线路1
   type: hysteria2
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 41582
   password: user022:a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   sni: www.bing.com
@@ -66,7 +66,7 @@ proxies:
   udp: true
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 41582
   password: user022:a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: 美国-VLESS-线路1
   type: vless
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 41582
   uuid: a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   flow: xtls-rprx-vision
@@ -104,7 +104,7 @@ proxies:
   fast-open: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 41582
   uuid: a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   flow: xtls-rprx-vision

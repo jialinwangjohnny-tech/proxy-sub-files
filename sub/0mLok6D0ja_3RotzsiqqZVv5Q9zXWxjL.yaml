@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: 美国-VLESS-线路1
   type: vless
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 31462
   uuid: 72cca28c-c39f-4a13-934d-61b157245dd6
   flow: xtls-rprx-vision
@@ -80,7 +80,7 @@ proxies:
   fast-open: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 31462
   uuid: 72cca28c-c39f-4a13-934d-61b157245dd6
   flow: xtls-rprx-vision

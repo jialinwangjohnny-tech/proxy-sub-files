@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: New York, US-HY2-线路3
   type: hysteria2
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 30923
   password: user163_windows:d4722ef3-c1f8-4b07-8b6e-ea31cfcf8ae6
   sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
   udp: true
 - name: New York, US-HY2-线路1
   type: hysteria2
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 30923
   password: user163_windows:d4722ef3-c1f8-4b07-8b6e-ea31cfcf8ae6
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: New York, US-VLESS-线路3
   type: vless
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 30923
   uuid: d4722ef3-c1f8-4b07-8b6e-ea31cfcf8ae6
   flow: xtls-rprx-vision
@@ -89,7 +89,7 @@ proxies:
   fast-open: true
 - name: New York, US-VLESS-线路1
   type: vless
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 30923
   uuid: d4722ef3-c1f8-4b07-8b6e-ea31cfcf8ae6
   flow: xtls-rprx-vision

@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: 美国AT&T-HY2-线路3
   type: hysteria2
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 51549
   password: user189_windows:7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
   sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
   udp: true
 - name: 美国AT&T-HY2-线路1
   type: hysteria2
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 51549
   password: user189_windows:7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: 美国AT&T-VLESS-线路3
   type: vless
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 51549
   uuid: 7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
   flow: xtls-rprx-vision
@@ -89,7 +89,7 @@ proxies:
   fast-open: true
 - name: 美国AT&T-VLESS-线路1
   type: vless
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 51549
   uuid: 7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
   flow: xtls-rprx-vision

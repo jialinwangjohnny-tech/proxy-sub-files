@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: Kuala Lumpur, MY2-HY2-线路1
   type: hysteria2
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 32838
   password: user334_phone:59d6eabc-8e9b-4f0f-8e00-fef45cbed7c5
   sni: www.bing.com
@@ -66,7 +66,7 @@ proxies:
   udp: true
 - name: Kuala Lumpur, MY2-HY2-线路3
   type: hysteria2
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 32838
   password: user334_phone:59d6eabc-8e9b-4f0f-8e00-fef45cbed7c5
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: Kuala Lumpur, MY2-VLESS-线路1
   type: vless
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 32838
   uuid: 59d6eabc-8e9b-4f0f-8e00-fef45cbed7c5
   flow: xtls-rprx-vision
@@ -104,7 +104,7 @@ proxies:
   fast-open: true
 - name: Kuala Lumpur, MY2-VLESS-线路3
   type: vless
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 32838
   uuid: 59d6eabc-8e9b-4f0f-8e00-fef45cbed7c5
   flow: xtls-rprx-vision

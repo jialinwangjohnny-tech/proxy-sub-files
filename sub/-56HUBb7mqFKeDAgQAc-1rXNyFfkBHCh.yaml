@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: 美国 · Draper, Utah-HY2-线路1
   type: hysteria2
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 26108
   password: user304_phone:56405918-99b5-44bd-a99a-3293f80f37e1
   sni: www.bing.com
@@ -66,7 +66,7 @@ proxies:
   udp: true
 - name: 美国 · Draper, Utah-HY2-线路3
   type: hysteria2
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 26108
   password: user304_phone:56405918-99b5-44bd-a99a-3293f80f37e1
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: 美国 · Draper, Utah-VLESS-线路1
   type: vless
-  server: 138.252.80.42
+  server: 45.197.149.41
   port: 26108
   uuid: 56405918-99b5-44bd-a99a-3293f80f37e1
   flow: xtls-rprx-vision
@@ -104,7 +104,7 @@ proxies:
   fast-open: true
 - name: 美国 · Draper, Utah-VLESS-线路3
   type: vless
-  server: 45.197.149.111
+  server: 45.197.149.8
   port: 26108
   uuid: 56405918-99b5-44bd-a99a-3293f80f37e1
   flow: xtls-rprx-vision
