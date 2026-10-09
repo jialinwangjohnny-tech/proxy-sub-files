@@ -58,7 +58,7 @@ proxies:
   udp: true
 - name: 美国 San Jose-HY2-线路3
   type: hysteria2
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 40884
   password: user300_windows:57adc02d-ad30-439c-b3e5-1e562bac26f6
   sni: www.bing.com
@@ -89,7 +89,7 @@ proxies:
   fast-open: true
 - name: 美国 San Jose-VLESS-线路3
   type: vless
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 40884
   uuid: 57adc02d-ad30-439c-b3e5-1e562bac26f6
   flow: xtls-rprx-vision

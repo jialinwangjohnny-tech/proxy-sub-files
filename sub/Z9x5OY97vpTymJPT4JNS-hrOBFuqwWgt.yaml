@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: 波兰-HY2-线路2
   type: hysteria2
-  server: 64.90.14.50
+  server: 45.197.149.105
   port: 57702
   password: user219_mac:3646780a-95f6-4e33-98e0-e17832c0dc0a
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: 波兰-VLESS-线路2
   type: vless
-  server: 64.90.14.50
+  server: 45.197.149.105
   port: 57702
   uuid: 3646780a-95f6-4e33-98e0-e17832c0dc0a
   flow: xtls-rprx-vision

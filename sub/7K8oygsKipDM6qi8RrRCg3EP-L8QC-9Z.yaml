@@ -48,22 +48,6 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国AT&T-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.8
-  port: 51549
-  password: user189_windows:7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国AT&T-HY2-线路1
-  type: hysteria2
-  server: 45.197.149.41
-  port: 51549
-  password: user189_windows:7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国AT&T-HY2-线路2
   type: hysteria2
   server: 45.197.149.105
@@ -72,36 +56,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国AT&T-VLESS-线路3
-  type: vless
-  server: 45.197.149.8
-  port: 51549
-  uuid: 7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 6041a2c5
-  client-fingerprint: chrome
-  fast-open: true
-- name: 美国AT&T-VLESS-线路1
-  type: vless
-  server: 45.197.149.41
-  port: 51549
-  uuid: 7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 6041a2c5
-  client-fingerprint: chrome
-  fast-open: true
 - name: 美国AT&T-VLESS-线路2
   type: vless
   server: 45.197.149.105
@@ -121,11 +75,7 @@ proxy-groups:
 - name: 自动切换
   type: fallback
   proxies:
-  - 美国AT&T-HY2-线路3
-  - 美国AT&T-HY2-线路1
   - 美国AT&T-HY2-线路2
-  - 美国AT&T-VLESS-线路3
-  - 美国AT&T-VLESS-线路1
   - 美国AT&T-VLESS-线路2
   interval: 5
   timeout: 8000

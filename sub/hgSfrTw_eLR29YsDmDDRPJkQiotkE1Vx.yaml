@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: 日本-HY2-线路3
   type: hysteria2
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 32238
   password: user280_phone:814df1b1-79d2-4c75-8c6e-c11fe9e153fc
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: 日本-VLESS-线路3
   type: vless
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 32238
   uuid: 814df1b1-79d2-4c75-8c6e-c11fe9e153fc
   flow: xtls-rprx-vision

@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 50410
   password: user283_windows:83d4882c-43fd-4100-bb00-7446cdbca1cf
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 50410
   uuid: 83d4882c-43fd-4100-bb00-7446cdbca1cf
   flow: xtls-rprx-vision

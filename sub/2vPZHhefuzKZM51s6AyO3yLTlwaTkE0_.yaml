@@ -48,15 +48,7 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: Los Angeles, US-HY2-线路1
-  type: hysteria2
-  server: 45.197.149.41
-  port: 18891
-  password: user335_windows:a89a17cf-5067-45c4-8c98-a5cf8d54c558
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: Los Angeles, US-HY2-线路2
+- name: Los Angeles US-HY2-线路2
   type: hysteria2
   server: 45.197.149.105
   port: 18891
@@ -64,7 +56,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: Los Angeles, US-HY2-线路3
+- name: Los Angeles US-HY2-线路3
   type: hysteria2
   server: 45.197.149.8
   port: 18891
@@ -72,22 +64,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: Los Angeles, US-VLESS-线路1
-  type: vless
-  server: 45.197.149.41
-  port: 18891
-  uuid: a89a17cf-5067-45c4-8c98-a5cf8d54c558
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: d37a1bef
-  client-fingerprint: firefox
-  fast-open: true
-- name: Los Angeles, US-VLESS-线路2
+- name: Los Angeles US-VLESS-线路2
   type: vless
   server: 45.197.149.105
   port: 18891
@@ -102,7 +79,7 @@ proxies:
     short-id: d37a1bef
   client-fingerprint: firefox
   fast-open: true
-- name: Los Angeles, US-VLESS-线路3
+- name: Los Angeles US-VLESS-线路3
   type: vless
   server: 45.197.149.8
   port: 18891
@@ -121,12 +98,10 @@ proxy-groups:
 - name: 自动切换
   type: fallback
   proxies:
-  - Los Angeles, US-HY2-线路1
-  - Los Angeles, US-HY2-线路2
-  - Los Angeles, US-HY2-线路3
-  - Los Angeles, US-VLESS-线路1
-  - Los Angeles, US-VLESS-线路2
-  - Los Angeles, US-VLESS-线路3
+  - Los Angeles US-HY2-线路2
+  - Los Angeles US-HY2-线路3
+  - Los Angeles US-VLESS-线路2
+  - Los Angeles US-VLESS-线路3
   interval: 5
   timeout: 8000
   lazy: false

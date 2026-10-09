@@ -48,15 +48,7 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: Salt Lake City, US-HY2-线路1
-  type: hysteria2
-  server: 45.197.149.41
-  port: 51748
-  password: user120_phone:064119b5-9cd2-4925-a670-2678282651e9
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: Salt Lake City, US-HY2-线路2
+- name: Salt Lake City US-HY2-线路2
   type: hysteria2
   server: 45.197.149.105
   port: 51748
@@ -64,7 +56,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: Salt Lake City, US-HY2-线路3
+- name: Salt Lake City US-HY2-线路3
   type: hysteria2
   server: 45.197.149.8
   port: 51748
@@ -72,22 +64,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: Salt Lake City, US-VLESS-线路1
-  type: vless
-  server: 45.197.149.41
-  port: 51748
-  uuid: 064119b5-9cd2-4925-a670-2678282651e9
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: dde9f125
-  client-fingerprint: edge
-  fast-open: true
-- name: Salt Lake City, US-VLESS-线路2
+- name: Salt Lake City US-VLESS-线路2
   type: vless
   server: 45.197.149.105
   port: 51748
@@ -102,7 +79,7 @@ proxies:
     short-id: dde9f125
   client-fingerprint: edge
   fast-open: true
-- name: Salt Lake City, US-VLESS-线路3
+- name: Salt Lake City US-VLESS-线路3
   type: vless
   server: 45.197.149.8
   port: 51748
@@ -121,12 +98,10 @@ proxy-groups:
 - name: 自动切换
   type: fallback
   proxies:
-  - Salt Lake City, US-HY2-线路1
-  - Salt Lake City, US-HY2-线路2
-  - Salt Lake City, US-HY2-线路3
-  - Salt Lake City, US-VLESS-线路1
-  - Salt Lake City, US-VLESS-线路2
-  - Salt Lake City, US-VLESS-线路3
+  - Salt Lake City US-HY2-线路2
+  - Salt Lake City US-HY2-线路3
+  - Salt Lake City US-VLESS-线路2
+  - Salt Lake City US-VLESS-线路3
   interval: 5
   timeout: 8000
   lazy: false

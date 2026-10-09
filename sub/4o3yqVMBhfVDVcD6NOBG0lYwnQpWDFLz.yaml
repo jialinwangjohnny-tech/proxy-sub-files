@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 21100
   password: user276_mac:c928e4a9-d4cf-46f9-b928-1a77369a1fe2
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 21100
   uuid: c928e4a9-d4cf-46f9-b928-1a77369a1fe2
   flow: xtls-rprx-vision

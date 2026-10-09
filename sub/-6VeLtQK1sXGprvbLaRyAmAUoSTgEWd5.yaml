@@ -58,7 +58,7 @@ proxies:
   udp: true
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 23039
   password: user269_mac:34c3135c-19d9-4667-8442-ae90f5505e5e
   sni: www.bing.com
@@ -89,7 +89,7 @@ proxies:
   fast-open: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 23039
   uuid: 34c3135c-19d9-4667-8442-ae90f5505e5e
   flow: xtls-rprx-vision

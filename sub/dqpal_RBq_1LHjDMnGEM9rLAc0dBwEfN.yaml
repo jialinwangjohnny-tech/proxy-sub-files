@@ -66,7 +66,7 @@ proxies:
   udp: true
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 51468
   password: user178_phone:cc64b788-a25e-464c-a12a-f20a2c07b0c0
   sni: www.bing.com
@@ -104,7 +104,7 @@ proxies:
   fast-open: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 154.64.246.43
+  server: 45.197.149.8
   port: 51468
   uuid: cc64b788-a25e-464c-a12a-f20a2c07b0c0
   flow: xtls-rprx-vision

@@ -48,7 +48,7 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: New York, US-HY2-线路3
+- name: New York US-HY2-线路3
   type: hysteria2
   server: 45.197.149.8
   port: 30923
@@ -56,7 +56,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: New York, US-HY2-线路1
+- name: New York US-HY2-线路1
   type: hysteria2
   server: 45.197.149.41
   port: 30923
@@ -64,15 +64,15 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: New York, US-HY2-线路2
+- name: New York US-HY2-线路2
   type: hysteria2
-  server: 64.90.14.50
+  server: 45.197.149.105
   port: 30923
   password: user163_mac:ed669a08-50f4-454b-b269-d1c88f2faf18
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: New York, US-VLESS-线路3
+- name: New York US-VLESS-线路3
   type: vless
   server: 45.197.149.8
   port: 30923
@@ -87,7 +87,7 @@ proxies:
     short-id: eaed8fa2
   client-fingerprint: edge
   fast-open: true
-- name: New York, US-VLESS-线路1
+- name: New York US-VLESS-线路1
   type: vless
   server: 45.197.149.41
   port: 30923
@@ -102,9 +102,9 @@ proxies:
     short-id: eaed8fa2
   client-fingerprint: edge
   fast-open: true
-- name: New York, US-VLESS-线路2
+- name: New York US-VLESS-线路2
   type: vless
-  server: 64.90.14.50
+  server: 45.197.149.105
   port: 30923
   uuid: ed669a08-50f4-454b-b269-d1c88f2faf18
   flow: xtls-rprx-vision
@@ -121,12 +121,12 @@ proxy-groups:
 - name: 自动切换
   type: fallback
   proxies:
-  - New York, US-HY2-线路3
-  - New York, US-HY2-线路1
-  - New York, US-HY2-线路2
-  - New York, US-VLESS-线路3
-  - New York, US-VLESS-线路1
-  - New York, US-VLESS-线路2
+  - New York US-HY2-线路3
+  - New York US-HY2-线路1
+  - New York US-HY2-线路2
+  - New York US-VLESS-线路3
+  - New York US-VLESS-线路1
+  - New York US-VLESS-线路2
   interval: 5
   timeout: 8000
   lazy: false
