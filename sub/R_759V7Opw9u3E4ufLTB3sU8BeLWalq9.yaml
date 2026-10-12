@@ -66,7 +66,7 @@ proxies:
   udp: true
 - name: Kuala Lumpur, MY2-HY2-线路3
   type: hysteria2
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 32838
   password: user334_mac:e99a68cd-f3d6-45ee-92ae-54662ecf146e
   sni: www.bing.com
@@ -104,7 +104,7 @@ proxies:
   fast-open: true
 - name: Kuala Lumpur, MY2-VLESS-线路3
   type: vless
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 32838
   uuid: e99a68cd-f3d6-45ee-92ae-54662ecf146e
   flow: xtls-rprx-vision

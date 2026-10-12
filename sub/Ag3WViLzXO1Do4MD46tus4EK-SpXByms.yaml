@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: Los Angeles, US-HY2-线路3
   type: hysteria2
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 50635
   password: user262_windows:07b3980f-2e5c-4244-aa16-f40e620cb933
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: Los Angeles, US-VLESS-线路3
   type: vless
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 50635
   uuid: 07b3980f-2e5c-4244-aa16-f40e620cb933
   flow: xtls-rprx-vision

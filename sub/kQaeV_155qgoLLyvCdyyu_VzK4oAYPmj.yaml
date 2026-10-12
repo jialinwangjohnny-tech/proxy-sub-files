@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 17565
   password: user290_phone:f95f6c03-84d4-45da-9b8e-8b6a62800b74
   sni: www.bing.com
@@ -66,7 +66,7 @@ proxies:
   udp: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 17565
   uuid: f95f6c03-84d4-45da-9b8e-8b6a62800b74
   flow: xtls-rprx-vision

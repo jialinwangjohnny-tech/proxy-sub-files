@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: 日本-HY2-线路3
   type: hysteria2
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 23951
   password: user328_windows:fa4ed6e6-5789-4780-906c-d0b4d66d2ac6
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: 日本-VLESS-线路3
   type: vless
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 23951
   uuid: fa4ed6e6-5789-4780-906c-d0b4d66d2ac6
   flow: xtls-rprx-vision

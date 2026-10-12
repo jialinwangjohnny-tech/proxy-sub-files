@@ -58,7 +58,7 @@ proxies:
   udp: true
 - name: Tokyo, JP-HY2-线路3
   type: hysteria2
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 10757
   password: user326_phone:9ed91315-04ae-4b09-8713-fc31050acce4
   sni: www.bing.com
@@ -89,7 +89,7 @@ proxies:
   fast-open: true
 - name: Tokyo, JP-VLESS-线路3
   type: vless
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 10757
   uuid: 9ed91315-04ae-4b09-8713-fc31050acce4
   flow: xtls-rprx-vision

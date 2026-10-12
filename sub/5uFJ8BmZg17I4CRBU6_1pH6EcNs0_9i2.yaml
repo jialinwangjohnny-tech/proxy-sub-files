@@ -69,7 +69,7 @@ proxies:
     udp: true
   - name: "新加坡-HY2-线路3"
     type: hysteria2
-    server: 45.197.149.8
+    server: 45.197.149.17
     port: 46541
     password: "user303_phone:76269aad-3584-48fe-873e-cd482b6ffd89"
     sni: www.bing.com
@@ -107,7 +107,7 @@ proxies:
     fast-open: true
   - name: "新加坡-VLESS-线路3"
     type: vless
-    server: 45.197.149.8
+    server: 45.197.149.17
     port: 46541
     uuid: 76269aad-3584-48fe-873e-cd482b6ffd89
     flow: xtls-rprx-vision

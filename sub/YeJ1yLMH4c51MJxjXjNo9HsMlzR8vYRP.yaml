@@ -50,7 +50,7 @@ tun:
 proxies:
 - name: Tokyo, JP-HY2-线路3
   type: hysteria2
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 40775
   password: user329_windows:586f230f-a970-457f-94a2-971e3bab543a
   sni: www.bing.com
@@ -74,7 +74,7 @@ proxies:
   udp: true
 - name: Tokyo, JP-VLESS-线路3
   type: vless
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 40775
   uuid: 586f230f-a970-457f-94a2-971e3bab543a
   flow: xtls-rprx-vision

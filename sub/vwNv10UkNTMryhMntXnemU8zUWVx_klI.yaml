@@ -58,7 +58,7 @@ proxies:
   udp: true
 - name: Virginia, US-HY2-线路3
   type: hysteria2
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 49541
   password: user332_windows:03969bca-7535-4793-9213-fc1632875bff
   sni: www.bing.com
@@ -89,7 +89,7 @@ proxies:
   fast-open: true
 - name: Virginia, US-VLESS-线路3
   type: vless
-  server: 45.197.149.8
+  server: 45.197.149.17
   port: 49541
   uuid: 03969bca-7535-4793-9213-fc1632875bff
   flow: xtls-rprx-vision

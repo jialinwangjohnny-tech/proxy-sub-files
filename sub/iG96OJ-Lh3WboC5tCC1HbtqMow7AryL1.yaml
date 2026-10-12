@@ -53,7 +53,7 @@ tun:
 proxies:
   - name: "新加坡-HY2-线路3"
     type: hysteria2
-    server: 45.197.149.8
+    server: 45.197.149.17
     port: 14545
     password: "user338_mac:4a304e4c-29c3-49e7-95f9-861023b2d818"
     sni: www.bing.com
@@ -77,7 +77,7 @@ proxies:
     udp: true
   - name: "新加坡-VLESS-线路3"
     type: vless
-    server: 45.197.149.8
+    server: 45.197.149.17
     port: 14545
     uuid: 4a304e4c-29c3-49e7-95f9-861023b2d818
     flow: xtls-rprx-vision
