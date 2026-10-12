@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Mira_Wang-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 29682
     password: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Mira_Wang-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 29682
     uuid: 42c7070b-650c-45e0-aa3f-e1ea47d67efc
     network: tcp

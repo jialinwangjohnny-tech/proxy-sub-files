@@ -61,7 +61,7 @@ tun:
 proxies:
   - name: "Dubai,AE-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 57992
     password: "user079_mac:60926c88-4443-4e98-bbb2-960d556ab3c6"
     sni: www.bing.com
@@ -85,7 +85,7 @@ proxies:
     udp: true
   - name: "Dubai,AE-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 57992
     uuid: 60926c88-4443-4e98-bbb2-960d556ab3c6
     flow: xtls-rprx-vision

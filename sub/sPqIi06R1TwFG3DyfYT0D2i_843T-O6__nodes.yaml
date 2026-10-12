@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (大熊猫独享)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50015
     password: f5774dea-81fd-40e4-9bb3-d708925f2af7
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (大熊猫独享)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50015
     uuid: f5774dea-81fd-40e4-9bb3-d708925f2af7
     network: tcp

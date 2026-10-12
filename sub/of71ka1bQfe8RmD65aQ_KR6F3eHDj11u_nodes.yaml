@@ -19,7 +19,7 @@ proxies:
 
   - name: "新加坡-HY2-线路3 (q33345666-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 16227
     password: 8c4d8a3f-4e1f-4c25-86ec-c04567c7c7c3
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "新加坡-VLESS-线路3 (q33345666-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 16227
     uuid: 8c4d8a3f-4e1f-4c25-86ec-c04567c7c7c3
     network: tcp

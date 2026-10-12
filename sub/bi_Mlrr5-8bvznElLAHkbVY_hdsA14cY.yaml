@@ -69,7 +69,7 @@ proxies:
     udp: true
   - name: "美国-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 12685
     password: "user067_mac:60911226-8c93-4e2e-97a8-50eb9adc6a89"
     sni: www.bing.com
@@ -100,7 +100,7 @@ proxies:
     fast-open: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 12685
     uuid: 60911226-8c93-4e2e-97a8-50eb9adc6a89
     flow: xtls-rprx-vision

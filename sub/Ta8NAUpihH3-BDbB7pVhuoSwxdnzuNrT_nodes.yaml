@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (展舒-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 22886
     password: bcab6206-c83f-41df-bbba-39d0fa678be7
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (展舒-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 22886
     uuid: bcab6206-c83f-41df-bbba-39d0fa678be7
     network: tcp

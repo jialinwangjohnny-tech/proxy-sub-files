@@ -49,7 +49,7 @@ proxies:
 
   - name: "新加坡-HY2-线路3 (j27237923-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 15529
     password: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "新加坡-VLESS-线路3 (j27237923-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 15529
     uuid: 89f453e3-4572-48a3-a2ae-ba2aa5ed9fae
     network: tcp

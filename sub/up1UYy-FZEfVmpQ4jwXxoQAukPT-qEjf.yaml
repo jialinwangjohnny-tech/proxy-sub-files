@@ -104,7 +104,7 @@ proxies:
     fast-open: true
   - name: "美国-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 20657
     password: "user156:2b54abe4-04f3-4fee-bf16-355f8cb250e7"
     obfs: salamander
@@ -114,7 +114,7 @@ proxies:
     udp: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 20657
     uuid: 2b54abe4-04f3-4fee-bf16-355f8cb250e7
     flow: xtls-rprx-vision

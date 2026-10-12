@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (deepsleep-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50049
     password: ae3decef-2b36-400b-b7ca-7178369ca751
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (deepsleep-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50049
     uuid: ae3decef-2b36-400b-b7ca-7178369ca751
     network: tcp

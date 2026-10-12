@@ -19,7 +19,7 @@ proxies:
 
   - name: "美国洛杉矶-HY2-线路3 (佳霖-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 39876
     password: 012b1b9c-3a21-4aca-80f9-f74f496070ce
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国洛杉矶-VLESS-线路3 (佳霖-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 39876
     uuid: 012b1b9c-3a21-4aca-80f9-f74f496070ce
     network: tcp

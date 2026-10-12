@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Ευτυχισμένος-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 29750
     password: e5d0d2e7-b1f6-430b-9f6d-f5a60225d93d
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Ευτυχισμένος-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 29750
     uuid: e5d0d2e7-b1f6-430b-9f6d-f5a60225d93d
     network: tcp

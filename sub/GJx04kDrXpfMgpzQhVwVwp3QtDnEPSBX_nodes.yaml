@@ -49,7 +49,7 @@ proxies:
 
   - name: "新加坡-HY2-线路3 (十月-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 53542
     password: 127c8180-3c44-4f2a-be41-cf2d95250757
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "新加坡-VLESS-线路3 (十月-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 53542
     uuid: 127c8180-3c44-4f2a-be41-cf2d95250757
     network: tcp

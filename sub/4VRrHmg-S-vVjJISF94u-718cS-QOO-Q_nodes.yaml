@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国洛杉矶-HY2-线路3 (DamaiLang-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 38340
     password: 1de69906-aadb-452d-a2c8-0dc629222d21
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国洛杉矶-VLESS-线路3 (DamaiLang-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 38340
     uuid: 1de69906-aadb-452d-a2c8-0dc629222d21
     network: tcp

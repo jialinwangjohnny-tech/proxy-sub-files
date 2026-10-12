@@ -61,7 +61,7 @@ tun:
 proxies:
   - name: "荷兰-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 36494
     password: "user224_mac:dd35ef96-0d67-4836-9867-f668ae286741"
     sni: www.bing.com
@@ -85,7 +85,7 @@ proxies:
     udp: true
   - name: "荷兰-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 36494
     uuid: dd35ef96-0d67-4836-9867-f668ae286741
     flow: xtls-rprx-vision

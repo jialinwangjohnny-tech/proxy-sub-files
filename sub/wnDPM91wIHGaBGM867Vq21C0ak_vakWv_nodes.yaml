@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (ready009-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 45495
     password: 2d795955-93fb-4196-a5e5-4fb6541ce5b8
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (ready009-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 45495
     uuid: 2d795955-93fb-4196-a5e5-4fb6541ce5b8
     network: tcp

@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (星际飞行-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 21695
     password: 34effe02-b701-470c-af87-cd0b650df917
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (星际飞行-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 21695
     uuid: 34effe02-b701-470c-af87-cd0b650df917
     network: tcp

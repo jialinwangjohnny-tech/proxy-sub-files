@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Marc并弄了个大新闻-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 36390
     password: 47452c09-e82a-413a-ba02-f81f2df4bfd1
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Marc并弄了个大新闻-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 36390
     uuid: 47452c09-e82a-413a-ba02-f81f2df4bfd1
     network: tcp

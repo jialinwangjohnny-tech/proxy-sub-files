@@ -69,7 +69,7 @@ proxies:
     udp: true
   - name: "美国-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 14062
     password: "user213_windows:9b780647-a6a2-403e-93a6-b653c35d25a2"
     sni: www.bing.com
@@ -100,7 +100,7 @@ proxies:
     fast-open: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 14062
     uuid: 9b780647-a6a2-403e-93a6-b653c35d25a2
     flow: xtls-rprx-vision

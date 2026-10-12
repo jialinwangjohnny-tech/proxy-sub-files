@@ -77,7 +77,7 @@ proxies:
     udp: true
   - name: "美国-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 23150
     password: "user052_mac:79e4246f-2ac3-4a35-bcdb-0e01c027156f"
     sni: www.bing.com
@@ -115,7 +115,7 @@ proxies:
     fast-open: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 23150
     uuid: 79e4246f-2ac3-4a35-bcdb-0e01c027156f
     flow: xtls-rprx-vision

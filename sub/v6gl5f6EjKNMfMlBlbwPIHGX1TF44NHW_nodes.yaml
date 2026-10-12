@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (David-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 20564
     password: 99c8e7a4-ae22-4197-a0ff-94590cda21f0
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (David-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 20564
     uuid: 99c8e7a4-ae22-4197-a0ff-94590cda21f0
     network: tcp

@@ -104,7 +104,7 @@ proxies:
 
   - name: "美国纽约-HY2-线路3 (禅-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50139
     password: 87fa9f9f-bd79-4955-a65f-57cefefd8891
     sni: www.bing.com
@@ -113,7 +113,7 @@ proxies:
 
   - name: "美国纽约-VLESS-线路3 (禅-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50139
     uuid: 87fa9f9f-bd79-4955-a65f-57cefefd8891
     network: tcp

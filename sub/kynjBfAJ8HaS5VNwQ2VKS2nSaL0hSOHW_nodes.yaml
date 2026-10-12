@@ -49,7 +49,7 @@ proxies:
 
   - name: "马来西亚-HY2-线路3 (潦草小羊-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 38170
     password: 3d786607-a9d4-4ec5-87c5-3a4e6bb2144e
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "马来西亚-VLESS-线路3 (潦草小羊-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 38170
     uuid: 3d786607-a9d4-4ec5-87c5-3a4e6bb2144e
     network: tcp

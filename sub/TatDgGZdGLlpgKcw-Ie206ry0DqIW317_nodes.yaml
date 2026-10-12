@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Water purifier-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 45292
     password: 66ebccac-9a06-40ad-a72c-bb62ef5be2c5
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Water purifier-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 45292
     uuid: 66ebccac-9a06-40ad-a72c-bb62ef5be2c5
     network: tcp

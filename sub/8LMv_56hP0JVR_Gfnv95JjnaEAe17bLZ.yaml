@@ -104,7 +104,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Soacabxiaoyu-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 25083
     password: ca00e5d3-df18-4658-811f-a8db651abdd7
     sni: www.bing.com
@@ -113,7 +113,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Soacabxiaoyu-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 25083
     uuid: ca00e5d3-df18-4658-811f-a8db651abdd7
     network: tcp

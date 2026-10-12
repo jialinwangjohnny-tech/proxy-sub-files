@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Rachel.C-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 24951
     password: bddc9582-da52-4f39-93a7-145195bff78d
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Rachel.C-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 24951
     uuid: bddc9582-da52-4f39-93a7-145195bff78d
     network: tcp

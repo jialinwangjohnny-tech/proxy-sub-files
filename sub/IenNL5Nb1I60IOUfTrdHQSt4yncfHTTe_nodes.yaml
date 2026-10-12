@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国德克萨斯-HY2-线路3 (duxiang-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 43402
     password: 623f4822-33ba-4eb8-a8c6-a76679634acd
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国德克萨斯-VLESS-线路3 (duxiang-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 43402
     uuid: 623f4822-33ba-4eb8-a8c6-a76679634acd
     network: tcp

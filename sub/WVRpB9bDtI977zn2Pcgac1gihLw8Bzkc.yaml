@@ -64,7 +64,7 @@ proxies:
     udp: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 26412
     uuid: 85038f90-9cd2-4058-9493-bd26dc5df70b
     flow: xtls-rprx-vision

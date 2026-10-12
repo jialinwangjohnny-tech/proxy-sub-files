@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国洛杉矶-HY2-线路3 (翩翩起舞-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 18347
     password: 1a29cf7e-e3a1-4d49-833c-feb489052251
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国洛杉矶-VLESS-线路3 (翩翩起舞-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 18347
     uuid: 1a29cf7e-e3a1-4d49-833c-feb489052251
     network: tcp

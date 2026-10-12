@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (ChenerLee1224-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 56080
     password: fd6e8858-bb44-4ebd-93df-2466839f62cb
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (ChenerLee1224-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 56080
     uuid: fd6e8858-bb44-4ebd-93df-2466839f62cb
     network: tcp

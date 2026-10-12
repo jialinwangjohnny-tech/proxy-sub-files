@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (JuicyKwok-phone2)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50043
     password: 7064acf3-2cf1-406a-b5e6-0148534208d4
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (JuicyKwok-phone2)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50043
     uuid: 7064acf3-2cf1-406a-b5e6-0148534208d4
     network: tcp

@@ -77,7 +77,7 @@ proxies:
     udp: true
   - name: "印尼-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 43470
     password: "user183_mac:66b8fd95-a102-4847-ae79-909f28749526"
     sni: www.bing.com
@@ -115,7 +115,7 @@ proxies:
     fast-open: true
   - name: "印尼-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 43470
     uuid: 66b8fd95-a102-4847-ae79-909f28749526
     flow: xtls-rprx-vision

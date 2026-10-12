@@ -61,7 +61,7 @@ tun:
 proxies:
   - name: "美国-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 40117
     password: "user232_phone:482a6f9f-8988-47a2-8119-c2d227b2ef70"
     sni: www.bing.com
@@ -85,7 +85,7 @@ proxies:
     udp: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 40117
     uuid: 482a6f9f-8988-47a2-8119-c2d227b2ef70
     flow: xtls-rprx-vision

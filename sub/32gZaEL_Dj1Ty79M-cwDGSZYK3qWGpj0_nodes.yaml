@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (何佳瑶-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 26117
     password: d9b365cb-4fe9-4043-907d-1f435ed3d838
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (何佳瑶-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 26117
     uuid: d9b365cb-4fe9-4043-907d-1f435ed3d838
     network: tcp

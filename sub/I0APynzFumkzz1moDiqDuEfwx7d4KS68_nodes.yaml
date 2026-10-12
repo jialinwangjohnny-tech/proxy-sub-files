@@ -49,7 +49,7 @@ proxies:
 
   - name: "墨西哥-HY2-线路3 (WrXiaohu11-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 56860
     password: e959be7f-c55b-4ed5-81ad-2337f5096030
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "墨西哥-VLESS-线路3 (WrXiaohu11-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 56860
     uuid: e959be7f-c55b-4ed5-81ad-2337f5096030
     network: tcp

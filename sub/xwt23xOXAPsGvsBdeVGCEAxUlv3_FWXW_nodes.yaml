@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (陈乐-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 45309
     password: 488f4156-7e03-4d46-bebd-0d60e2d91bb6
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (陈乐-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 45309
     uuid: 488f4156-7e03-4d46-bebd-0d60e2d91bb6
     network: tcp

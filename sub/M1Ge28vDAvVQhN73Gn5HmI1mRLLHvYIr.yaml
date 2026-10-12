@@ -104,7 +104,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Soacabxiaoyu-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 25083
     password: 8413923b-38d4-4f79-bca4-1e45cc4148eb
     sni: www.bing.com
@@ -113,7 +113,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Soacabxiaoyu-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 25083
     uuid: 8413923b-38d4-4f79-bca4-1e45cc4148eb
     network: tcp

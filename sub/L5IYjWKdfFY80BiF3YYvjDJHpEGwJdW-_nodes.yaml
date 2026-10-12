@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (活着测试-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 15864
     password: a22ee84c-e5d8-4739-879f-f0add27458bd
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (活着测试-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 15864
     uuid: a22ee84c-e5d8-4739-879f-f0add27458bd
     network: tcp

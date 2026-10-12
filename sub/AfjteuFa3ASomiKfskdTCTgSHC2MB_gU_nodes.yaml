@@ -54,7 +54,7 @@ proxies:
   obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
   password: user225_phone:1a93a2d4-e83a-4491-9034-d4db9b1c876b
   port: 44773
-  server: s3.huhiuh.space
+  server: 45.197.149.17
   skip-cert-verify: true
   sni: www.bing.com
   type: hysteria2
@@ -68,7 +68,7 @@ proxies:
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
     short-id: 5b398859
-  server: s3.huhiuh.space
+  server: 45.197.149.17
   servername: download.microsoft.com
   tls: true
   type: vless

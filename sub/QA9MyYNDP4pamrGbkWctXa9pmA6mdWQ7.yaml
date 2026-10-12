@@ -77,7 +77,7 @@ proxies:
     udp: true
   - name: "美国洛杉矶-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 32040
     password: "user179_phone:f1b264cc-cf15-4446-bfff-a54e2489fa53"
     sni: www.bing.com
@@ -115,7 +115,7 @@ proxies:
     fast-open: true
   - name: "美国洛杉矶-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 32040
     uuid: f1b264cc-cf15-4446-bfff-a54e2489fa53
     flow: xtls-rprx-vision

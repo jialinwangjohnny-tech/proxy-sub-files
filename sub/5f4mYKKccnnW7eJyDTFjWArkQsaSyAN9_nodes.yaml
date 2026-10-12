@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Lynnia-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50737
     password: 679a61ee-3d75-48f2-8a9b-12dd445ae0aa
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Lynnia-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50737
     uuid: 679a61ee-3d75-48f2-8a9b-12dd445ae0aa
     network: tcp

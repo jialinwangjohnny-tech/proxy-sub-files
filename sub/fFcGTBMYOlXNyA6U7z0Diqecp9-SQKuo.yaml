@@ -54,7 +54,7 @@ tun:
 proxies:
   - name: "美国-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 23669
     uuid: f7cc33e3-0e46-4abb-891a-eacf04be6b75
     flow: xtls-rprx-vision

@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国洛杉矶-HY2-线路3 (Dawn-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50097
     password: e0b7ce81-3d96-4420-8aa1-9c4f008949f4
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国洛杉矶-VLESS-线路3 (Dawn-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50097
     uuid: e0b7ce81-3d96-4420-8aa1-9c4f008949f4
     network: tcp

@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国华盛顿-HY2-线路3 (简凡4-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 33572
     password: 161dcb92-a245-4de5-9d62-7696c7e7cab4
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国华盛顿-VLESS-线路3 (简凡4-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 33572
     uuid: 161dcb92-a245-4de5-9d62-7696c7e7cab4
     network: tcp

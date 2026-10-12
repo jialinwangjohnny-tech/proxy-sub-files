@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Cecilia_fan-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 14978
     password: e185ffca-7cc6-4424-b5c2-23a9d1e5163d
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Cecilia_fan-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 14978
     uuid: e185ffca-7cc6-4424-b5c2-23a9d1e5163d
     network: tcp

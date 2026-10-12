@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (David-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 21519
     password: c7b275d9-f1a9-4b97-bc20-13b4c8743f92
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (David-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 21519
     uuid: c7b275d9-f1a9-4b97-bc20-13b4c8743f92
     network: tcp

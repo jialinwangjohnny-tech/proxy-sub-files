@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国洛杉矶-HY2-线路3 (Darrick-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 21372
     password: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国洛杉矶-VLESS-线路3 (Darrick-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 21372
     uuid: 3f384346-eeeb-47d5-9fc4-b096c6bee42d
     network: tcp

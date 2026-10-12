@@ -92,7 +92,7 @@ proxies:
     fast-open: true
   - name: "美国-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 52631
     uuid: a45a64e5-be51-426f-9b62-cfac0877f2a6
     flow: xtls-rprx-vision

@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (小馒头-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 48711
     password: 9e25ba14-dccc-4882-b181-8d54ecbed9b6
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (小馒头-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 48711
     uuid: 9e25ba14-dccc-4882-b181-8d54ecbed9b6
     network: tcp

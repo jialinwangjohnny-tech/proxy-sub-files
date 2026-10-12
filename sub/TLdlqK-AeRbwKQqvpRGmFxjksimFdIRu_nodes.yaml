@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Victor-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 22263
     password: 94532bae-898b-40ae-9cad-578c1212f1ff
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Victor-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 22263
     uuid: 94532bae-898b-40ae-9cad-578c1212f1ff
     network: tcp

@@ -49,7 +49,7 @@ proxies:
 
   - name: "韩国-HY2-线路3 (测评独享)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 11791
     password: aef60337-5c9f-4beb-83c7-437bea657371
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "韩国-VLESS-线路3 (测评独享)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 11791
     uuid: aef60337-5c9f-4beb-83c7-437bea657371
     network: tcp

@@ -19,7 +19,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (talant2000-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 48611
     password: 3efbc109-838e-461c-8b9a-ad945c4c632e
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (talant2000-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 48611
     uuid: 3efbc109-838e-461c-8b9a-ad945c4c632e
     network: tcp

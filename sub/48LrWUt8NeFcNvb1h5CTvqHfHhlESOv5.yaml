@@ -69,7 +69,7 @@ proxies:
     udp: true
   - name: "新加坡-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 15339
     password: "user281_phone:33e416c6-af61-4b35-920d-036506807915"
     sni: www.bing.com
@@ -100,7 +100,7 @@ proxies:
     fast-open: true
   - name: "新加坡-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 15339
     uuid: 33e416c6-af61-4b35-920d-036506807915
     flow: xtls-rprx-vision

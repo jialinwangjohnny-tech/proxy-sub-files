@@ -19,7 +19,7 @@ proxies:
 
   - name: "波兰-HY2-线路3 (Zhoumo185-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 55106
     password: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "波兰-VLESS-线路3 (Zhoumo185-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 55106
     uuid: f9f3116c-b4ef-4996-ab59-630d6d9b8f77
     network: tcp

@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国洛杉矶-HY2-线路3 (voyage-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 36693
     password: 286b4bd6-8a0a-416a-9a69-3180c8f24128
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国洛杉矶-VLESS-线路3 (voyage-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 36693
     uuid: 286b4bd6-8a0a-416a-9a69-3180c8f24128
     network: tcp

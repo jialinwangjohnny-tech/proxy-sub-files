@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (阿鹏 国芯GPS-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 15836
     password: 38958bc2-0f71-4433-83ba-e58e8e2bf9db
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (阿鹏 国芯GPS-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 15836
     uuid: 38958bc2-0f71-4433-83ba-e58e8e2bf9db
     network: tcp

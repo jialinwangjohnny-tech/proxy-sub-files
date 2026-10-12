@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Nayanovo-mac)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50060
     password: 0dedbad6-eb28-4f5a-82f2-798e1b638b27
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Nayanovo-mac)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50060
     uuid: 0dedbad6-eb28-4f5a-82f2-798e1b638b27
     network: tcp

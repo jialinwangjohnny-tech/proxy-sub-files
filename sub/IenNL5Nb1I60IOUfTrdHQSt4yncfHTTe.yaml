@@ -61,7 +61,7 @@ tun:
 proxies:
   - name: "美国德克萨斯-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 19906
     password: "user177_phone:623f4822-33ba-4eb8-a8c6-a76679634acd"
     sni: www.bing.com
@@ -85,7 +85,7 @@ proxies:
     udp: true
   - name: "美国德克萨斯-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 19906
     uuid: 623f4822-33ba-4eb8-a8c6-a76679634acd
     flow: xtls-rprx-vision

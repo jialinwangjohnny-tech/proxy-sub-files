@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (测试微信独享)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 28041
     password: 7cdf6f8d-41c4-4c18-a9f2-797a4bacfec7
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (测试微信独享)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 28041
     uuid: 7cdf6f8d-41c4-4c18-a9f2-797a4bacfec7
     network: tcp

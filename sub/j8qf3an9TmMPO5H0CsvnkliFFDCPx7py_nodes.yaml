@@ -49,7 +49,7 @@ proxies:
 
   - name: "美国-HY2-线路3 (Twenty-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50040
     password: 80486799-e9db-4ad8-a624-3cf4674b0edc
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "美国-VLESS-线路3 (Twenty-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 50040
     uuid: 80486799-e9db-4ad8-a624-3cf4674b0edc
     network: tcp

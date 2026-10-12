@@ -49,7 +49,7 @@ proxies:
 
   - name: "Dubai,AE-HY2-线路3 (王旭峰-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 48911
     password: c60d5bf3-dacf-41db-9f66-9e76f9e0402b
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "Dubai,AE-VLESS-线路3 (王旭峰-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 48911
     uuid: c60d5bf3-dacf-41db-9f66-9e76f9e0402b
     network: tcp

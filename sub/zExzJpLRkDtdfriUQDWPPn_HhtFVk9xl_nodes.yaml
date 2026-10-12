@@ -49,7 +49,7 @@ proxies:
 
   - name: "新加坡-HY2-线路3 (chenjiesong75-phone)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 45563
     password: c3c1ac65-38c0-4ccf-9449-706a36a7b139
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "新加坡-VLESS-线路3 (chenjiesong75-phone)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 45563
     uuid: c3c1ac65-38c0-4ccf-9449-706a36a7b139
     network: tcp

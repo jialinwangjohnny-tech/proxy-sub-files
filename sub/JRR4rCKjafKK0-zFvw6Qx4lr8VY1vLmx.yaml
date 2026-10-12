@@ -61,7 +61,7 @@ tun:
 proxies:
   - name: "马来西亚-HY2-线路3"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 55902
     password: "user215_windows:f2f9eb24-509a-4ec2-bb43-46aca29b0149"
     sni: www.bing.com
@@ -85,7 +85,7 @@ proxies:
     udp: true
   - name: "马来西亚-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 55902
     uuid: f2f9eb24-509a-4ec2-bb43-46aca29b0149
     flow: xtls-rprx-vision

@@ -94,7 +94,7 @@ proxies:
     fast-open: true
   - name: "韩国-VLESS-线路3"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 43560
     uuid: aef60337-5c9f-4beb-83c7-437bea657371
     flow: xtls-rprx-vision

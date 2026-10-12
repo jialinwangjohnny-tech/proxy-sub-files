@@ -49,7 +49,7 @@ proxies:
 
   - name: "德国-HY2-线路3 (CFESSD1-windows)"
     type: hysteria2
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 28026
     password: 355ea1b2-ac1c-4c80-9fca-ab081e51b154
     sni: www.bing.com
@@ -58,7 +58,7 @@ proxies:
 
   - name: "德国-VLESS-线路3 (CFESSD1-windows)"
     type: vless
-    server: s3.huhiuh.space
+    server: 45.197.149.17
     port: 28026
     uuid: 355ea1b2-ac1c-4c80-9fca-ab081e51b154
     network: tcp
