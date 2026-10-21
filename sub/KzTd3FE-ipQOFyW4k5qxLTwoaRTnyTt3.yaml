@@ -117,6 +117,29 @@ proxies:
     short-id: 073998f1
   client-fingerprint: safari
   fast-open: true
+- name: 美国-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.108
+  port: 50410
+  password: user283_phone:f6864d35-5d9f-4187-85b9-8e755ac9e37c
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国-VLESS-线路4
+  type: vless
+  server: 38.190.245.108
+  port: 50410
+  uuid: f6864d35-5d9f-4187-85b9-8e755ac9e37c
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 073998f1
+  client-fingerprint: safari
+  fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
@@ -127,6 +150,8 @@ proxy-groups:
   - 美国-VLESS-线路3
   - 美国-VLESS-线路1
   - 美国-VLESS-线路2
+  - 美国-HY2-线路4
+  - 美国-VLESS-线路4
   interval: 5
   timeout: 3000
   lazy: false

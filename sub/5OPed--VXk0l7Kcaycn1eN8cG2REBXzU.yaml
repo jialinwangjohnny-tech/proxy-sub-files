@@ -125,6 +125,29 @@ proxies:
     short-id: 5b8562ee
   client-fingerprint: safari
   fast-open: true
+- name: 美国-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.108
+  port: 51841
+  password: user040_windows3:05926bc4-184e-42f0-b294-1154f7b55350
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国-VLESS-线路4
+  type: vless
+  server: 38.190.245.108
+  port: 51841
+  uuid: 05926bc4-184e-42f0-b294-1154f7b55350
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: apple.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 5b8562ee
+  client-fingerprint: safari
+  fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
@@ -135,6 +158,8 @@ proxy-groups:
   - 美国-VLESS-线路3
   - 美国-HY2-线路2
   - 美国-VLESS-线路2
+  - 美国-HY2-线路4
+  - 美国-VLESS-线路4
   interval: 5
   timeout: 3000
   lazy: false

@@ -111,6 +111,29 @@ proxies:
     short-id: a02e5b60
   client-fingerprint: firefox
   fast-open: true
+- name: 新加坡-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.108
+  port: 14145
+  password: user147_mac:47b9bbdc-f450-4cfb-812d-ac3b8584843f
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 新加坡-VLESS-线路4
+  type: vless
+  server: 38.190.245.108
+  port: 14145
+  uuid: 47b9bbdc-f450-4cfb-812d-ac3b8584843f
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.nvidia.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: a02e5b60
+  client-fingerprint: firefox
+  fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
@@ -121,6 +144,8 @@ proxy-groups:
   - 新加坡-VLESS-线路2
   - 新加坡-VLESS-线路3
   - 新加坡-VLESS-线路1
+  - 新加坡-HY2-线路4
+  - 新加坡-VLESS-线路4
   interval: 5
   timeout: 8000
   lazy: false

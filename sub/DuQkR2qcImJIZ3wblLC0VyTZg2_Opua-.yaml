@@ -117,6 +117,29 @@ proxies:
     short-id: c7653849
   client-fingerprint: edge
   fast-open: true
+- name: 新山，MY2-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.108
+  port: 32838
+  password: user334_phone:59d6eabc-8e9b-4f0f-8e00-fef45cbed7c5
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 新山，MY2-VLESS-线路4
+  type: vless
+  server: 38.190.245.108
+  port: 32838
+  uuid: 59d6eabc-8e9b-4f0f-8e00-fef45cbed7c5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: c7653849
+  client-fingerprint: edge
+  fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
@@ -127,6 +150,8 @@ proxy-groups:
   - Kuala Lumpur, MY2-VLESS-线路1
   - Kuala Lumpur, MY2-VLESS-线路2
   - Kuala Lumpur, MY2-VLESS-线路3
+  - 新山，MY2-HY2-线路4
+  - 新山，MY2-VLESS-线路4
   interval: 5
   timeout: 8000
   lazy: false

@@ -117,6 +117,29 @@ proxies:
     short-id: 745d6ef0
   client-fingerprint: chrome
   fast-open: true
+- name: 美国洛杉矶-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.108
+  port: 25119
+  password: user337_phone:199bbffe-f6f8-4444-9ae6-c50274e921ce
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国洛杉矶-VLESS-线路4
+  type: vless
+  server: 38.190.245.108
+  port: 25119
+  uuid: 199bbffe-f6f8-4444-9ae6-c50274e921ce
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 745d6ef0
+  client-fingerprint: chrome
+  fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
@@ -127,6 +150,8 @@ proxy-groups:
   - 美国洛杉矶-VLESS-线路1
   - 美国洛杉矶-VLESS-线路2
   - 美国洛杉矶-VLESS-线路3
+  - 美国洛杉矶-HY2-线路4
+  - 美国洛杉矶-VLESS-线路4
   interval: 5
   timeout: 8000
   lazy: false

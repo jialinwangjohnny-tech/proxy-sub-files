@@ -117,6 +117,29 @@ proxies:
     short-id: 67a1bde4
   client-fingerprint: chrome
   fast-open: true
+- name: Los Angeles, US-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.108
+  port: 13716
+  password: user287_windows:de3f525f-4e3b-43cc-b241-74e5e2b052c9
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: Los Angeles, US-VLESS-线路4
+  type: vless
+  server: 38.190.245.108
+  port: 13716
+  uuid: de3f525f-4e3b-43cc-b241-74e5e2b052c9
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 67a1bde4
+  client-fingerprint: chrome
+  fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
@@ -127,6 +150,8 @@ proxy-groups:
   - Los Angeles, US-VLESS-线路1
   - Los Angeles, US-VLESS-线路2
   - Los Angeles, US-VLESS-线路3
+  - Los Angeles, US-HY2-线路4
+  - Los Angeles, US-VLESS-线路4
   interval: 5
   timeout: 8000
   lazy: false

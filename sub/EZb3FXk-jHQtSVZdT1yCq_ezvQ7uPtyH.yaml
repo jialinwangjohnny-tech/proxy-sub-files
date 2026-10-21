@@ -117,6 +117,29 @@ proxies:
     short-id: b90c7c9b
   client-fingerprint: firefox
   fast-open: true
+- name: New York, US-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.108
+  port: 50635
+  password: user262_mac:ef2ddd19-6b6c-4f39-b897-d497e8d8c4ec
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: New York, US-VLESS-线路4
+  type: vless
+  server: 38.190.245.108
+  port: 50635
+  uuid: ef2ddd19-6b6c-4f39-b897-d497e8d8c4ec
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: b90c7c9b
+  client-fingerprint: firefox
+  fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
@@ -127,6 +150,8 @@ proxy-groups:
   - Los Angeles, US-VLESS-线路3
   - Los Angeles, US-VLESS-线路1
   - Los Angeles, US-VLESS-线路2
+  - New York, US-HY2-线路4
+  - New York, US-VLESS-线路4
   interval: 5
   timeout: 8000
   lazy: false
