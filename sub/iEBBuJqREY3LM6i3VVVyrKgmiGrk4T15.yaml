@@ -14,8 +14,8 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
   nameserver:
-  - https://dns.google/dns-query#自动切换
-  - https://cloudflare-dns.com/dns-query#自动切换
+  - https://dns.google/dns-query#线路选择
+  - https://cloudflare-dns.com/dns-query#线路选择
   proxy-server-nameserver:
   - 223.5.5.5
   - 119.29.29.29
@@ -109,8 +109,16 @@ proxies:
   client-fingerprint: edge
   fast-open: true
 proxy-groups:
+- name: 线路选择
+  type: select
+  proxies:
+  - 自动切换
+  - 美国-VLESS-线路1
+  - 美国-VLESS-线路2
+  - 美国-VLESS-线路3
+  - New York, US-VLESS-线路4
 - name: 自动切换
-  type: fallback
+  type: url-test
   proxies:
   - 美国-VLESS-线路1
   - 美国-VLESS-线路2
@@ -120,6 +128,7 @@ proxy-groups:
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
+  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT
@@ -131,7 +140,9 @@ rules:
 - DOMAIN-SUFFIX,huhiuh.space,DIRECT
 - GEOSITE,private,DIRECT
 - GEOSITE,cn,DIRECT
-- GEOSITE,geolocation-!cn,自动切换
+- GEOSITE,geolocation-!cn,线路选择
 - GEOIP,private,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,自动切换
+- MATCH,线路选择
+profile:
+  store-selected: true
