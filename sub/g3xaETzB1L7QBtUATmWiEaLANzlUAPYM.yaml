@@ -100,6 +100,29 @@ proxies:
       short-id: "2d8806ee"
     client-fingerprint: chrome
     fast-open: true
+  - name: "美国洛杉矶-HY2-线路4"
+    type: hysteria2
+    server: 38.190.245.108
+    port: 45452
+    password: "user330_mac:c97e9b5d-e3cb-490e-b0e3-6ff91f0353fb"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "美国洛杉矶-VLESS-线路4"
+    type: vless
+    server: 38.190.245.108
+    port: 45452
+    uuid: c97e9b5d-e3cb-490e-b0e3-6ff91f0353fb
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: www.bing.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "2d8806ee"
+    client-fingerprint: chrome
+    fast-open: true
 
 proxy-groups:
   - name: "线路选择"
@@ -110,6 +133,8 @@ proxy-groups:
       - "美国洛杉矶-HY2-线路2"
       - "美国洛杉矶-VLESS-线路1"
       - "美国洛杉矶-VLESS-线路2"
+      - "美国洛杉矶-HY2-线路4"
+      - "美国洛杉矶-VLESS-线路4"
   - name: "自动切换"
     type: url-test
     proxies:
@@ -117,6 +142,8 @@ proxy-groups:
       - "美国洛杉矶-HY2-线路2"
       - "美国洛杉矶-VLESS-线路1"
       - "美国洛杉矶-VLESS-线路2"
+      - "美国洛杉矶-HY2-线路4"
+      - "美国洛杉矶-VLESS-线路4"
     interval: 5
     timeout: 8000
     lazy: false
