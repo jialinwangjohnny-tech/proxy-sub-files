@@ -172,6 +172,15 @@ proxy-groups:
   url: https://www.gstatic.com/generate_204
   tolerance: 0
 rules:
+- PROCESS-NAME,WeChat,DIRECT
+- PROCESS-NAME,Weixin,DIRECT
+- PROCESS-NAME,WeChatAppEx,DIRECT
+- PROCESS-NAME,WeChatHelper,DIRECT
+- DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+- DOMAIN-SUFFIX,wx.qq.com,DIRECT
+- DOMAIN-SUFFIX,wechat.com,DIRECT
+- DOMAIN-SUFFIX,weixin.com,DIRECT
+- DOMAIN-SUFFIX,wechatapp.com,DIRECT
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT
 - DST-PORT,19302,REJECT
