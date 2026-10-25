@@ -117,6 +117,29 @@ proxies:
     short-id: 000d3bf8
   client-fingerprint: chrome
   fast-open: true
+- name: 美国-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.108
+  port: 28264
+  password: user144_windows:73607977-7b52-4c71-999b-df50940bc292
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国-VLESS-线路4
+  type: vless
+  server: 38.190.245.108
+  port: 28264
+  uuid: 73607977-7b52-4c71-999b-df50940bc292
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: itunes.apple.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: 000d3bf8
+  client-fingerprint: chrome
+  fast-open: true
 proxy-groups:
 - name: 线路选择
   type: select
@@ -128,6 +151,8 @@ proxy-groups:
   - 美国-VLESS-线路3
   - 美国-VLESS-线路1
   - 美国-VLESS-线路2
+  - 美国-HY2-线路4
+  - 美国-VLESS-线路4
 - name: 自动切换
   type: url-test
   proxies:
@@ -137,6 +162,8 @@ proxy-groups:
   - 美国-VLESS-线路3
   - 美国-VLESS-线路1
   - 美国-VLESS-线路2
+  - 美国-HY2-线路4
+  - 美国-VLESS-线路4
   interval: 5
   timeout: 8000
   lazy: false
