@@ -72,14 +72,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国-HY2-线路2
-  type: hysteria2
-  server: s2.huhiuh.space
-  port: 28264
-  password: user144_mac:9c70248a-4b3e-4c0d-91ae-61dfb8ad4332
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国-VLESS-线路3
   type: vless
   server: 45.197.149.17
@@ -110,21 +102,6 @@ proxies:
     short-id: 000d3bf8
   client-fingerprint: chrome
   fast-open: true
-- name: 美国-VLESS-线路2
-  type: vless
-  server: s2.huhiuh.space
-  port: 28264
-  uuid: 9c70248a-4b3e-4c0d-91ae-61dfb8ad4332
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: itunes.apple.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 000d3bf8
-  client-fingerprint: chrome
-  fast-open: true
 proxy-groups:
 - name: 线路选择
   type: select
@@ -132,19 +109,15 @@ proxy-groups:
   - 自动切换
   - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-HY2-线路2
   - 美国-VLESS-线路3
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路2
 - name: 自动切换
   type: url-test
   proxies:
   - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-HY2-线路2
   - 美国-VLESS-线路3
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路2
   interval: 5
   timeout: 8000
   lazy: false

@@ -48,14 +48,6 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国弗吉尼亚州-HY2-线路2
-  type: hysteria2
-  server: 45.197.149.105
-  port: 53016
-  password: user284_mac:c91e3987-62c5-41f9-bd71-0f9ead5917a2
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国弗吉尼亚州-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -72,21 +64,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国弗吉尼亚州-VLESS-线路2
-  type: vless
-  server: 45.197.149.105
-  port: 53016
-  uuid: c91e3987-62c5-41f9-bd71-0f9ead5917a2
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 0c2d1c41
-  client-fingerprint: edge
-  fast-open: true
 - name: 美国弗吉尼亚州-VLESS-线路3
   type: vless
   server: 45.197.149.17
@@ -145,10 +122,8 @@ proxy-groups:
   type: select
   proxies:
   - 自动切换
-  - 美国弗吉尼亚州-HY2-线路2
   - 美国弗吉尼亚州-HY2-线路3
   - 美国弗吉尼亚州-HY2-线路1
-  - 美国弗吉尼亚州-VLESS-线路2
   - 美国弗吉尼亚州-VLESS-线路3
   - 美国弗吉尼亚州-VLESS-线路1
   - 美国弗吉尼亚州-HY2-线路4
@@ -156,10 +131,8 @@ proxy-groups:
 - name: 自动切换
   type: url-test
   proxies:
-  - 美国弗吉尼亚州-HY2-线路2
   - 美国弗吉尼亚州-HY2-线路3
   - 美国弗吉尼亚州-HY2-线路1
-  - 美国弗吉尼亚州-VLESS-线路2
   - 美国弗吉尼亚州-VLESS-线路3
   - 美国弗吉尼亚州-VLESS-线路1
   - 美国弗吉尼亚州-HY2-线路4

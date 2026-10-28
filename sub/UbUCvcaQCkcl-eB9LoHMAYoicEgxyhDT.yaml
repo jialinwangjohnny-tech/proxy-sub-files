@@ -58,14 +58,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 新加坡，SG2-HY2-线路2
-  type: hysteria2
-  server: 45.197.149.105
-  port: 25124
-  password: user344_mac:b93ac6a6-243b-447c-8199-72bda3a99ecc
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 新加坡，SG2-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -77,21 +69,6 @@ proxies:
 - name: 新加坡，SG2-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 25124
-  uuid: b93ac6a6-243b-447c-8199-72bda3a99ecc
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: dd0aecfa
-  client-fingerprint: firefox
-  fast-open: true
-- name: 新加坡，SG2-VLESS-线路2
-  type: vless
-  server: 45.197.149.105
   port: 25124
   uuid: b93ac6a6-243b-447c-8199-72bda3a99ecc
   flow: xtls-rprx-vision
@@ -148,10 +125,8 @@ proxy-groups:
   proxies:
   - 自动切换
   - 新加坡，SG2-HY2-线路1
-  - 新加坡，SG2-HY2-线路2
   - 新加坡，SG2-HY2-线路3
   - 新加坡，SG2-VLESS-线路1
-  - 新加坡，SG2-VLESS-线路2
   - 新加坡，SG2-VLESS-线路3
   - 新加坡，SG2-HY2-线路4
   - 新加坡，SG2-VLESS-线路4
@@ -159,10 +134,8 @@ proxy-groups:
   type: url-test
   proxies:
   - 新加坡，SG2-HY2-线路1
-  - 新加坡，SG2-HY2-线路2
   - 新加坡，SG2-HY2-线路3
   - 新加坡，SG2-VLESS-线路1
-  - 新加坡，SG2-VLESS-线路2
   - 新加坡，SG2-VLESS-线路3
   - 新加坡，SG2-HY2-线路4
   - 新加坡，SG2-VLESS-线路4

@@ -71,31 +71,6 @@ proxies:
     short-id: 5b8562ee
   client-fingerprint: safari
   fast-open: true
-- name: 美国-HY2-线路2
-  type: hysteria2
-  server: s2.huhiuh.space
-  port: 51841
-  password: user040:0795185e-6c2d-4626-afc3-487854d2678f
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-VLESS-线路2
-  type: vless
-  server: s2.huhiuh.space
-  port: 51841
-  uuid: 0795185e-6c2d-4626-afc3-487854d2678f
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: apple.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 5b8562ee
-  client-fingerprint: safari
-  fast-open: true
 - name: 美国-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -151,8 +126,6 @@ proxy-groups:
   - 自动切换
   - 美国-HY2-线路1
   - 美国-VLESS-线路1
-  - 美国-HY2-线路2
-  - 美国-VLESS-线路2
   - 美国-HY2-线路3
   - 美国-VLESS-线路3
   - 美国-HY2-线路4
@@ -162,8 +135,6 @@ proxy-groups:
   proxies:
   - 美国-HY2-线路1
   - 美国-VLESS-线路1
-  - 美国-HY2-线路2
-  - 美国-VLESS-线路2
   - 美国-HY2-线路3
   - 美国-VLESS-线路3
   - 美国-HY2-线路4

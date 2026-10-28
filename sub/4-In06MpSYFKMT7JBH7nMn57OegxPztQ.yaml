@@ -48,14 +48,6 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: Virginia, US-HY2-线路2
-  type: hysteria2
-  server: 45.197.149.105
-  port: 49541
-  password: user332_phone:82a2abf4-83d6-4e2c-8997-64db8594bd88
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: Virginia, US-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -72,21 +64,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: Virginia, US-VLESS-线路2
-  type: vless
-  server: 45.197.149.105
-  port: 49541
-  uuid: 82a2abf4-83d6-4e2c-8997-64db8594bd88
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c1b48997
-  client-fingerprint: firefox
-  fast-open: true
 - name: Virginia, US-VLESS-线路3
   type: vless
   server: 45.197.149.17
@@ -122,19 +99,15 @@ proxy-groups:
   type: select
   proxies:
   - 自动切换
-  - Virginia, US-HY2-线路2
   - Virginia, US-HY2-线路3
   - Virginia, US-HY2-线路1
-  - Virginia, US-VLESS-线路2
   - Virginia, US-VLESS-线路3
   - Virginia, US-VLESS-线路1
 - name: 自动切换
   type: url-test
   proxies:
-  - Virginia, US-HY2-线路2
   - Virginia, US-HY2-线路3
   - Virginia, US-HY2-线路1
-  - Virginia, US-VLESS-线路2
   - Virginia, US-VLESS-线路3
   - Virginia, US-VLESS-线路1
   interval: 5

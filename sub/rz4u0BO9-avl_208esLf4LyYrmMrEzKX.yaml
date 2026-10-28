@@ -64,14 +64,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 日本-HY2-线路2
-  type: hysteria2
-  server: 45.197.149.105
-  port: 32238
-  password: user280_mac:2aec1658-bf5a-4bea-ac2f-2ec7eb3eaa61
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 日本-VLESS-线路3
   type: vless
   server: 45.197.149.17
@@ -90,21 +82,6 @@ proxies:
 - name: 日本-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 32238
-  uuid: 2aec1658-bf5a-4bea-ac2f-2ec7eb3eaa61
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: learn.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 06c1db52
-  client-fingerprint: chrome
-  fast-open: true
-- name: 日本-VLESS-线路2
-  type: vless
-  server: 45.197.149.105
   port: 32238
   uuid: 2aec1658-bf5a-4bea-ac2f-2ec7eb3eaa61
   flow: xtls-rprx-vision
@@ -147,10 +124,8 @@ proxy-groups:
   - 自动切换
   - 日本-HY2-线路3
   - 日本-HY2-线路1
-  - 日本-HY2-线路2
   - 日本-VLESS-线路3
   - 日本-VLESS-线路1
-  - 日本-VLESS-线路2
   - 日本-HY2-线路4
   - 日本-VLESS-线路4
 - name: 自动切换
@@ -158,10 +133,8 @@ proxy-groups:
   proxies:
   - 日本-HY2-线路3
   - 日本-HY2-线路1
-  - 日本-HY2-线路2
   - 日本-VLESS-线路3
   - 日本-VLESS-线路1
-  - 日本-VLESS-线路2
   - 日本-HY2-线路4
   - 日本-VLESS-线路4
   interval: 5

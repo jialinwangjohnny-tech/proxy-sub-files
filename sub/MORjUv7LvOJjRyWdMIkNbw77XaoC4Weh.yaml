@@ -56,14 +56,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 墨西哥-HY2-线路2
-  type: hysteria2
-  server: 64.90.14.50
-  port: 22096
-  password: user282_windows:01e79ff1-8063-42dd-94d0-770fc2ad43a5
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 墨西哥-HY2-线路3
   type: hysteria2
   server: 45.197.149.41
@@ -75,21 +67,6 @@ proxies:
 - name: 墨西哥-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 22096
-  uuid: 01e79ff1-8063-42dd-94d0-770fc2ad43a5
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: learn.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 3ad5b692
-  client-fingerprint: safari
-  fast-open: true
-- name: 墨西哥-VLESS-线路2
-  type: vless
-  server: 64.90.14.50
   port: 22096
   uuid: 01e79ff1-8063-42dd-94d0-770fc2ad43a5
   flow: xtls-rprx-vision
@@ -122,10 +99,8 @@ proxy-groups:
   type: fallback
   proxies:
   - 墨西哥-HY2-线路1
-  - 墨西哥-HY2-线路2
   - 墨西哥-HY2-线路3
   - 墨西哥-VLESS-线路1
-  - 墨西哥-VLESS-线路2
   - 墨西哥-VLESS-线路3
   interval: 5
   timeout: 8000

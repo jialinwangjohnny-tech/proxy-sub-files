@@ -64,14 +64,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国-HY2-线路2
-  type: hysteria2
-  server: 45.197.149.105
-  port: 33421
-  password: user289_windows:4308ea78-a5d0-4909-bc5e-d3a12070d707
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国-VLESS-线路3
   type: vless
   server: 45.197.149.17
@@ -90,21 +82,6 @@ proxies:
 - name: 美国-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 33421
-  uuid: 4308ea78-a5d0-4909-bc5e-d3a12070d707
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: cb7b4867
-  client-fingerprint: chrome
-  fast-open: true
-- name: 美国-VLESS-线路2
-  type: vless
-  server: 45.197.149.105
   port: 33421
   uuid: 4308ea78-a5d0-4909-bc5e-d3a12070d707
   flow: xtls-rprx-vision
@@ -147,10 +124,8 @@ proxy-groups:
   - 自动切换
   - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-HY2-线路2
   - 美国-VLESS-线路3
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路2
   - 美国-HY2-线路4
   - 美国-VLESS-线路4
 - name: 自动切换
@@ -158,10 +133,8 @@ proxy-groups:
   proxies:
   - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-HY2-线路2
   - 美国-VLESS-线路3
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路2
   - 美国-HY2-线路4
   - 美国-VLESS-线路4
   interval: 5

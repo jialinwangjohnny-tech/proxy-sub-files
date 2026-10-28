@@ -48,14 +48,6 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国洛杉矶-HY2-线路2
-  type: hysteria2
-  server: 45.197.149.105
-  port: 16922
-  password: user336_mac:58599d8d-5f9c-4c9f-8624-143a1a76793c
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国洛杉矶-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -72,21 +64,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国洛杉矶-VLESS-线路2
-  type: vless
-  server: 45.197.149.105
-  port: 16922
-  uuid: 58599d8d-5f9c-4c9f-8624-143a1a76793c
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 74779b73
-  client-fingerprint: firefox
-  fast-open: true
 - name: 美国洛杉矶-VLESS-线路3
   type: vless
   server: 45.197.149.17
@@ -145,10 +122,8 @@ proxy-groups:
   type: select
   proxies:
   - 自动切换
-  - 美国洛杉矶-HY2-线路2
   - 美国洛杉矶-HY2-线路3
   - 美国洛杉矶-HY2-线路1
-  - 美国洛杉矶-VLESS-线路2
   - 美国洛杉矶-VLESS-线路3
   - 美国洛杉矶-VLESS-线路1
   - 美国洛杉矶-HY2-线路4
@@ -156,10 +131,8 @@ proxy-groups:
 - name: 自动切换
   type: url-test
   proxies:
-  - 美国洛杉矶-HY2-线路2
   - 美国洛杉矶-HY2-线路3
   - 美国洛杉矶-HY2-线路1
-  - 美国洛杉矶-VLESS-线路2
   - 美国洛杉矶-VLESS-线路3
   - 美国洛杉矶-VLESS-线路1
   - 美国洛杉矶-HY2-线路4

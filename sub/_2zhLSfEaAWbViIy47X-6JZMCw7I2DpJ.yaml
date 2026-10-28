@@ -56,14 +56,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国-HY2-线路2
-  type: hysteria2
-  server: 64.90.14.50
-  port: 36024
-  password: user322_phone:684879b8-e5ea-4c8e-a9d7-f61bbef5d9b0
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国-HY2-线路3
   type: hysteria2
   server: 45.197.149.41
@@ -75,21 +67,6 @@ proxies:
 - name: 美国-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 36024
-  uuid: 684879b8-e5ea-4c8e-a9d7-f61bbef5d9b0
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 6e5dfcf7
-  client-fingerprint: firefox
-  fast-open: true
-- name: 美国-VLESS-线路2
-  type: vless
-  server: 64.90.14.50
   port: 36024
   uuid: 684879b8-e5ea-4c8e-a9d7-f61bbef5d9b0
   flow: xtls-rprx-vision
@@ -122,10 +99,8 @@ proxy-groups:
   type: fallback
   proxies:
   - 美国-HY2-线路1
-  - 美国-HY2-线路2
   - 美国-HY2-线路3
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路2
   - 美国-VLESS-线路3
   interval: 5
   timeout: 8000

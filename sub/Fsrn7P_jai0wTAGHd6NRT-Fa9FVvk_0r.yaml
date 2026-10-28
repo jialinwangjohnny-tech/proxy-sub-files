@@ -64,14 +64,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国-HY2-线路2
-  type: hysteria2
-  server: 64.90.14.50
-  port: 57369
-  password: user301_mac:1d05af31-dac0-4bd2-a9b5-933c8864a440
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国-VLESS-线路3
   type: vless
   server: 45.197.149.41
@@ -102,31 +94,14 @@ proxies:
     short-id: 436f291b
   client-fingerprint: safari
   fast-open: true
-- name: 美国-VLESS-线路2
-  type: vless
-  server: 64.90.14.50
-  port: 57369
-  uuid: 1d05af31-dac0-4bd2-a9b5-933c8864a440
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 436f291b
-  client-fingerprint: safari
-  fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
   proxies:
   - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-HY2-线路2
   - 美国-VLESS-线路3
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路2
   interval: 5
   timeout: 3000
   lazy: false

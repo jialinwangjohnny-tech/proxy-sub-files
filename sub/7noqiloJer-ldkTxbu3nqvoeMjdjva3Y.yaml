@@ -64,14 +64,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 墨西哥-HY2-线路2
-  type: hysteria2
-  server: 64.90.14.50
-  port: 34141
-  password: user311_phone:183a997f-f68b-4c85-a44e-a67ef45a4ad3
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 墨西哥-VLESS-线路3
   type: vless
   server: 45.197.149.41
@@ -102,31 +94,14 @@ proxies:
     short-id: dd71c25b
   client-fingerprint: chrome
   fast-open: true
-- name: 墨西哥-VLESS-线路2
-  type: vless
-  server: 64.90.14.50
-  port: 34141
-  uuid: 183a997f-f68b-4c85-a44e-a67ef45a4ad3
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: dd71c25b
-  client-fingerprint: chrome
-  fast-open: true
 proxy-groups:
 - name: 自动切换
   type: fallback
   proxies:
   - 墨西哥-HY2-线路3
   - 墨西哥-HY2-线路1
-  - 墨西哥-HY2-线路2
   - 墨西哥-VLESS-线路3
   - 墨西哥-VLESS-线路1
-  - 墨西哥-VLESS-线路2
   interval: 5
   timeout: 3000
   lazy: false

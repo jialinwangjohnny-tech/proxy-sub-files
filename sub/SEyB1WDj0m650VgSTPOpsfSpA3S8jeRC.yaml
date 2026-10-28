@@ -48,14 +48,6 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 日本东京-HY2-线路2
-  type: hysteria2
-  server: 45.197.149.105
-  port: 25123
-  password: user343_phone:c9b5b97e-7e03-4e28-80aa-a9144844704a
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 日本东京-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -72,21 +64,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 日本东京-VLESS-线路2
-  type: vless
-  server: 45.197.149.105
-  port: 25123
-  uuid: c9b5b97e-7e03-4e28-80aa-a9144844704a
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 8f997640
-  client-fingerprint: edge
-  fast-open: true
 - name: 日本东京-VLESS-线路3
   type: vless
   server: 45.197.149.17
@@ -145,10 +122,8 @@ proxy-groups:
   type: select
   proxies:
   - 自动切换
-  - 日本东京-HY2-线路2
   - 日本东京-HY2-线路3
   - 日本东京-HY2-线路1
-  - 日本东京-VLESS-线路2
   - 日本东京-VLESS-线路3
   - 日本东京-VLESS-线路1
   - 日本东京-HY2-线路4
@@ -156,10 +131,8 @@ proxy-groups:
 - name: 自动切换
   type: url-test
   proxies:
-  - 日本东京-HY2-线路2
   - 日本东京-HY2-线路3
   - 日本东京-HY2-线路1
-  - 日本东京-VLESS-线路2
   - 日本东京-VLESS-线路3
   - 日本东京-VLESS-线路1
   - 日本东京-HY2-线路4

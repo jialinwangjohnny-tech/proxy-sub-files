@@ -74,31 +74,6 @@ proxies:
     short-id: 31fb1ee0
   client-fingerprint: firefox
   fast-open: true
-- name: 美国-HY2-线路2
-  type: hysteria2
-  server: s2.huhiuh.space
-  port: 15898
-  password: user212:test-uuid-1234
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-VLESS-线路2
-  type: vless
-  server: s2.huhiuh.space
-  port: 15898
-  uuid: test-uuid-1234
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: download.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 31fb1ee0
-  client-fingerprint: firefox
-  fast-open: true
 - name: 美国-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -131,8 +106,6 @@ proxy-groups:
   - 自动切换
   - 美国-HY2-线路1
   - 美国-VLESS-线路1
-  - 美国-HY2-线路2
-  - 美国-VLESS-线路2
   - 美国-HY2-线路3
   - 美国-VLESS-线路3
 - name: 自动切换
@@ -140,8 +113,6 @@ proxy-groups:
   proxies:
   - 美国-HY2-线路1
   - 美国-VLESS-线路1
-  - 美国-HY2-线路2
-  - 美国-VLESS-线路2
   - 美国-HY2-线路3
   - 美国-VLESS-线路3
   interval: 5

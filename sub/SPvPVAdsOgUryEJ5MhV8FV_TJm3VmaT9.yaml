@@ -71,31 +71,6 @@ proxies:
     short-id: 40612bfd
   client-fingerprint: firefox
   fast-open: true
-- name: 美国-HY2-线路2
-  type: hysteria2
-  server: s2.huhiuh.space
-  port: 24046
-  password: user158:f2467a6e-1b23-4387-a072-81bd034bc57f
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-VLESS-线路2
-  type: vless
-  server: s2.huhiuh.space
-  port: 24046
-  uuid: f2467a6e-1b23-4387-a072-81bd034bc57f
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 40612bfd
-  client-fingerprint: firefox
-  fast-open: true
 - name: 美国-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -151,8 +126,6 @@ proxy-groups:
   - 自动切换
   - 美国-HY2-线路1
   - 美国-VLESS-线路1
-  - 美国-HY2-线路2
-  - 美国-VLESS-线路2
   - 美国-HY2-线路3
   - 美国-VLESS-线路3
   - 美国洛杉矶-HY2-线路4
@@ -162,8 +135,6 @@ proxy-groups:
   proxies:
   - 美国-HY2-线路1
   - 美国-VLESS-线路1
-  - 美国-HY2-线路2
-  - 美国-VLESS-线路2
   - 美国-HY2-线路3
   - 美国-VLESS-线路3
   - 美国洛杉矶-HY2-线路4

@@ -48,14 +48,6 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国 San Jose-HY2-线路2
-  type: hysteria2
-  server: 45.197.149.105
-  port: 40884
-  password: user300_mac:e408b202-5139-4c20-9d77-42ba1535e194
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国 San Jose-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -72,21 +64,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国 San Jose-VLESS-线路2
-  type: vless
-  server: 45.197.149.105
-  port: 40884
-  uuid: e408b202-5139-4c20-9d77-42ba1535e194
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: f4beb3e7
-  client-fingerprint: chrome
-  fast-open: true
 - name: 美国 San Jose-VLESS-线路3
   type: vless
   server: 45.197.149.17
@@ -145,10 +122,8 @@ proxy-groups:
   type: select
   proxies:
   - 自动切换
-  - 美国 San Jose-HY2-线路2
   - 美国 San Jose-HY2-线路3
   - 美国 San Jose-HY2-线路1
-  - 美国 San Jose-VLESS-线路2
   - 美国 San Jose-VLESS-线路3
   - 美国 San Jose-VLESS-线路1
   - 美国 San Jose-HY2-线路4
@@ -156,10 +131,8 @@ proxy-groups:
 - name: 自动切换
   type: url-test
   proxies:
-  - 美国 San Jose-HY2-线路2
   - 美国 San Jose-HY2-线路3
   - 美国 San Jose-HY2-线路1
-  - 美国 San Jose-VLESS-线路2
   - 美国 San Jose-VLESS-线路3
   - 美国 San Jose-VLESS-线路1
   - 美国 San Jose-HY2-线路4

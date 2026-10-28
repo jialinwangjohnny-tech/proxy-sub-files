@@ -48,14 +48,6 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: New York, US-HY2-线路2
-  type: hysteria2
-  server: 45.197.149.105
-  port: 53014
-  password: user342_mac:30137059-975b-47e8-804d-3cf9f02faf23
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: New York, US-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -72,21 +64,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: New York, US-VLESS-线路2
-  type: vless
-  server: 45.197.149.105
-  port: 53014
-  uuid: 30137059-975b-47e8-804d-3cf9f02faf23
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: learn.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 01974e32
-  client-fingerprint: edge
-  fast-open: true
 - name: New York, US-VLESS-线路3
   type: vless
   server: 45.197.149.17
@@ -145,10 +122,8 @@ proxy-groups:
   type: select
   proxies:
   - 自动切换
-  - New York, US-HY2-线路2
   - New York, US-HY2-线路3
   - New York, US-HY2-线路1
-  - New York, US-VLESS-线路2
   - New York, US-VLESS-线路3
   - New York, US-VLESS-线路1
   - New York, US-HY2-线路4
@@ -156,10 +131,8 @@ proxy-groups:
 - name: 自动切换
   type: url-test
   proxies:
-  - New York, US-HY2-线路2
   - New York, US-HY2-线路3
   - New York, US-HY2-线路1
-  - New York, US-VLESS-线路2
   - New York, US-VLESS-线路3
   - New York, US-VLESS-线路1
   - New York, US-HY2-线路4

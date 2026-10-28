@@ -56,14 +56,6 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: Los Angeles, US-HY2-线路2
-  type: hysteria2
-  server: 45.197.149.105
-  port: 13716
-  password: user287_mac:1925fa2a-4f15-42a1-8cc3-6ac6c876dcb3
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: Los Angeles, US-HY2-线路3
   type: hysteria2
   server: 45.197.149.17
@@ -75,21 +67,6 @@ proxies:
 - name: Los Angeles, US-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 13716
-  uuid: 1925fa2a-4f15-42a1-8cc3-6ac6c876dcb3
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 67a1bde4
-  client-fingerprint: chrome
-  fast-open: true
-- name: Los Angeles, US-VLESS-线路2
-  type: vless
-  server: 45.197.149.105
   port: 13716
   uuid: 1925fa2a-4f15-42a1-8cc3-6ac6c876dcb3
   flow: xtls-rprx-vision
@@ -146,10 +123,8 @@ proxy-groups:
   proxies:
   - 自动切换
   - Los Angeles, US-HY2-线路1
-  - Los Angeles, US-HY2-线路2
   - Los Angeles, US-HY2-线路3
   - Los Angeles, US-VLESS-线路1
-  - Los Angeles, US-VLESS-线路2
   - Los Angeles, US-VLESS-线路3
   - Los Angeles, US-HY2-线路4
   - Los Angeles, US-VLESS-线路4
@@ -157,10 +132,8 @@ proxy-groups:
   type: url-test
   proxies:
   - Los Angeles, US-HY2-线路1
-  - Los Angeles, US-HY2-线路2
   - Los Angeles, US-HY2-线路3
   - Los Angeles, US-VLESS-线路1
-  - Los Angeles, US-VLESS-线路2
   - Los Angeles, US-VLESS-线路3
   - Los Angeles, US-HY2-线路4
   - Los Angeles, US-VLESS-线路4
