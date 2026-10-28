@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: Los Angeles, US-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 18891
   password: user335_phone:a65e6e16-d692-49f9-bd83-b924d0c01421
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: Los Angeles, US-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 18891
   uuid: a65e6e16-d692-49f9-bd83-b924d0c01421
   flow: xtls-rprx-vision

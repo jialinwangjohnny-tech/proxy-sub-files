@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: 日本-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 32238
   password: user280_mac:2aec1658-bf5a-4bea-ac2f-2ec7eb3eaa61
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: 日本-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 32238
   uuid: 2aec1658-bf5a-4bea-ac2f-2ec7eb3eaa61
   flow: xtls-rprx-vision

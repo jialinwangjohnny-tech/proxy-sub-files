@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: 新山，MY2-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 32838
   password: user334_windows:108f48b8-3105-44d9-be69-069ac29db391
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: 新山，MY2-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 32838
   uuid: 108f48b8-3105-44d9-be69-069ac29db391
   flow: xtls-rprx-vision

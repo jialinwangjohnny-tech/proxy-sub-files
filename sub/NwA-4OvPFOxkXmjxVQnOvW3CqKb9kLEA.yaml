@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: New York, US-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 53014
   password: user342_phone:03638b7d-9a80-44bb-8c93-f0a809998b03
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: New York, US-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 53014
   uuid: 03638b7d-9a80-44bb-8c93-f0a809998b03
   flow: xtls-rprx-vision

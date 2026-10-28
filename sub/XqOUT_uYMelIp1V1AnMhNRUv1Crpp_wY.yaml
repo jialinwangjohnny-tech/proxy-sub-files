@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: 波兰-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 57702
   password: user219_windows:85d634aa-ead2-4b50-89ca-9d33ee3db7a2
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: 波兰-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 57702
   uuid: 85d634aa-ead2-4b50-89ca-9d33ee3db7a2
   flow: xtls-rprx-vision

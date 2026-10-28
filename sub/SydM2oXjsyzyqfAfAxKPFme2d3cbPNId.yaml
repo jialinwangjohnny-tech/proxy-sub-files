@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: Los Angeles, US-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 13716
   password: user287_mac:1925fa2a-4f15-42a1-8cc3-6ac6c876dcb3
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: Los Angeles, US-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 13716
   uuid: 1925fa2a-4f15-42a1-8cc3-6ac6c876dcb3
   flow: xtls-rprx-vision

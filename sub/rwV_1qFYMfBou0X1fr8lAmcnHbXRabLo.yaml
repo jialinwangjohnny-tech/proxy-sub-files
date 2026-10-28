@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: 新加坡 SG2-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 18011
   password: user341_mac:58ea1913-6bb8-4e29-b5c8-bc9eb21035a4
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: 新加坡 SG2-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 18011
   uuid: 58ea1913-6bb8-4e29-b5c8-bc9eb21035a4
   flow: xtls-rprx-vision

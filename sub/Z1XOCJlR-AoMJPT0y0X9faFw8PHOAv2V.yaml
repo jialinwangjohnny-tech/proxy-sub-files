@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: Virginia, US-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 44890
   password: user323_windows:8f588d75-9fcf-4139-b881-83c10195dec9
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: Virginia, US-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 44890
   uuid: 8f588d75-9fcf-4139-b881-83c10195dec9
   flow: xtls-rprx-vision

@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: Los Angeles, US-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 58780
   password: user327_windows:0d605e84-2e9b-404b-a87f-febc01f8574f
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: Los Angeles, US-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 58780
   uuid: 0d605e84-2e9b-404b-a87f-febc01f8574f
   flow: xtls-rprx-vision

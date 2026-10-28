@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: 美国洛杉矶-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 16922
   password: user336_mac:58599d8d-5f9c-4c9f-8624-143a1a76793c
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: 美国洛杉矶-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 16922
   uuid: 58599d8d-5f9c-4c9f-8624-143a1a76793c
   flow: xtls-rprx-vision

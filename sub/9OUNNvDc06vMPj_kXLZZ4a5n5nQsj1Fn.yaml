@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: 美国弗吉尼亚州-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 53016
   password: user284_mac:c91e3987-62c5-41f9-bd71-0f9ead5917a2
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: 美国弗吉尼亚州-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 53016
   uuid: c91e3987-62c5-41f9-bd71-0f9ead5917a2
   flow: xtls-rprx-vision

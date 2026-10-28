@@ -113,7 +113,7 @@ proxies:
   fast-open: true
 - name: 新加坡-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 14145
   password: user147_mac:47b9bbdc-f450-4cfb-812d-ac3b8584843f
   sni: www.bing.com
@@ -121,7 +121,7 @@ proxies:
   udp: true
 - name: 新加坡-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 14145
   uuid: 47b9bbdc-f450-4cfb-812d-ac3b8584843f
   flow: xtls-rprx-vision

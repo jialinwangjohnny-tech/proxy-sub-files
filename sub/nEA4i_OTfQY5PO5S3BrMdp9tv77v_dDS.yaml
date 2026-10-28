@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: 美国-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 28264
   password: user144_phone:6add3b61-2fe4-4b31-8ff8-f9181e12ccc9
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: 美国-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 28264
   uuid: 6add3b61-2fe4-4b31-8ff8-f9181e12ccc9
   flow: xtls-rprx-vision

@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: 日本东京-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 25123
   password: user343_windows:b98cea4d-a4d4-484d-9a1b-0465282f3bb3
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: 日本东京-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 25123
   uuid: b98cea4d-a4d4-484d-9a1b-0465282f3bb3
   flow: xtls-rprx-vision

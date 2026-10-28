@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: Tokyo, JP-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 40775
   password: user329_windows:586f230f-a970-457f-94a2-971e3bab543a
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: Tokyo, JP-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 40775
   uuid: 586f230f-a970-457f-94a2-971e3bab543a
   flow: xtls-rprx-vision

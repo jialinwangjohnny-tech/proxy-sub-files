@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: 美国AT&T-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 51549
   password: user189_mac:9b208558-8734-4f6b-8b95-59ae5ee4707a
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: 美国AT&T-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 51549
   uuid: 9b208558-8734-4f6b-8b95-59ae5ee4707a
   flow: xtls-rprx-vision

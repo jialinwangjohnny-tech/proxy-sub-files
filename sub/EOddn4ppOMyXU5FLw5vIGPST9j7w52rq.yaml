@@ -119,7 +119,7 @@ proxies:
   fast-open: true
 - name: Salt Lake City, US-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 51748
   password: user120_windows:c97a5a41-114e-4061-b13b-2601719c846d
   sni: www.bing.com
@@ -127,7 +127,7 @@ proxies:
   udp: true
 - name: Salt Lake City, US-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 51748
   uuid: c97a5a41-114e-4061-b13b-2601719c846d
   flow: xtls-rprx-vision

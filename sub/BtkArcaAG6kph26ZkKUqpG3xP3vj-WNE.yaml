@@ -121,7 +121,7 @@ proxies:
   fast-open: true
 - name: 新加坡，SG2-HY2-线路4
   type: hysteria2
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 25124
   password: user344_windows:ce2120b2-9054-4c7a-bdf7-dc41879e5474
   sni: www.bing.com
@@ -129,7 +129,7 @@ proxies:
   udp: true
 - name: 新加坡，SG2-VLESS-线路4
   type: vless
-  server: 38.190.245.108
+  server: 38.190.245.60
   port: 25124
   uuid: ce2120b2-9054-4c7a-bdf7-dc41879e5474
   flow: xtls-rprx-vision
