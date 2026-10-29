@@ -100,6 +100,29 @@ proxies:
       short-id: "6041a2c5"
     client-fingerprint: chrome
     fast-open: true
+  - name: "美国AT&T-HY2-线路4"
+    type: hysteria2
+    server: 38.190.245.60
+    port: 51549
+    password: "user189_windows:7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "美国AT&T-VLESS-线路4"
+    type: vless
+    server: 38.190.245.60
+    port: 51549
+    uuid: 7ee6262b-8c4e-4e92-9c0a-db8af7b8ee24
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: www.bing.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "6041a2c5"
+    client-fingerprint: chrome
+    fast-open: true
 
 proxy-groups:
   - name: "线路选择"
@@ -110,6 +133,8 @@ proxy-groups:
       - "美国AT&T-HY2-线路1"
       - "美国AT&T-VLESS-线路3"
       - "美国AT&T-VLESS-线路1"
+      - "美国AT&T-HY2-线路4"
+      - "美国AT&T-VLESS-线路4"
   - name: "自动切换"
     type: url-test
     proxies:
@@ -117,6 +142,8 @@ proxy-groups:
       - "美国AT&T-HY2-线路1"
       - "美国AT&T-VLESS-线路3"
       - "美国AT&T-VLESS-线路1"
+      - "美国AT&T-HY2-线路4"
+      - "美国AT&T-VLESS-线路4"
     interval: 5
     timeout: 8000
     lazy: false

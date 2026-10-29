@@ -54,6 +54,52 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "波兰-HY2-线路3"
+    type: hysteria2
+    server: 45.197.149.17
+    port: 57702
+    password: "user219_phone:f9427e7c-1d17-439f-8e27-67073659e420"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "波兰-HY2-线路1"
+    type: hysteria2
+    server: 45.197.149.41
+    port: 57702
+    password: "user219_phone:f9427e7c-1d17-439f-8e27-67073659e420"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "波兰-VLESS-线路3"
+    type: vless
+    server: 45.197.149.17
+    port: 57702
+    uuid: f9427e7c-1d17-439f-8e27-67073659e420
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "9075c6ca"
+    client-fingerprint: safari
+    fast-open: true
+  - name: "波兰-VLESS-线路1"
+    type: vless
+    server: 45.197.149.41
+    port: 57702
+    uuid: f9427e7c-1d17-439f-8e27-67073659e420
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: gateway.icloud.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "9075c6ca"
+    client-fingerprint: safari
+    fast-open: true
   - name: "波兰-HY2-线路4"
     type: hysteria2
     server: 38.190.245.60
@@ -83,11 +129,19 @@ proxy-groups:
     type: select
     proxies:
       - "自动切换"
+      - "波兰-HY2-线路3"
+      - "波兰-HY2-线路1"
+      - "波兰-VLESS-线路3"
+      - "波兰-VLESS-线路1"
       - "波兰-HY2-线路4"
       - "波兰-VLESS-线路4"
   - name: "自动切换"
     type: url-test
     proxies:
+      - "波兰-HY2-线路3"
+      - "波兰-HY2-线路1"
+      - "波兰-VLESS-线路3"
+      - "波兰-VLESS-线路1"
       - "波兰-HY2-线路4"
       - "波兰-VLESS-线路4"
     interval: 5
