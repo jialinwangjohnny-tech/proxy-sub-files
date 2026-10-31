@@ -50,16 +50,16 @@ tun:
 proxies:
 - name: 美国-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 39089
+  server: 38.190.245.60
+  port: 20003
   password: user013:47b6de05-cd8d-4083-b1e9-b3be8d2b3027
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 39089
+  server: 38.190.245.60
+  port: 20004
   password: user013:47b6de05-cd8d-4083-b1e9-b3be8d2b3027
   sni: www.bing.com
   skip-cert-verify: true
@@ -76,13 +76,13 @@ proxies:
   servername: gateway.icloud.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: f4f80bc8
+    short-id: "f4f80bc8"
   client-fingerprint: edge
   fast-open: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 39089
+  server: 38.190.245.60
+  port: 20004
   uuid: 47b6de05-cd8d-4083-b1e9-b3be8d2b3027
   flow: xtls-rprx-vision
   network: tcp
@@ -91,7 +91,7 @@ proxies:
   servername: gateway.icloud.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: f4f80bc8
+    short-id: "f4f80bc8"
   client-fingerprint: edge
   fast-open: true
 - name: 美国-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: gateway.icloud.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: f4f80bc8
+    short-id: "f4f80bc8"
   client-fingerprint: edge
   fast-open: true
 proxy-groups:

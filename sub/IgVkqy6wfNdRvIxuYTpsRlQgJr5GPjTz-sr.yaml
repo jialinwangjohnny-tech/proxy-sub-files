@@ -1,0 +1,96 @@
+mode: rule
+allow-lan: false
+ipv6: false
+log-level: warning
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+proxies:
+- name: 🇺🇸 美国-user345-phone-HY2-线路3
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20113
+  password: user345_phone:e29d622a-65f1-47f1-b4ae-89de6b8a18df
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸 美国-user345-phone-HY2-线路1
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20112
+  password: user345_phone:e29d622a-65f1-47f1-b4ae-89de6b8a18df
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸 美国-user345-phone-VLESS-线路3
+  type: vless
+  server: 38.190.245.60
+  port: 20113
+  uuid: e29d622a-65f1-47f1-b4ae-89de6b8a18df
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "fe41e93d"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 🇺🇸 美国-user345-phone-VLESS-线路1
+  type: vless
+  server: 45.197.149.41
+  port: 25125
+  uuid: e29d622a-65f1-47f1-b4ae-89de6b8a18df
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "fe41e93d"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 🇺🇸 美国-user345-phone-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.60
+  port: 25125
+  password: user345_phone:e29d622a-65f1-47f1-b4ae-89de6b8a18df
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸 美国-user345-phone-VLESS-线路4
+  type: vless
+  server: 38.190.245.60
+  port: 25125
+  uuid: e29d622a-65f1-47f1-b4ae-89de6b8a18df
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "fe41e93d"
+  client-fingerprint: chrome
+  fast-open: true
+proxy-groups:
+- name: 小火箭恢复选择
+  type: select
+  proxies:
+  - 🇺🇸 美国-user345-phone-VLESS-线路1
+  - 🇺🇸 美国-user345-phone-VLESS-线路4
+  - 🇺🇸 美国-user345-phone-HY2-线路3
+  - 🇺🇸 美国-user345-phone-HY2-线路1
+  - 🇺🇸 美国-user345-phone-VLESS-线路3
+  - 🇺🇸 美国-user345-phone-HY2-线路4
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- MATCH,小火箭恢复选择

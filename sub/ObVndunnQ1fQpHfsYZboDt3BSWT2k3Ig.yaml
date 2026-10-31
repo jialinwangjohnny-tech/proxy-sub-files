@@ -52,8 +52,8 @@ tun:
 proxies:
 - name: 美国洛杉矶-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 45452
+  server: 38.190.245.60
+  port: 20092
   password: user330_windows:b3fc88cb-3290-400d-adea-b66f4941601f
   sni: www.bing.com
   skip-cert-verify: true
@@ -70,7 +70,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 2d8806ee
+    short-id: "2d8806ee"
   client-fingerprint: chrome
   fast-open: true
 - name: 美国洛杉矶-HY2-线路4
@@ -93,7 +93,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 2d8806ee
+    short-id: "2d8806ee"
   client-fingerprint: chrome
   fast-open: true
 proxy-groups:

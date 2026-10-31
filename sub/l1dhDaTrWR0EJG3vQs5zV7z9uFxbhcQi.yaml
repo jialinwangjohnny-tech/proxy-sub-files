@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: Tokyo, JP-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 10757
+  server: 38.190.245.60
+  port: 20086
   password: user326_mac:20a5ce3a-d0b3-4947-a5e2-75259d132b16
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: Tokyo, JP-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 10757
+  server: 38.190.245.60
+  port: 20084
   password: user326_mac:20a5ce3a-d0b3-4947-a5e2-75259d132b16
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: Tokyo, JP-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 10757
+  server: 38.190.245.60
+  port: 20086
   uuid: 20a5ce3a-d0b3-4947-a5e2-75259d132b16
   flow: xtls-rprx-vision
   network: tcp
@@ -76,13 +76,13 @@ proxies:
   servername: www.cloudflare.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: a9062e5c
+    short-id: "a9062e5c"
   client-fingerprint: chrome
   fast-open: true
 - name: Tokyo, JP-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 10757
+  port: 20085
   uuid: 20a5ce3a-d0b3-4947-a5e2-75259d132b16
   flow: xtls-rprx-vision
   network: tcp
@@ -91,7 +91,7 @@ proxies:
   servername: www.cloudflare.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: a9062e5c
+    short-id: "a9062e5c"
   client-fingerprint: chrome
   fast-open: true
 - name: Tokyo, JP-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: www.cloudflare.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: a9062e5c
+    short-id: "a9062e5c"
   client-fingerprint: chrome
   fast-open: true
 proxy-groups:

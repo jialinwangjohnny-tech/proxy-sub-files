@@ -44,24 +44,24 @@ tun:
 proxies:
 - name: 新加坡-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 14145
+  server: 38.190.245.60
+  port: 20023
   password: user147_phone:187708f4-a1d0-4c33-84d4-d272a220efab
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 新加坡-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 14145
+  server: 38.190.245.60
+  port: 20021
   password: user147_phone:187708f4-a1d0-4c33-84d4-d272a220efab
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 新加坡-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 14145
+  server: 38.190.245.60
+  port: 20023
   uuid: 187708f4-a1d0-4c33-84d4-d272a220efab
   flow: xtls-rprx-vision
   network: tcp
@@ -70,13 +70,13 @@ proxies:
   servername: www.nvidia.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: a02e5b60
+    short-id: "a02e5b60"
   client-fingerprint: firefox
   fast-open: true
 - name: 新加坡-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 14145
+  port: 20022
   uuid: 187708f4-a1d0-4c33-84d4-d272a220efab
   flow: xtls-rprx-vision
   network: tcp
@@ -85,7 +85,7 @@ proxies:
   servername: www.nvidia.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: a02e5b60
+    short-id: "a02e5b60"
   client-fingerprint: firefox
   fast-open: true
 - name: 新加坡-HY2-线路4
@@ -108,7 +108,7 @@ proxies:
   servername: www.nvidia.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: a02e5b60
+    short-id: "a02e5b60"
   client-fingerprint: firefox
   fast-open: true
 proxy-groups:

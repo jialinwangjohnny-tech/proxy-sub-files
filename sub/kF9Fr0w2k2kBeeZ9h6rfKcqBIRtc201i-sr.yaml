@@ -1,0 +1,103 @@
+mode: rule
+allow-lan: false
+ipv6: false
+log-level: warning
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+  - https://cloudflare-dns.com/dns-query#SR-user253-phone-线路选择
+  - https://dns.google/dns-query#SR-user253-phone-线路选择
+  respect-rules: true
+  default-nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+  proxy-server-nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- name: 美国-HY2-线路1
+  type: hysteria2
+  server: 38.190.245.60
+  port: 41449
+  password: user253_phone:4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国-HY2-线路3
+  type: hysteria2
+  server: 38.190.245.60
+  port: 41451
+  password: user253_phone:4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国-VLESS-线路1
+  type: vless
+  server: 45.197.149.41
+  port: 55136
+  uuid: 4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "cda9c2ca"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 美国-VLESS-线路3
+  type: vless
+  server: 38.190.245.60
+  port: 41451
+  uuid: 4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "cda9c2ca"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 美国-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.60
+  port: 55136
+  password: user253_phone:4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国-VLESS-线路4
+  type: vless
+  server: 38.190.245.60
+  port: 55136
+  uuid: 4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "cda9c2ca"
+  client-fingerprint: chrome
+  fast-open: true
+proxy-groups:
+- name: SR-user253-phone-线路选择
+  type: select
+  proxies:
+  - 美国-VLESS-线路4
+  - 美国-VLESS-线路1
+  - 美国-HY2-线路1
+  - 美国-HY2-线路3
+  - 美国-VLESS-线路3
+  - 美国-HY2-线路4
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- MATCH,SR-user253-phone-线路选择

@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: Virginia, US-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 44890
+  server: 38.190.245.60
+  port: 20083
   password: user323_phone:ea56ec8c-f7d3-4b0c-902a-3345ac15818f
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: Virginia, US-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 44890
+  server: 38.190.245.60
+  port: 20081
   password: user323_phone:ea56ec8c-f7d3-4b0c-902a-3345ac15818f
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: Virginia, US-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 44890
+  server: 38.190.245.60
+  port: 20083
   uuid: ea56ec8c-f7d3-4b0c-902a-3345ac15818f
   flow: xtls-rprx-vision
   network: tcp
@@ -76,13 +76,13 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 9f53f0b9
+    short-id: "9f53f0b9"
   client-fingerprint: firefox
   fast-open: true
 - name: Virginia, US-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 44890
+  port: 20082
   uuid: ea56ec8c-f7d3-4b0c-902a-3345ac15818f
   flow: xtls-rprx-vision
   network: tcp
@@ -91,7 +91,7 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 9f53f0b9
+    short-id: "9f53f0b9"
   client-fingerprint: firefox
   fast-open: true
 - name: Virginia, US-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 9f53f0b9
+    short-id: "9f53f0b9"
   client-fingerprint: firefox
   fast-open: true
 proxy-groups:

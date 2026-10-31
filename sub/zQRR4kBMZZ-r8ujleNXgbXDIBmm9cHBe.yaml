@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 12003
+  server: 38.190.245.60
+  port: 20012
   password: user056_windows:0cefc42a-d9a8-4730-82a8-a31cddcf8a5f
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 12003
+  server: 38.190.245.60
+  port: 20010
   password: user056_windows:0cefc42a-d9a8-4730-82a8-a31cddcf8a5f
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 12003
+  server: 38.190.245.60
+  port: 20012
   uuid: 0cefc42a-d9a8-4730-82a8-a31cddcf8a5f
   flow: xtls-rprx-vision
   network: tcp
@@ -76,13 +76,13 @@ proxies:
   servername: apple.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: fe08d36e
+    short-id: "fe08d36e"
   client-fingerprint: edge
   fast-open: true
 - name: 美国-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 12003
+  port: 20011
   uuid: 0cefc42a-d9a8-4730-82a8-a31cddcf8a5f
   flow: xtls-rprx-vision
   network: tcp
@@ -91,7 +91,7 @@ proxies:
   servername: apple.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: fe08d36e
+    short-id: "fe08d36e"
   client-fingerprint: edge
   fast-open: true
 - name: New York, US-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: apple.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: fe08d36e
+    short-id: "fe08d36e"
   client-fingerprint: edge
   fast-open: true
 proxy-groups:

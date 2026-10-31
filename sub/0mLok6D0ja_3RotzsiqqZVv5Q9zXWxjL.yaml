@@ -60,13 +60,13 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: d8b0c03d
+    short-id: "d8b0c03d"
   client-fingerprint: edge
   fast-open: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 31462
+  server: 38.190.245.60
+  port: 20039
   uuid: 72cca28c-c39f-4a13-934d-61b157245dd6
   flow: xtls-rprx-vision
   network: tcp
@@ -75,7 +75,7 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: d8b0c03d
+    short-id: "d8b0c03d"
   client-fingerprint: edge
   fast-open: true
 - name: New York, US-VLESS-线路4
@@ -90,7 +90,7 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: d8b0c03d
+    short-id: "d8b0c03d"
   client-fingerprint: edge
   fast-open: true
 proxy-groups:

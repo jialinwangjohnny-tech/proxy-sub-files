@@ -50,16 +50,16 @@ tun:
 proxies:
 - name: Kuala Lumpur, MY2-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 32838
+  server: 38.190.245.60
+  port: 20093
   password: user334_mac:e99a68cd-f3d6-45ee-92ae-54662ecf146e
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: Kuala Lumpur, MY2-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 32838
+  server: 38.190.245.60
+  port: 20094
   password: user334_mac:e99a68cd-f3d6-45ee-92ae-54662ecf146e
   sni: www.bing.com
   skip-cert-verify: true
@@ -76,13 +76,13 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c7653849
+    short-id: "c7653849"
   client-fingerprint: edge
   fast-open: true
 - name: Kuala Lumpur, MY2-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 32838
+  server: 38.190.245.60
+  port: 20094
   uuid: e99a68cd-f3d6-45ee-92ae-54662ecf146e
   flow: xtls-rprx-vision
   network: tcp
@@ -91,7 +91,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c7653849
+    short-id: "c7653849"
   client-fingerprint: edge
   fast-open: true
 - name: 新山，MY2-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: c7653849
+    short-id: "c7653849"
   client-fingerprint: edge
   fast-open: true
 proxy-groups:

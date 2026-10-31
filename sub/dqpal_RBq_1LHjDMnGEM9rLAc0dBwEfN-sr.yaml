@@ -1,0 +1,105 @@
+mode: rule
+allow-lan: false
+ipv6: false
+log-level: warning
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+proxies:
+- name: 🇺🇸 美国洛杉矶-Moshimoshi-手机-HY2-线路1
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20029
+  password: user178_phone:cc64b788-a25e-464c-a12a-f20a2c07b0c0
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸 美国洛杉矶-Moshimoshi-手机-HY2-线路3
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20030
+  password: user178_phone:cc64b788-a25e-464c-a12a-f20a2c07b0c0
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸 美国洛杉矶-Moshimoshi-手机-VLESS-线路1
+  type: vless
+  server: 45.197.149.41
+  port: 51468
+  uuid: cc64b788-a25e-464c-a12a-f20a2c07b0c0
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "92f7d7d8"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 🇺🇸 美国洛杉矶-Moshimoshi-手机-VLESS-线路3
+  type: vless
+  server: 38.190.245.60
+  port: 20030
+  uuid: cc64b788-a25e-464c-a12a-f20a2c07b0c0
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "92f7d7d8"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 🇺🇸 美国洛杉矶-Moshimoshi-手机-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.60
+  port: 51468
+  password: user178_phone:cc64b788-a25e-464c-a12a-f20a2c07b0c0
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸 美国洛杉矶-Moshimoshi-手机-VLESS-线路4
+  type: vless
+  server: 38.190.245.60
+  port: 51468
+  uuid: cc64b788-a25e-464c-a12a-f20a2c07b0c0
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "92f7d7d8"
+  client-fingerprint: chrome
+  fast-open: true
+proxy-groups:
+- name: 小火箭恢复选择
+  type: select
+  proxies:
+  - 🇺🇸 美国洛杉矶-Moshimoshi-手机-VLESS-线路1
+  - 🇺🇸 美国洛杉矶-Moshimoshi-手机-VLESS-线路4
+  - 🇺🇸 美国洛杉矶-Moshimoshi-手机-HY2-线路1
+  - 🇺🇸 美国洛杉矶-Moshimoshi-手机-HY2-线路3
+  - 🇺🇸 美国洛杉矶-Moshimoshi-手机-VLESS-线路3
+  - 🇺🇸 美国洛杉矶-Moshimoshi-手机-HY2-线路4
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+- DOMAIN-SUFFIX,wx.qq.com,DIRECT
+- DOMAIN-SUFFIX,wechat.com,DIRECT
+- DOMAIN-SUFFIX,weixin.com,DIRECT
+- DOMAIN-SUFFIX,wechatapp.com,DIRECT
+- DOMAIN-SUFFIX,servicewechat.com,DIRECT
+- DOMAIN-SUFFIX,weixinbridge.com,DIRECT
+- DOMAIN-SUFFIX,qpic.cn,DIRECT
+- DOMAIN-SUFFIX,qlogo.cn,DIRECT
+- MATCH,小火箭恢复选择

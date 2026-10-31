@@ -50,16 +50,16 @@ tun:
 proxies:
 - name: 美国-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 41582
+  server: 38.190.245.60
+  port: 20005
   password: user022:a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 41582
+  server: 38.190.245.60
+  port: 20007
   password: user022:a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   sni: www.bing.com
   skip-cert-verify: true
@@ -67,7 +67,7 @@ proxies:
 - name: 美国-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 41582
+  port: 20006
   uuid: a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   flow: xtls-rprx-vision
   network: tcp
@@ -76,13 +76,13 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 3825fcff
+    short-id: "3825fcff"
   client-fingerprint: edge
   fast-open: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 41582
+  server: 38.190.245.60
+  port: 20007
   uuid: a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   flow: xtls-rprx-vision
   network: tcp
@@ -91,7 +91,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 3825fcff
+    short-id: "3825fcff"
   client-fingerprint: edge
   fast-open: true
 - name: 美国-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 3825fcff
+    short-id: "3825fcff"
   client-fingerprint: edge
   fast-open: true
 proxy-groups:

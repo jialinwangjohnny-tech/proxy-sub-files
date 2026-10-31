@@ -1,0 +1,140 @@
+mode: rule
+allow-lan: false
+ipv6: false
+log-level: warning
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+  - https://1.1.1.1/dns-query#SR-user271-phone-线路选择
+  - https://8.8.8.8/dns-query#SR-user271-phone-线路选择
+  respect-rules: true
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  proxy-server-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  nameserver-policy:
+    +.weixin.qq.com:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    +.wx.qq.com:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    +.wechat.com:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    +.weixin.com:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    +.wechatapp.com:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    +.servicewechat.com:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    +.weixinbridge.com:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    +.qpic.cn:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    +.qlogo.cn:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+proxies:
+- name: SR-user271-phone-HY2-线路3
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20049
+  password: user271_phone:56c4e7f0-6fba-4c16-be57-73c6a38733a9
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user271-phone-HY2-线路1
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20047
+  password: user271_phone:56c4e7f0-6fba-4c16-be57-73c6a38733a9
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user271-phone-VLESS-线路3
+  type: vless
+  server: 38.190.245.60
+  port: 20049
+  uuid: 56c4e7f0-6fba-4c16-be57-73c6a38733a9
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "19a56345"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user271-phone-VLESS-线路1
+  type: vless
+  server: 45.197.149.41
+  port: 20048
+  uuid: 56c4e7f0-6fba-4c16-be57-73c6a38733a9
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "19a56345"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user271-phone-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.60
+  port: 14811
+  password: user271_phone:56c4e7f0-6fba-4c16-be57-73c6a38733a9
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user271-phone-VLESS-线路4
+  type: vless
+  server: 38.190.245.60
+  port: 14811
+  uuid: 56c4e7f0-6fba-4c16-be57-73c6a38733a9
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "19a56345"
+  client-fingerprint: chrome
+  fast-open: true
+proxy-groups:
+- name: SR-user271-phone-线路选择
+  type: select
+  proxies:
+  - SR-user271-phone-VLESS-线路4
+  - SR-user271-phone-VLESS-线路1
+  - SR-user271-phone-HY2-线路3
+  - SR-user271-phone-HY2-线路1
+  - SR-user271-phone-VLESS-线路3
+  - SR-user271-phone-HY2-线路4
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+- DOMAIN-SUFFIX,wx.qq.com,DIRECT
+- DOMAIN-SUFFIX,wechat.com,DIRECT
+- DOMAIN-SUFFIX,weixin.com,DIRECT
+- DOMAIN-SUFFIX,wechatapp.com,DIRECT
+- DOMAIN-SUFFIX,servicewechat.com,DIRECT
+- DOMAIN-SUFFIX,weixinbridge.com,DIRECT
+- DOMAIN-SUFFIX,qpic.cn,DIRECT
+- DOMAIN-SUFFIX,qlogo.cn,DIRECT
+- MATCH,SR-user271-phone-线路选择

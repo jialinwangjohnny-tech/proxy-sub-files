@@ -11,8 +11,8 @@ dns:
 proxies:
 - name: SR-user346-phone-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 25126
+  server: 38.190.245.60
+  port: 20114
   password: user346_phone:995f5a05-d9b0-422c-9eb1-7302ac2cbfcd
   sni: www.bing.com
   skip-cert-verify: true
@@ -29,7 +29,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 2309279e
+    short-id: "2309279e"
   client-fingerprint: chrome
   fast-open: true
 - name: SR-user346-phone-HY2-线路4
@@ -52,7 +52,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 2309279e
+    short-id: "2309279e"
   client-fingerprint: chrome
   fast-open: true
 proxy-groups:

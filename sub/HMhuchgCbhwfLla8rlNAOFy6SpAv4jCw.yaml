@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 25729
+  server: 38.190.245.60
+  port: 20053
   password: user278_mac:0e8adda2-a766-4385-ac0f-bc85104e1feb
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 25729
+  server: 38.190.245.60
+  port: 20051
   password: user278_mac:0e8adda2-a766-4385-ac0f-bc85104e1feb
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 25729
+  server: 38.190.245.60
+  port: 20053
   uuid: 0e8adda2-a766-4385-ac0f-bc85104e1feb
   flow: xtls-rprx-vision
   network: tcp
@@ -76,13 +76,13 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 5a40b175
+    short-id: "5a40b175"
   client-fingerprint: chrome
   fast-open: true
 - name: 美国-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 25729
+  port: 20052
   uuid: 0e8adda2-a766-4385-ac0f-bc85104e1feb
   flow: xtls-rprx-vision
   network: tcp
@@ -91,7 +91,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 5a40b175
+    short-id: "5a40b175"
   client-fingerprint: chrome
   fast-open: true
 - name: 美国-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 5a40b175
+    short-id: "5a40b175"
   client-fingerprint: chrome
   fast-open: true
 proxy-groups:

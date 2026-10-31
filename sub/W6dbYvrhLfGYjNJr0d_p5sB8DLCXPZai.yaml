@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: 日本-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 23951
+  server: 38.190.245.60
+  port: 20088
   password: user328_mac:a5ad745d-835c-4b74-a5bf-5dbabde30cef
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 日本-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 23951
+  server: 38.190.245.60
+  port: 20087
   password: user328_mac:a5ad745d-835c-4b74-a5bf-5dbabde30cef
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 日本-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 23951
+  server: 38.190.245.60
+  port: 20088
   uuid: a5ad745d-835c-4b74-a5bf-5dbabde30cef
   flow: xtls-rprx-vision
   network: tcp
@@ -76,7 +76,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 8448c5e3
+    short-id: "8448c5e3"
   client-fingerprint: firefox
   fast-open: true
 - name: 日本-VLESS-线路1
@@ -91,7 +91,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 8448c5e3
+    short-id: "8448c5e3"
   client-fingerprint: firefox
   fast-open: true
 - name: Tokyo, JP-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 8448c5e3
+    short-id: "8448c5e3"
   client-fingerprint: firefox
   fast-open: true
 proxy-groups:

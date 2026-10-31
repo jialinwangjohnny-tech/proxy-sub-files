@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: New York, US-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 30024
+  server: 38.190.245.60
+  port: 20072
   password: user292_mac:dad525f5-f676-42ec-971d-208949bae07a
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: New York, US-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 30024
+  server: 38.190.245.60
+  port: 20070
   password: user292_mac:dad525f5-f676-42ec-971d-208949bae07a
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: New York, US-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 30024
+  server: 38.190.245.60
+  port: 20072
   uuid: dad525f5-f676-42ec-971d-208949bae07a
   flow: xtls-rprx-vision
   network: tcp
@@ -76,13 +76,13 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: b8aa55ee
+    short-id: "b8aa55ee"
   client-fingerprint: edge
   fast-open: true
 - name: New York, US-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 30024
+  port: 20071
   uuid: dad525f5-f676-42ec-971d-208949bae07a
   flow: xtls-rprx-vision
   network: tcp
@@ -91,7 +91,7 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: b8aa55ee
+    short-id: "b8aa55ee"
   client-fingerprint: edge
   fast-open: true
 - name: New York, US-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: b8aa55ee
+    short-id: "b8aa55ee"
   client-fingerprint: edge
   fast-open: true
 proxy-groups:

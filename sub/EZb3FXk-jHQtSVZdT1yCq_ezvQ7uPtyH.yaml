@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: Los Angeles, US-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 50635
+  server: 38.190.245.60
+  port: 20046
   password: user262_mac:ef2ddd19-6b6c-4f39-b897-d497e8d8c4ec
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: Los Angeles, US-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 50635
+  server: 38.190.245.60
+  port: 20045
   password: user262_mac:ef2ddd19-6b6c-4f39-b897-d497e8d8c4ec
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: Los Angeles, US-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 50635
+  server: 38.190.245.60
+  port: 20046
   uuid: ef2ddd19-6b6c-4f39-b897-d497e8d8c4ec
   flow: xtls-rprx-vision
   network: tcp
@@ -76,7 +76,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: b90c7c9b
+    short-id: "b90c7c9b"
   client-fingerprint: firefox
   fast-open: true
 - name: Los Angeles, US-VLESS-线路1
@@ -91,7 +91,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: b90c7c9b
+    short-id: "b90c7c9b"
   client-fingerprint: firefox
   fast-open: true
 - name: New York, US-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: b90c7c9b
+    short-id: "b90c7c9b"
   client-fingerprint: firefox
   fast-open: true
 proxy-groups:

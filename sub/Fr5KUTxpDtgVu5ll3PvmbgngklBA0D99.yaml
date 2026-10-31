@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: New York US-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 30923
+  server: 38.190.245.60
+  port: 20028
   password: user163_windows:d4722ef3-c1f8-4b07-8b6e-ea31cfcf8ae6
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: New York US-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 30923
+  server: 38.190.245.60
+  port: 20027
   password: user163_windows:d4722ef3-c1f8-4b07-8b6e-ea31cfcf8ae6
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: New York US-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 30923
+  server: 38.190.245.60
+  port: 20028
   uuid: d4722ef3-c1f8-4b07-8b6e-ea31cfcf8ae6
   flow: xtls-rprx-vision
   network: tcp
@@ -76,7 +76,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: eaed8fa2
+    short-id: "eaed8fa2"
   client-fingerprint: edge
   fast-open: true
 - name: New York US-VLESS-线路1
@@ -91,7 +91,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: eaed8fa2
+    short-id: "eaed8fa2"
   client-fingerprint: edge
   fast-open: true
 - name: New York, US-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: eaed8fa2
+    short-id: "eaed8fa2"
   client-fingerprint: edge
   fast-open: true
 proxy-groups:

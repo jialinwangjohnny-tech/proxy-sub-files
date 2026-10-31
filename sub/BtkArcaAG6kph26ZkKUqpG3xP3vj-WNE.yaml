@@ -52,16 +52,16 @@ tun:
 proxies:
 - name: 新加坡，SG2-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 25124
+  server: 38.190.245.60
+  port: 20109
   password: user344_windows:ce2120b2-9054-4c7a-bdf7-dc41879e5474
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 新加坡，SG2-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 25124
+  server: 38.190.245.60
+  port: 20111
   password: user344_windows:ce2120b2-9054-4c7a-bdf7-dc41879e5474
   sni: www.bing.com
   skip-cert-verify: true
@@ -69,7 +69,7 @@ proxies:
 - name: 新加坡，SG2-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 25124
+  port: 20110
   uuid: ce2120b2-9054-4c7a-bdf7-dc41879e5474
   flow: xtls-rprx-vision
   network: tcp
@@ -78,13 +78,13 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: dd0aecfa
+    short-id: "dd0aecfa"
   client-fingerprint: firefox
   fast-open: true
 - name: 新加坡，SG2-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 25124
+  server: 38.190.245.60
+  port: 20111
   uuid: ce2120b2-9054-4c7a-bdf7-dc41879e5474
   flow: xtls-rprx-vision
   network: tcp
@@ -93,7 +93,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: dd0aecfa
+    short-id: "dd0aecfa"
   client-fingerprint: firefox
   fast-open: true
 - name: 新加坡，SG2-HY2-线路4
@@ -116,7 +116,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: dd0aecfa
+    short-id: "dd0aecfa"
   client-fingerprint: firefox
   fast-open: true
 proxy-groups:

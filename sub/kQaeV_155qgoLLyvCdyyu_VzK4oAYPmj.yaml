@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 17565
+  server: 38.190.245.60
+  port: 20069
   password: user290_phone:f95f6c03-84d4-45da-9b8e-8b6a62800b74
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 17565
+  server: 38.190.245.60
+  port: 20068
   password: user290_phone:f95f6c03-84d4-45da-9b8e-8b6a62800b74
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 17565
+  server: 38.190.245.60
+  port: 20069
   uuid: f95f6c03-84d4-45da-9b8e-8b6a62800b74
   flow: xtls-rprx-vision
   network: tcp
@@ -76,7 +76,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 19fcdcbc
+    short-id: "19fcdcbc"
   client-fingerprint: edge
   fast-open: true
 - name: 美国-VLESS-线路1
@@ -91,7 +91,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 19fcdcbc
+    short-id: "19fcdcbc"
   client-fingerprint: edge
   fast-open: true
 - name: 美国-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 19fcdcbc
+    short-id: "19fcdcbc"
   client-fingerprint: edge
   fast-open: true
 proxy-groups:

@@ -11,8 +11,8 @@ dns:
 proxies:
 - name: SR-user346-mac-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 25126
+  server: 38.190.245.60
+  port: 20114
   password: user346_mac:0b54091f-7c9e-4ba1-913b-6e670caf096e
   sni: www.bing.com
   skip-cert-verify: true
@@ -29,7 +29,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 2309279e
+    short-id: "2309279e"
   client-fingerprint: chrome
   fast-open: true
 - name: SR-user346-mac-HY2-线路4
@@ -52,7 +52,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 2309279e
+    short-id: "2309279e"
   client-fingerprint: chrome
   fast-open: true
 proxy-groups:

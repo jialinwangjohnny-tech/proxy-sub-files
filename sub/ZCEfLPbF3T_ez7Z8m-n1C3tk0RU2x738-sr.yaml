@@ -1,0 +1,103 @@
+mode: rule
+allow-lan: false
+ipv6: false
+log-level: warning
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+  - https://cloudflare-dns.com/dns-query#SR-user341-phone-线路选择
+  - https://dns.google/dns-query#SR-user341-phone-线路选择
+  respect-rules: true
+  default-nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+  proxy-server-nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+proxies:
+- name: SR-user341-phone-HY2-线路1
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20100
+  password: user341_phone:8c0e5690-0c42-48cb-9d28-f43ae9cdb244
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user341-phone-HY2-线路3
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20101
+  password: user341_phone:8c0e5690-0c42-48cb-9d28-f43ae9cdb244
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user341-phone-VLESS-线路1
+  type: vless
+  server: 45.197.149.41
+  port: 18011
+  uuid: 8c0e5690-0c42-48cb-9d28-f43ae9cdb244
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "9112d9fb"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user341-phone-VLESS-线路3
+  type: vless
+  server: 38.190.245.60
+  port: 20101
+  uuid: 8c0e5690-0c42-48cb-9d28-f43ae9cdb244
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "9112d9fb"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user341-phone-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.60
+  port: 18011
+  password: user341_phone:8c0e5690-0c42-48cb-9d28-f43ae9cdb244
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user341-phone-VLESS-线路4
+  type: vless
+  server: 38.190.245.60
+  port: 18011
+  uuid: 8c0e5690-0c42-48cb-9d28-f43ae9cdb244
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "9112d9fb"
+  client-fingerprint: chrome
+  fast-open: true
+proxy-groups:
+- name: SR-user341-phone-线路选择
+  type: select
+  proxies:
+  - SR-user341-phone-VLESS-线路1
+  - SR-user341-phone-VLESS-线路4
+  - SR-user341-phone-HY2-线路1
+  - SR-user341-phone-HY2-线路3
+  - SR-user341-phone-VLESS-线路3
+  - SR-user341-phone-HY2-线路4
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- MATCH,SR-user341-phone-线路选择

@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: 美国洛杉矶-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 24046
+  server: 38.190.245.60
+  port: 20026
   password: user158_windows:dcf18f59-7147-4e01-8cff-55c02eb75c91
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国洛杉矶-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 24046
+  server: 38.190.245.60
+  port: 20024
   password: user158_windows:dcf18f59-7147-4e01-8cff-55c02eb75c91
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国洛杉矶-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 24046
+  server: 38.190.245.60
+  port: 20026
   uuid: dcf18f59-7147-4e01-8cff-55c02eb75c91
   flow: xtls-rprx-vision
   network: tcp
@@ -76,13 +76,13 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 40612bfd
+    short-id: "40612bfd"
   client-fingerprint: firefox
   fast-open: true
 - name: 美国洛杉矶-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 24046
+  port: 20025
   uuid: dcf18f59-7147-4e01-8cff-55c02eb75c91
   flow: xtls-rprx-vision
   network: tcp
@@ -91,7 +91,7 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 40612bfd
+    short-id: "40612bfd"
   client-fingerprint: firefox
   fast-open: true
 - name: 美国洛杉矶-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: learn.microsoft.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 40612bfd
+    short-id: "40612bfd"
   client-fingerprint: firefox
   fast-open: true
 proxy-groups:

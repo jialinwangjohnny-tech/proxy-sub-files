@@ -50,24 +50,24 @@ tun:
 proxies:
 - name: 美国-HY2-线路3
   type: hysteria2
-  server: 45.197.149.17
-  port: 28264
+  server: 38.190.245.60
+  port: 20020
   password: user144_windows:73607977-7b52-4c71-999b-df50940bc292
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国-HY2-线路1
   type: hysteria2
-  server: 45.197.149.41
-  port: 28264
+  server: 38.190.245.60
+  port: 20018
   password: user144_windows:73607977-7b52-4c71-999b-df50940bc292
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 美国-VLESS-线路3
   type: vless
-  server: 45.197.149.17
-  port: 28264
+  server: 38.190.245.60
+  port: 20020
   uuid: 73607977-7b52-4c71-999b-df50940bc292
   flow: xtls-rprx-vision
   network: tcp
@@ -76,13 +76,13 @@ proxies:
   servername: itunes.apple.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 000d3bf8
+    short-id: "000d3bf8"
   client-fingerprint: chrome
   fast-open: true
 - name: 美国-VLESS-线路1
   type: vless
   server: 45.197.149.41
-  port: 28264
+  port: 20019
   uuid: 73607977-7b52-4c71-999b-df50940bc292
   flow: xtls-rprx-vision
   network: tcp
@@ -91,7 +91,7 @@ proxies:
   servername: itunes.apple.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 000d3bf8
+    short-id: "000d3bf8"
   client-fingerprint: chrome
   fast-open: true
 - name: 美国-HY2-线路4
@@ -114,7 +114,7 @@ proxies:
   servername: itunes.apple.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 000d3bf8
+    short-id: "000d3bf8"
   client-fingerprint: chrome
   fast-open: true
 proxy-groups:
