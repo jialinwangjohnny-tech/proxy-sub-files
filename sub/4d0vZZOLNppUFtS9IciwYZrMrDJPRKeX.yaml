@@ -79,7 +79,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: learn.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "d73398d4"
@@ -94,7 +94,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: learn.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "d73398d4"
@@ -117,7 +117,7 @@ proxies:
     network: tcp
     tls: true
     udp: true
-    servername: www.microsoft.com
+    servername: learn.microsoft.com
     reality-opts:
       public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
       short-id: "d73398d4"
