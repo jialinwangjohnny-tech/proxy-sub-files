@@ -1,0 +1,96 @@
+mode: rule
+allow-lan: false
+ipv6: false
+log-level: warning
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+proxies:
+- name: SR-user269-mac-HY2-线路3
+  type: hysteria2
+  server: 38.190.245.60
+  port: 41455
+  password: user269_mac:34c3135c-19d9-4667-8442-ae90f5505e5e
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user269-mac-HY2-线路1
+  type: hysteria2
+  server: 38.190.245.60
+  port: 41453
+  password: user269_mac:34c3135c-19d9-4667-8442-ae90f5505e5e
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user269-mac-VLESS-线路3
+  type: vless
+  server: 38.190.245.60
+  port: 41455
+  uuid: 34c3135c-19d9-4667-8442-ae90f5505e5e
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: f2121708
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user269-mac-VLESS-线路1
+  type: vless
+  server: 45.197.149.41
+  port: 41453
+  uuid: 34c3135c-19d9-4667-8442-ae90f5505e5e
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: f2121708
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user269-mac-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.60
+  port: 23039
+  password: user269_mac:34c3135c-19d9-4667-8442-ae90f5505e5e
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user269-mac-VLESS-线路4
+  type: vless
+  server: 38.190.245.60
+  port: 23039
+  uuid: 34c3135c-19d9-4667-8442-ae90f5505e5e
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: f2121708
+  client-fingerprint: chrome
+  fast-open: true
+proxy-groups:
+- name: 小火箭恢复选择
+  type: select
+  proxies:
+  - SR-user269-mac-VLESS-线路1
+  - SR-user269-mac-VLESS-线路4
+  - SR-user269-mac-HY2-线路3
+  - SR-user269-mac-HY2-线路1
+  - SR-user269-mac-VLESS-线路3
+  - SR-user269-mac-HY2-线路4
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- MATCH,小火箭恢复选择
