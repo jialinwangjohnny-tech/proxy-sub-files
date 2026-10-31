@@ -1,0 +1,114 @@
+mode: rule
+allow-lan: false
+ipv6: false
+log-level: warning
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+proxies:
+- name: SR-user286-phone-HY2-线路3
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20064
+  password: user286_phone:cd466827-6e35-4efe-86d5-b124003000ee
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user286-phone-HY2-线路1
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20062
+  password: user286_phone:cd466827-6e35-4efe-86d5-b124003000ee
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user286-phone-VLESS-线路3
+  type: vless
+  server: 38.190.245.60
+  port: 20064
+  uuid: cd466827-6e35-4efe-86d5-b124003000ee
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "63694fd8"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user286-phone-VLESS-线路1
+  type: vless
+  server: 45.197.149.41
+  port: 20063
+  uuid: cd466827-6e35-4efe-86d5-b124003000ee
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "63694fd8"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user286-phone-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.60
+  port: 12537
+  password: user286_phone:cd466827-6e35-4efe-86d5-b124003000ee
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user286-phone-VLESS-线路4
+  type: vless
+  server: 38.190.245.60
+  port: 12537
+  uuid: cd466827-6e35-4efe-86d5-b124003000ee
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "63694fd8"
+  client-fingerprint: chrome
+  fast-open: true
+proxy-groups:
+- name: 小火箭恢复选择
+  type: select
+  proxies:
+  - SR-user286-phone-VLESS-线路1
+  - SR-user286-phone-VLESS-线路4
+  - SR-user286-phone-HY2-线路3
+  - SR-user286-phone-HY2-线路1
+  - SR-user286-phone-VLESS-线路3
+  - SR-user286-phone-HY2-线路4
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+- DOMAIN-SUFFIX,wx.qq.com,DIRECT
+- DOMAIN-SUFFIX,wechat.com,DIRECT
+- DOMAIN-SUFFIX,weixin.com,DIRECT
+- DOMAIN-SUFFIX,wechatapp.com,DIRECT
+- DOMAIN-SUFFIX,servicewechat.com,DIRECT
+- DOMAIN-SUFFIX,weixinbridge.com,DIRECT
+- DOMAIN-SUFFIX,qpic.cn,DIRECT
+- DOMAIN-SUFFIX,qlogo.cn,DIRECT
+- DOMAIN-SUFFIX,wxapp.tc.qq.com,DIRECT
+- DOMAIN-SUFFIX,wxs.qq.com,DIRECT
+- DOMAIN-SUFFIX,wx.gtimg.com,DIRECT
+- DOMAIN-SUFFIX,weixin110.qq.com,DIRECT
+- DOMAIN-SUFFIX,vweixinf.tc.qq.com,DIRECT
+- DOMAIN-SUFFIX,vweixinthumb.tc.qq.com,DIRECT
+- DOMAIN-SUFFIX,apd-pcdnwxlogin.teg.tencent-cloud.net,DIRECT
+- DOMAIN-SUFFIX,wechatpay.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
+- MATCH,小火箭恢复选择

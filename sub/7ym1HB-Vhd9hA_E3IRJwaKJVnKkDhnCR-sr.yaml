@@ -137,4 +137,13 @@ rules:
 - DOMAIN-SUFFIX,weixinbridge.com,DIRECT
 - DOMAIN-SUFFIX,qpic.cn,DIRECT
 - DOMAIN-SUFFIX,qlogo.cn,DIRECT
+- DOMAIN-SUFFIX,wxapp.tc.qq.com,DIRECT
+- DOMAIN-SUFFIX,wxs.qq.com,DIRECT
+- DOMAIN-SUFFIX,wx.gtimg.com,DIRECT
+- DOMAIN-SUFFIX,weixin110.qq.com,DIRECT
+- DOMAIN-SUFFIX,vweixinf.tc.qq.com,DIRECT
+- DOMAIN-SUFFIX,vweixinthumb.tc.qq.com,DIRECT
+- DOMAIN-SUFFIX,apd-pcdnwxlogin.teg.tencent-cloud.net,DIRECT
+- DOMAIN-SUFFIX,wechatpay.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
 - MATCH,SR-user271-phone-线路选择
