@@ -1,0 +1,277 @@
+mode: rule
+allow-lan: false
+ipv6: false
+log-level: warning
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  nameserver-policy:
+    +.weixin.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.wx.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.wechat.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.weixin.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.wechatapp.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.servicewechat.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.weixinbridge.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.qpic.cn:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.qlogo.cn:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.wxapp.tc.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.wxs.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.wx.gtimg.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.weixin110.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.vweixinf.tc.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.vweixinthumb.tc.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.apd-pcdnwxlogin.teg.tencent-cloud.net:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.wechatpay.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.tenpay.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.btrace.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.dldir1.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.slife.xy-asia.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.soup.v.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.wup.imtt.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.iot-tencent.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.lbs.gtimg.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.map.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.up-hl.3g.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.wechatlegal.net:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.wechatos.net:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.weixinsxy.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.yun-hl.3g.qq.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.douyin.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.lf3-static.bytednsdoc.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.v5-dy-o-abtest.zjcdn.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.amemv.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.douyincdn.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.douyinpic.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.douyinstatic.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.douyinvod.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.idouyinvod.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.ixigua.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.ixiguavideo.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.pstatp.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.snssdk.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+    +.toutiao.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+proxies:
+- name: SR-user124-mac-HY2-线路3
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20017
+  password: user124_mac:e4f596bd-c25c-4daf-814e-00fe1e504a20
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user124-mac-HY2-线路1
+  type: hysteria2
+  server: 38.190.245.60
+  port: 20015
+  password: user124_mac:e4f596bd-c25c-4daf-814e-00fe1e504a20
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user124-mac-VLESS-线路3
+  type: vless
+  server: 38.190.245.60
+  port: 20017
+  uuid: e4f596bd-c25c-4daf-814e-00fe1e504a20
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "37c22c4e"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user124-mac-VLESS-线路1
+  type: vless
+  server: 45.197.149.41
+  port: 20016
+  uuid: e4f596bd-c25c-4daf-814e-00fe1e504a20
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "37c22c4e"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user124-mac-HY2-线路4
+  type: hysteria2
+  server: 38.190.245.60
+  port: 19583
+  password: user124_mac:e4f596bd-c25c-4daf-814e-00fe1e504a20
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user124-mac-VLESS-线路4
+  type: vless
+  server: 38.190.245.60
+  port: 19583
+  uuid: e4f596bd-c25c-4daf-814e-00fe1e504a20
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "37c22c4e"
+  client-fingerprint: chrome
+  fast-open: true
+proxy-groups:
+- name: 小火箭恢复选择
+  type: select
+  proxies:
+  - SR-user124-mac-VLESS-线路1
+  - SR-user124-mac-VLESS-线路4
+  - SR-user124-mac-HY2-线路3
+  - SR-user124-mac-HY2-线路1
+  - SR-user124-mac-VLESS-线路3
+  - SR-user124-mac-HY2-线路4
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+- DOMAIN-SUFFIX,wx.qq.com,DIRECT
+- DOMAIN-SUFFIX,wechat.com,DIRECT
+- DOMAIN-SUFFIX,weixin.com,DIRECT
+- DOMAIN-SUFFIX,wechatapp.com,DIRECT
+- DOMAIN-SUFFIX,servicewechat.com,DIRECT
+- DOMAIN-SUFFIX,weixinbridge.com,DIRECT
+- DOMAIN-SUFFIX,qpic.cn,DIRECT
+- DOMAIN-SUFFIX,qlogo.cn,DIRECT
+- DOMAIN-SUFFIX,wxapp.tc.qq.com,DIRECT
+- DOMAIN-SUFFIX,wxs.qq.com,DIRECT
+- DOMAIN-SUFFIX,wx.gtimg.com,DIRECT
+- DOMAIN-SUFFIX,weixin110.qq.com,DIRECT
+- DOMAIN-SUFFIX,vweixinf.tc.qq.com,DIRECT
+- DOMAIN-SUFFIX,vweixinthumb.tc.qq.com,DIRECT
+- DOMAIN-SUFFIX,apd-pcdnwxlogin.teg.tencent-cloud.net,DIRECT
+- DOMAIN-SUFFIX,wechatpay.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
+- DOMAIN-SUFFIX,btrace.qq.com,DIRECT
+- DOMAIN-SUFFIX,dldir1.qq.com,DIRECT
+- DOMAIN-SUFFIX,slife.xy-asia.com,DIRECT
+- DOMAIN-SUFFIX,soup.v.qq.com,DIRECT
+- DOMAIN-SUFFIX,wup.imtt.qq.com,DIRECT
+- DOMAIN-SUFFIX,iot-tencent.com,DIRECT
+- DOMAIN-SUFFIX,lbs.gtimg.com,DIRECT
+- DOMAIN-SUFFIX,map.qq.com,DIRECT
+- DOMAIN-SUFFIX,up-hl.3g.qq.com,DIRECT
+- DOMAIN-SUFFIX,wechatlegal.net,DIRECT
+- DOMAIN-SUFFIX,wechatos.net,DIRECT
+- DOMAIN-SUFFIX,weixinsxy.com,DIRECT
+- DOMAIN-SUFFIX,yun-hl.3g.qq.com,DIRECT
+- DOMAIN-SUFFIX,douyin.com,DIRECT
+- DOMAIN-SUFFIX,lf3-static.bytednsdoc.com,DIRECT
+- DOMAIN-SUFFIX,v5-dy-o-abtest.zjcdn.com,DIRECT
+- DOMAIN-SUFFIX,amemv.com,DIRECT
+- DOMAIN-SUFFIX,douyincdn.com,DIRECT
+- DOMAIN-SUFFIX,douyinpic.com,DIRECT
+- DOMAIN-SUFFIX,douyinstatic.com,DIRECT
+- DOMAIN-SUFFIX,douyinvod.com,DIRECT
+- DOMAIN-SUFFIX,idouyinvod.com,DIRECT
+- DOMAIN-SUFFIX,ixigua.com,DIRECT
+- DOMAIN-SUFFIX,ixiguavideo.com,DIRECT
+- DOMAIN-SUFFIX,pstatp.com,DIRECT
+- DOMAIN-SUFFIX,snssdk.com,DIRECT
+- DOMAIN-SUFFIX,toutiao.com,DIRECT
+- MATCH,小火箭恢复选择
