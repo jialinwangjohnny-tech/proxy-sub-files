@@ -145,26 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user344-mac-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20109
-  password: user344_mac:b93ac6a6-243b-447c-8199-72bda3a99ecc
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user344-mac-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20111
-  password: user344_mac:b93ac6a6-243b-447c-8199-72bda3a99ecc
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user344-mac-VLESS-线路1
+- name: 🇸🇬 新加坡-SuperHanno-Mac-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 20110
+  server: 45.197.149.226
+  port: 32048
   uuid: b93ac6a6-243b-447c-8199-72bda3a99ecc
   flow: xtls-rprx-vision
   network: tcp
@@ -176,30 +160,15 @@ proxies:
     short-id: "dd0aecfa"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user344-mac-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20111
-  uuid: b93ac6a6-243b-447c-8199-72bda3a99ecc
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "dd0aecfa"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user344-mac-HY2-线路4
+- name: 🇸🇬 新加坡-SuperHanno-Mac-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 25124
+  server: 45.197.149.226
+  port: 32048
   password: user344_mac:b93ac6a6-243b-447c-8199-72bda3a99ecc
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user344-mac-VLESS-线路4
+- name: 🇸🇬 新加坡-SuperHanno-Mac-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 25124
@@ -214,16 +183,22 @@ proxies:
     short-id: "dd0aecfa"
   client-fingerprint: chrome
   fast-open: true
+- name: 🇸🇬 新加坡-SuperHanno-Mac-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 25124
+  password: user344_mac:b93ac6a6-243b-447c-8199-72bda3a99ecc
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - SR-user344-mac-VLESS-线路1
-  - SR-user344-mac-VLESS-线路4
-  - SR-user344-mac-HY2-线路1
-  - SR-user344-mac-HY2-线路3
-  - SR-user344-mac-VLESS-线路3
-  - SR-user344-mac-HY2-线路4
+  - 🇸🇬 新加坡-SuperHanno-Mac-VLESS-线路1
+  - 🇸🇬 新加坡-SuperHanno-Mac-VLESS-线路2
+  - 🇸🇬 新加坡-SuperHanno-Mac-HY2-线路1
+  - 🇸🇬 新加坡-SuperHanno-Mac-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

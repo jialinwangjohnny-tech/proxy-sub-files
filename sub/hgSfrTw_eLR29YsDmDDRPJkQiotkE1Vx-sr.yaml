@@ -145,41 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user280-phone-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20056
-  password: user280_phone:814df1b1-79d2-4c75-8c6e-c11fe9e153fc
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user280-phone-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20054
-  password: user280_phone:814df1b1-79d2-4c75-8c6e-c11fe9e153fc
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user280-phone-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20056
-  uuid: 814df1b1-79d2-4c75-8c6e-c11fe9e153fc
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: learn.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "06c1db52"
-  client-fingerprint: chrome
-  fast-open: true
 - name: SR-user280-phone-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 20055
+  server: 45.197.149.226
+  port: 32029
   uuid: 814df1b1-79d2-4c75-8c6e-c11fe9e153fc
   flow: xtls-rprx-vision
   network: tcp
@@ -191,15 +160,15 @@ proxies:
     short-id: "06c1db52"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user280-phone-HY2-线路4
+- name: SR-user280-phone-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 32238
+  server: 45.197.149.226
+  port: 32057
   password: user280_phone:814df1b1-79d2-4c75-8c6e-c11fe9e153fc
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user280-phone-VLESS-线路4
+- name: SR-user280-phone-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 32238
@@ -214,16 +183,22 @@ proxies:
     short-id: "06c1db52"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user280-phone-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 32238
+  password: user280_phone:814df1b1-79d2-4c75-8c6e-c11fe9e153fc
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user280-phone-VLESS-线路1
-  - SR-user280-phone-VLESS-线路4
-  - SR-user280-phone-HY2-线路3
+  - SR-user280-phone-VLESS-线路2
   - SR-user280-phone-HY2-线路1
-  - SR-user280-phone-VLESS-线路3
-  - SR-user280-phone-HY2-线路4
+  - SR-user280-phone-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

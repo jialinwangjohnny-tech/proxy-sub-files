@@ -16,8 +16,8 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
   nameserver:
-  - https://dns.google/dns-query#线路选择
-  - https://cloudflare-dns.com/dns-query#线路选择
+  - https://dns.google/dns-query#MsZeng-线路选择
+  - https://cloudflare-dns.com/dns-query#MsZeng-线路选择
   proxy-server-nameserver:
   - 223.5.5.5
   - 119.29.29.29
@@ -50,41 +50,10 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国华盛顿-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20113
-  password: user345_phone:e29d622a-65f1-47f1-b4ae-89de6b8a18df
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国华盛顿-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20112
-  password: user345_phone:e29d622a-65f1-47f1-b4ae-89de6b8a18df
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国华盛顿-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20113
-  uuid: e29d622a-65f1-47f1-b4ae-89de6b8a18df
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "fe41e93d"
-  client-fingerprint: chrome
-  fast-open: true
 - name: 美国华盛顿-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 25125
+  server: 45.197.149.226
+  port: 32049
   uuid: e29d622a-65f1-47f1-b4ae-89de6b8a18df
   flow: xtls-rprx-vision
   network: tcp
@@ -96,7 +65,15 @@ proxies:
     short-id: "fe41e93d"
   client-fingerprint: chrome
   fast-open: true
-- name: 美国华盛顿-HY2-线路4
+- name: 美国华盛顿-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32049
+  password: user345_phone:e29d622a-65f1-47f1-b4ae-89de6b8a18df
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国华盛顿-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 25125
@@ -104,46 +81,24 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国华盛顿-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 25125
-  uuid: e29d622a-65f1-47f1-b4ae-89de6b8a18df
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "fe41e93d"
-  client-fingerprint: chrome
-  fast-open: true
 proxy-groups:
-- name: 线路选择
+- name: MsZeng-线路选择
   type: select
   proxies:
+  - 美国华盛顿-VLESS-线路1
   - 自动切换
-  - 美国华盛顿-HY2-线路3
   - 美国华盛顿-HY2-线路1
-  - 美国华盛顿-VLESS-线路3
-  - 美国华盛顿-VLESS-线路1
-  - 美国华盛顿-HY2-线路4
-  - 美国华盛顿-VLESS-线路4
+  - 美国华盛顿-HY2-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
-  - 美国华盛顿-HY2-线路3
   - 美国华盛顿-HY2-线路1
-  - 美国华盛顿-VLESS-线路3
   - 美国华盛顿-VLESS-线路1
-  - 美国华盛顿-HY2-线路4
-  - 美国华盛顿-VLESS-线路4
-  interval: 5
+  - 美国华盛顿-HY2-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT
@@ -155,7 +110,7 @@ rules:
 - DOMAIN-SUFFIX,huhiuh.space,DIRECT
 - GEOSITE,private,DIRECT
 - GEOSITE,cn,DIRECT
-- GEOSITE,geolocation-!cn,线路选择
+- GEOSITE,geolocation-!cn,MsZeng-线路选择
 - GEOIP,private,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,线路选择
+- MATCH,MsZeng-线路选择

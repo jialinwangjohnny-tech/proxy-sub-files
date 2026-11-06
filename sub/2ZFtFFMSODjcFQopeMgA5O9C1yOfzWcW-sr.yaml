@@ -6,8 +6,8 @@ dns:
   enable: true
   ipv6: false
   nameserver:
-  - https://cloudflare-dns.com/dns-query#SR-user312-phone-线路选择
-  - https://dns.google/dns-query#SR-user312-phone-线路选择
+  - https://1.1.1.1/dns-query#SR-user312-phone-线路选择
+  - https://8.8.8.8/dns-query#SR-user312-phone-线路选择
   respect-rules: true
   default-nameserver:
   - 1.1.1.1
@@ -152,26 +152,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user312-phone-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 41445
-  password: user312_phone:ccc5cac4-e08a-4adf-b4a8-94468df820b2
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user312-phone-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 41447
-  password: user312_phone:ccc5cac4-e08a-4adf-b4a8-94468df820b2
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user312-phone-VLESS-线路3
+- name: 美国-VLESS-线路1
   type: vless
-  server: 38.190.245.60
-  port: 41445
+  server: 45.197.149.226
+  port: 32085
   uuid: ccc5cac4-e08a-4adf-b4a8-94468df820b2
   flow: xtls-rprx-vision
   network: tcp
@@ -182,31 +166,8 @@ proxies:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
     short-id: "45dd756a"
   client-fingerprint: chrome
-  fast-open: true
-- name: SR-user312-phone-VLESS-线路1
-  type: vless
-  server: 45.197.149.41
-  port: 41443
-  uuid: ccc5cac4-e08a-4adf-b4a8-94468df820b2
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "45dd756a"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user312-phone-HY2-线路4
-  type: hysteria2
-  server: 38.190.245.60
-  port: 41443
-  password: user312_phone:ccc5cac4-e08a-4adf-b4a8-94468df820b2
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user312-phone-VLESS-线路4
+  fast-open: false
+- name: 美国-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 41443
@@ -220,17 +181,22 @@ proxies:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
     short-id: "45dd756a"
   client-fingerprint: chrome
-  fast-open: true
+  fast-open: false
+- name: 美国-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 41443
+  password: user312_phone:ccc5cac4-e08a-4adf-b4a8-94468df820b2
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: SR-user312-phone-线路选择
   type: select
   proxies:
-  - SR-user312-phone-VLESS-线路4
-  - SR-user312-phone-VLESS-线路1
-  - SR-user312-phone-HY2-线路3
-  - SR-user312-phone-HY2-线路1
-  - SR-user312-phone-VLESS-线路3
-  - SR-user312-phone-HY2-线路4
+  - 美国-VLESS-线路1
+  - 美国-VLESS-线路2
+  - 美国-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

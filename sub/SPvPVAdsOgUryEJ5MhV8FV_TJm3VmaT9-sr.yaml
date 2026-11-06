@@ -145,69 +145,11 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user158-default-HY2-线路1
-  type: hysteria2
-  server: s1.huhiuh.space
-  port: 24046
-  password: user158:f2467a6e-1b23-4387-a072-81bd034bc57f
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user158-default-VLESS-线路1
+- name: SR-user158-phone-VLESS-线路1
   type: vless
-  server: s1.huhiuh.space
-  port: 24046
-  uuid: f2467a6e-1b23-4387-a072-81bd034bc57f
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "40612bfd"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user158-default-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.17
-  port: 24046
-  password: user158:f2467a6e-1b23-4387-a072-81bd034bc57f
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user158-default-VLESS-线路3
-  type: vless
-  server: 45.197.149.17
-  port: 24046
-  uuid: f2467a6e-1b23-4387-a072-81bd034bc57f
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "40612bfd"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user158-default-HY2-线路4
-  type: hysteria2
-  server: 38.190.245.60
-  port: 24046
-  password: user158:f2467a6e-1b23-4387-a072-81bd034bc57f
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user158-default-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 24046
-  uuid: f2467a6e-1b23-4387-a072-81bd034bc57f
+  server: 45.197.149.226
+  port: 32023
+  uuid: a767ce39-af92-48e9-b058-75f23b4bf378
   flow: xtls-rprx-vision
   network: tcp
   tls: true
@@ -218,16 +160,45 @@ proxies:
     short-id: "40612bfd"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user158-phone-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32046
+  password: user158_phone:a767ce39-af92-48e9-b058-75f23b4bf378
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user158-phone-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
+  port: 24046
+  uuid: a767ce39-af92-48e9-b058-75f23b4bf378
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "40612bfd"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user158-phone-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 24046
+  password: user158_phone:a767ce39-af92-48e9-b058-75f23b4bf378
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - SR-user158-default-VLESS-线路1
-  - SR-user158-default-VLESS-线路4
-  - SR-user158-default-HY2-线路1
-  - SR-user158-default-HY2-线路3
-  - SR-user158-default-VLESS-线路3
-  - SR-user158-default-HY2-线路4
+  - SR-user158-phone-VLESS-线路1
+  - SR-user158-phone-VLESS-线路2
+  - SR-user158-phone-HY2-线路1
+  - SR-user158-phone-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

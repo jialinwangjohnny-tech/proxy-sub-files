@@ -145,25 +145,32 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user013-default-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20003
-  password: user013:47b6de05-cd8d-4083-b1e9-b3be8d2b3027
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user013-default-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20004
-  password: user013:47b6de05-cd8d-4083-b1e9-b3be8d2b3027
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: SR-user013-default-VLESS-线路1
   type: vless
-  server: 45.197.149.41
+  server: 45.197.149.226
+  port: 32061
+  uuid: 47b6de05-cd8d-4083-b1e9-b3be8d2b3027
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: gateway.icloud.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "f4f80bc8"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user013-default-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32061
+  password: user013:47b6de05-cd8d-4083-b1e9-b3be8d2b3027
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user013-default-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
   port: 39089
   uuid: 47b6de05-cd8d-4083-b1e9-b3be8d2b3027
   flow: xtls-rprx-vision
@@ -176,22 +183,7 @@ proxies:
     short-id: "f4f80bc8"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user013-default-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20004
-  uuid: 47b6de05-cd8d-4083-b1e9-b3be8d2b3027
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "f4f80bc8"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user013-default-HY2-线路4
+- name: SR-user013-default-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 39089
@@ -199,31 +191,14 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user013-default-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 39089
-  uuid: 47b6de05-cd8d-4083-b1e9-b3be8d2b3027
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "f4f80bc8"
-  client-fingerprint: chrome
-  fast-open: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user013-default-VLESS-线路1
-  - SR-user013-default-VLESS-线路4
+  - SR-user013-default-VLESS-线路2
   - SR-user013-default-HY2-线路1
-  - SR-user013-default-HY2-线路3
-  - SR-user013-default-VLESS-线路3
-  - SR-user013-default-HY2-线路4
+  - SR-user013-default-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

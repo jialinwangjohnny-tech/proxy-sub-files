@@ -3,6 +3,9 @@ socks-port: 7891
 allow-lan: false
 mode: rule
 log-level: warning
+ipv6: false
+profile:
+  store-selected: true
 dns:
   enable: true
   enhanced-mode: fake-ip
@@ -36,6 +39,7 @@ dns:
   - +.stun.playstation.net
   - +.apple.com
   - +.cdn.apple.com
+  - +.huhiuh.space
 tun:
   enable: true
   stack: mixed
@@ -46,69 +50,11 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国-HY2-线路1
-  type: hysteria2
-  server: s1.huhiuh.space
-  port: 51549
-  password: user189:0603f2c4-b567-49a9-9dea-8f31a92cd823
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-VLESS-线路1
+- name: 美国AT&T-VLESS-线路1
   type: vless
-  server: s1.huhiuh.space
-  port: 51549
-  uuid: 0603f2c4-b567-49a9-9dea-8f31a92cd823
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 6041a2c5
-  client-fingerprint: chrome
-  fast-open: true
-- name: 美国-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.17
-  port: 51549
-  password: user189:0603f2c4-b567-49a9-9dea-8f31a92cd823
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-VLESS-线路3
-  type: vless
-  server: 45.197.149.17
-  port: 51549
-  uuid: 0603f2c4-b567-49a9-9dea-8f31a92cd823
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 6041a2c5
-  client-fingerprint: chrome
-  fast-open: true
-- name: 美国AT&T-HY2-线路4
-  type: hysteria2
-  server: 38.190.245.60
-  port: 51549
-  password: user189:0603f2c4-b567-49a9-9dea-8f31a92cd823
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国AT&T-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 51549
-  uuid: 0603f2c4-b567-49a9-9dea-8f31a92cd823
+  server: 45.197.149.226
+  port: 32024
+  uuid: d9cbfe37-e6a4-4448-97d1-80a0e3f595df
   flow: xtls-rprx-vision
   network: tcp
   tls: true
@@ -116,39 +62,72 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 6041a2c5
+    short-id: "6041a2c5"
   client-fingerprint: chrome
   fast-open: true
+- name: 美国AT&T-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32076
+  password: user189_phone:d9cbfe37-e6a4-4448-97d1-80a0e3f595df
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国AT&T-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
+  port: 51549
+  uuid: d9cbfe37-e6a4-4448-97d1-80a0e3f595df
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "6041a2c5"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 美国AT&T-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 51549
+  password: user189_phone:d9cbfe37-e6a4-4448-97d1-80a0e3f595df
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 线路选择
   type: select
   proxies:
   - 自动切换
-  - 美国-HY2-线路1
-  - 美国-VLESS-线路1
-  - 美国-HY2-线路3
-  - 美国-VLESS-线路3
-  - 美国AT&T-HY2-线路4
-  - 美国AT&T-VLESS-线路4
+  - 美国AT&T-HY2-线路1
+  - 美国AT&T-VLESS-线路1
+  - 美国AT&T-HY2-线路2
+  - 美国AT&T-VLESS-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
-  - 美国-HY2-线路1
-  - 美国-VLESS-线路1
-  - 美国-HY2-线路3
-  - 美国-VLESS-线路3
-  - 美国AT&T-HY2-线路4
-  - 美国AT&T-VLESS-线路4
-  interval: 5
+  - 美国AT&T-HY2-线路1
+  - 美国AT&T-VLESS-线路1
+  - 美国AT&T-HY2-线路2
+  - 美国AT&T-VLESS-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
+- DOMAIN-SUFFIX,stun.playstation.net,DIRECT
+- DST-PORT,3478,REJECT
+- DST-PORT,19302,REJECT
+- DST-PORT,19305,REJECT
+- DST-PORT,5349,REJECT
+- DOMAIN-KEYWORD,stun,REJECT
+- DOMAIN-KEYWORD,turn,REJECT
+- DOMAIN-SUFFIX,huhiuh.space,DIRECT
 - GEOSITE,private,DIRECT
 - GEOSITE,cn,DIRECT
+- GEOSITE,geolocation-!cn,线路选择
 - GEOIP,private,DIRECT
 - GEOIP,CN,DIRECT
 - MATCH,线路选择
-profile:
-  store-selected: true

@@ -145,69 +145,11 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user195-default-HY2-线路1
-  type: hysteria2
-  server: s1.huhiuh.space
-  port: 36589
-  password: user195:595dfbc4-0e1e-4311-8657-45e305ef5bfc
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user195-default-VLESS-线路1
+- name: SR-user195-phone-VLESS-线路1
   type: vless
-  server: s1.huhiuh.space
-  port: 36589
-  uuid: 595dfbc4-0e1e-4311-8657-45e305ef5bfc
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: download.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "ce811752"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user195-default-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.17
-  port: 36589
-  password: user195:595dfbc4-0e1e-4311-8657-45e305ef5bfc
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user195-default-VLESS-线路3
-  type: vless
-  server: 45.197.149.17
-  port: 36589
-  uuid: 595dfbc4-0e1e-4311-8657-45e305ef5bfc
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: download.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "ce811752"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user195-default-HY2-线路4
-  type: hysteria2
-  server: 38.190.245.60
-  port: 36589
-  password: user195:595dfbc4-0e1e-4311-8657-45e305ef5bfc
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user195-default-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 36589
-  uuid: 595dfbc4-0e1e-4311-8657-45e305ef5bfc
+  server: 45.197.149.226
+  port: 32025
+  uuid: 1e72d8b9-1b09-4d99-a87c-d749c53ba158
   flow: xtls-rprx-vision
   network: tcp
   tls: true
@@ -218,16 +160,45 @@ proxies:
     short-id: "ce811752"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user195-phone-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32060
+  password: user195_phone:1e72d8b9-1b09-4d99-a87c-d749c53ba158
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user195-phone-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
+  port: 36589
+  uuid: 1e72d8b9-1b09-4d99-a87c-d749c53ba158
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "ce811752"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user195-phone-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 36589
+  password: user195_phone:1e72d8b9-1b09-4d99-a87c-d749c53ba158
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - SR-user195-default-VLESS-线路1
-  - SR-user195-default-VLESS-线路4
-  - SR-user195-default-HY2-线路1
-  - SR-user195-default-HY2-线路3
-  - SR-user195-default-VLESS-线路3
-  - SR-user195-default-HY2-线路4
+  - SR-user195-phone-VLESS-线路1
+  - SR-user195-phone-VLESS-线路2
+  - SR-user195-phone-HY2-线路1
+  - SR-user195-phone-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

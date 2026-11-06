@@ -48,25 +48,32 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 新加坡-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20076
-  password: user303_phone:76269aad-3584-48fe-873e-cd482b6ffd89
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 新加坡-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20077
-  password: user303_phone:76269aad-3584-48fe-873e-cd482b6ffd89
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 新加坡-VLESS-线路1
   type: vless
-  server: 45.197.149.41
+  server: 45.197.149.226
+  port: 32072
+  uuid: 76269aad-3584-48fe-873e-cd482b6ffd89
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: learn.microsoft.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "437852a8"
+  client-fingerprint: firefox
+  fast-open: true
+- name: 新加坡-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32072
+  password: user303_phone:76269aad-3584-48fe-873e-cd482b6ffd89
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 新加坡-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
   port: 46541
   uuid: 76269aad-3584-48fe-873e-cd482b6ffd89
   flow: xtls-rprx-vision
@@ -79,22 +86,7 @@ proxies:
     short-id: "437852a8"
   client-fingerprint: firefox
   fast-open: true
-- name: 新加坡-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20077
-  uuid: 76269aad-3584-48fe-873e-cd482b6ffd89
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: learn.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "437852a8"
-  client-fingerprint: firefox
-  fast-open: true
-- name: 新加坡-HY2-线路4
+- name: 新加坡-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 46541
@@ -102,46 +94,26 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 新加坡-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 46541
-  uuid: 76269aad-3584-48fe-873e-cd482b6ffd89
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: learn.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "437852a8"
-  client-fingerprint: firefox
-  fast-open: true
 proxy-groups:
 - name: 线路选择
   type: select
   proxies:
   - 自动切换
   - 新加坡-HY2-线路1
-  - 新加坡-HY2-线路3
   - 新加坡-VLESS-线路1
-  - 新加坡-VLESS-线路3
-  - 新加坡-HY2-线路4
-  - 新加坡-VLESS-线路4
+  - 新加坡-HY2-线路2
+  - 新加坡-VLESS-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
   - 新加坡-HY2-线路1
-  - 新加坡-HY2-线路3
   - 新加坡-VLESS-线路1
-  - 新加坡-VLESS-线路3
-  - 新加坡-HY2-线路4
-  - 新加坡-VLESS-线路4
-  interval: 5
+  - 新加坡-HY2-线路2
+  - 新加坡-VLESS-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT

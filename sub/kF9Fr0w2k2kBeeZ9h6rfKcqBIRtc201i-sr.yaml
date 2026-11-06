@@ -6,15 +6,15 @@ dns:
   enable: true
   ipv6: false
   nameserver:
-  - https://cloudflare-dns.com/dns-query#SR-user253-phone-线路选择
-  - https://dns.google/dns-query#SR-user253-phone-线路选择
+  - https://1.1.1.1/dns-query#SR-user253-phone-线路选择
+  - https://8.8.8.8/dns-query#SR-user253-phone-线路选择
   respect-rules: true
   default-nameserver:
-  - 1.1.1.1
-  - 8.8.8.8
+  - 223.5.5.5
+  - 119.29.29.29
   proxy-server-nameserver:
-  - 1.1.1.1
-  - 8.8.8.8
+  - 223.5.5.5
+  - 119.29.29.29
   nameserver-policy:
     +.weixin.qq.com:
     - https://dns.alidns.com/dns-query#DIRECT
@@ -70,6 +70,9 @@ dns:
     +.tenpay.com:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
+    +.douyin.com:
+    - https://dns.alidns.com/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
     +.btrace.qq.com:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
@@ -107,9 +110,6 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
     +.yun-hl.3g.qq.com:
-    - https://dns.alidns.com/dns-query#DIRECT
-    - https://doh.pub/dns-query#DIRECT
-    +.douyin.com:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
     +.lf3-static.bytednsdoc.com:
@@ -152,25 +152,24 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: 美国-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 41449
-  password: user253_phone:4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 41451
-  password: user253_phone:4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国-VLESS-线路1
   type: vless
-  server: 45.197.149.41
+  server: 45.197.149.226
+  port: 32082
+  uuid: 4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "cda9c2ca"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 美国-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
   port: 55136
   uuid: 4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
   flow: xtls-rprx-vision
@@ -183,22 +182,7 @@ proxies:
     short-id: "cda9c2ca"
   client-fingerprint: chrome
   fast-open: true
-- name: 美国-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 41451
-  uuid: 4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "cda9c2ca"
-  client-fingerprint: chrome
-  fast-open: true
-- name: 美国-HY2-线路4
+- name: 美国-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 55136
@@ -206,31 +190,13 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 55136
-  uuid: 4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "cda9c2ca"
-  client-fingerprint: chrome
-  fast-open: true
 proxy-groups:
 - name: SR-user253-phone-线路选择
   type: select
   proxies:
-  - 美国-VLESS-线路4
+  - 美国-VLESS-线路2
   - 美国-VLESS-线路1
-  - 美国-HY2-线路1
-  - 美国-HY2-线路3
-  - 美国-VLESS-线路3
-  - 美国-HY2-线路4
+  - 美国-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
@@ -254,6 +220,7 @@ rules:
 - DOMAIN-SUFFIX,apd-pcdnwxlogin.teg.tencent-cloud.net,DIRECT
 - DOMAIN-SUFFIX,wechatpay.com,DIRECT
 - DOMAIN-SUFFIX,tenpay.com,DIRECT
+- DOMAIN-SUFFIX,douyin.com,DIRECT
 - DOMAIN-SUFFIX,btrace.qq.com,DIRECT
 - DOMAIN-SUFFIX,dldir1.qq.com,DIRECT
 - DOMAIN-SUFFIX,slife.xy-asia.com,DIRECT
@@ -267,7 +234,6 @@ rules:
 - DOMAIN-SUFFIX,wechatos.net,DIRECT
 - DOMAIN-SUFFIX,weixinsxy.com,DIRECT
 - DOMAIN-SUFFIX,yun-hl.3g.qq.com,DIRECT
-- DOMAIN-SUFFIX,douyin.com,DIRECT
 - DOMAIN-SUFFIX,lf3-static.bytednsdoc.com,DIRECT
 - DOMAIN-SUFFIX,v5-dy-o-abtest.zjcdn.com,DIRECT
 - DOMAIN-SUFFIX,amemv.com,DIRECT

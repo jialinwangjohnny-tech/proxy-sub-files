@@ -145,25 +145,32 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user334-windows-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20093
-  password: user334_windows:108f48b8-3105-44d9-be69-069ac29db391
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user334-windows-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20094
-  password: user334_windows:108f48b8-3105-44d9-be69-069ac29db391
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: SR-user334-windows-VLESS-线路1
   type: vless
-  server: 45.197.149.41
+  server: 45.197.149.226
+  port: 32058
+  uuid: 108f48b8-3105-44d9-be69-069ac29db391
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "c7653849"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user334-windows-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32058
+  password: user334_windows:108f48b8-3105-44d9-be69-069ac29db391
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user334-windows-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
   port: 32838
   uuid: 108f48b8-3105-44d9-be69-069ac29db391
   flow: xtls-rprx-vision
@@ -176,22 +183,7 @@ proxies:
     short-id: "c7653849"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user334-windows-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20094
-  uuid: 108f48b8-3105-44d9-be69-069ac29db391
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "c7653849"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user334-windows-HY2-线路4
+- name: SR-user334-windows-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 32838
@@ -199,31 +191,14 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user334-windows-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 32838
-  uuid: 108f48b8-3105-44d9-be69-069ac29db391
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "c7653849"
-  client-fingerprint: chrome
-  fast-open: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user334-windows-VLESS-线路1
-  - SR-user334-windows-VLESS-线路4
+  - SR-user334-windows-VLESS-线路2
   - SR-user334-windows-HY2-线路1
-  - SR-user334-windows-HY2-线路3
-  - SR-user334-windows-VLESS-线路3
-  - SR-user334-windows-HY2-线路4
+  - SR-user334-windows-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

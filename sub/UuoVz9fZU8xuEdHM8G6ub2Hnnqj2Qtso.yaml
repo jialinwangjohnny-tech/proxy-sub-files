@@ -48,25 +48,32 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20029
-  password: user178_mac:0792f947-5f60-4c7b-88e1-ae8b932c3616
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20030
-  password: user178_mac:0792f947-5f60-4c7b-88e1-ae8b932c3616
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国-VLESS-线路1
   type: vless
-  server: 45.197.149.41
+  server: 45.197.149.226
+  port: 32075
+  uuid: 0792f947-5f60-4c7b-88e1-ae8b932c3616
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "92f7d7d8"
+  client-fingerprint: edge
+  fast-open: true
+- name: 美国-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32075
+  password: user178_mac:0792f947-5f60-4c7b-88e1-ae8b932c3616
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国洛杉矶-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
   port: 51468
   uuid: 0792f947-5f60-4c7b-88e1-ae8b932c3616
   flow: xtls-rprx-vision
@@ -79,22 +86,7 @@ proxies:
     short-id: "92f7d7d8"
   client-fingerprint: edge
   fast-open: true
-- name: 美国-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20030
-  uuid: 0792f947-5f60-4c7b-88e1-ae8b932c3616
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "92f7d7d8"
-  client-fingerprint: edge
-  fast-open: true
-- name: 美国洛杉矶-HY2-线路4
+- name: 美国洛杉矶-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 51468
@@ -102,46 +94,26 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国洛杉矶-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 51468
-  uuid: 0792f947-5f60-4c7b-88e1-ae8b932c3616
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "92f7d7d8"
-  client-fingerprint: edge
-  fast-open: true
 proxy-groups:
 - name: 线路选择
   type: select
   proxies:
   - 自动切换
   - 美国-HY2-线路1
-  - 美国-HY2-线路3
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路3
-  - 美国洛杉矶-HY2-线路4
-  - 美国洛杉矶-VLESS-线路4
+  - 美国洛杉矶-HY2-线路2
+  - 美国洛杉矶-VLESS-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
   - 美国-HY2-线路1
-  - 美国-HY2-线路3
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路3
-  - 美国洛杉矶-HY2-线路4
-  - 美国洛杉矶-VLESS-线路4
-  interval: 5
+  - 美国洛杉矶-HY2-线路2
+  - 美国洛杉矶-VLESS-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT

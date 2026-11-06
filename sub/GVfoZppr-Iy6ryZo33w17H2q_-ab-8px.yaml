@@ -48,26 +48,10 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国洛杉矶-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20034
-  password: user195_phone:1e72d8b9-1b09-4d99-a87c-d749c53ba158
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国洛杉矶-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20036
-  password: user195_phone:1e72d8b9-1b09-4d99-a87c-d749c53ba158
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国洛杉矶-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 20035
+  server: 45.197.149.226
+  port: 32025
   uuid: 1e72d8b9-1b09-4d99-a87c-d749c53ba158
   flow: xtls-rprx-vision
   network: tcp
@@ -79,10 +63,18 @@ proxies:
     short-id: "ce811752"
   client-fingerprint: chrome
   fast-open: true
-- name: 美国洛杉矶-VLESS-线路3
+- name: 美国洛杉矶-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32060
+  password: user195_phone:1e72d8b9-1b09-4d99-a87c-d749c53ba158
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 美国洛杉矶-VLESS-线路2
   type: vless
   server: 38.190.245.60
-  port: 20036
+  port: 36589
   uuid: 1e72d8b9-1b09-4d99-a87c-d749c53ba158
   flow: xtls-rprx-vision
   network: tcp
@@ -94,7 +86,7 @@ proxies:
     short-id: "ce811752"
   client-fingerprint: chrome
   fast-open: true
-- name: 美国洛杉矶-HY2-线路4
+- name: 美国洛杉矶-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 36589
@@ -102,46 +94,26 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国洛杉矶-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 36589
-  uuid: 1e72d8b9-1b09-4d99-a87c-d749c53ba158
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "ce811752"
-  client-fingerprint: chrome
-  fast-open: true
 proxy-groups:
 - name: 线路选择
   type: select
   proxies:
   - 自动切换
   - 美国洛杉矶-HY2-线路1
-  - 美国洛杉矶-HY2-线路3
   - 美国洛杉矶-VLESS-线路1
-  - 美国洛杉矶-VLESS-线路3
-  - 美国洛杉矶-HY2-线路4
-  - 美国洛杉矶-VLESS-线路4
+  - 美国洛杉矶-HY2-线路2
+  - 美国洛杉矶-VLESS-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
   - 美国洛杉矶-HY2-线路1
-  - 美国洛杉矶-HY2-线路3
   - 美国洛杉矶-VLESS-线路1
-  - 美国洛杉矶-VLESS-线路3
-  - 美国洛杉矶-HY2-线路4
-  - 美国洛杉矶-VLESS-线路4
-  interval: 5
+  - 美国洛杉矶-HY2-线路2
+  - 美国洛杉矶-VLESS-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT

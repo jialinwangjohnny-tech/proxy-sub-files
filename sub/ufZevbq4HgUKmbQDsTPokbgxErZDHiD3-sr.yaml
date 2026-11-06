@@ -145,69 +145,11 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user163-default-HY2-线路1
-  type: hysteria2
-  server: s1.huhiuh.space
-  port: 30923
-  password: user163:ff847696-5747-42fd-9c28-b1e13eba220c
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user163-default-VLESS-线路1
+- name: 🇺🇸 美国纽约-阿鹏国芯-手机-VLESS-线路1
   type: vless
-  server: s1.huhiuh.space
-  port: 30923
-  uuid: ff847696-5747-42fd-9c28-b1e13eba220c
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.samsung.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "eaed8fa2"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user163-default-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.17
-  port: 30923
-  password: user163:ff847696-5747-42fd-9c28-b1e13eba220c
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user163-default-VLESS-线路3
-  type: vless
-  server: 45.197.149.17
-  port: 30923
-  uuid: ff847696-5747-42fd-9c28-b1e13eba220c
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.samsung.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "eaed8fa2"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user163-default-HY2-线路4
-  type: hysteria2
-  server: 38.190.245.60
-  port: 30923
-  password: user163:ff847696-5747-42fd-9c28-b1e13eba220c
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user163-default-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 30923
-  uuid: ff847696-5747-42fd-9c28-b1e13eba220c
+  server: 45.197.149.226
+  port: 32054
+  uuid: 38958bc2-0f71-4433-83ba-e58e8e2bf9db
   flow: xtls-rprx-vision
   network: tcp
   tls: true
@@ -218,16 +160,45 @@ proxies:
     short-id: "eaed8fa2"
   client-fingerprint: chrome
   fast-open: true
+- name: 🇺🇸 美国纽约-阿鹏国芯-手机-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32054
+  password: user163_phone:38958bc2-0f71-4433-83ba-e58e8e2bf9db
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸 美国纽约-阿鹏国芯-手机-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
+  port: 30923
+  uuid: 38958bc2-0f71-4433-83ba-e58e8e2bf9db
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "eaed8fa2"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 🇺🇸 美国纽约-阿鹏国芯-手机-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 30923
+  password: user163_phone:38958bc2-0f71-4433-83ba-e58e8e2bf9db
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - SR-user163-default-VLESS-线路1
-  - SR-user163-default-VLESS-线路4
-  - SR-user163-default-HY2-线路1
-  - SR-user163-default-HY2-线路3
-  - SR-user163-default-VLESS-线路3
-  - SR-user163-default-HY2-线路4
+  - 🇺🇸 美国纽约-阿鹏国芯-手机-VLESS-线路1
+  - 🇺🇸 美国纽约-阿鹏国芯-手机-VLESS-线路2
+  - 🇺🇸 美国纽约-阿鹏国芯-手机-HY2-线路1
+  - 🇺🇸 美国纽约-阿鹏国芯-手机-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

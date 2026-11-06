@@ -145,18 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user330-mac-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20092
-  password: user330_mac:c97e9b5d-e3cb-490e-b0e3-6ff91f0353fb
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: SR-user330-mac-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 45452
+  server: 45.197.149.226
+  port: 32071
   uuid: c97e9b5d-e3cb-490e-b0e3-6ff91f0353fb
   flow: xtls-rprx-vision
   network: tcp
@@ -168,15 +160,15 @@ proxies:
     short-id: "2d8806ee"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user330-mac-HY2-线路4
+- name: SR-user330-mac-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 45452
+  server: 45.197.149.226
+  port: 32071
   password: user330_mac:c97e9b5d-e3cb-490e-b0e3-6ff91f0353fb
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user330-mac-VLESS-线路4
+- name: SR-user330-mac-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 45452
@@ -191,14 +183,22 @@ proxies:
     short-id: "2d8806ee"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user330-mac-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 45452
+  password: user330_mac:c97e9b5d-e3cb-490e-b0e3-6ff91f0353fb
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user330-mac-VLESS-线路1
-  - SR-user330-mac-VLESS-线路4
+  - SR-user330-mac-VLESS-线路2
   - SR-user330-mac-HY2-线路1
-  - SR-user330-mac-HY2-线路4
+  - SR-user330-mac-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

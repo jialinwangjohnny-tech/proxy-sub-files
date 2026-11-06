@@ -48,25 +48,32 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: Salt Lake City, US-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20013
-  password: user120_mac:90283726-e426-44ec-a6a1-30aa7b0f002f
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: Salt Lake City, US-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20014
-  password: user120_mac:90283726-e426-44ec-a6a1-30aa7b0f002f
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: Salt Lake City, US-VLESS-线路1
   type: vless
-  server: 45.197.149.41
+  server: 45.197.149.226
+  port: 32077
+  uuid: 90283726-e426-44ec-a6a1-30aa7b0f002f
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: gateway.icloud.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "dde9f125"
+  client-fingerprint: edge
+  fast-open: true
+- name: Salt Lake City, US-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32077
+  password: user120_mac:90283726-e426-44ec-a6a1-30aa7b0f002f
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: Salt Lake City, US-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
   port: 51748
   uuid: 90283726-e426-44ec-a6a1-30aa7b0f002f
   flow: xtls-rprx-vision
@@ -79,22 +86,7 @@ proxies:
     short-id: "dde9f125"
   client-fingerprint: edge
   fast-open: true
-- name: Salt Lake City, US-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20014
-  uuid: 90283726-e426-44ec-a6a1-30aa7b0f002f
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "dde9f125"
-  client-fingerprint: edge
-  fast-open: true
-- name: Salt Lake City, US-HY2-线路4
+- name: Salt Lake City, US-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 51748
@@ -102,46 +94,26 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: Salt Lake City, US-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 51748
-  uuid: 90283726-e426-44ec-a6a1-30aa7b0f002f
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "dde9f125"
-  client-fingerprint: edge
-  fast-open: true
 proxy-groups:
 - name: 线路选择
   type: select
   proxies:
   - 自动切换
   - Salt Lake City, US-HY2-线路1
-  - Salt Lake City, US-HY2-线路3
   - Salt Lake City, US-VLESS-线路1
-  - Salt Lake City, US-VLESS-线路3
-  - Salt Lake City, US-HY2-线路4
-  - Salt Lake City, US-VLESS-线路4
+  - Salt Lake City, US-HY2-线路2
+  - Salt Lake City, US-VLESS-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
   - Salt Lake City, US-HY2-线路1
-  - Salt Lake City, US-HY2-线路3
   - Salt Lake City, US-VLESS-线路1
-  - Salt Lake City, US-VLESS-线路3
-  - Salt Lake City, US-HY2-线路4
-  - Salt Lake City, US-VLESS-线路4
-  interval: 5
+  - Salt Lake City, US-HY2-线路2
+  - Salt Lake City, US-VLESS-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT

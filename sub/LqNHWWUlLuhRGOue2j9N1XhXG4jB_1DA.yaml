@@ -48,26 +48,10 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国-HY2-线路1
-  type: hysteria2
-  server: 45.197.149.41
-  port: 58780
-  password: user327_mac:4e486943-6dc2-47a6-9646-7bbdfde9114b
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.17
-  port: 58780
-  password: user327_mac:4e486943-6dc2-47a6-9646-7bbdfde9114b
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 58780
+  server: 45.197.149.226
+  port: 32084
   uuid: 4e486943-6dc2-47a6-9646-7bbdfde9114b
   flow: xtls-rprx-vision
   network: tcp
@@ -76,12 +60,20 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 60ccbbc9
+    short-id: "60ccbbc9"
   client-fingerprint: firefox
   fast-open: true
-- name: 美国-VLESS-线路3
+- name: 美国-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32084
+  password: user327_mac:4e486943-6dc2-47a6-9646-7bbdfde9114b
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: Los Angeles, US-VLESS-线路2
   type: vless
-  server: 45.197.149.17
+  server: 38.190.245.60
   port: 58780
   uuid: 4e486943-6dc2-47a6-9646-7bbdfde9114b
   flow: xtls-rprx-vision
@@ -91,10 +83,10 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 60ccbbc9
+    short-id: "60ccbbc9"
   client-fingerprint: firefox
   fast-open: true
-- name: Los Angeles, US-HY2-线路4
+- name: Los Angeles, US-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 58780
@@ -102,46 +94,26 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: Los Angeles, US-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 58780
-  uuid: 4e486943-6dc2-47a6-9646-7bbdfde9114b
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: 60ccbbc9
-  client-fingerprint: firefox
-  fast-open: true
 proxy-groups:
 - name: 线路选择
   type: select
   proxies:
   - 自动切换
   - 美国-HY2-线路1
-  - 美国-HY2-线路3
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路3
-  - Los Angeles, US-HY2-线路4
-  - Los Angeles, US-VLESS-线路4
+  - Los Angeles, US-HY2-线路2
+  - Los Angeles, US-VLESS-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
   - 美国-HY2-线路1
-  - 美国-HY2-线路3
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路3
-  - Los Angeles, US-HY2-线路4
-  - Los Angeles, US-VLESS-线路4
-  interval: 5
+  - Los Angeles, US-HY2-线路2
+  - Los Angeles, US-VLESS-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT

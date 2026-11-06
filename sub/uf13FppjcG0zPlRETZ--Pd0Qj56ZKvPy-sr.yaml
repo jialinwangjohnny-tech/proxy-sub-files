@@ -145,41 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user286-windows-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20064
-  password: user286_windows:08704a1a-1f54-4e50-8d34-c5445e0fbb6e
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user286-windows-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20062
-  password: user286_windows:08704a1a-1f54-4e50-8d34-c5445e0fbb6e
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user286-windows-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20064
-  uuid: 08704a1a-1f54-4e50-8d34-c5445e0fbb6e
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: learn.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "63694fd8"
-  client-fingerprint: chrome
-  fast-open: true
 - name: SR-user286-windows-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 20063
+  server: 45.197.149.226
+  port: 32031
   uuid: 08704a1a-1f54-4e50-8d34-c5445e0fbb6e
   flow: xtls-rprx-vision
   network: tcp
@@ -191,15 +160,15 @@ proxies:
     short-id: "63694fd8"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user286-windows-HY2-线路4
+- name: SR-user286-windows-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 12537
+  server: 45.197.149.226
+  port: 32007
   password: user286_windows:08704a1a-1f54-4e50-8d34-c5445e0fbb6e
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user286-windows-VLESS-线路4
+- name: SR-user286-windows-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 12537
@@ -214,16 +183,22 @@ proxies:
     short-id: "63694fd8"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user286-windows-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 12537
+  password: user286_windows:08704a1a-1f54-4e50-8d34-c5445e0fbb6e
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user286-windows-VLESS-线路1
-  - SR-user286-windows-VLESS-线路4
-  - SR-user286-windows-HY2-线路3
+  - SR-user286-windows-VLESS-线路2
   - SR-user286-windows-HY2-线路1
-  - SR-user286-windows-VLESS-线路3
-  - SR-user286-windows-HY2-线路4
+  - SR-user286-windows-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

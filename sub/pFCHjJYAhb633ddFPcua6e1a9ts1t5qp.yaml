@@ -48,41 +48,10 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20012
-  password: user056_phone:441cb537-f89e-4d62-986d-826aae0102e8
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20010
-  password: user056_phone:441cb537-f89e-4d62-986d-826aae0102e8
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20012
-  uuid: 441cb537-f89e-4d62-986d-826aae0102e8
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: apple.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "fe08d36e"
-  client-fingerprint: edge
-  fast-open: true
 - name: 美国-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 20011
+  server: 45.197.149.226
+  port: 32019
   uuid: 441cb537-f89e-4d62-986d-826aae0102e8
   flow: xtls-rprx-vision
   network: tcp
@@ -94,15 +63,15 @@ proxies:
     short-id: "fe08d36e"
   client-fingerprint: edge
   fast-open: true
-- name: New York, US-HY2-线路4
+- name: 美国-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 12003
+  server: 45.197.149.226
+  port: 32005
   password: user056_phone:441cb537-f89e-4d62-986d-826aae0102e8
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: New York, US-VLESS-线路4
+- name: New York, US-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 12003
@@ -117,31 +86,34 @@ proxies:
     short-id: "fe08d36e"
   client-fingerprint: edge
   fast-open: true
+- name: New York, US-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 12003
+  password: user056_phone:441cb537-f89e-4d62-986d-826aae0102e8
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 线路选择
   type: select
   proxies:
   - 自动切换
-  - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-VLESS-线路3
   - 美国-VLESS-线路1
-  - New York, US-HY2-线路4
-  - New York, US-VLESS-线路4
+  - New York, US-HY2-线路2
+  - New York, US-VLESS-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
-  - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-VLESS-线路3
   - 美国-VLESS-线路1
-  - New York, US-HY2-线路4
-  - New York, US-VLESS-线路4
-  interval: 5
+  - New York, US-HY2-线路2
+  - New York, US-VLESS-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT

@@ -50,8 +50,8 @@ tun:
 proxies:
 - name: 美国-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 31462
+  server: 45.197.149.226
+  port: 32056
   uuid: 29fe161c-024d-4fca-a59e-f1aba49a163a
   flow: xtls-rprx-vision
   network: tcp
@@ -63,22 +63,7 @@ proxies:
     short-id: "d8b0c03d"
   client-fingerprint: edge
   fast-open: true
-- name: 美国-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20039
-  uuid: 29fe161c-024d-4fca-a59e-f1aba49a163a
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: learn.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "d8b0c03d"
-  client-fingerprint: edge
-  fast-open: true
-- name: New York, US-VLESS-线路4
+- name: New York, US-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 31462
@@ -99,19 +84,16 @@ proxy-groups:
   proxies:
   - 自动切换
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路3
-  - New York, US-VLESS-线路4
+  - New York, US-VLESS-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
   - 美国-VLESS-线路1
-  - 美国-VLESS-线路3
-  - New York, US-VLESS-线路4
-  interval: 5
+  - New York, US-VLESS-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT

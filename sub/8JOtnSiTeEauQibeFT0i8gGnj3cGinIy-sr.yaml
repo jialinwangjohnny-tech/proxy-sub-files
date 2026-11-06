@@ -145,26 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user022-default-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20005
-  password: user022:a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user022-default-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20007
-  password: user022:a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: SR-user022-default-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 20006
+  server: 45.197.149.226
+  port: 32018
   uuid: a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   flow: xtls-rprx-vision
   network: tcp
@@ -176,10 +160,18 @@ proxies:
     short-id: "3825fcff"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user022-default-VLESS-线路3
+- name: SR-user022-default-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32067
+  password: user022:a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user022-default-VLESS-线路2
   type: vless
   server: 38.190.245.60
-  port: 20007
+  port: 41582
   uuid: a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   flow: xtls-rprx-vision
   network: tcp
@@ -191,7 +183,7 @@ proxies:
     short-id: "3825fcff"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user022-default-HY2-线路4
+- name: SR-user022-default-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 41582
@@ -199,31 +191,14 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user022-default-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 41582
-  uuid: a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "3825fcff"
-  client-fingerprint: chrome
-  fast-open: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - SR-user022-default-VLESS-线路4
+  - SR-user022-default-VLESS-线路2
   - SR-user022-default-VLESS-线路1
   - SR-user022-default-HY2-线路1
-  - SR-user022-default-HY2-线路3
-  - SR-user022-default-VLESS-线路3
-  - SR-user022-default-HY2-线路4
+  - SR-user022-default-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

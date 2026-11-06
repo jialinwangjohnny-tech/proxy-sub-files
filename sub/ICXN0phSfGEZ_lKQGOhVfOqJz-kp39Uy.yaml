@@ -48,41 +48,10 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20044
-  password: user258_windows:7b9d6b95-a45a-419b-b420-d786eeeb9d3c
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20042
-  password: user258_windows:7b9d6b95-a45a-419b-b420-d786eeeb9d3c
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20044
-  uuid: 7b9d6b95-a45a-419b-b420-d786eeeb9d3c
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "b3862996"
-  client-fingerprint: edge
-  fast-open: true
 - name: 美国-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 20043
+  server: 45.197.149.226
+  port: 32026
   uuid: 7b9d6b95-a45a-419b-b420-d786eeeb9d3c
   flow: xtls-rprx-vision
   network: tcp
@@ -94,15 +63,15 @@ proxies:
     short-id: "b3862996"
   client-fingerprint: edge
   fast-open: true
-- name: 美国-HY2-线路4
+- name: 美国-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 44712
+  server: 45.197.149.226
+  port: 32069
   password: user258_windows:7b9d6b95-a45a-419b-b420-d786eeeb9d3c
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国-VLESS-线路4
+- name: 美国-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 44712
@@ -117,31 +86,34 @@ proxies:
     short-id: "b3862996"
   client-fingerprint: edge
   fast-open: true
+- name: 美国-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 44712
+  password: user258_windows:7b9d6b95-a45a-419b-b420-d786eeeb9d3c
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 线路选择
   type: select
   proxies:
   - 自动切换
-  - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-VLESS-线路3
   - 美国-VLESS-线路1
-  - 美国-HY2-线路4
-  - 美国-VLESS-线路4
+  - 美国-HY2-线路2
+  - 美国-VLESS-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
-  - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-VLESS-线路3
   - 美国-VLESS-线路1
-  - 美国-HY2-线路4
-  - 美国-VLESS-线路4
-  interval: 5
+  - 美国-HY2-线路2
+  - 美国-VLESS-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT

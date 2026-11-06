@@ -50,18 +50,10 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国华盛顿-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20114
-  password: user346_windows:7de68156-6ef2-4bcd-956f-84b286e73719
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: 美国华盛顿-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 25126
+  server: 45.197.149.226
+  port: 32050
   uuid: 7de68156-6ef2-4bcd-956f-84b286e73719
   flow: xtls-rprx-vision
   network: tcp
@@ -73,15 +65,15 @@ proxies:
     short-id: "2309279e"
   client-fingerprint: chrome
   fast-open: true
-- name: 美国华盛顿-HY2-线路4
+- name: 美国华盛顿-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 25126
+  server: 45.197.149.226
+  port: 32050
   password: user346_windows:7de68156-6ef2-4bcd-956f-84b286e73719
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 美国华盛顿-VLESS-线路4
+- name: 美国华盛顿-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 25126
@@ -96,6 +88,14 @@ proxies:
     short-id: "2309279e"
   client-fingerprint: chrome
   fast-open: true
+- name: 美国华盛顿-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 25126
+  password: user346_windows:7de68156-6ef2-4bcd-956f-84b286e73719
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 线路选择
   type: select
@@ -103,20 +103,19 @@ proxy-groups:
   - 自动切换
   - 美国华盛顿-HY2-线路1
   - 美国华盛顿-VLESS-线路1
-  - 美国华盛顿-HY2-线路4
-  - 美国华盛顿-VLESS-线路4
+  - 美国华盛顿-HY2-线路2
+  - 美国华盛顿-VLESS-线路2
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
   - 美国华盛顿-HY2-线路1
   - 美国华盛顿-VLESS-线路1
-  - 美国华盛顿-HY2-线路4
-  - 美国华盛顿-VLESS-线路4
-  interval: 5
+  - 美国华盛顿-HY2-线路2
+  - 美国华盛顿-VLESS-线路2
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT

@@ -48,41 +48,10 @@ tun:
   - any:53
   - tcp://any:53
 proxies:
-- name: 美国-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.17
-  port: 21100
-  password: user276_mac:c928e4a9-d4cf-46f9-b928-1a77369a1fe2
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-HY2-线路1
-  type: hysteria2
-  server: 45.197.149.41
-  port: 21100
-  password: user276_mac:c928e4a9-d4cf-46f9-b928-1a77369a1fe2
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: 美国-VLESS-线路3
-  type: vless
-  server: 45.197.149.17
-  port: 21100
-  uuid: c928e4a9-d4cf-46f9-b928-1a77369a1fe2
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: e8703703
-  client-fingerprint: firefox
-  fast-open: true
 - name: 美国-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 21100
+  server: 45.197.149.226
+  port: 32043
   uuid: c928e4a9-d4cf-46f9-b928-1a77369a1fe2
   flow: xtls-rprx-vision
   network: tcp
@@ -91,30 +60,33 @@ proxies:
   servername: gateway.icloud.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: e8703703
+    short-id: "e8703703"
   client-fingerprint: firefox
   fast-open: true
+- name: 美国-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32043
+  password: user276_mac:c928e4a9-d4cf-46f9-b928-1a77369a1fe2
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 线路选择
   type: select
   proxies:
   - 自动切换
-  - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-VLESS-线路3
   - 美国-VLESS-线路1
 - name: 自动切换
-  type: url-test
+  type: fallback
   proxies:
-  - 美国-HY2-线路3
   - 美国-HY2-线路1
-  - 美国-VLESS-线路3
   - 美国-VLESS-线路1
-  interval: 5
+  interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
-  tolerance: 0
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT

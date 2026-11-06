@@ -145,26 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user195-windows-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20034
-  password: user195_windows:43b57740-ecb6-46a4-b3af-e08f8ba93764
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user195-windows-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20036
-  password: user195_windows:43b57740-ecb6-46a4-b3af-e08f8ba93764
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: SR-user195-windows-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 20035
+  server: 45.197.149.226
+  port: 32025
   uuid: 43b57740-ecb6-46a4-b3af-e08f8ba93764
   flow: xtls-rprx-vision
   network: tcp
@@ -176,10 +160,18 @@ proxies:
     short-id: "ce811752"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user195-windows-VLESS-线路3
+- name: SR-user195-windows-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32060
+  password: user195_windows:43b57740-ecb6-46a4-b3af-e08f8ba93764
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user195-windows-VLESS-线路2
   type: vless
   server: 38.190.245.60
-  port: 20036
+  port: 36589
   uuid: 43b57740-ecb6-46a4-b3af-e08f8ba93764
   flow: xtls-rprx-vision
   network: tcp
@@ -191,7 +183,7 @@ proxies:
     short-id: "ce811752"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user195-windows-HY2-线路4
+- name: SR-user195-windows-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 36589
@@ -199,31 +191,14 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user195-windows-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 36589
-  uuid: 43b57740-ecb6-46a4-b3af-e08f8ba93764
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "ce811752"
-  client-fingerprint: chrome
-  fast-open: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user195-windows-VLESS-线路1
-  - SR-user195-windows-VLESS-线路4
+  - SR-user195-windows-VLESS-线路2
   - SR-user195-windows-HY2-线路1
-  - SR-user195-windows-HY2-线路3
-  - SR-user195-windows-VLESS-线路3
-  - SR-user195-windows-HY2-线路4
+  - SR-user195-windows-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

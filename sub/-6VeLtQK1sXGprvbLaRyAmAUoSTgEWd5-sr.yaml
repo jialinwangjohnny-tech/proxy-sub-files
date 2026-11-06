@@ -145,41 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user269-mac-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 41455
-  password: user269_mac:34c3135c-19d9-4667-8442-ae90f5505e5e
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user269-mac-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 41453
-  password: user269_mac:34c3135c-19d9-4667-8442-ae90f5505e5e
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user269-mac-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 41455
-  uuid: 34c3135c-19d9-4667-8442-ae90f5505e5e
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: learn.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "f2121708"
-  client-fingerprint: chrome
-  fast-open: true
 - name: SR-user269-mac-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 41453
+  server: 45.197.149.226
+  port: 32065
   uuid: 34c3135c-19d9-4667-8442-ae90f5505e5e
   flow: xtls-rprx-vision
   network: tcp
@@ -191,15 +160,15 @@ proxies:
     short-id: "f2121708"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user269-mac-HY2-线路4
+- name: SR-user269-mac-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 23039
+  server: 45.197.149.226
+  port: 32044
   password: user269_mac:34c3135c-19d9-4667-8442-ae90f5505e5e
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user269-mac-VLESS-线路4
+- name: SR-user269-mac-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 23039
@@ -214,16 +183,22 @@ proxies:
     short-id: "f2121708"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user269-mac-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 23039
+  password: user269_mac:34c3135c-19d9-4667-8442-ae90f5505e5e
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user269-mac-VLESS-线路1
-  - SR-user269-mac-VLESS-线路4
-  - SR-user269-mac-HY2-线路3
+  - SR-user269-mac-VLESS-线路2
   - SR-user269-mac-HY2-线路1
-  - SR-user269-mac-VLESS-线路3
-  - SR-user269-mac-HY2-线路4
+  - SR-user269-mac-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

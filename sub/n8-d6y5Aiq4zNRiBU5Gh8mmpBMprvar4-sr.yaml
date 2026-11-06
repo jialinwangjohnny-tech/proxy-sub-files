@@ -145,41 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user283-windows-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20058
-  password: user283_windows:83d4882c-43fd-4100-bb00-7446cdbca1cf
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user283-windows-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20057
-  password: user283_windows:83d4882c-43fd-4100-bb00-7446cdbca1cf
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user283-windows-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20058
-  uuid: 83d4882c-43fd-4100-bb00-7446cdbca1cf
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "073998f1"
-  client-fingerprint: chrome
-  fast-open: true
 - name: SR-user283-windows-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 50410
+  server: 45.197.149.226
+  port: 32073
   uuid: 83d4882c-43fd-4100-bb00-7446cdbca1cf
   flow: xtls-rprx-vision
   network: tcp
@@ -191,15 +160,15 @@ proxies:
     short-id: "073998f1"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user283-windows-HY2-线路4
+- name: SR-user283-windows-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 50410
+  server: 45.197.149.226
+  port: 32073
   password: user283_windows:83d4882c-43fd-4100-bb00-7446cdbca1cf
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user283-windows-VLESS-线路4
+- name: SR-user283-windows-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 50410
@@ -214,16 +183,22 @@ proxies:
     short-id: "073998f1"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user283-windows-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 50410
+  password: user283_windows:83d4882c-43fd-4100-bb00-7446cdbca1cf
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user283-windows-VLESS-线路1
-  - SR-user283-windows-VLESS-线路4
-  - SR-user283-windows-HY2-线路3
+  - SR-user283-windows-VLESS-线路2
   - SR-user283-windows-HY2-线路1
-  - SR-user283-windows-VLESS-线路3
-  - SR-user283-windows-HY2-线路4
+  - SR-user283-windows-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

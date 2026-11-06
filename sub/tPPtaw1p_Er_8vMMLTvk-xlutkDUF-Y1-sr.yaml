@@ -145,69 +145,11 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user178-default-HY2-线路1
-  type: hysteria2
-  server: s1.huhiuh.space
-  port: 51468
-  password: user178:8098e90d-9d5d-4d24-a03c-bcc40711fbcf
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user178-default-VLESS-线路1
+- name: 🇺🇸 美国洛杉矶-Moshimoshi-手机-VLESS-线路1
   type: vless
-  server: s1.huhiuh.space
-  port: 51468
-  uuid: 8098e90d-9d5d-4d24-a03c-bcc40711fbcf
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "92f7d7d8"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user178-default-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.17
-  port: 51468
-  password: user178:8098e90d-9d5d-4d24-a03c-bcc40711fbcf
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user178-default-VLESS-线路3
-  type: vless
-  server: 45.197.149.17
-  port: 51468
-  uuid: 8098e90d-9d5d-4d24-a03c-bcc40711fbcf
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "92f7d7d8"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user178-default-HY2-线路4
-  type: hysteria2
-  server: 38.190.245.60
-  port: 51468
-  password: user178:8098e90d-9d5d-4d24-a03c-bcc40711fbcf
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user178-default-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 51468
-  uuid: 8098e90d-9d5d-4d24-a03c-bcc40711fbcf
+  server: 45.197.149.226
+  port: 32075
+  uuid: cc64b788-a25e-464c-a12a-f20a2c07b0c0
   flow: xtls-rprx-vision
   network: tcp
   tls: true
@@ -218,16 +160,45 @@ proxies:
     short-id: "92f7d7d8"
   client-fingerprint: chrome
   fast-open: true
+- name: 🇺🇸 美国洛杉矶-Moshimoshi-手机-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32075
+  password: user178_phone:cc64b788-a25e-464c-a12a-f20a2c07b0c0
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸 美国洛杉矶-Moshimoshi-手机-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
+  port: 51468
+  uuid: cc64b788-a25e-464c-a12a-f20a2c07b0c0
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "92f7d7d8"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 🇺🇸 美国洛杉矶-Moshimoshi-手机-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 51468
+  password: user178_phone:cc64b788-a25e-464c-a12a-f20a2c07b0c0
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - SR-user178-default-VLESS-线路1
-  - SR-user178-default-VLESS-线路4
-  - SR-user178-default-HY2-线路1
-  - SR-user178-default-HY2-线路3
-  - SR-user178-default-VLESS-线路3
-  - SR-user178-default-HY2-线路4
+  - 🇺🇸 美国洛杉矶-Moshimoshi-手机-VLESS-线路1
+  - 🇺🇸 美国洛杉矶-Moshimoshi-手机-VLESS-线路2
+  - 🇺🇸 美国洛杉矶-Moshimoshi-手机-HY2-线路1
+  - 🇺🇸 美国洛杉矶-Moshimoshi-手机-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

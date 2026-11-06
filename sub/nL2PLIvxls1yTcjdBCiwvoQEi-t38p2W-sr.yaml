@@ -145,41 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user262-phone-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20046
-  password: user262_phone:6dbff841-606f-4c6a-8d6b-a8e1606d86dc
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user262-phone-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20045
-  password: user262_phone:6dbff841-606f-4c6a-8d6b-a8e1606d86dc
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user262-phone-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20046
-  uuid: 6dbff841-606f-4c6a-8d6b-a8e1606d86dc
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "b90c7c9b"
-  client-fingerprint: chrome
-  fast-open: true
 - name: SR-user262-phone-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 50635
+  server: 45.197.149.226
+  port: 32074
   uuid: 6dbff841-606f-4c6a-8d6b-a8e1606d86dc
   flow: xtls-rprx-vision
   network: tcp
@@ -191,15 +160,15 @@ proxies:
     short-id: "b90c7c9b"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user262-phone-HY2-线路4
+- name: SR-user262-phone-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 50635
+  server: 45.197.149.226
+  port: 32074
   password: user262_phone:6dbff841-606f-4c6a-8d6b-a8e1606d86dc
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user262-phone-VLESS-线路4
+- name: SR-user262-phone-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 50635
@@ -214,16 +183,22 @@ proxies:
     short-id: "b90c7c9b"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user262-phone-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 50635
+  password: user262_phone:6dbff841-606f-4c6a-8d6b-a8e1606d86dc
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
-- name: 小火箭恢复选择
+- name: SR-user262-phone-线路选择
   type: select
   proxies:
+  - SR-user262-phone-VLESS-线路2
   - SR-user262-phone-VLESS-线路1
-  - SR-user262-phone-VLESS-线路4
-  - SR-user262-phone-HY2-线路3
   - SR-user262-phone-HY2-线路1
-  - SR-user262-phone-VLESS-线路3
-  - SR-user262-phone-HY2-线路4
+  - SR-user262-phone-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
@@ -274,4 +249,4 @@ rules:
 - DOMAIN-SUFFIX,pstatp.com,DIRECT
 - DOMAIN-SUFFIX,snssdk.com,DIRECT
 - DOMAIN-SUFFIX,toutiao.com,DIRECT
-- MATCH,小火箭恢复选择
+- MATCH,SR-user262-phone-线路选择

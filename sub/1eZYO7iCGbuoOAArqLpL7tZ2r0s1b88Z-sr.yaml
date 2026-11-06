@@ -145,25 +145,32 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user040-phone-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20008
-  password: user040_phone:80486799-e9db-4ad8-a624-3cf4674b0edc
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user040-phone-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20009
-  password: user040_phone:80486799-e9db-4ad8-a624-3cf4674b0edc
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
 - name: SR-user040-phone-VLESS-线路1
   type: vless
-  server: 45.197.149.41
+  server: 45.197.149.226
+  port: 32078
+  uuid: 80486799-e9db-4ad8-a624-3cf4674b0edc
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: apple.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "5b8562ee"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user040-phone-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32078
+  password: user040_phone:80486799-e9db-4ad8-a624-3cf4674b0edc
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user040-phone-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
   port: 51841
   uuid: 80486799-e9db-4ad8-a624-3cf4674b0edc
   flow: xtls-rprx-vision
@@ -176,22 +183,7 @@ proxies:
     short-id: "5b8562ee"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user040-phone-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20009
-  uuid: 80486799-e9db-4ad8-a624-3cf4674b0edc
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: apple.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "5b8562ee"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user040-phone-HY2-线路4
+- name: SR-user040-phone-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 51841
@@ -199,31 +191,14 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user040-phone-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 51841
-  uuid: 80486799-e9db-4ad8-a624-3cf4674b0edc
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: apple.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "5b8562ee"
-  client-fingerprint: chrome
-  fast-open: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user040-phone-VLESS-线路1
-  - SR-user040-phone-VLESS-线路4
+  - SR-user040-phone-VLESS-线路2
   - SR-user040-phone-HY2-线路1
-  - SR-user040-phone-HY2-线路3
-  - SR-user040-phone-VLESS-线路3
-  - SR-user040-phone-HY2-线路4
+  - SR-user040-phone-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

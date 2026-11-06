@@ -16,69 +16,11 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- name: SR-user147-default-HY2-线路1
-  type: hysteria2
-  server: s1.huhiuh.space
-  port: 28118
-  password: user147:a6b43f60-3010-4b7c-a3fc-2f9de819d687
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user147-default-VLESS-线路1
+- name: SR-user147-phone-VLESS-线路1
   type: vless
-  server: s1.huhiuh.space
-  port: 28118
-  uuid: a6b43f60-3010-4b7c-a3fc-2f9de819d687
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: swdist.apple.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "a02e5b60"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user147-default-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.17
-  port: 28118
-  password: user147:a6b43f60-3010-4b7c-a3fc-2f9de819d687
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user147-default-VLESS-线路3
-  type: vless
-  server: 45.197.149.17
-  port: 28118
-  uuid: a6b43f60-3010-4b7c-a3fc-2f9de819d687
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: swdist.apple.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "a02e5b60"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user147-default-HY2-线路4
-  type: hysteria2
-  server: 38.190.245.60
-  port: 14145
-  password: user147:a6b43f60-3010-4b7c-a3fc-2f9de819d687
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user147-default-VLESS-线路4
-  type: vless
-  server: 38.190.245.60
-  port: 14145
-  uuid: a6b43f60-3010-4b7c-a3fc-2f9de819d687
+  server: 45.197.149.226
+  port: 32022
+  uuid: 187708f4-a1d0-4c33-84d4-d272a220efab
   flow: xtls-rprx-vision
   network: tcp
   tls: true
@@ -89,16 +31,45 @@ proxies:
     short-id: "a02e5b60"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user147-phone-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32009
+  password: user147_phone:187708f4-a1d0-4c33-84d4-d272a220efab
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: SR-user147-phone-VLESS-线路2
+  type: vless
+  server: 38.190.245.60
+  port: 14145
+  uuid: 187708f4-a1d0-4c33-84d4-d272a220efab
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.nvidia.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "a02e5b60"
+  client-fingerprint: chrome
+  fast-open: true
+- name: SR-user147-phone-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 14145
+  password: user147_phone:187708f4-a1d0-4c33-84d4-d272a220efab
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - SR-user147-default-VLESS-线路1
-  - SR-user147-default-VLESS-线路4
-  - SR-user147-default-HY2-线路1
-  - SR-user147-default-HY2-线路3
-  - SR-user147-default-VLESS-线路3
-  - SR-user147-default-HY2-线路4
+  - SR-user147-phone-VLESS-线路1
+  - SR-user147-phone-VLESS-线路2
+  - SR-user147-phone-HY2-线路1
+  - SR-user147-phone-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

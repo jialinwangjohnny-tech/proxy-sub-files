@@ -16,41 +16,10 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- name: SR-user317-windows-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.17
-  port: 18642
-  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user317-windows-HY2-线路1
-  type: hysteria2
-  server: 45.197.149.41
-  port: 18642
-  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user317-windows-VLESS-线路3
-  type: vless
-  server: 45.197.149.17
-  port: 18642
-  uuid: c70565e9-a99f-40ef-b96c-469a3949eed2
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.bing.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "4b71293d"
-  client-fingerprint: chrome
-  fast-open: true
 - name: SR-user317-windows-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 18642
+  server: 45.197.149.226
+  port: 32015
   uuid: c70565e9-a99f-40ef-b96c-469a3949eed2
   flow: xtls-rprx-vision
   network: tcp
@@ -62,15 +31,15 @@ proxies:
     short-id: "4b71293d"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user317-windows-HY2-线路4
+- name: SR-user317-windows-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 18642
+  server: 45.197.149.226
+  port: 32015
   password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user317-windows-VLESS-线路4
+- name: SR-user317-windows-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 18642
@@ -85,16 +54,22 @@ proxies:
     short-id: "4b71293d"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user317-windows-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 18642
+  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user317-windows-VLESS-线路1
-  - SR-user317-windows-VLESS-线路4
-  - SR-user317-windows-HY2-线路3
+  - SR-user317-windows-VLESS-线路2
   - SR-user317-windows-HY2-线路1
-  - SR-user317-windows-VLESS-线路3
-  - SR-user317-windows-HY2-线路4
+  - SR-user317-windows-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

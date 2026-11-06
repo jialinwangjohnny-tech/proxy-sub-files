@@ -145,41 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user290-mac-HY2-线路3
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20069
-  password: user290_mac:1d998235-42a0-4e73-b84a-b05f16e89a6a
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user290-mac-HY2-线路1
-  type: hysteria2
-  server: 38.190.245.60
-  port: 20068
-  password: user290_mac:1d998235-42a0-4e73-b84a-b05f16e89a6a
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user290-mac-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20069
-  uuid: 1d998235-42a0-4e73-b84a-b05f16e89a6a
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: www.dell.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "19fcdcbc"
-  client-fingerprint: chrome
-  fast-open: true
 - name: SR-user290-mac-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 17565
+  server: 45.197.149.226
+  port: 32013
   uuid: 1d998235-42a0-4e73-b84a-b05f16e89a6a
   flow: xtls-rprx-vision
   network: tcp
@@ -191,15 +160,15 @@ proxies:
     short-id: "19fcdcbc"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user290-mac-HY2-线路4
+- name: SR-user290-mac-HY2-线路1
   type: hysteria2
-  server: 38.190.245.60
-  port: 17565
+  server: 45.197.149.226
+  port: 32013
   password: user290_mac:1d998235-42a0-4e73-b84a-b05f16e89a6a
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user290-mac-VLESS-线路4
+- name: SR-user290-mac-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 17565
@@ -214,16 +183,22 @@ proxies:
     short-id: "19fcdcbc"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user290-mac-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 17565
+  password: user290_mac:1d998235-42a0-4e73-b84a-b05f16e89a6a
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user290-mac-VLESS-线路1
-  - SR-user290-mac-VLESS-线路4
-  - SR-user290-mac-HY2-线路3
+  - SR-user290-mac-VLESS-线路2
   - SR-user290-mac-HY2-线路1
-  - SR-user290-mac-VLESS-线路3
-  - SR-user290-mac-HY2-线路4
+  - SR-user290-mac-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

@@ -145,41 +145,10 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user276-mac-HY2-线路3
-  type: hysteria2
-  server: 45.197.149.17
-  port: 21100
-  password: user276_mac:c928e4a9-d4cf-46f9-b928-1a77369a1fe2
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user276-mac-HY2-线路1
-  type: hysteria2
-  server: 45.197.149.41
-  port: 21100
-  password: user276_mac:c928e4a9-d4cf-46f9-b928-1a77369a1fe2
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user276-mac-VLESS-线路3
-  type: vless
-  server: 45.197.149.17
-  port: 21100
-  uuid: c928e4a9-d4cf-46f9-b928-1a77369a1fe2
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: gateway.icloud.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "e8703703"
-  client-fingerprint: chrome
-  fast-open: true
 - name: SR-user276-mac-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 21100
+  server: 45.197.149.226
+  port: 32043
   uuid: c928e4a9-d4cf-46f9-b928-1a77369a1fe2
   flow: xtls-rprx-vision
   network: tcp
@@ -191,14 +160,20 @@ proxies:
     short-id: "e8703703"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user276-mac-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32043
+  password: user276_mac:c928e4a9-d4cf-46f9-b928-1a77369a1fe2
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
   - SR-user276-mac-VLESS-线路1
-  - SR-user276-mac-HY2-线路3
   - SR-user276-mac-HY2-线路1
-  - SR-user276-mac-VLESS-线路3
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

@@ -147,8 +147,8 @@ dns:
 proxies:
 - name: SR-user233-windows-VLESS-线路1
   type: vless
-  server: 45.197.149.41
-  port: 31462
+  server: 45.197.149.226
+  port: 32056
   uuid: 72cca28c-c39f-4a13-934d-61b157245dd6
   flow: xtls-rprx-vision
   network: tcp
@@ -160,22 +160,7 @@ proxies:
     short-id: "d8b0c03d"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user233-windows-VLESS-线路3
-  type: vless
-  server: 38.190.245.60
-  port: 20039
-  uuid: 72cca28c-c39f-4a13-934d-61b157245dd6
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: learn.microsoft.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "d8b0c03d"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user233-windows-VLESS-线路4
+- name: SR-user233-windows-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 31462
@@ -195,8 +180,7 @@ proxy-groups:
   type: select
   proxies:
   - SR-user233-windows-VLESS-线路1
-  - SR-user233-windows-VLESS-线路4
-  - SR-user233-windows-VLESS-线路3
+  - SR-user233-windows-VLESS-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

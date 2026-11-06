@@ -145,21 +145,11 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user144-default-HY2-线路1
-  type: hysteria2
-  server: s1.huhiuh.space
-  port: 28264
-  password: user144:51755a6d-11c7-4624-af8d-0e648832e36b
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user144-default-VLESS-线路1
+- name: SR-user144-phone-VLESS-线路1
   type: vless
-  server: s1.huhiuh.space
-  port: 28264
-  uuid: 51755a6d-11c7-4624-af8d-0e648832e36b
+  server: 45.197.149.226
+  port: 32021
+  uuid: 6add3b61-2fe4-4b31-8ff8-f9181e12ccc9
   flow: xtls-rprx-vision
   network: tcp
   tls: true
@@ -170,44 +160,19 @@ proxies:
     short-id: "000d3bf8"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user144-default-HY2-线路3
+- name: SR-user144-phone-HY2-线路1
   type: hysteria2
-  server: 45.197.149.17
-  port: 28264
-  password: user144:51755a6d-11c7-4624-af8d-0e648832e36b
-  obfs: salamander
-  obfs-password: sR7mK2xP9vN4wQ6jL1tF3bY8hA5cE0gZ
+  server: 45.197.149.226
+  port: 32052
+  password: user144_phone:6add3b61-2fe4-4b31-8ff8-f9181e12ccc9
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user144-default-VLESS-线路3
-  type: vless
-  server: 45.197.149.17
-  port: 28264
-  uuid: 51755a6d-11c7-4624-af8d-0e648832e36b
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  udp: true
-  servername: itunes.apple.com
-  reality-opts:
-    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "000d3bf8"
-  client-fingerprint: chrome
-  fast-open: true
-- name: SR-user144-default-HY2-线路4
-  type: hysteria2
-  server: 38.190.245.60
-  port: 28264
-  password: user144:51755a6d-11c7-4624-af8d-0e648832e36b
-  sni: www.bing.com
-  skip-cert-verify: true
-  udp: true
-- name: SR-user144-default-VLESS-线路4
+- name: SR-user144-phone-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 28264
-  uuid: 51755a6d-11c7-4624-af8d-0e648832e36b
+  uuid: 6add3b61-2fe4-4b31-8ff8-f9181e12ccc9
   flow: xtls-rprx-vision
   network: tcp
   tls: true
@@ -218,16 +183,22 @@ proxies:
     short-id: "000d3bf8"
   client-fingerprint: chrome
   fast-open: true
+- name: SR-user144-phone-HY2-线路2
+  type: hysteria2
+  server: 38.190.245.60
+  port: 28264
+  password: user144_phone:6add3b61-2fe4-4b31-8ff8-f9181e12ccc9
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - SR-user144-default-VLESS-线路1
-  - SR-user144-default-VLESS-线路4
-  - SR-user144-default-HY2-线路1
-  - SR-user144-default-HY2-线路3
-  - SR-user144-default-VLESS-线路3
-  - SR-user144-default-HY2-线路4
+  - SR-user144-phone-VLESS-线路1
+  - SR-user144-phone-VLESS-线路2
+  - SR-user144-phone-HY2-线路1
+  - SR-user144-phone-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
