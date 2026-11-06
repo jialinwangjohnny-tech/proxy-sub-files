@@ -192,11 +192,11 @@ proxies:
   skip-cert-verify: true
   udp: true
 proxy-groups:
-- name: 小火箭恢复选择-优化1106
+- name: 小火箭恢复选择-稳定1106
   type: select
   proxies:
-  - 🇵🇱 波兰-windows-VLESS-线路1
   - 🇵🇱 波兰-windows-VLESS-线路2
+  - 🇵🇱 波兰-windows-VLESS-线路1
   - 🇵🇱 波兰-windows-HY2-线路1
   - 🇵🇱 波兰-windows-HY2-线路2
 rules:
@@ -249,4 +249,4 @@ rules:
 - DOMAIN-SUFFIX,pstatp.com,DIRECT
 - DOMAIN-SUFFIX,snssdk.com,DIRECT
 - DOMAIN-SUFFIX,toutiao.com,DIRECT
-- MATCH,小火箭恢复选择-优化1106
+- MATCH,小火箭恢复选择-稳定1106

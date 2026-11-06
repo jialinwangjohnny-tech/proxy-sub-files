@@ -56,11 +56,11 @@ proxies:
   skip-cert-verify: true
   udp: true
 proxy-groups:
-- name: 小火箭恢复选择-优化1106
+- name: 小火箭恢复选择-稳定1106
   type: select
   proxies:
-  - SR-user219-phone-VLESS-线路1
   - SR-user219-phone-VLESS-线路2
+  - SR-user219-phone-VLESS-线路1
   - SR-user219-phone-HY2-线路1
   - SR-user219-phone-HY2-线路2
 rules:
@@ -86,4 +86,4 @@ rules:
 - DOMAIN-SUFFIX,apd-pcdnwxlogin.teg.tencent-cloud.net,DIRECT
 - DOMAIN-SUFFIX,wechatpay.com,DIRECT
 - DOMAIN-SUFFIX,tenpay.com,DIRECT
-- MATCH,小火箭恢复选择-优化1106
+- MATCH,小火箭恢复选择-稳定1106
