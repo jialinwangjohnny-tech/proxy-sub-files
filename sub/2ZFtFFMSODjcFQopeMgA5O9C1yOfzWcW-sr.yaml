@@ -6,8 +6,8 @@ dns:
   enable: true
   ipv6: false
   nameserver:
-  - https://1.1.1.1/dns-query#SR-user312-phone-线路选择-稳定
-  - https://8.8.8.8/dns-query#SR-user312-phone-线路选择-稳定
+  - https://1.1.1.1/dns-query#DNS稳定路径
+  - https://8.8.8.8/dns-query#DNS稳定路径
   respect-rules: true
   default-nameserver:
   - 1.1.1.1
@@ -191,12 +191,22 @@ proxies:
   skip-cert-verify: true
   udp: true
 proxy-groups:
-- name: SR-user312-phone-线路选择-稳定
+- name: SR-user312-phone-线路选择-稳定-优化1106
   type: select
   proxies:
   - 美国-VLESS-线路2
   - 美国-VLESS-线路1
   - 美国-HY2-线路2
+- name: DNS稳定路径
+  type: fallback
+  proxies:
+  - 美国-VLESS-线路2
+  - 美国-HY2-线路2
+  - 美国-VLESS-线路1
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 8000
+  lazy: false
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
@@ -247,4 +257,4 @@ rules:
 - DOMAIN-SUFFIX,pstatp.com,DIRECT
 - DOMAIN-SUFFIX,snssdk.com,DIRECT
 - DOMAIN-SUFFIX,toutiao.com,DIRECT
-- MATCH,SR-user312-phone-线路选择-稳定
+- MATCH,SR-user312-phone-线路选择-稳定-优化1106

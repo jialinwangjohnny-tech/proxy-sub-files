@@ -14,8 +14,8 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
   nameserver:
-  - https://dns.google/dns-query#线路选择
-  - https://cloudflare-dns.com/dns-query#线路选择
+  - https://1.1.1.1/dns-query#DNS稳定路径
+  - https://8.8.8.8/dns-query#DNS稳定路径
   proxy-server-nameserver:
   - 223.5.5.5
   - 119.29.29.29
@@ -38,6 +38,7 @@ dns:
   - +.apple.com
   - +.cdn.apple.com
   - +.huhiuh.space
+  respect-rules: true
 tun:
   enable: true
   stack: mixed
@@ -95,25 +96,36 @@ proxies:
   skip-cert-verify: true
   udp: true
 proxy-groups:
-- name: 线路选择
+- name: 线路选择-优化1106
   type: select
   proxies:
+  - 美国-VLESS-线路2
   - 自动切换
   - 美国-HY2-线路1
   - 美国-VLESS-线路1
   - 美国-HY2-线路2
-  - 美国-VLESS-线路2
 - name: 自动切换
   type: fallback
   proxies:
+  - 美国-VLESS-线路2
   - 美国-HY2-线路1
   - 美国-VLESS-线路1
   - 美国-HY2-线路2
-  - 美国-VLESS-线路2
   interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
+- name: DNS稳定路径
+  type: fallback
+  proxies:
+  - 美国-VLESS-线路2
+  - 美国-HY2-线路2
+  - 美国-HY2-线路1
+  - 美国-VLESS-线路1
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 8000
+  lazy: false
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT
@@ -125,9 +137,9 @@ rules:
 - DOMAIN-SUFFIX,huhiuh.space,DIRECT
 - GEOSITE,private,DIRECT
 - GEOSITE,cn,DIRECT
-- GEOSITE,geolocation-!cn,线路选择
+- GEOSITE,geolocation-!cn,线路选择-优化1106
 - GEOIP,private,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,线路选择
+- MATCH,线路选择-优化1106
 profile:
   store-selected: true

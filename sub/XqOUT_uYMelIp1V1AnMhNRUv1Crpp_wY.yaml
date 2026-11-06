@@ -16,8 +16,8 @@ dns:
   - 223.5.5.5
   - 119.29.29.29
   nameserver:
-  - https://dns.google/dns-query#线路选择
-  - https://cloudflare-dns.com/dns-query#线路选择
+  - https://dns.google/dns-query#线路选择-优化1106
+  - https://cloudflare-dns.com/dns-query#线路选择-优化1106
   proxy-server-nameserver:
   - 223.5.5.5
   - 119.29.29.29
@@ -97,19 +97,19 @@ proxies:
   skip-cert-verify: true
   udp: true
 proxy-groups:
-- name: 线路选择
+- name: 线路选择-优化1106
   type: select
   proxies:
+  - 波兰-VLESS-线路1
   - 自动切换
   - 波兰-HY2-线路1
-  - 波兰-VLESS-线路1
   - 波兰-HY2-线路2
   - 波兰-VLESS-线路2
 - name: 自动切换
   type: fallback
   proxies:
-  - 波兰-HY2-线路1
   - 波兰-VLESS-线路1
+  - 波兰-HY2-线路1
   - 波兰-HY2-线路2
   - 波兰-VLESS-线路2
   interval: 60
@@ -127,7 +127,7 @@ rules:
 - DOMAIN-SUFFIX,huhiuh.space,DIRECT
 - GEOSITE,private,DIRECT
 - GEOSITE,cn,DIRECT
-- GEOSITE,geolocation-!cn,线路选择
+- GEOSITE,geolocation-!cn,线路选择-优化1106
 - GEOIP,private,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,线路选择
+- MATCH,线路选择-优化1106

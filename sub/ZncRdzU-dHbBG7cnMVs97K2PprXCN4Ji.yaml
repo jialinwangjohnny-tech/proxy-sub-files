@@ -15,8 +15,8 @@ dns:
   - 8.8.8.8
   respect-rules: true
   nameserver:
-  - https://cloudflare-dns.com/dns-query#线路选择
-  - https://dns.google/dns-query#线路选择
+  - https://1.1.1.1/dns-query#DNS稳定路径
+  - https://8.8.8.8/dns-query#DNS稳定路径
   proxy-server-nameserver:
   - 1.1.1.1
   - 8.8.8.8
@@ -89,25 +89,36 @@ proxies:
   skip-cert-verify: true
   udp: true
 proxy-groups:
-- name: 线路选择
+- name: 线路选择-优化1106
   type: select
   proxies:
+  - 新加坡-VLESS-线路2
   - 自动切换
   - 新加坡-HY2-线路1
   - 新加坡-VLESS-线路1
   - 新加坡-HY2-线路2
-  - 新加坡-VLESS-线路2
 - name: 自动切换
   type: fallback
   proxies:
+  - 新加坡-VLESS-线路2
   - 新加坡-HY2-线路1
   - 新加坡-VLESS-线路1
   - 新加坡-HY2-线路2
-  - 新加坡-VLESS-线路2
   interval: 60
   timeout: 8000
   lazy: false
   url: https://www.gstatic.com/generate_204
+- name: DNS稳定路径
+  type: fallback
+  proxies:
+  - 新加坡-VLESS-线路2
+  - 新加坡-HY2-线路2
+  - 新加坡-HY2-线路1
+  - 新加坡-VLESS-线路1
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 8000
+  lazy: false
 rules:
 - DOMAIN-SUFFIX,stun.playstation.net,DIRECT
 - DST-PORT,3478,REJECT
@@ -119,9 +130,9 @@ rules:
 - DOMAIN-SUFFIX,huhiuh.space,DIRECT
 - GEOSITE,private,DIRECT
 - GEOSITE,cn,DIRECT
-- GEOSITE,geolocation-!cn,线路选择
+- GEOSITE,geolocation-!cn,线路选择-优化1106
 - GEOIP,private,DIRECT
 - GEOIP,CN,DIRECT
-- MATCH,线路选择
+- MATCH,线路选择-优化1106
 profile:
   store-selected: true

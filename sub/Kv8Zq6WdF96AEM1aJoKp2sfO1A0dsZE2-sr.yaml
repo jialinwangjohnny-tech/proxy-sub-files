@@ -6,8 +6,8 @@ dns:
   enable: true
   ipv6: false
   nameserver:
-  - https://dns.alidns.com/dns-query
-  - https://doh.pub/dns-query
+  - https://1.1.1.1/dns-query#DNS稳定路径
+  - https://8.8.8.8/dns-query#DNS稳定路径
   nameserver-policy:
     +.weixin.qq.com:
     - https://dns.alidns.com/dns-query#DIRECT
@@ -144,6 +144,13 @@ dns:
     +.toutiao.com:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
+  respect-rules: true
+  proxy-server-nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+  default-nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
 proxies:
 - name: SR-user312-mac-VLESS-线路1
   type: vless
@@ -192,13 +199,24 @@ proxies:
   skip-cert-verify: true
   udp: true
 proxy-groups:
-- name: 小火箭恢复选择
+- name: 小火箭恢复选择-优化1106
   type: select
   proxies:
-  - SR-user312-mac-VLESS-线路1
   - SR-user312-mac-VLESS-线路2
+  - SR-user312-mac-VLESS-线路1
   - SR-user312-mac-HY2-线路1
   - SR-user312-mac-HY2-线路2
+- name: DNS稳定路径
+  type: fallback
+  proxies:
+  - SR-user312-mac-VLESS-线路2
+  - SR-user312-mac-HY2-线路2
+  - SR-user312-mac-HY2-线路1
+  - SR-user312-mac-VLESS-线路1
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  timeout: 8000
+  lazy: false
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
@@ -249,4 +267,4 @@ rules:
 - DOMAIN-SUFFIX,pstatp.com,DIRECT
 - DOMAIN-SUFFIX,snssdk.com,DIRECT
 - DOMAIN-SUFFIX,toutiao.com,DIRECT
-- MATCH,小火箭恢复选择
+- MATCH,小火箭恢复选择-优化1106
