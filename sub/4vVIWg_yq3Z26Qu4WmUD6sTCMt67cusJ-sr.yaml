@@ -6,8 +6,8 @@ dns:
   enable: true
   ipv6: false
   nameserver:
-  - https://cloudflare-dns.com/dns-query#小火箭恢复选择
-  - https://dns.google/dns-query#小火箭恢复选择
+  - https://cloudflare-dns.com/dns-query#小火箭恢复选择-稳定
+  - https://dns.google/dns-query#小火箭恢复选择-稳定
   respect-rules: true
   default-nameserver:
   - 1.1.1.1
@@ -63,11 +63,11 @@ proxies:
   skip-cert-verify: true
   udp: true
 proxy-groups:
-- name: 小火箭恢复选择
+- name: 小火箭恢复选择-稳定
   type: select
   proxies:
-  - SR-user147-phone-VLESS-线路1
   - SR-user147-phone-VLESS-线路2
+  - SR-user147-phone-VLESS-线路1
   - SR-user147-phone-HY2-线路1
   - SR-user147-phone-HY2-线路2
 rules:
@@ -120,4 +120,4 @@ rules:
 - DOMAIN-SUFFIX,pstatp.com,DIRECT
 - DOMAIN-SUFFIX,snssdk.com,DIRECT
 - DOMAIN-SUFFIX,toutiao.com,DIRECT
-- MATCH,小火箭恢复选择
+- MATCH,小火箭恢复选择-稳定
