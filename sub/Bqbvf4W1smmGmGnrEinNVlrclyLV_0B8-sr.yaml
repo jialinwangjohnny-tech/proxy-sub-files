@@ -9,7 +9,7 @@ dns:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
 proxies:
-- name: SR-user219-phone-VLESS-线路1
+- name: 🇵🇱 波兰-Zhoumo185-手机-VLESS-线路1
   type: vless
   server: 45.197.149.226
   port: 32083
@@ -24,7 +24,7 @@ proxies:
     short-id: "9075c6ca"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user219-phone-HY2-线路1
+- name: 🇵🇱 波兰-Zhoumo185-手机-HY2-线路1
   type: hysteria2
   server: 45.197.149.226
   port: 32083
@@ -32,7 +32,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user219-phone-VLESS-线路2
+- name: 🇵🇱 波兰-Zhoumo185-手机-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 57702
@@ -47,7 +47,7 @@ proxies:
     short-id: "9075c6ca"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user219-phone-HY2-线路2
+- name: 🇵🇱 波兰-Zhoumo185-手机-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 57702
@@ -59,10 +59,10 @@ proxy-groups:
 - name: 小火箭恢复选择-稳定1106
   type: select
   proxies:
-  - SR-user219-phone-VLESS-线路2
-  - SR-user219-phone-VLESS-线路1
-  - SR-user219-phone-HY2-线路1
-  - SR-user219-phone-HY2-线路2
+  - 🇵🇱 波兰-Zhoumo185-手机-VLESS-线路2
+  - 🇵🇱 波兰-Zhoumo185-手机-VLESS-线路1
+  - 🇵🇱 波兰-Zhoumo185-手机-HY2-线路1
+  - 🇵🇱 波兰-Zhoumo185-手机-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

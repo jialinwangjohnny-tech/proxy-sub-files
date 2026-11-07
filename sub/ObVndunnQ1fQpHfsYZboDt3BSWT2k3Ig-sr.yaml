@@ -145,7 +145,7 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user330-windows-VLESS-线路1
+- name: 🇺🇸 美国-xpp7899-Windows-VLESS-线路1
   type: vless
   server: 45.197.149.226
   port: 32071
@@ -160,7 +160,7 @@ proxies:
     short-id: "2d8806ee"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user330-windows-HY2-线路1
+- name: 🇺🇸 美国-xpp7899-Windows-HY2-线路1
   type: hysteria2
   server: 45.197.149.226
   port: 32071
@@ -168,7 +168,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user330-windows-VLESS-线路2
+- name: 🇺🇸 美国-xpp7899-Windows-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 45452
@@ -183,7 +183,7 @@ proxies:
     short-id: "2d8806ee"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user330-windows-HY2-线路2
+- name: 🇺🇸 美国-xpp7899-Windows-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 45452
@@ -195,10 +195,10 @@ proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - SR-user330-windows-VLESS-线路1
-  - SR-user330-windows-VLESS-线路2
-  - SR-user330-windows-HY2-线路1
-  - SR-user330-windows-HY2-线路2
+  - 🇺🇸 美国-xpp7899-Windows-VLESS-线路1
+  - 🇺🇸 美国-xpp7899-Windows-VLESS-线路2
+  - 🇺🇸 美国-xpp7899-Windows-HY2-线路1
+  - 🇺🇸 美国-xpp7899-Windows-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

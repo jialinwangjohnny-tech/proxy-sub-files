@@ -152,7 +152,7 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: 美国-VLESS-线路1
+- name: 🇺🇸 美国-JM15059887041-手机-VLESS-线路1
   type: vless
   server: 45.197.149.226
   port: 32082
@@ -167,7 +167,7 @@ proxies:
     short-id: "cda9c2ca"
   client-fingerprint: chrome
   fast-open: true
-- name: 美国-VLESS-线路2
+- name: 🇺🇸 美国-JM15059887041-手机-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 55136
@@ -182,7 +182,7 @@ proxies:
     short-id: "cda9c2ca"
   client-fingerprint: chrome
   fast-open: true
-- name: 美国-HY2-线路2
+- name: 🇺🇸 美国-JM15059887041-手机-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 55136
@@ -194,9 +194,9 @@ proxy-groups:
 - name: SR-user253-phone-线路选择
   type: select
   proxies:
-  - 美国-VLESS-线路2
-  - 美国-VLESS-线路1
-  - 美国-HY2-线路2
+  - 🇺🇸 美国-JM15059887041-手机-VLESS-线路2
+  - 🇺🇸 美国-JM15059887041-手机-VLESS-线路1
+  - 🇺🇸 美国-JM15059887041-手机-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

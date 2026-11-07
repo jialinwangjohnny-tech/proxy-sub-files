@@ -16,7 +16,7 @@ dns:
   - 1.1.1.1
   - 8.8.8.8
 proxies:
-- name: SR-user147-windows-VLESS-线路1
+- name: 🇺🇸 美国-白丽娜-Windows-VLESS-线路1
   type: vless
   server: 45.197.149.226
   port: 32022
@@ -31,7 +31,7 @@ proxies:
     short-id: "a02e5b60"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user147-windows-HY2-线路1
+- name: 🇺🇸 美国-白丽娜-Windows-HY2-线路1
   type: hysteria2
   server: 45.197.149.226
   port: 32009
@@ -39,7 +39,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user147-windows-VLESS-线路2
+- name: 🇺🇸 美国-白丽娜-Windows-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 14145
@@ -54,7 +54,7 @@ proxies:
     short-id: "a02e5b60"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user147-windows-HY2-线路2
+- name: 🇺🇸 美国-白丽娜-Windows-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 14145
@@ -66,17 +66,17 @@ proxy-groups:
 - name: 小火箭恢复选择-优化1106
   type: select
   proxies:
-  - SR-user147-windows-VLESS-线路2
-  - SR-user147-windows-VLESS-线路1
-  - SR-user147-windows-HY2-线路1
-  - SR-user147-windows-HY2-线路2
+  - 🇺🇸 美国-白丽娜-Windows-VLESS-线路2
+  - 🇺🇸 美国-白丽娜-Windows-VLESS-线路1
+  - 🇺🇸 美国-白丽娜-Windows-HY2-线路1
+  - 🇺🇸 美国-白丽娜-Windows-HY2-线路2
 - name: DNS稳定路径
   type: fallback
   proxies:
-  - SR-user147-windows-VLESS-线路2
-  - SR-user147-windows-HY2-线路2
-  - SR-user147-windows-HY2-线路1
-  - SR-user147-windows-VLESS-线路1
+  - 🇺🇸 美国-白丽娜-Windows-VLESS-线路2
+  - 🇺🇸 美国-白丽娜-Windows-HY2-线路2
+  - 🇺🇸 美国-白丽娜-Windows-HY2-线路1
+  - 🇺🇸 美国-白丽娜-Windows-VLESS-线路1
   url: https://www.gstatic.com/generate_204
   interval: 60
   timeout: 8000

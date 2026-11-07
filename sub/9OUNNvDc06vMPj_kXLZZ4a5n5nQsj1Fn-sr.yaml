@@ -145,7 +145,7 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: SR-user284-mac-VLESS-线路1
+- name: 🇺🇸 美国-wh287175881-Mac-VLESS-线路1
   type: vless
   server: 45.197.149.226
   port: 32030
@@ -160,7 +160,7 @@ proxies:
     short-id: "0c2d1c41"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user284-mac-HY2-线路1
+- name: 🇺🇸 美国-wh287175881-Mac-HY2-线路1
   type: hysteria2
   server: 45.197.149.226
   port: 32080
@@ -168,7 +168,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: SR-user284-mac-VLESS-线路2
+- name: 🇺🇸 美国-wh287175881-Mac-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 53016
@@ -183,7 +183,7 @@ proxies:
     short-id: "0c2d1c41"
   client-fingerprint: chrome
   fast-open: true
-- name: SR-user284-mac-HY2-线路2
+- name: 🇺🇸 美国-wh287175881-Mac-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 53016
@@ -195,10 +195,10 @@ proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - SR-user284-mac-VLESS-线路1
-  - SR-user284-mac-VLESS-线路2
-  - SR-user284-mac-HY2-线路1
-  - SR-user284-mac-HY2-线路2
+  - 🇺🇸 美国-wh287175881-Mac-VLESS-线路1
+  - 🇺🇸 美国-wh287175881-Mac-VLESS-线路2
+  - 🇺🇸 美国-wh287175881-Mac-HY2-线路1
+  - 🇺🇸 美国-wh287175881-Mac-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
