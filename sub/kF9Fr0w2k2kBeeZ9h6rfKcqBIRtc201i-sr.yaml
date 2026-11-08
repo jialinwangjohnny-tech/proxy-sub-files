@@ -167,6 +167,14 @@ proxies:
     short-id: "cda9c2ca"
   client-fingerprint: chrome
   fast-open: true
+- name: 🇺🇸 美国-JM15059887041-手机-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 32082
+  password: user253_phone:4f2a4062-d3e5-4a63-8fc6-1d174cc9100f
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
 - name: 🇺🇸 美国-JM15059887041-手机-VLESS-线路2
   type: vless
   server: 38.190.245.60
@@ -197,6 +205,7 @@ proxy-groups:
   - 🇺🇸 美国-JM15059887041-手机-VLESS-线路2
   - 🇺🇸 美国-JM15059887041-手机-VLESS-线路1
   - 🇺🇸 美国-JM15059887041-手机-HY2-线路2
+  - 🇺🇸 美国-JM15059887041-手机-HY2-线路1
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve

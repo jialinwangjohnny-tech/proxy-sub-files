@@ -63,6 +63,13 @@ proxies:
     short-id: "d8b0c03d"
   client-fingerprint: edge
   fast-open: true
+- type: hysteria2
+  server: 45.197.149.226
+  port: 32056
+  password: user233_phone:29fe161c-024d-4fca-a59e-f1aba49a163a
+  sni: www.bing.com
+  skip-cert-verify: true
+  name: 美国-HY2-线路1
 - name: New York, US-VLESS-线路2
   type: vless
   server: 38.190.245.60
@@ -78,6 +85,13 @@ proxies:
     short-id: "d8b0c03d"
   client-fingerprint: edge
   fast-open: true
+- type: hysteria2
+  server: 38.190.245.60
+  port: 31462
+  password: user233_phone:29fe161c-024d-4fca-a59e-f1aba49a163a
+  sni: www.bing.com
+  skip-cert-verify: true
+  name: 美国-HY2-线路2
 proxy-groups:
 - name: 线路选择
   type: select
@@ -85,11 +99,15 @@ proxy-groups:
   - 自动切换
   - 美国-VLESS-线路1
   - New York, US-VLESS-线路2
+  - 美国-HY2-线路1
+  - 美国-HY2-线路2
 - name: 自动切换
   type: fallback
   proxies:
   - 美国-VLESS-线路1
   - New York, US-VLESS-线路2
+  - 美国-HY2-线路1
+  - 美国-HY2-线路2
   interval: 60
   timeout: 8000
   lazy: false
