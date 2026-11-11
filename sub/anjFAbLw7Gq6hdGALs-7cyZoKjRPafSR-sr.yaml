@@ -145,7 +145,30 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
-- name: 🇦🇪 阿联酋迪拜-Dai8698_-Mac-HY2-线路4
+- name: 🇦🇪 阿联酋迪拜-Dai8698_-Mac-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 52817
+  password: user348_mac:14ec6df4-6d37-4130-9001-51cda35b81fb
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇦🇪 阿联酋迪拜-Dai8698_-Mac-VLESS-线路1
+  type: vless
+  server: 45.197.149.226
+  port: 52817
+  uuid: 14ec6df4-6d37-4130-9001-51cda35b81fb
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.dell.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "76615713"
+  client-fingerprint: chrome
+  fast-open: true
+- name: 🇦🇪 阿联酋迪拜-Dai8698_-Mac-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
   port: 52817
@@ -153,7 +176,7 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
-- name: 🇦🇪 阿联酋迪拜-Dai8698_-Mac-VLESS-线路4
+- name: 🇦🇪 阿联酋迪拜-Dai8698_-Mac-VLESS-线路2
   type: vless
   server: 38.190.245.60
   port: 52817
@@ -172,8 +195,10 @@ proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
-  - 🇦🇪 阿联酋迪拜-Dai8698_-Mac-VLESS-线路4
-  - 🇦🇪 阿联酋迪拜-Dai8698_-Mac-HY2-线路4
+  - 🇦🇪 阿联酋迪拜-Dai8698_-Mac-VLESS-线路1
+  - 🇦🇪 阿联酋迪拜-Dai8698_-Mac-VLESS-线路2
+  - 🇦🇪 阿联酋迪拜-Dai8698_-Mac-HY2-线路1
+  - 🇦🇪 阿联酋迪拜-Dai8698_-Mac-HY2-线路2
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
