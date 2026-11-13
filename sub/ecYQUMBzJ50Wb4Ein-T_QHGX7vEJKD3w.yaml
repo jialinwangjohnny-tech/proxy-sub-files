@@ -54,6 +54,29 @@ tun:
     - tcp://any:53
 
 proxies:
+  - name: "新加坡 SG2-HY2-线路1"
+    type: hysteria2
+    server: 45.197.149.226
+    port: 24136
+    password: "user349_phone:ed067b25-c299-4ff2-a085-456a0a2c65ff"
+    sni: www.bing.com
+    skip-cert-verify: true
+    udp: true
+  - name: "新加坡 SG2-VLESS-线路1"
+    type: vless
+    server: 45.197.149.226
+    port: 24136
+    uuid: ed067b25-c299-4ff2-a085-456a0a2c65ff
+    flow: xtls-rprx-vision
+    network: tcp
+    tls: true
+    udp: true
+    servername: www.bing.com
+    reality-opts:
+      public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+      short-id: "119d4f74"
+    client-fingerprint: chrome
+    fast-open: true
   - name: "新加坡 SG2-HY2-线路4"
     type: hysteria2
     server: 38.190.245.60
@@ -84,10 +107,14 @@ proxy-groups:
     proxies:
       - "新加坡 SG2-VLESS-线路4"
       - "自动切换"
+      - "新加坡 SG2-HY2-线路1"
+      - "新加坡 SG2-VLESS-线路1"
       - "新加坡 SG2-HY2-线路4"
   - name: "自动切换"
     type: fallback
     proxies:
+      - "新加坡 SG2-HY2-线路1"
+      - "新加坡 SG2-VLESS-线路1"
       - "新加坡 SG2-HY2-线路4"
       - "新加坡 SG2-VLESS-线路4"
     interval: 60

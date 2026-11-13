@@ -145,6 +145,29 @@ dns:
     - https://dns.alidns.com/dns-query#DIRECT
     - https://doh.pub/dns-query#DIRECT
 proxies:
+- name: 🇸🇬 新加坡 SG2-mytzxyhtsmjj-Windows-HY2-线路1
+  type: hysteria2
+  server: 45.197.149.226
+  port: 24136
+  password: user349_windows:9b82195f-97c0-42dd-83c7-ab0869cec9a6
+  sni: www.bing.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇸🇬 新加坡 SG2-mytzxyhtsmjj-Windows-VLESS-线路1
+  type: vless
+  server: 45.197.149.226
+  port: 24136
+  uuid: 9b82195f-97c0-42dd-83c7-ab0869cec9a6
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  udp: true
+  servername: www.bing.com
+  reality-opts:
+    public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
+    short-id: "119d4f74"
+  client-fingerprint: chrome
+  fast-open: true
 - name: 🇸🇬 新加坡 SG2-mytzxyhtsmjj-Windows-HY2-线路4
   type: hysteria2
   server: 38.190.245.60
@@ -172,7 +195,9 @@ proxy-groups:
 - name: 小火箭恢复选择
   type: select
   proxies:
+  - 🇸🇬 新加坡 SG2-mytzxyhtsmjj-Windows-VLESS-线路1
   - 🇸🇬 新加坡 SG2-mytzxyhtsmjj-Windows-VLESS-线路4
+  - 🇸🇬 新加坡 SG2-mytzxyhtsmjj-Windows-HY2-线路1
   - 🇸🇬 新加坡 SG2-mytzxyhtsmjj-Windows-HY2-线路4
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
