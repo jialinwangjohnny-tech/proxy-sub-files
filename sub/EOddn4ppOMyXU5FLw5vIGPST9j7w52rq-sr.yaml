@@ -147,8 +147,8 @@ dns:
 proxies:
 - name: 🇺🇸 美国-Ya-xian-Windows-VLESS-线路1
   type: vless
-  server: 45.197.149.226
-  port: 32077
+  server: 64.90.18.99
+  port: 28449
   uuid: c97a5a41-114e-4061-b13b-2601719c846d
   flow: xtls-rprx-vision
   network: tcp
@@ -157,21 +157,21 @@ proxies:
   servername: gateway.icloud.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "dde9f125"
+    short-id: dde9f125
   client-fingerprint: chrome
   fast-open: true
 - name: 🇺🇸 美国-Ya-xian-Windows-HY2-线路1
   type: hysteria2
-  server: 45.197.149.226
-  port: 32077
+  server: 38.190.245.60
+  port: 28451
   password: user120_windows:c97a5a41-114e-4061-b13b-2601719c846d
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 🇺🇸 美国-Ya-xian-Windows-VLESS-线路2
   type: vless
-  server: 38.190.245.60
-  port: 51748
+  server: 64.90.18.99
+  port: 28450
   uuid: c97a5a41-114e-4061-b13b-2601719c846d
   flow: xtls-rprx-vision
   network: tcp
@@ -180,7 +180,7 @@ proxies:
   servername: gateway.icloud.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "dde9f125"
+    short-id: dde9f125
   client-fingerprint: chrome
   fast-open: true
 - name: 🇺🇸 美国-Ya-xian-Windows-HY2-线路2
