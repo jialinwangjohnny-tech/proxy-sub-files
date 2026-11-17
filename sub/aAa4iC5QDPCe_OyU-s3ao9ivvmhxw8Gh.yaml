@@ -51,7 +51,7 @@ proxies:
 - name: 日本东京-VLESS-线路1
   type: vless
   server: 45.197.149.226
-  port: 32040
+  port: 33017
   uuid: b98cea4d-a4d4-484d-9a1b-0465282f3bb3
   flow: xtls-rprx-vision
   network: tcp
@@ -60,7 +60,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "8f997640"
+    short-id: 8f997640
   client-fingerprint: edge
   fast-open: true
 - name: 日本东京-HY2-线路1
@@ -83,7 +83,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "8f997640"
+    short-id: 8f997640
   client-fingerprint: edge
   fast-open: true
 - name: 日本东京-HY2-线路2

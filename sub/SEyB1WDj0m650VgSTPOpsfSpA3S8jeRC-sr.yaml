@@ -148,7 +148,7 @@ proxies:
 - name: 🇯🇵 日本-Leanna_lina-手机-VLESS-线路1
   type: vless
   server: 45.197.149.226
-  port: 32040
+  port: 33017
   uuid: c9b5b97e-7e03-4e28-80aa-a9144844704a
   flow: xtls-rprx-vision
   network: tcp
@@ -157,7 +157,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "8f997640"
+    short-id: 8f997640
   client-fingerprint: chrome
   fast-open: true
 - name: 🇯🇵 日本-Leanna_lina-手机-HY2-线路1
@@ -180,7 +180,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "8f997640"
+    short-id: 8f997640
   client-fingerprint: chrome
   fast-open: true
 - name: 🇯🇵 日本-Leanna_lina-手机-HY2-线路2
