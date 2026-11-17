@@ -147,8 +147,8 @@ dns:
 proxies:
 - name: 🇺🇸 美国-pikapi717-Windows-VLESS-线路1
   type: vless
-  server: 45.197.149.226
-  port: 32025
+  server: 64.90.18.99
+  port: 28459
   uuid: 43b57740-ecb6-46a4-b3af-e08f8ba93764
   flow: xtls-rprx-vision
   network: tcp
@@ -157,21 +157,21 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "ce811752"
+    short-id: ce811752
   client-fingerprint: chrome
   fast-open: true
 - name: 🇺🇸 美国-pikapi717-Windows-HY2-线路1
   type: hysteria2
-  server: 45.197.149.226
-  port: 32060
+  server: 38.190.245.60
+  port: 28461
   password: user195_windows:43b57740-ecb6-46a4-b3af-e08f8ba93764
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 🇺🇸 美国-pikapi717-Windows-VLESS-线路2
   type: vless
-  server: 38.190.245.60
-  port: 36589
+  server: 64.90.18.99
+  port: 28460
   uuid: 43b57740-ecb6-46a4-b3af-e08f8ba93764
   flow: xtls-rprx-vision
   network: tcp
@@ -180,13 +180,13 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "ce811752"
+    short-id: ce811752
   client-fingerprint: chrome
   fast-open: true
 - name: 🇺🇸 美国-pikapi717-Windows-HY2-线路2
   type: hysteria2
   server: 38.190.245.60
-  port: 36589
+  port: 28462
   password: user195_windows:43b57740-ecb6-46a4-b3af-e08f8ba93764
   sni: www.bing.com
   skip-cert-verify: true
