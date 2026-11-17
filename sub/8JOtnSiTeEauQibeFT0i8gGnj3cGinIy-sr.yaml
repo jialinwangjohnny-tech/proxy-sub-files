@@ -147,8 +147,8 @@ dns:
 proxies:
 - name: 🇺🇸 美国-森森森森-默认设备-VLESS-线路1
   type: vless
-  server: 45.197.149.226
-  port: 32018
+  server: 64.90.18.99
+  port: 28445
   uuid: a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   flow: xtls-rprx-vision
   network: tcp
@@ -157,21 +157,21 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "3825fcff"
+    short-id: 3825fcff
   client-fingerprint: chrome
   fast-open: true
 - name: 🇺🇸 美国-森森森森-默认设备-HY2-线路1
   type: hysteria2
-  server: 45.197.149.226
-  port: 32067
+  server: 38.190.245.60
+  port: 28452
   password: user022:a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 🇺🇸 美国-森森森森-默认设备-VLESS-线路2
   type: vless
-  server: 38.190.245.60
-  port: 41582
+  server: 64.90.18.99
+  port: 28446
   uuid: a8bce8f9-a3f8-43a9-ba95-0a291bc3ef07
   flow: xtls-rprx-vision
   network: tcp
@@ -180,7 +180,7 @@ proxies:
   servername: www.bing.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "3825fcff"
+    short-id: 3825fcff
   client-fingerprint: chrome
   fast-open: true
 - name: 🇺🇸 美国-森森森森-默认设备-HY2-线路2
