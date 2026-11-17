@@ -154,8 +154,8 @@ dns:
 proxies:
 - name: 🇻🇳 越南-XiaoleRen-sealing-手机-VLESS-线路1
   type: vless
-  server: 45.197.149.226
-  port: 32027
+  server: 64.90.18.99
+  port: 28453
   uuid: 56c4e7f0-6fba-4c16-be57-73c6a38733a9
   flow: xtls-rprx-vision
   network: tcp
@@ -164,21 +164,21 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "19a56345"
+    short-id: 19a56345
   client-fingerprint: chrome
   fast-open: true
 - name: 🇻🇳 越南-XiaoleRen-sealing-手机-HY2-线路1
   type: hysteria2
-  server: 45.197.149.226
-  port: 32011
+  server: 38.190.245.60
+  port: 28455
   password: user271_phone:56c4e7f0-6fba-4c16-be57-73c6a38733a9
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 🇻🇳 越南-XiaoleRen-sealing-手机-VLESS-线路2
   type: vless
-  server: 38.190.245.60
-  port: 14811
+  server: 64.90.18.99
+  port: 28454
   uuid: 56c4e7f0-6fba-4c16-be57-73c6a38733a9
   flow: xtls-rprx-vision
   network: tcp
@@ -187,7 +187,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "19a56345"
+    short-id: 19a56345
   client-fingerprint: chrome
   fast-open: true
 - name: 🇻🇳 越南-XiaoleRen-sealing-手机-HY2-线路2
