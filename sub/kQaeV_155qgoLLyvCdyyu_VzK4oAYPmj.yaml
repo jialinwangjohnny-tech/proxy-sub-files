@@ -65,8 +65,8 @@ proxies:
   fast-open: true
 - name: 美国-HY2-线路1
   type: hysteria2
-  server: 45.197.149.226
-  port: 32013
+  server: 38.190.245.60
+  port: 28501
   password: user290_phone:f95f6c03-84d4-45da-9b8e-8b6a62800b74
   sni: www.bing.com
   skip-cert-verify: true
