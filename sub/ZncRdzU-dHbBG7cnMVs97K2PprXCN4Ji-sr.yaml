@@ -18,8 +18,8 @@ dns:
 proxies:
 - name: 🇺🇸 美国-白丽娜-Mac-VLESS-线路1
   type: vless
-  server: 45.197.149.226
-  port: 32022
+  server: 64.90.18.99
+  port: 28456
   uuid: 47b9bbdc-f450-4cfb-812d-ac3b8584843f
   flow: xtls-rprx-vision
   network: tcp
@@ -28,21 +28,21 @@ proxies:
   servername: www.nvidia.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "a02e5b60"
+    short-id: a02e5b60
   client-fingerprint: chrome
   fast-open: true
 - name: 🇺🇸 美国-白丽娜-Mac-HY2-线路1
   type: hysteria2
-  server: 45.197.149.226
-  port: 32009
+  server: 38.190.245.60
+  port: 28458
   password: user147_mac:47b9bbdc-f450-4cfb-812d-ac3b8584843f
   sni: www.bing.com
   skip-cert-verify: true
   udp: true
 - name: 🇺🇸 美国-白丽娜-Mac-VLESS-线路2
   type: vless
-  server: 38.190.245.60
-  port: 14145
+  server: 64.90.18.99
+  port: 28457
   uuid: 47b9bbdc-f450-4cfb-812d-ac3b8584843f
   flow: xtls-rprx-vision
   network: tcp
@@ -51,7 +51,7 @@ proxies:
   servername: www.nvidia.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "a02e5b60"
+    short-id: a02e5b60
   client-fingerprint: chrome
   fast-open: true
 - name: 🇺🇸 美国-白丽娜-Mac-HY2-线路2
