@@ -147,8 +147,8 @@ dns:
 proxies:
 - name: 🇺🇸 美国-Q_HERUO-Windows-VLESS-线路1
   type: vless
-  server: 45.197.149.226
-  port: 32013
+  server: 64.90.18.99
+  port: 28447
   uuid: fa1701c7-1966-43e3-881d-c2489be33cea
   flow: xtls-rprx-vision
   network: tcp
@@ -157,7 +157,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "19fcdcbc"
+    short-id: 19fcdcbc
   client-fingerprint: chrome
   fast-open: true
 - name: 🇺🇸 美国-Q_HERUO-Windows-HY2-线路1
@@ -170,8 +170,8 @@ proxies:
   udp: true
 - name: 🇺🇸 美国-Q_HERUO-Windows-VLESS-线路2
   type: vless
-  server: 38.190.245.60
-  port: 17565
+  server: 64.90.18.99
+  port: 28448
   uuid: fa1701c7-1966-43e3-881d-c2489be33cea
   flow: xtls-rprx-vision
   network: tcp
@@ -180,7 +180,7 @@ proxies:
   servername: www.dell.com
   reality-opts:
     public-key: rY6I8E6kJjbgmnwz5TSt8Tkb955J5C6_d6YE9qQCcFg
-    short-id: "19fcdcbc"
+    short-id: 19fcdcbc
   client-fingerprint: chrome
   fast-open: true
 - name: 🇺🇸 美国-Q_HERUO-Windows-HY2-线路2
